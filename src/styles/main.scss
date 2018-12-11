@@ -1,8 +1,15 @@
-@import '/~node_modules/reset-css/sass/reset';
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
 @import "./fonts/fonts";
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-
+html,
 body {
-  background: #ff0000;
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+
+.flex-spacer {
+  flex-grow: 1;
 }

@@ -1,0 +1,22 @@
+.main {
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  .navbar-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px 16px;
+    background: #3f51b5;
+
+    .legion-logo {
+      height: 26px;
+      margin: 0 4px 3px 0;
+      vertical-align: middle;
+    }
+  }
+}

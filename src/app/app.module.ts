@@ -5,12 +5,16 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MainViewComponent } from './components/main-view/main-view.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule,
+MatInputModule, MatToolbarModule, MatSidenavModule, MatListModule } from '@angular/material';
 import { StoreModule } from '@ngrx/store';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { EffectsModule } from '@ngrx/effects';
 import { environment } from '../environments/environment';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MainNavComponent } from './components/main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 
 const ngModules = [
@@ -25,15 +29,15 @@ const materialModules = [
   MatToolbarModule,
   MatButtonModule,
   MatFormFieldModule,
-  MatInputModule,
-
-  FlexLayoutModule
+  MatInputModule
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainViewComponent
+    MainViewComponent,
+    MainNavComponent,
+    NavBarComponent
   ],
   imports: [
     ...ngModules,
@@ -41,7 +45,13 @@ const materialModules = [
     StoreModule.forRoot({}),
     StoreRouterConnectingModule.forRoot({stateKey: 'router'}),
     EffectsModule.forRoot([]),
-    environment.imports
+    environment.imports,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

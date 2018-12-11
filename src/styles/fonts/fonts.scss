@@ -1,0 +1,12 @@
+@import "../variables/typo";
+
+html {
+  font-size: $font-base-size;
+}
+
+body {
+  font-family: $font-family;
+  font-weight: $font-weight-regular;
+}
+
+

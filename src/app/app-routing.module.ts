@@ -10,7 +10,16 @@ const routes: Routes = [
     data: {
       isTabView: true
     }
-  }
+  },
+
+  {
+    path: 'admin',
+    component: MainViewComponent,
+    pathMatch: 'full',
+    data: {
+      isTabView: false
+    }
+  },
 ];
 
 @NgModule({
