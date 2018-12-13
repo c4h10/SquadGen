@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 
-//TODO: plugins? clonning copying and creating new store
+// TODO: plugins? clonning copying and creating new store
 
 @Component({
   selector: 'sg-tab-content',

@@ -1,13 +1,5 @@
 <mat-tab-group>
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <sg-tab></sg-tab>
-    </ng-template>
-    <ng-template matTabContent>
-      <sg-tab-content></sg-tab-content>
-    </ng-template>
-  </mat-tab>
-  <mat-tab>
+  <mat-tab *ngFor="let tab of tabs">
     <ng-template mat-tab-label>
       <sg-tab></sg-tab>
     </ng-template>
