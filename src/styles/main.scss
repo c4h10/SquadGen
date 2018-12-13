@@ -1,4 +1,5 @@
-@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+@import "./theme/indigo-pink";
+
 @import "./fonts/fonts";
 
 html,
@@ -8,8 +9,16 @@ body {
 body {
   margin: 0;
 }
-
-
 .flex-spacer {
   flex-grow: 1;
+}
+
+.sg-main {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 56px;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

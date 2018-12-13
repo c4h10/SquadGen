@@ -11,10 +11,11 @@ import { StoreModule } from '@ngrx/store';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { EffectsModule } from '@ngrx/effects';
 import { environment } from '../environments/environment';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { MainNavComponent } from './components/main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { TabNavigationModule } from './modules/tab-navigation/tab-navigation.module';
+import { CommonMaterialModule } from './modules/common-material/common-material.module';
 
 
 const ngModules = [
@@ -23,13 +24,9 @@ const ngModules = [
   AppRoutingModule
 ];
 
-const materialModules = [
-  MatCardModule,
-  MatIconModule,
-  MatToolbarModule,
-  MatButtonModule,
-  MatFormFieldModule,
-  MatInputModule
+const sgModules = [
+  TabNavigationModule,
+  CommonMaterialModule
 ];
 
 @NgModule({
@@ -41,19 +38,15 @@ const materialModules = [
   ],
   imports: [
     ...ngModules,
-    ...materialModules,
+    ...sgModules,
     StoreModule.forRoot({}),
     StoreRouterConnectingModule.forRoot({stateKey: 'router'}),
     EffectsModule.forRoot([]),
     environment.imports,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
