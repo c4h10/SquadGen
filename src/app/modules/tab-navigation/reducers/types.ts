@@ -6,5 +6,5 @@ export interface State {
 
 export interface Tab {
   id: number;
-  type?: string;
+  type: string;
 }

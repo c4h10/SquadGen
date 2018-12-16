@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 
 // TODO: plugins? clonning copying and creating new store
@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'sg-tab-content',
   templateUrl: './tab-content.component.html',
-  styleUrls: ['./tab-content.component.scss']
+  styleUrls: ['./tab-content.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TabContentComponent implements OnInit {
+
+  @Input() id: number;
+  @Input() type: string;
 
   constructor() { }
 

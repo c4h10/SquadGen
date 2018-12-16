@@ -9,12 +9,15 @@ export const initialState: State = {
   tabs: [
     {
       id: 1,
+      type: 'squad-list'
     },
     {
       id: 2,
+      type: 'squad-list'
     },
     {
       id: 3,
+      type: 'squad-list'
     }
   ],
   config: {

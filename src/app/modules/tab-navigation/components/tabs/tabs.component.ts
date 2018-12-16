@@ -34,7 +34,6 @@ export class TabsComponent implements OnInit, OnDestroy {
     [
       this.tabs$.subscribe(tabs => {
         this.tabs = tabs;
-        console.log(this.tabs);
       })
     ].forEach(s => this.subscriptions.add(s));
 
