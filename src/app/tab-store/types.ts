@@ -11,7 +11,7 @@ export interface TabContainerAction<P> extends ActionWithPayload<P> {
 }
 
 
-export interface FeatureState<T> {
+export interface TabState<T> {
   containers: {
     [tabId: string]: T;
   };

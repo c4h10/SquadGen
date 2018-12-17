@@ -12,7 +12,8 @@ export class SelectorCache {
     }
 
     getSelector(options: GetSelectorOptions) {
-        const tabId = Option.of(options.tabId).getOrElse('_GLOBAL');
+        // const tabId = Option.of(options.tabId).getOrElse('_GLOBAL');
+        const tabId = options.tabId;
         const fnSet = [...options.selectors];
         let storage = this.cacheMapping[tabId];
         let createSelectorArgs;

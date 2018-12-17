@@ -1,55 +1,55 @@
 import { ActionReducer, ActionReducerMap } from '@ngrx/store';
 
-import { ActionWithPayload, TabContainerAction, FeatureState } from './types';
+import { ActionWithPayload, TabContainerAction, TabState } from './types';
 import { GlobalStoreTabActionTypes } from './global-store-tab-actions';
 
 export const identityReducer = (state: any) => state;
 
 export function tabReducer<T>(
     featureName: string,
-    featureState: FeatureState<any>,
-    defaultFeatureState: FeatureState<T>,
+    tabState: TabState<any>,
+    defaultTabState: TabState<T>,
     defaultContainerState: T,
     action: TabContainerAction<any>,
     containerReducerMap: ActionReducerMap<any>,
     globalReducerMap: ActionReducerMap<any>
-): FeatureState<any> {
+): TabState<any> {
     const {type, payload, tabId} = action;
     let reducer: ActionReducer<any, ActionWithPayload<any>>;
 
     if (action.type === GlobalStoreTabActionTypes.KILL_SESSION) {
-        return {...defaultFeatureState};
+        return {...defaultTabState};
     }
 
     if (action.type === GlobalStoreTabActionTypes.CREATE_TAB && action.payload.feature === featureName) {
         return {
-            ...featureState,
+            ...tabState,
             containers: {
-                ...featureState.containers,
-                [action.payload.id]: featureState.containers[action.payload.id] || defaultContainerState
+                ...tabState.containers,
+                [action.payload.id]: tabState.containers[action.payload.id] || defaultContainerState
             }
         };
     }
 
     if (action.type === GlobalStoreTabActionTypes.DESTROY_TAB && action.payload.feature === featureName) {
-        const newFeatureState = {...featureState, containers: {...featureState.containers}};
+        const newFeatureState = {...tabState, containers: {...tabState.containers}};
         delete newFeatureState.containers[action.payload.id];
         return newFeatureState;
     }
 
-    if ('tabId' in action && action.tabId in featureState.containers) {
-        const containerState = featureState.containers[tabId] || defaultContainerState;
+    if ('tabId' in action && action.tabId in tabState.containers) {
+        const containerState = tabState.containers[tabId] || defaultContainerState;
         reducer = containerReducerMap[type] || identityReducer;
         const result = reducer(containerState, {type, payload});
         return {
-            ...featureState,
+            ...tabState,
             containers: {
-                ...featureState.containers,
+                ...tabState.containers,
                 [tabId]: {...result}
             }
         };
     }
 
     reducer = globalReducerMap[type] || identityReducer;
-    return reducer(featureState, {type, payload});
+    return reducer(tabState, {type, payload});
 }

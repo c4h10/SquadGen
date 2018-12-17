@@ -2,9 +2,9 @@ import * as Types from '../store/squad-list.store';
 
 export const defaultState: Types.State = {
   configuration: {},
-  containers: []
+  containers: {}
 };
 
 export const defaultContainerState: Types.ContainerState = {
-
+  tmp: 'bolo'
 };
