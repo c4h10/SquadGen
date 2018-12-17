@@ -6,5 +6,5 @@ export const defaultState: Types.State = {
 };
 
 export const defaultContainerState: Types.ContainerState = {
-  tmp: 'bolo'
+  tabId: '__EMPTY__'
 };

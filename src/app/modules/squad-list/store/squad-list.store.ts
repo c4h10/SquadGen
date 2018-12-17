@@ -7,5 +7,5 @@ export interface State extends TabState<ContainerState> {
 
 
 export interface ContainerState {
-  tmp: string;
+  tabId: string | number;
 }

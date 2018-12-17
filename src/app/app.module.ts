@@ -14,7 +14,6 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { TabNavigationModule } from './modules/tab-navigation/tab-navigation.module';
 import { CommonMaterialModule } from './modules/common-material/common-material.module';
-import { TabManagerModule } from './modules/tab-manager/tab-manager.module';
 
 
 const ngModules = [
@@ -25,7 +24,6 @@ const ngModules = [
 
 const sgModules = [
   TabNavigationModule,
-  TabManagerModule,
   CommonMaterialModule
 ];
 

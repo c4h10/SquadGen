@@ -1,6 +1,5 @@
 import { createFeatureSelector, createSelector, MemoizedSelector, Selector } from '@ngrx/store';
 import { GetSelectorOptions, SelectorCacheMapping } from './types';
-import { Option } from 'funfix-core';
 
 
 export class SelectorCache {
@@ -8,6 +7,7 @@ export class SelectorCache {
     private readonly featureSelector: MemoizedSelector<any, any>;
 
     constructor(private featureName: string) {
+      console.log(featureName);
         this.featureSelector = createFeatureSelector(featureName);
     }
 

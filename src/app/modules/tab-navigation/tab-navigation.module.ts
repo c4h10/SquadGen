@@ -7,14 +7,14 @@ import { CommonMaterialModule } from '../common-material/common-material.module'
 import * as fromTabNavigation from './reducers/tab-navigation.reducer';
 import { MODULE_NAME } from './types';
 import { StoreModule } from '@ngrx/store';
-import { TabManagerModule } from '../tab-manager/tab-manager.module';
+import { SquadListModule } from '../squad-list/squad-list.module';
 
 @NgModule({
   declarations: [TabsComponent, TabComponent, TabContentComponent],
   imports: [
     CommonModule,
     CommonMaterialModule,
-    TabManagerModule,
+    SquadListModule,
     StoreModule.forFeature(MODULE_NAME, fromTabNavigation.reducer),
     // TODO: Import effects
   ],

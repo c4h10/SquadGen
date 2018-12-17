@@ -4,6 +4,7 @@ import { SquadListContainerComponent } from './components/squad-list-container/s
 import { StoreModule } from '@ngrx/store';
 import { MODULE_NAME } from './types';
 import { reducer } from './reducers/squad-list.reducers';
+import { StoreManagerService } from './services/store-manager.service';
 
 @NgModule({
   declarations: [SquadListContainerComponent],
@@ -12,6 +13,8 @@ import { reducer } from './reducers/squad-list.reducers';
     StoreModule.forFeature(MODULE_NAME, reducer),
     // TODO: Import effects
   ],
-  exports: [SquadListContainerComponent]
+  exports: [SquadListContainerComponent],
+
+  providers: [StoreManagerService]
 })
 export class SquadListModule { }
