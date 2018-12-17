@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SquadListViewComponent } from './squad-list-view.component';
+import { TabLoaderComponent } from './tab-loader.component';
 
-describe('SquadListViewComponent', () => {
-  let component: SquadListViewComponent;
-  let fixture: ComponentFixture<SquadListViewComponent>;
+describe('TabLoaderComponent', () => {
+  let component: TabLoaderComponent;
+  let fixture: ComponentFixture<TabLoaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SquadListViewComponent ]
+      declarations: [ TabLoaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SquadListViewComponent);
+    fixture = TestBed.createComponent(TabLoaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

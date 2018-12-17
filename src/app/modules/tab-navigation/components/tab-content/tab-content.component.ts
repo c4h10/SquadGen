@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 
-// TODO: plugins? clonning copying and creating new store
+// TODO: tab? clonning copying and creating new store
 
 @Component({
   selector: 'sg-tab-content',

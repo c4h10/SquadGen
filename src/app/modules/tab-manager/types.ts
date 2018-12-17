@@ -1,4 +1,4 @@
-export interface PluginContext {
+export interface TabContext {
   tabId: number;
   type: string;
   data?: {

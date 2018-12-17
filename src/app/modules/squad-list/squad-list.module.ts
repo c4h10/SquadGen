@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SquadListViewComponent } from './components/squad-list-view/squad-list-view.component';
+import { SquadListContainerComponent } from './components/squad-list-container/squad-list-container.component';
+import { StoreModule } from '@ngrx/store';
+import { MODULE_NAME } from './types';
+/*import * as fromSquadList from './reducers/squad-list.reducers';*/
 
 @NgModule({
-  declarations: [SquadListViewComponent],
+  declarations: [SquadListContainerComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    /*StoreModule.forFeature(MODULE_NAME, fromSquadList.reducer),*/
+    // TODO: Import effects
   ],
-  exports: [SquadListViewComponent]
+  exports: [SquadListContainerComponent]
 })
 export class SquadListModule { }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PluginLoaderComponent } from './plugin-loader.component';
+import { SquadListContainerComponent } from './squad-list-container.component';
 
-describe('PluginLoaderComponent', () => {
-  let component: PluginLoaderComponent;
-  let fixture: ComponentFixture<PluginLoaderComponent>;
+describe('SquadListContainerComponent', () => {
+  let component: SquadListContainerComponent;
+  let fixture: ComponentFixture<SquadListContainerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PluginLoaderComponent ]
+      declarations: [ SquadListContainerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PluginLoaderComponent);
+    fixture = TestBed.createComponent(SquadListContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
