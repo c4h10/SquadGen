@@ -12,7 +12,7 @@ export class SquadListService {
 
   squadMock() {
 
-    return this.apiClient.getWithParameters(SQUAD_LIST_ALIASES.SQUAD_MOCK, '', {observe: 'response'})
+    return this.apiClient.getWithParameters(SQUAD_LIST_ALIASES.SQUAD_MOCK, '')
       .pipe(
         map((response) => {
           console.log(response);

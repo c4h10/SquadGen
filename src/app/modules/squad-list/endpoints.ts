@@ -9,6 +9,7 @@ export const API_ENDPOINTS: EndpointConfiguration[] = [
   {
     alias: ALIASES.SQUAD_MOCK,
     method: HTTP_VERBS.GET,
-    path: 'squad_mock'
+    path: 'mock/mock.json',
+    prefix: '/assets/'
   }
 ];
