@@ -1,4 +1,4 @@
-export const enum ACTION {
+export const enum ACTION_NAMES {
   DUMMY = '[Squad list] DUMMY',
   GLOBAL_DUMMY = '[Squad list] GLOBAL_DUMMY'
 }

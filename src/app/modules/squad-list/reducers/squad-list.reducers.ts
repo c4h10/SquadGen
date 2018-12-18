@@ -1,4 +1,4 @@
-import { ACTION } from '../actions/types';
+import { ACTION_NAMES } from '../actions/types';
 import { ActionReducerMap } from '@ngrx/store';
 import { defaultState, defaultContainerState } from './defaults';
 import * as Store from '../store/squad-list.store';
@@ -11,11 +11,11 @@ import { TabContainerAction, TabState } from '../../../tab-store/types';
 
 
 export const CONTAINER_REDUCERS: Types.ReducerMap = {
-  [ACTION.DUMMY]: dummyReducer
+  [ACTION_NAMES.DUMMY]: dummyReducer
 };
 
 export const GLOBAL_REDUCERS: Types.GlobalReducerMap = {
-  [ACTION.GLOBAL_DUMMY]: globalDummyReducer
+  [ACTION_NAMES.GLOBAL_DUMMY]: globalDummyReducer
 };
 
 export function reducer(
