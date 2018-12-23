@@ -3,7 +3,7 @@ import { TabNavigationActions } from '../actions/tab-navigation.actions';
 export interface State {
   config?: any;
   activeTab: number;
-  latestTab: number;
+  lastCreatedTab: number;
   tabs: Tab[];
 }
 

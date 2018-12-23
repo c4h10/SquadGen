@@ -12,7 +12,7 @@ export function reducer(state: State, action: CreateTabAction): State {
   });
   return {
     ...state,
-    latestTab: latestTabId,
+    lastCreatedTab: latestTabId,
     tabs
   };
 }

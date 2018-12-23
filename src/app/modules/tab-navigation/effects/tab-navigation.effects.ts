@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 import { map, switchMap, first } from 'rxjs/operators';
 import { SetActiveTabAction } from '../actions/tab-navigation.actions';
 import { State } from '../reducers/types';
-import { getLatestTab } from '../tab-navigation.store';
+import { getLastCreatedTab } from '../tab-navigation.store';
 
 @Injectable()
 export class TabNavigationEffects {
@@ -14,7 +14,7 @@ export class TabNavigationEffects {
   createTab$ = this.actions$
     .pipe(
       ofType(ACTION_NAMES.CREATE_TAB),
-      switchMap(action => this.store.select(getLatestTab)
+      switchMap(action => this.store.select(getLastCreatedTab)
         .pipe(
           map(data => ({action, data}))
         )

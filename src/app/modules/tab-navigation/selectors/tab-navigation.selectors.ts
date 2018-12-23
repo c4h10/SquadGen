@@ -14,9 +14,9 @@ export const getActiveTabSelector = (state: State): number => {
   return 0;
 };
 
-export const getLatestTabSelector = (state: State): number => {
+export const getLastCreatedSelector = (state: State): number => {
   if (state) {
-    return state.latestTab;
+    return state.lastCreatedTab;
   }
   return 0;
 };
