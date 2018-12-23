@@ -7,3 +7,16 @@ export const getTabsSelector = (state: State): Tab[] => {
   return null;
 };
 
+export const getActiveTabSelector = (state: State): number => {
+  if (state) {
+    return state.activeTab;
+  }
+  return 0;
+};
+
+export const getLatestTabSelector = (state: State): number => {
+  if (state) {
+    return state.latestTab;
+  }
+  return 0;
+};

@@ -4,13 +4,15 @@ import { CreateTabAction } from '../actions/tab-navigation.actions';
 export function reducer(state: State, action: CreateTabAction): State {
   // TODO: hardcoded type
   const tabs: Tab[] = [...state.tabs];
+  const latestTabId = calculateNewTabId(tabs);
   tabs.push({
-    id: calculateNewTabId(tabs),
+    id: latestTabId,
     type: 'squad-list',
     data: action.payload
   });
   return {
     ...state,
+    latestTab: latestTabId,
     tabs
   };
 }

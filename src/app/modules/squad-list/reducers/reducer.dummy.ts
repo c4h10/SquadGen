@@ -7,6 +7,5 @@ export function reducer(state: ContainerState, action: DummyAction): ContainerSt
     ...state,
     tmp: 'test'
   };
-  console.log(action);
   return newState;
 }

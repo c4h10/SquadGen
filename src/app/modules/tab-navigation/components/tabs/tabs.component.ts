@@ -4,7 +4,7 @@ import { Store } from '@ngrx/store';
 import { TabsConfigurationAction } from '../../actions/tab-navigation.actions';
 
 import { Observable, Subscription } from 'rxjs';
-import { getTabs } from '../../tab-navigation.store';
+import { getActiveTab, getTabs } from '../../tab-navigation.store';
 
 @Component({
   selector: 'sg-tabs',
@@ -15,6 +15,9 @@ import { getTabs } from '../../tab-navigation.store';
 export class TabsComponent implements OnInit, OnDestroy {
 
   @Input() config?: any;
+
+  selectedIndex$: Observable<number>;
+  selectedIndex: number;
 
   tabs$: Observable<Tab[]>;
   tabs: Tab[] = [];
@@ -31,11 +34,14 @@ export class TabsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.store.dispatch(new TabsConfigurationAction(this.config));
     this.tabs$ = this.store.select(getTabs);
+    this.selectedIndex$ = this.store.select(getActiveTab);
 
     [
       this.tabs$.subscribe(tabs => {
         this.tabs = tabs;
-        console.log(this.tabs);
+      }),
+      this.selectedIndex$.subscribe(selIndex => {
+        this.selectedIndex = selIndex;
       })
     ].forEach(s => this.subscriptions.add(s));
 

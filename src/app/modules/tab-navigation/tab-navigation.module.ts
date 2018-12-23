@@ -8,6 +8,8 @@ import * as fromTabNavigation from './reducers/tab-navigation.reducers';
 import { MODULE_NAME } from './types';
 import { StoreModule } from '@ngrx/store';
 import { SquadListModule } from '../squad-list/squad-list.module';
+import { EffectsModule } from '@ngrx/effects';
+import { TabNavigationEffects } from './effects/tab-navigation.effects';
 
 @NgModule({
   declarations: [TabsComponent, TabComponent, TabContentComponent],
@@ -16,7 +18,7 @@ import { SquadListModule } from '../squad-list/squad-list.module';
     CommonMaterialModule,
     SquadListModule,
     StoreModule.forFeature(MODULE_NAME, fromTabNavigation.reducer),
-    // TODO: Import effects
+    EffectsModule.forFeature([TabNavigationEffects])
   ],
   exports: [
     TabsComponent
