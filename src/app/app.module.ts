@@ -9,12 +9,13 @@ import { StoreModule } from '@ngrx/store';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { EffectsModule } from '@ngrx/effects';
 import { environment } from '../environments/environment';
-import { MainNavComponent } from './components/main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { TabNavigationModule } from './modules/tab-navigation/tab-navigation.module';
 import { CommonMaterialModule } from './modules/common-material/common-material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
+import { NavMenuItemComponent } from './components/nav-menu-item/nav-menu-item.component';
 
 
 const ngModules = [
@@ -33,8 +34,9 @@ const sgModules = [
   declarations: [
     AppComponent,
     MainViewComponent,
-    MainNavComponent,
-    NavBarComponent
+    NavBarComponent,
+    NavMenuComponent,
+    NavMenuItemComponent
   ],
   imports: [
     ...ngModules,
