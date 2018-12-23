@@ -7,7 +7,6 @@ export class SelectorCache {
     private readonly featureSelector: MemoizedSelector<any, any>;
 
     constructor(private featureName: string) {
-      console.log(featureName);
         this.featureSelector = createFeatureSelector(featureName);
     }
 

@@ -2,16 +2,10 @@
   <mat-icon>add</mat-icon>
 </button>
 <mat-menu #dropdownMenu="matMenu">
-  <button mat-menu-item>
-    <mat-icon>dialpad</mat-icon>
-    <span>Redial</span>
-  </button>
-  <button mat-menu-item disabled>
-    <mat-icon>voicemail</mat-icon>
-    <span>Check voicemail</span>
-  </button>
-  <button mat-menu-item>
-    <mat-icon>notifications_off</mat-icon>
-    <span>Disable alerts</span>
-  </button>
+  <sg-nav-menu-item *ngFor="let item of items"
+    [label]="item.label"
+    [iconClass]="item.iconClass"
+    (click)="onClick(item.actionName, item.payload)"
+  >
+  </sg-nav-menu-item>
 </mat-menu>

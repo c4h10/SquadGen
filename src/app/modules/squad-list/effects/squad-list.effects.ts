@@ -23,7 +23,6 @@ export class SquadListEffects {
         )
       ),
       map(({action, data }) => {
-        console.log('szataa');
         return new GlobalDummyAction({tabId: 'ss'});
       })
     );

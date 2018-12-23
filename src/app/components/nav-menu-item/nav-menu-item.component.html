@@ -1,3 +1,4 @@
-<p>
-  nav-menu-item works!
-</p>
+<button mat-menu-item>
+  <mat-icon [ngClass]="iconClass"></mat-icon>
+  <span *ngIf="label">{{ label }}</span>
+</button>

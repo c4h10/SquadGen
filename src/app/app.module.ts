@@ -16,6 +16,7 @@ import { CommonMaterialModule } from './modules/common-material/common-material.
 import { HttpClientModule } from '@angular/common/http';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { NavMenuItemComponent } from './components/nav-menu-item/nav-menu-item.component';
+import { GlobalModule } from './modules/global/global.module';
 
 
 const ngModules = [
@@ -27,7 +28,8 @@ const ngModules = [
 
 const sgModules = [
   TabNavigationModule,
-  CommonMaterialModule
+  CommonMaterialModule,
+  GlobalModule
 ];
 
 @NgModule({
@@ -42,8 +44,8 @@ const sgModules = [
     ...ngModules,
     ...sgModules,
     StoreModule.forRoot({}),
-    StoreRouterConnectingModule.forRoot({stateKey: 'router'}),
     EffectsModule.forRoot([]),
+    StoreRouterConnectingModule.forRoot({stateKey: 'router'}),
     environment.imports,
     LayoutModule
   ],

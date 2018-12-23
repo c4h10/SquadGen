@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'sg-nav-menu-item',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-menu-item.component.scss']
 })
 export class NavMenuItemComponent implements OnInit {
-
+  @Input() iconClass: string;
+  @Input() label: string;
   constructor() { }
 
   ngOnInit() {

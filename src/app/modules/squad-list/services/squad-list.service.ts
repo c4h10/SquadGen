@@ -15,7 +15,6 @@ export class SquadListService {
     return this.apiClient.getWithParameters(SQUAD_LIST_ALIASES.SQUAD_MOCK, '')
       .pipe(
         map((response) => {
-          console.log(response);
           return response;
         })
       );
