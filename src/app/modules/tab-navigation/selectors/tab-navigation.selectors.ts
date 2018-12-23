@@ -1,14 +1,9 @@
-import { MODULE_NAME, State, Tab } from '../types';
-import { createSelector, createFeatureSelector, MemoizedSelector } from '@ngrx/store';
+import { State, Tab } from '../reducers/types';
 
-
-const getTabsSelector = (state: State): Tab[] => state.tabs;
-
-const getTabNavigationFeatureState = createFeatureSelector<State>(MODULE_NAME);
-
-function buildSelector(fn: (state: State) => any) {
-  return createSelector(getTabNavigationFeatureState, fn);
-}
-
-export const getTabs: MemoizedSelector<State, Tab[]> = buildSelector(getTabsSelector);
+export const getTabsSelector = (state: State): Tab[] => {
+  if (state.tabs) {
+    return state.tabs;
+  }
+  return null;
+};
 

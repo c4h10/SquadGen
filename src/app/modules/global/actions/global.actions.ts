@@ -1,6 +1,5 @@
 import { Action } from '@ngrx/store';
-import { ACTION_NAMES } from './types';
-import { Configuration } from '../reducers/types';
+import { ACTION_NAMES, ConfigurationFetchedPayload } from './types';
 
 
 export class ConfigurationFetchAction implements Action {
@@ -10,7 +9,7 @@ export class ConfigurationFetchAction implements Action {
 export class ConfigurationFetchedAction implements Action {
   readonly type = ACTION_NAMES.CONFIGURATION_FETCHED;
 
-  constructor(public payload: Configuration) {
+  constructor(public payload: ConfigurationFetchedPayload) {
   }
 }
 

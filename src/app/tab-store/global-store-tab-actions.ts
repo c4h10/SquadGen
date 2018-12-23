@@ -1,5 +1,7 @@
 import { ActionWithPayload } from './types';
 
+
+// TODO: Refactor move to tab navigations
 export const enum GlobalStoreTabActionTypes {
   KILL_SESSION = '[GLOBAL] KILL_SESSION',
   CREATE_TAB = '[GLOBAL] CREATE_TAB',

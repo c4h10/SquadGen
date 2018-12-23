@@ -20,7 +20,7 @@ export class GlobalEffects {
         (action: Action) => this.globalService.getConfiguration()
           .pipe(
             map((response: ApiTypes.ConfigurationResponse) => {
-              return new ConfigurationFetchedAction(response as Configuration);
+              return new ConfigurationFetchedAction({data: response as Configuration});
             }),
             catchError(err => {
               console.log(err);

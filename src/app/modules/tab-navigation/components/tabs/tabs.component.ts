@@ -2,8 +2,9 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy
 import { State, Tab } from '../../reducers/types';
 import { Store } from '@ngrx/store';
 import { TabsConfigurationAction } from '../../actions/tab-navigation.actions';
-import { getTabs } from '../../selectors/tab-navigation.selectors';
-import { EMPTY, Observable, Subscription } from 'rxjs';
+
+import { Observable, Subscription } from 'rxjs';
+import { getTabs } from '../../tab-navigation.store';
 
 @Component({
   selector: 'sg-tabs',
@@ -15,7 +16,7 @@ export class TabsComponent implements OnInit, OnDestroy {
 
   @Input() config?: any;
 
-  tabs$: Observable<Tab[]> = EMPTY;
+  tabs$: Observable<Tab[]>;
   tabs: Tab[] = [];
 
   private subscriptions: Subscription = new Subscription();
@@ -34,6 +35,7 @@ export class TabsComponent implements OnInit, OnDestroy {
     [
       this.tabs$.subscribe(tabs => {
         this.tabs = tabs;
+        console.log(this.tabs);
       })
     ].forEach(s => this.subscriptions.add(s));
 

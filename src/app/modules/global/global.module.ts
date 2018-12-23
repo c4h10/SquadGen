@@ -7,6 +7,7 @@ import { API_ENDPOINTS } from './endpoints';
 import { EffectsModule } from '@ngrx/effects';
 import { GlobalEffects } from './effects/global.effects';
 import { GlobalService } from './services/global.service';
+import { MODULE_NAME } from './types';
 
 
 export function initEndpoints(apiClient: ApiClientService) {
@@ -17,7 +18,7 @@ export function initEndpoints(apiClient: ApiClientService) {
   declarations: [],
   imports: [
     CommonModule,
-    StoreModule.forFeature('global', fromGlobal.reducer),
+    StoreModule.forFeature(MODULE_NAME, fromGlobal.reducer),
     EffectsModule.forFeature([GlobalEffects])
   ],
   providers: [

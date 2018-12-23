@@ -3,6 +3,7 @@ import { Faction, State as GlobalState } from '../../modules/global/reducers/typ
 import { Store } from '@ngrx/store';
 import { ConfigurationFetchAction } from '../../modules/global/actions/global.actions';
 import { ACTION_NAMES } from '../../modules/global/actions/types';
+import { ACTION_NAMES as TAB_NAVIGATION_ACTION_NAMES } from '../../modules/tab-navigation/actions/types';
 import { Observable, Subscription } from 'rxjs';
 import { getConfigurationFactions } from '../../modules/global/global.store';
 import { MenuItem } from '../nav-menu/types';
@@ -39,7 +40,7 @@ export class NavBarComponent implements OnInit, OnDestroy {
           return {
             iconClass: faction.factionIcon,
             label: faction.factionName,
-            actionName: 'TODO',
+            actionName: TAB_NAVIGATION_ACTION_NAMES.CREATE_TAB,
             payload: faction
           };
         });
@@ -49,6 +50,14 @@ export class NavBarComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
+  }
+
+
+  actionEvent(event) {
+    this.store.dispatch<any>({
+      type: event.type,
+      payload: event.payload
+    });
   }
 
 }

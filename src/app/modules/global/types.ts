@@ -2,6 +2,8 @@ import { Action } from '@ngrx/store';
 import { Configuration } from './reducers/types';
 import { HttpHeaders } from '@angular/common/http';
 
+export const MODULE_NAME = 'global';
+
 export interface ActionWithPayload<P> extends Action {
   payload?: P;
 }

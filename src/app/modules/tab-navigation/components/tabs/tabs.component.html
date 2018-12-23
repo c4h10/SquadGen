@@ -1,7 +1,10 @@
-<mat-tab-group>
-  <mat-tab *ngFor="let tab of tabs">
+<mat-tab-group *ngIf="tabs$ | async">
+  <mat-tab *ngFor="let tab of tabs$ | async">
     <ng-template mat-tab-label>
-      <sg-tab></sg-tab>
+      <sg-tab
+        [iconClass]="tab.data.factionIcon"
+        [label]="tab.data.factionName"
+      ></sg-tab>
     </ng-template>
     <ng-template matTabContent>
       <sg-tab-content [id]="tab.id" [type]="tab.type"></sg-tab-content>
