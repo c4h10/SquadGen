@@ -1,4 +1,5 @@
 import { EndpointConfiguration, HTTP_VERBS } from '../api-client';
+import { environment } from '../../../environments/environment';
 
 
 export enum ALIASES {
@@ -10,6 +11,6 @@ export const API_ENDPOINTS: EndpointConfiguration[] = [
     alias: ALIASES.CONFIGURATION,
     method: HTTP_VERBS.GET,
     path: 'json/configuration.json',
-    prefix: '/assets/'
+    prefix: `${environment.apiBase}/assets/`
   }
 ];

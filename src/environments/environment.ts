@@ -9,6 +9,7 @@ export const environment = {
   imports: [
     StoreDevtoolsModule.instrument({maxAge: 20})
   ],
+  apiBase: '',
   defaultLang: 'en'
 };
 
