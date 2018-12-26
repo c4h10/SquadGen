@@ -2,10 +2,14 @@ import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { ACTION_NAMES } from '../actions/types';
 import { Store } from '@ngrx/store';
-import { map, switchMap, first } from 'rxjs/operators';
+import { map, switchMap, first, mergeMap, mergeAll } from 'rxjs/operators';
 import { SetActiveTabAction } from '../actions/tab-navigation.actions';
 import { State } from '../reducers/types';
 import { getLastCreatedTab } from '../tab-navigation.store';
+import { SquadListContainerCreateAction } from '../../squad-list/actions';
+import { ActionWithPayload } from '../types';
+import { Faction } from '../../global/reducers/types';
+import { CreateTabAction } from '../../../tab-store/global-store-tab-actions';
 
 @Injectable()
 export class TabNavigationEffects {
@@ -13,16 +17,32 @@ export class TabNavigationEffects {
   @Effect()
   createTab$ = this.actions$
     .pipe(
-      ofType(ACTION_NAMES.CREATE_TAB),
-      switchMap(action => this.store.select(getLastCreatedTab)
+      ofType(ACTION_NAMES.CREATE_MATERIAL_TAB),
+
+      mergeMap(action => this.store.select(getLastCreatedTab)
         .pipe(
-          map(data => ({action, data}))
+          map(activeTab => {
+            const createAction = action as ActionWithPayload<Faction>;
+            return ({activeTab, createAction});
+          })
         )
       ),
-      map( ({action, data}) => {
-          return new SetActiveTabAction({activeId: data});
+      map( ({activeTab, createAction}) => {
+          return [
+            new SetActiveTabAction({activeId: activeTab}),
+            new CreateTabAction({id: activeTab, feature: 'squadlist'}),
+            new SquadListContainerCreateAction({
+              tabId: activeTab,
+              config: {
+                // TODO: hyperspace type
+                isHyperspace: false,
+                faction: createAction.payload
+              }
+            })
+          ];
         }
-      )
+      ),
+      mergeAll()
   );
 
   constructor (private actions$: Actions, private store: Store<State>) {}

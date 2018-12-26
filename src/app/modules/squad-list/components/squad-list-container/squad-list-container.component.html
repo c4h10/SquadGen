@@ -1,8 +1,2 @@
-<p>
- squad-list-container works!
-  {{context.type}}
-  {{context.tabId}}
+<h1 *ngIf="config"><mat-icon [ngClass]="config.faction.factionIcon"></mat-icon> <span>{{ config.faction.factionName }}</span></h1>
 
-  ---
-  {{tabId}}
-</p>

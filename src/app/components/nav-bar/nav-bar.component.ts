@@ -40,7 +40,7 @@ export class NavBarComponent implements OnInit, OnDestroy {
           return {
             iconClass: faction.factionIcon,
             label: faction.factionName,
-            actionName: TAB_NAVIGATION_ACTION_NAMES.CREATE_TAB,
+            actionName: TAB_NAVIGATION_ACTION_NAMES.CREATE_MATERIAL_TAB,
             payload: faction
           };
         });

@@ -7,14 +7,14 @@ export const getTabsSelector = (state: State): Tab[] => {
   return null;
 };
 
-export const getActiveTabSelector = (state: State): number => {
+export const getActiveTabSelector = (state: State): number | string => {
   if (state) {
     return state.activeTab;
   }
   return 0;
 };
 
-export const getLastCreatedSelector = (state: State): number => {
+export const getLastCreatedSelector = (state: State): number | string => {
   if (state) {
     return state.lastCreatedTab;
   }

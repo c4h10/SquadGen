@@ -1,11 +1,7 @@
-import { State, ContainerState } from '../store/squad-list.store';
-import {
-  createFeatureSelector,
-  MemoizedSelector,
-  createSelector
-} from '@ngrx/store';
+import { ContainerState, SquadConfig } from '../store/squad-list.store';
 
-
+// TODO: refactor to by like tab-navigation
 export const getTabId = (state: ContainerState): string | number | undefined => state ? state.tabId : undefined;
+export const getSquadConfig = (state: ContainerState): SquadConfig | undefined => state ? state.squadConfig : undefined;
 
 

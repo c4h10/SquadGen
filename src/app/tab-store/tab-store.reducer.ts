@@ -16,7 +16,6 @@ export function tabReducer<T>(
 ): TabState<any> {
     const {type, payload, tabId} = action;
     let reducer: ActionReducer<any, ActionWithPayload<any>>;
-
     if (action.type === GlobalStoreTabActionTypes.KILL_SESSION) {
         return {...defaultTabState};
     }

@@ -6,8 +6,8 @@ export class TabsConfigurationAction implements Action {
   constructor(public payload: TabsConfigurationPayload) {}
 }
 
-export class CreateTabAction implements Action {
-  readonly type = ACTION_NAMES.CREATE_TAB;
+export class CreateMaterialTabAction implements Action {
+  readonly type = ACTION_NAMES.CREATE_MATERIAL_TAB;
   constructor(public payload: CreateTabPayload) {}
 }
 
@@ -19,4 +19,4 @@ export class SetActiveTabAction implements Action {
 export type TabNavigationActions =
   TabsConfigurationAction
   | SetActiveTabAction
-  | CreateTabAction;
+  | CreateMaterialTabAction;

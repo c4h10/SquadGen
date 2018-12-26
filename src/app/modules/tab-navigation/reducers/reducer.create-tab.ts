@@ -1,7 +1,7 @@
 import { State, Tab } from './types';
-import { CreateTabAction } from '../actions/tab-navigation.actions';
+import { CreateMaterialTabAction } from '../actions/tab-navigation.actions';
 
-export function reducer(state: State, action: CreateTabAction): State {
+export function reducer(state: State, action: CreateMaterialTabAction): State {
   // TODO: hardcoded type
   const tabs: Tab[] = [...state.tabs];
   const latestTabId = calculateNewTabId(tabs);

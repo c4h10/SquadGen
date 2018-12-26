@@ -1,11 +1,10 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { StoreManagerService } from '../../services/store-manager.service';
-import { State } from '../../store/squad-list.store';
+import { SquadConfig, State } from '../../store/squad-list.store';
 import { Store } from '@ngrx/store';
 import { TabContext } from '../../../tab-navigation/types';
-import { getTabId } from '../../selectors/squad-list.selectors';
+import { getSquadConfig, getTabId } from '../../selectors/squad-list.selectors';
 import { EMPTY, Observable, Subscription } from 'rxjs';
-import { DummyAction } from '../../actions';
 
 
 @Component({
@@ -14,12 +13,14 @@ import { DummyAction } from '../../actions';
   styleUrls: ['./squad-list-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SquadListContainerComponent implements OnInit {
+export class SquadListContainerComponent implements OnInit, OnDestroy {
 
   @Input() context: TabContext;
   tabId?: string | number;
   tabId$: Observable<string | number> = EMPTY;
 
+  config: SquadConfig;
+  config$: Observable<SquadConfig>;
 
   subscriptions: Subscription = Subscription.EMPTY;
 
@@ -30,19 +31,25 @@ export class SquadListContainerComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.context.tabId);
     this.storeManager.init(this.context.tabId, 'squadlist', this.store);
     this.subscriptions = new Subscription();
 
     this.tabId$ = this.storeManager.select(getTabId);
+    this.config$ = this.storeManager.select(getSquadConfig);
 
     [
       this.tabId$
         .subscribe(tabId => {
           this.tabId = tabId;
-        })
+        }),
+      this.config$
+        .subscribe(config => {
+          this.config = config;
+          })
     ].forEach(s => this.subscriptions.add(s));
+  }
 
-    this.storeManager.dispatch(new DummyAction({tabId: 'tmp'}));
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
   }
 }

@@ -7,7 +7,7 @@ export interface ActionWithPayload<P> extends Action {
 }
 
 export interface TabContainerAction<P> extends ActionWithPayload<P> {
-  tabId: string;
+  tabId: string | number;
 }
 
 
@@ -32,6 +32,6 @@ export interface GetSelectorOptions {
   projector?: AnyFn;
 }
 
-export function withTabId<P>(action: ActionWithPayload<P>, tabId: string): TabContainerAction<P> {
+export function withTabId<P>(action: ActionWithPayload<P>, tabId: string | number): TabContainerAction<P> {
   return {...action, tabId};
 }

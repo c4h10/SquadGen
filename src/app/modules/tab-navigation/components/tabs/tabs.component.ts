@@ -16,8 +16,8 @@ export class TabsComponent implements OnInit, OnDestroy {
 
   @Input() config?: any;
 
-  selectedIndex$: Observable<number>;
-  selectedIndex: number;
+  selectedIndex$: Observable<number | string>;
+  selectedIndex: number | string;
 
   tabs$: Observable<Tab[]>;
   tabs: Tab[] = [];

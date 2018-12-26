@@ -9,7 +9,7 @@ import { pseudoReducer } from '../tab-navigation.pseudo-reducer';
 
 export const REDUCERS: Types.ReducerMap = {
   [ACTION_NAMES.TABS_CONFIGURATION]: tabsConfigurationReducer,
-  [ACTION_NAMES.CREATE_TAB]: createTabReducer,
+  [ACTION_NAMES.CREATE_MATERIAL_TAB]: createTabReducer,
   [ACTION_NAMES.SET_ACTIVE_TAB]: setActiveTabReducer
 };
 

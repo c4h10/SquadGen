@@ -10,6 +10,7 @@ import { API_ENDPOINTS } from './endpoints';
 import { SquadListService } from './services/squad-list.service';
 import { EffectsModule } from '@ngrx/effects';
 import { SquadListEffects } from './effects/squad-list.effects';
+import { CommonMaterialModule } from '../common-material/common-material.module';
 
 export function initEndpoints(apiClient: ApiClientService) {
   return () => apiClient.registerEndpoints(API_ENDPOINTS);
@@ -19,6 +20,7 @@ export function initEndpoints(apiClient: ApiClientService) {
   declarations: [SquadListContainerComponent],
   imports: [
     CommonModule,
+    CommonMaterialModule,
     StoreModule.forFeature(MODULE_NAME, reducer),
     EffectsModule.forFeature([SquadListEffects])
   ],
