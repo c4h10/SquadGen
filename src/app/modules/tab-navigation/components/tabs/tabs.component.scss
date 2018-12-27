@@ -1,0 +1,43 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 290px;
+  ::ng-deep{
+    .mat-drawer-inner-container {
+      overflow: hidden;
+    }
+  }
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar a{
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.tab-navigation-tabs {
+  padding: 20px 50px 50px 20px;
+}
+
+@media (max-width:720px){
+
+}

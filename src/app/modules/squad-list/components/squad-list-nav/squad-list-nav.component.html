@@ -1,0 +1,21 @@
+<div class="main">
+
+    <mat-toolbar color="primary"><mat-icon [ngClass]="faction.factionIcon"></mat-icon> {{ faction.factionName }}</mat-toolbar>
+  <div class="content" *ngIf="faction">
+    <mat-accordion multi="true" displayMode="flat">
+      <mat-expansion-panel *ngFor="let ship of faction.ships" >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon [ngClass]="ship.icon"></mat-icon> {{ ship.name }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul>
+          <li *ngFor="let pilot of faction.pilots | pilotByShipFilter :ship">
+            {{pilot.name}} ({{pilot.points}})
+          </li>
+        </ul>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>
+

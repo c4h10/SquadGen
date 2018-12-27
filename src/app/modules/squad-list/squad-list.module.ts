@@ -11,20 +11,28 @@ import { SquadListService } from './services/squad-list.service';
 import { EffectsModule } from '@ngrx/effects';
 import { SquadListEffects } from './effects/squad-list.effects';
 import { CommonMaterialModule } from '../common-material/common-material.module';
+import { SquadListNavComponent } from './components/squad-list-nav/squad-list-nav.component';
+import { SquadListNavSectionComponent } from './components/squad-list-nav-section/squad-list-nav-section.component';
+import { SquadListNavSectionItemComponent } from './components/squad-list-nav-section-item/squad-list-nav-section-item.component';
+
 
 export function initEndpoints(apiClient: ApiClientService) {
   return () => apiClient.registerEndpoints(API_ENDPOINTS);
 }
 
 @NgModule({
-  declarations: [SquadListContainerComponent],
+  declarations: [
+    SquadListContainerComponent,
+    SquadListNavComponent,
+    SquadListNavSectionComponent,
+    SquadListNavSectionItemComponent],
   imports: [
     CommonModule,
     CommonMaterialModule,
     StoreModule.forFeature(MODULE_NAME, reducer),
     EffectsModule.forFeature([SquadListEffects])
   ],
-  exports: [SquadListContainerComponent],
+  exports: [SquadListContainerComponent, SquadListNavComponent],
 
   providers: [
     StoreManagerService,

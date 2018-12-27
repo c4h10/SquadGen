@@ -1,0 +1,15 @@
+.main{
+  position: sticky;
+  .mat-icon {
+    height: auto;
+    width: auto;
+    padding-right: 0.25em;
+  }
+  .content {
+
+    max-height: calc(100vh - 120px);
+    overflow: auto;
+
+
+  }
+}

@@ -1,13 +1,43 @@
-<mat-tab-group *ngIf="tabs$ | async" [(selectedIndex)]="selectedIndex">
-  <mat-tab *ngFor="let tab of tabs$ | async">
-    <ng-template mat-tab-label>
-      <sg-tab
-        [iconClass]="tab.data.factionIcon"
-        [label]="tab.data.factionName"
-      ></sg-tab>
-    </ng-template>
-    <ng-template matTabContent>
-      <sg-tab-content [id]="tab.id" [type]="tab.type"></sg-tab-content>
-    </ng-template>
-  </mat-tab>
-</mat-tab-group>
+<mat-sidenav-container class="sidenav-container" *ngIf="tabs.length > 0">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="false"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <sg-squad-list-nav
+      [factionId]="activeFactionId"
+    ></sg-squad-list-nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" *ngIf="isHandset$ | async">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Squad list menu">menu</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-tab-group *ngIf="tabs$ | async" [(selectedIndex)]="selectedIndex"
+                   (selectedTabChange)="selectedTabChanged($event)"
+                   class="tab-navigation-tabs">
+      <mat-tab *ngFor="let tab of tabs$ | async">
+        <ng-template mat-tab-label>
+          <sg-tab
+            [iconClass]="tab.factionIcon"
+            [label]="tab.factionName"
+          ></sg-tab>
+        </ng-template>
+        <ng-template matTabContent>
+          <sg-tab-content [id]="tab.id" [type]="tab.type"></sg-tab-content>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+    <ng-content>
+    </ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

@@ -11,6 +11,9 @@ export interface State {
 export interface Tab {
   id: number;
   type?: string;
+  factionIcon?: string;
+  factionId?: string;
+  factionName?: string;
   data?: Properties;
 }
 

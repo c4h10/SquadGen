@@ -6,8 +6,10 @@ import {
   MatIconModule,
   MatInputModule, MatListModule, MatMenuModule, MatSidenavModule,
   MatTabsModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatExpansionModule
 } from '@angular/material';
+import { PilotByShipFilterPipe } from './pilot-by-ship-filter.pipe';
 
 
 const materialModules = [
@@ -19,16 +21,19 @@ const materialModules = [
   MatInputModule,
   MatSidenavModule,
   MatMenuModule,
+  MatExpansionModule,
   MatListModule,
   MatTabsModule
 ];
 
 @NgModule({
+  declarations: [PilotByShipFilterPipe],
   imports: [
     ...materialModules
   ],
   exports: [
-    ...materialModules
+    ...materialModules,
+    PilotByShipFilterPipe
   ]
 })
 export class CommonMaterialModule { }
