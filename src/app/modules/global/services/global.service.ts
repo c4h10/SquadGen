@@ -19,4 +19,17 @@ export class GlobalService {
         })
       );
   }
+
+  getFactionConfiguration(factionId: string): Observable<ApiTypes.FactionConfigurationResponse> {
+
+    const urlParams = {
+      id: factionId
+    };
+    return this.apiClient.getWithUrlParameters(GLOBAL_ALIASES.SHIP_LIST_BY_FACTION, urlParams)
+      .pipe(
+        map((response) => {
+          return response as ApiTypes.FactionConfigurationResponse;
+        })
+      );
+  }
 }
