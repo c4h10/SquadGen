@@ -31,7 +31,7 @@ export class SquadListNavComponent implements OnInit, OnDestroy, OnChanges {
           faction.pilots.sort((a, b) => b.points - a.points);
           return faction;
         });
-        this.factionsConfig = configs;
+        this.factionsConfig = newConfig;
         this.faction = this.factionsConfig.find((faction) => faction.factionId === this.factionId);
       })
     ].forEach(s => this.subscriptions.add(s));
