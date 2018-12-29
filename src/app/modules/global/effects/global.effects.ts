@@ -1,13 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { GlobalService } from '../services/global.service';
-import { ACTION_NAMES } from '../actions/types';
-import { Observable, of as observableOf } from 'rxjs';
+import { ACTION_NAMES, OpenDialogPayload } from '../actions/types';
+import { Observable, of, of as observableOf } from 'rxjs';
 import { Action } from '@ngrx/store';
 import { catchError, map, mergeMap, switchMap } from 'rxjs/operators';
-import { ConfigurationFetchedAction, ErrorAction, FactionFetchAction, FactionFetchedAction } from '../actions/global.actions';
+import {
+  CloseDialogAction,
+  ConfigurationFetchedAction,
+  ErrorAction,
+  FactionFetchAction,
+  FactionFetchedAction,
+  OpenDialogAction, ResultDialogAction
+} from '../actions/global.actions';
 import { EndpointProtocolTypes as ApiTypes } from '../types';
 import { Configuration } from '../reducers/types';
+import { MatDialog } from '@angular/material';
 
 @Injectable()
 export class GlobalEffects {
@@ -56,5 +64,25 @@ export class GlobalEffects {
       )
     );
 
-  constructor (private actions$: Actions, private globalService: GlobalService) {}
+  @Effect()
+  openDialog$ = this.actions$
+    .pipe(
+      ofType(ACTION_NAMES.OPEN_DIALOG),
+      map((action: OpenDialogAction) => {
+        setTimeout(() => this.dialog.open(action.payload.componentOrTemplateRef, action.payload.config));
+        return new ResultDialogAction({});
+      })
+    );
+
+  @Effect()
+  closeDialog$ = this.actions$
+    .pipe(
+      ofType(ACTION_NAMES.CLOSE_DIALOG),
+      map((action: CloseDialogAction) => {
+        this.dialog.closeAll();
+        return new ResultDialogAction({});
+      })
+    );
+
+  constructor (private actions$: Actions, private globalService: GlobalService,  private dialog: MatDialog) {}
 }

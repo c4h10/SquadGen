@@ -14,8 +14,6 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { TabNavigationModule } from './modules/tab-navigation/tab-navigation.module';
 import { CommonMaterialModule } from './modules/common-material/common-material.module';
 import { HttpClientModule } from '@angular/common/http';
-import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
-import { NavMenuItemComponent } from './components/nav-menu-item/nav-menu-item.component';
 import { GlobalModule } from './modules/global/global.module';
 
 
@@ -37,8 +35,6 @@ const sgModules = [
     AppComponent,
     MainViewComponent,
     NavBarComponent,
-    NavMenuComponent,
-    NavMenuItemComponent
   ],
   imports: [
     ...ngModules,

@@ -7,7 +7,7 @@ import {
   MatInputModule, MatListModule, MatMenuModule, MatSidenavModule,
   MatTabsModule,
   MatToolbarModule,
-  MatExpansionModule
+  MatExpansionModule, MatDialogModule
 } from '@angular/material';
 import { PilotByShipFilterPipe } from './pilot-by-ship-filter.pipe';
 
@@ -22,6 +22,7 @@ const materialModules = [
   MatSidenavModule,
   MatMenuModule,
   MatExpansionModule,
+  MatDialogModule,
   MatListModule,
   MatTabsModule
 ];

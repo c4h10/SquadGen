@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { ACTION_NAMES, ConfigurationFetchedPayload, FactionFetchedPayload } from './types';
+import { ACTION_NAMES, ConfigurationFetchedPayload, FactionFetchedPayload, OpenDialogPayload } from './types';
 
 
 export class ConfigurationFetchAction implements Action {
@@ -31,9 +31,28 @@ export class ErrorAction implements Action {
   readonly type = ACTION_NAMES.ERROR;
 }
 
+export class OpenDialogAction implements Action {
+  readonly type = ACTION_NAMES.OPEN_DIALOG;
+  constructor(public payload:  OpenDialogPayload) {
+  }
+}
+
+export class CloseDialogAction implements Action {
+  readonly type = ACTION_NAMES.CLOSE_DIALOG;
+}
+
+export class ResultDialogAction implements Action {
+  readonly type = ACTION_NAMES.RESULT_DIALOG;
+  constructor(public payload:  any) {
+  }
+}
+
 export type GlobalActions =
   ConfigurationFetchAction
   | ConfigurationFetchedAction
   | FactionFetchAction
   | FactionFetchedAction
+  | OpenDialogAction
+  | CloseDialogAction
+  | ResultDialogAction
   | ErrorAction;

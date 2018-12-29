@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { ACTION_NAMES } from '../actions/types';
 import { Store } from '@ngrx/store';
-import { map, switchMap, first, mergeMap, mergeAll } from 'rxjs/operators';
+import { map, mergeMap, mergeAll } from 'rxjs/operators';
 import { SetActiveTabAction } from '../actions/tab-navigation.actions';
 import { State } from '../reducers/types';
 import { getLastCreatedTab } from '../tab-navigation.store';

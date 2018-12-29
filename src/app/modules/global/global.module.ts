@@ -8,6 +8,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { GlobalEffects } from './effects/global.effects';
 import { GlobalService } from './services/global.service';
 import { MODULE_NAME } from './types';
+import { NewSquadCardComponent } from './components/new-squad-card/new-squad-card.component';
+import { CommonMaterialModule } from '../common-material/common-material.module';
 
 
 export function initEndpoints(apiClient: ApiClientService) {
@@ -15,15 +17,21 @@ export function initEndpoints(apiClient: ApiClientService) {
 }
 
 @NgModule({
-  declarations: [],
+  declarations: [NewSquadCardComponent],
+  exports: [NewSquadCardComponent],
   imports: [
     CommonModule,
+    CommonMaterialModule,
     StoreModule.forFeature(MODULE_NAME, fromGlobal.reducer),
     EffectsModule.forFeature([GlobalEffects])
   ],
   providers: [
     GlobalService,
     ApiClientModule.provideEndpoints(initEndpoints)
+  ],
+  entryComponents: [
+    NewSquadCardComponent
   ]
 })
-export class GlobalModule { }
+export class GlobalModule {
+}

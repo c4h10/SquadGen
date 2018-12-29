@@ -4,9 +4,8 @@
       <span class="mat-button-wrapper"><img alt="Legion" class="legion-logo" src="assets/img/legion_white.png"></span>
     </a>
     <div class="flex-spacer"></div>
-    <sg-nav-menu
-      [items]="factionsMenuItem"
-      (action)="actionEvent($event)"
-    ></sg-nav-menu>
+    <button mat-mini-fab color="accent" (click)="newSquadDialog()">
+      <mat-icon>add</mat-icon>
+    </button>
   </nav>
 </div>

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavMenuItemComponent } from './nav-menu-item.component';
+import { NewSquadCardComponent } from './new-squad-card.component';
 
-describe('NavMenuItemComponent', () => {
-  let component: NavMenuItemComponent;
-  let fixture: ComponentFixture<NavMenuItemComponent>;
+describe('NewSquadCardComponent', () => {
+  let component: NewSquadCardComponent;
+  let fixture: ComponentFixture<NewSquadCardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavMenuItemComponent ]
+      declarations: [ NewSquadCardComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavMenuItemComponent);
+    fixture = TestBed.createComponent(NewSquadCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
