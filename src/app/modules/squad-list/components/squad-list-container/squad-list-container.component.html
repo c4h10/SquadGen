@@ -1,2 +1,32 @@
-<h1 *ngIf="config"><mat-icon [ngClass]="config.faction.factionIcon"></mat-icon> <span>{{ config.faction.factionName }}</span></h1>
+<mat-sidenav-container class="sidenav-container" >
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="false"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <sg-squad-list-nav
+      [factionId]="config.faction.factionId"
+    ></sg-squad-list-nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" *ngIf="isHandset$ | async">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Squad list menu">menu</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <h1 *ngIf="config"><mat-icon [ngClass]="config.faction.factionIcon"></mat-icon> <span>{{ config.faction.factionName }}</span></h1>
+    <ng-content>
+    </ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
 

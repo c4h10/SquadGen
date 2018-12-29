@@ -1,0 +1,42 @@
+.sidenav-container {
+  height: 100%;
+  &.mat-drawer-container{
+    background: none;
+  }
+
+  .sidenav {
+    width: 290px;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    .mat-toolbar {
+      background: inherit;
+    }
+
+    ::ng-deep{
+      .mat-drawer-inner-container {
+        overflow: hidden;
+      }
+
+    }
+  }
+}
+
+
+
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar a{
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}

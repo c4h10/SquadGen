@@ -24,17 +24,11 @@ export class TabsComponent implements OnInit, OnDestroy {
   tabs$: Observable<Tab[]>;
   tabs: Tab[] = [];
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
-
   private subscriptions: Subscription = new Subscription();
 
   constructor(
     private store: Store<State>,
-    private changeDetector: ChangeDetectorRef,
-    private breakpointObserver: BreakpointObserver
+    private changeDetector: ChangeDetectorRef
   ) {
   }
 

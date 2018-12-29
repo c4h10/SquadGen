@@ -1,10 +1,12 @@
-import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { StoreManagerService } from '../../services/store-manager.service';
 import { SquadConfig, State } from '../../store/squad-list.store';
 import { Store } from '@ngrx/store';
 import { TabContext } from '../../../tab-navigation/types';
 import { getSquadConfig, getTabId } from '../../selectors/squad-list.selectors';
 import { EMPTY, Observable, Subscription } from 'rxjs';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { map } from 'rxjs/operators';
 
 
 @Component({
@@ -23,10 +25,16 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
   config$: Observable<SquadConfig>;
 
   subscriptions: Subscription = Subscription.EMPTY;
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches)
+    );
 
   constructor(
     private storeManager: StoreManagerService,
-    private store: Store<State>
+    private store: Store<State>,
+    private changeDetector: ChangeDetectorRef,
+    private breakpointObserver: BreakpointObserver
   ) {
   }
 

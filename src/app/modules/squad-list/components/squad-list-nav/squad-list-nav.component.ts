@@ -11,7 +11,7 @@ import { getConfigurationFactions, getFactionConfig } from '../../../global/glob
   styleUrls: ['./squad-list-nav.component.scss'],
 
 })
-export class SquadListNavComponent implements OnInit, OnDestroy, OnChanges {
+export class SquadListNavComponent implements OnInit, OnDestroy {
 
   @Input() factionId: string;
   factionsConfig$: Observable<Faction[]>;
@@ -37,9 +37,6 @@ export class SquadListNavComponent implements OnInit, OnDestroy, OnChanges {
     ].forEach(s => this.subscriptions.add(s));
   }
 
-  ngOnChanges() {
-    this.faction = this.factionsConfig.find((faction) => faction.factionId === this.factionId);
-  }
 
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
