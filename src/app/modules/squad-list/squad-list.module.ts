@@ -14,6 +14,7 @@ import { CommonMaterialModule } from '../common-material/common-material.module'
 import { SquadListNavComponent } from './components/squad-list-nav/squad-list-nav.component';
 import { SquadListNavSectionComponent } from './components/squad-list-nav-section/squad-list-nav-section.component';
 import { SquadListNavSectionItemComponent } from './components/squad-list-nav-section-item/squad-list-nav-section-item.component';
+import { WindowRefService } from '../../services/window-ref.service';
 
 
 export function initEndpoints(apiClient: ApiClientService) {
@@ -38,6 +39,7 @@ export function initEndpoints(apiClient: ApiClientService) {
     StoreManagerService,
     ApiClientService,
     SquadListService,
+    WindowRefService,
     ApiClientModule.provideEndpoints(initEndpoints)
   ]
 })
