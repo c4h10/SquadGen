@@ -1,20 +1,20 @@
-<div class="main">
-    <mat-toolbar color="primary"><mat-icon [ngClass]="faction.factionIcon"></mat-icon> {{ faction.factionName }}</mat-toolbar>
-  <div class="content" *ngIf="faction">
-    <mat-accordion multi="true" displayMode="flat">
-      <mat-expansion-panel *ngFor="let ship of faction.ships" >
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            <mat-icon [ngClass]="ship.icon"></mat-icon> {{ ship.name }}
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <ul>
-          <li *ngFor="let pilot of faction.pilots | pilotByShipFilter :ship">
-            {{pilot.name}} ({{pilot.points}})
-          </li>
-        </ul>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </div>
-</div>
+<div class="sidebar" data-background-color="white" data-color="danger">
+    <div class="sidebar-wrapper">
+      <ul  class="nav" *ngIf="faction">
 
+        <li class="nav-item active">
+          <a class="nav-link">
+            <mat-icon [ngClass]="faction.factionIcon"></mat-icon> {{ faction.factionName }}
+          </a>
+        </li>
+        <li class="nav-item" *ngFor="let ship of faction.ships">
+          <sg-squad-list-nav-section
+            [ship]="ship"
+            [pilots]="faction.pilots | pilotByShipFilter :ship"
+          >
+          </sg-squad-list-nav-section>
+        </li>
+      </ul>
+    </div>
+  <div class="sidebar-background" style="background-image: url(assets/img/sidebar-4.jpg)"></div>
+</div>

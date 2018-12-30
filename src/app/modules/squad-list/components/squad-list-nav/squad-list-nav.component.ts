@@ -1,9 +1,8 @@
-import { Component, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { Faction, State as GlobalState } from '../../../global/reducers/types';
-import { getConfigurationFactions, getFactionConfig } from '../../../global/global.store';
-
+import { getConfigurationFactions } from '../../../global/global.store';
 
 @Component({
   selector: 'sg-squad-list-nav',
@@ -36,7 +35,6 @@ export class SquadListNavComponent implements OnInit, OnDestroy {
       })
     ].forEach(s => this.subscriptions.add(s));
   }
-
 
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe();

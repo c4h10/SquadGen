@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import { TabsConfigurationAction } from '../../actions/tab-navigation.actions';
 import { Observable, Subscription } from 'rxjs';
 import { getActiveTab, getTabs } from '../../tab-navigation.store';
+import PerfectScrollbar from 'perfect-scrollbar';
 
 @Component({
   selector: 'sg-tabs',
@@ -58,6 +59,14 @@ export class TabsComponent implements OnInit, OnDestroy {
 
   selectedTabChanged(event) {
     this.selectTab(event.index);
+  }
+
+  animationDone() {
+    setTimeout(() => {
+      const elemSidebar = <HTMLElement>document.querySelector('.sidebar .sidebar-wrapper');
+      console.log(elemSidebar);
+      const ps = new PerfectScrollbar(elemSidebar);
+    });
   }
 
   selectTab(tabIndex: number): void {

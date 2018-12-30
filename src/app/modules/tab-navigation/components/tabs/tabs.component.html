@@ -1,5 +1,6 @@
 <mat-tab-group *ngIf="tabs$ | async" [(selectedIndex)]="selectedIndex"
                (selectedTabChange)="selectedTabChanged($event)"
+               (animationDone)="animationDone()"
                color="accent"
                class="tab-navigation-tabs">
   <mat-tab *ngFor="let tab of tabs$ | async" class="mat-elevation-z6">

@@ -3,9 +3,9 @@ import { Store } from '@ngrx/store';
 import { Faction, State as GlobalState } from '../../reducers/types';
 import { Observable, Subscription } from 'rxjs';
 import { getConfigurationFactions } from '../../global.store';
-import { MenuItem } from '../../../../components/nav-menu/types';
 import { ACTION_NAMES as TAB_NAVIGATION_ACTION_NAMES } from '../../../tab-navigation/actions/types';
 import { CloseDialogAction } from '../../actions/global.actions';
+import { MenuItem } from './types';
 
 @Component({
   selector: 'sg-new-squad-card',
