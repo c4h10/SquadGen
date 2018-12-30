@@ -5,12 +5,12 @@ import { Faction, State as GlobalState } from '../../../global/reducers/types';
 import { getConfigurationFactions } from '../../../global/global.store';
 
 @Component({
-  selector: 'sg-squad-list-nav',
-  templateUrl: './squad-list-nav.component.html',
-  styleUrls: ['./squad-list-nav.component.scss'],
+  selector: 'sg-squad-list-side-nav',
+  templateUrl: './squad-list-side-nav.component.html',
+  styleUrls: ['./squad-list-side-nav.component.scss'],
 
 })
-export class SquadListNavComponent implements OnInit, OnDestroy {
+export class SquadListSideNavComponent implements OnInit, OnDestroy {
 
   @Input() factionId: string;
   factionsConfig$: Observable<Faction[]>;

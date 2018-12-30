@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SquadListNavComponent } from './squad-list-nav.component';
+import { SquadListNavbarComponent } from './squad-list-navbar.component';
 
-describe('SquadListNavComponent', () => {
-  let component: SquadListNavComponent;
-  let fixture: ComponentFixture<SquadListNavComponent>;
+describe('SquadListNavbarComponent', () => {
+  let component: SquadListNavbarComponent;
+  let fixture: ComponentFixture<SquadListNavbarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SquadListNavComponent ]
+      declarations: [ SquadListNavbarComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SquadListNavComponent);
+    fixture = TestBed.createComponent(SquadListNavbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

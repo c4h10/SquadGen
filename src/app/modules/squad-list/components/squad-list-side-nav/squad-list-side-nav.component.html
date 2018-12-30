@@ -8,11 +8,11 @@
           </a>
         </li>
         <li class="nav-item" *ngFor="let ship of faction.ships">
-          <sg-squad-list-nav-section
+          <sg-squad-list-side-nav-section
             [ship]="ship"
             [pilots]="faction.pilots | pilotByShipFilter :ship"
           >
-          </sg-squad-list-nav-section>
+          </sg-squad-list-side-nav-section>
         </li>
       </ul>
     </div>
