@@ -6,7 +6,6 @@
   text-align: center;
 }
 
-
 .nav-link {
   cursor: pointer;
   &:hover {
@@ -28,6 +27,13 @@
     }
   }
 }
+
+.ship-dial {
+  font-size: 13px;
+  margin: 10px auto;
+  width: 215px;
+}
+
 
 .nav {
   &.pilot-list {

@@ -23,6 +23,7 @@ export class SquadListNavbarToggleComponent implements OnInit, OnDestroy {
   }
 
   sidebarToggle() {
+    const toggleButton = this.toggleButton;
     let $layer;
     if (this.sidebarVisible === false) {
       this.sidebarOpen();
@@ -37,13 +38,13 @@ export class SquadListNavbarToggleComponent implements OnInit, OnDestroy {
         $layer.remove();
       }
       setTimeout(function() {
-        this.toggleButton.classList.remove('toggled');
+        toggleButton.classList.remove('toggled');
       }, 400);
 
       this.mobile_menu_visible = 0;
     } else {
       setTimeout(function() {
-        this.toggleButton.classList.add('toggled');
+        toggleButton.classList.add('toggled');
       }, 430);
 
       $layer = document.createElement('div');
@@ -66,7 +67,7 @@ export class SquadListNavbarToggleComponent implements OnInit, OnDestroy {
         $layer.classList.remove('visible');
         setTimeout(function() {
           $layer.remove();
-          this.toggleButton.classList.remove('toggled');
+          toggleButton.classList.remove('toggled');
         }, 400);
       }.bind(this);
 

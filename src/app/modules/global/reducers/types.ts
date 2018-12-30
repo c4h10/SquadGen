@@ -28,7 +28,7 @@ export interface Ship {
   size: number;
   isHyperspace: boolean;
   actions: ShipAction[];
-  maneuvers?: any[];
+  maneuvers?: number[][];
   ability?: string;
 }
 
