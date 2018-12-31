@@ -1,12 +1,10 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
-import { Faction, State as GlobalState } from '../../modules/global/reducers/types';
+import { State as GlobalState } from '../../modules/global/reducers/types';
 import { Store } from '@ngrx/store';
-import { ConfigurationFetchAction } from '../../modules/global/actions/global.actions';
+import { ConfigurationFetchAction, OpenDialogAction } from '../../modules/global/actions/global.actions';
 import { ACTION_NAMES } from '../../modules/global/actions/types';
-import { ACTION_NAMES as TAB_NAVIGATION_ACTION_NAMES } from '../../modules/tab-navigation/actions/types';
-import { Observable, Subscription } from 'rxjs';
-import { getConfigurationFactions } from '../../modules/global/global.store';
-import { MenuItem } from '../nav-menu/types';
+import { Subscription } from 'rxjs';
+import { NewSquadCardComponent } from '../../modules/global/components/new-squad-card/new-squad-card.component';
 
 @Component({
   selector: 'sg-nav-bar',
@@ -18,9 +16,6 @@ export class NavBarComponent implements OnInit, OnDestroy {
 
   private subscriptions: Subscription = new Subscription();
 
-  factions$: Observable<Faction[]>;
-  factionsMenuItem: MenuItem[];
-
   constructor(private store: Store<GlobalState>) {
   }
 
@@ -29,23 +24,14 @@ export class NavBarComponent implements OnInit, OnDestroy {
       type: ACTION_NAMES.CONFIGURATION_FETCH
     });
 
-    this.factions$ = this.store.select(getConfigurationFactions);
-
-    [
-      this.factions$.subscribe(factions => {
-        if (!factions) {
-          return;
+    this.store.dispatch<OpenDialogAction>(
+      new OpenDialogAction({
+        componentOrTemplateRef: NewSquadCardComponent,
+        config: {
+          width: '500px'
         }
-        this.factionsMenuItem = factions.map((faction): MenuItem => {
-          return {
-            iconClass: faction.factionIcon,
-            label: faction.factionName,
-            actionName: TAB_NAVIGATION_ACTION_NAMES.CREATE_MATERIAL_TAB,
-            payload: faction
-          };
-        });
       })
-    ].forEach(s => this.subscriptions.add(s));
+    );
   }
 
   ngOnDestroy(): void {
@@ -60,4 +46,14 @@ export class NavBarComponent implements OnInit, OnDestroy {
     });
   }
 
+  newSquadDialog() {
+    this.store.dispatch<OpenDialogAction>(
+      new OpenDialogAction({
+        componentOrTemplateRef: NewSquadCardComponent,
+        config: {
+          width: '500px'
+        }
+      })
+    );
+  }
 }

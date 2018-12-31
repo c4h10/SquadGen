@@ -7,8 +7,8 @@ import { State } from '../store/squad-list.store';
 import { StoreManagerService } from '../services/store-manager.service';
 import { SquadListService } from '../services/squad-list.service';
 import { ACTION_NAMES, GlobalDummyAction, SquadListContainerCreateAction, SquadListContainerCreatedAction } from '../actions';
-import { map, mergeMap, switchMap } from 'rxjs/operators';
-import { withTabId } from '../../../tab-store/types';
+import { map, mapTo, mergeMap, switchMap } from 'rxjs/operators';
+import { TabContainerAction, withTabId } from '../../../tab-store/types';
 
 
 @Injectable()

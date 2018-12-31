@@ -7,8 +7,10 @@ export function reducer(state: State, action: CreateMaterialTabAction): State {
   const latestTabId = calculateNewTabId(tabs);
   tabs.push({
     id: latestTabId,
-    type: 'squad-list',
-    data: action.payload
+    type: 'squadlist',
+    factionId: action.payload.factionId,
+    factionName: action.payload.factionName,
+    factionIcon: action.payload.factionIcon
   });
   return {
     ...state,

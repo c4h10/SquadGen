@@ -1,2 +1,9 @@
-<h1 *ngIf="config"><mat-icon [ngClass]="config.faction.factionIcon"></mat-icon> <span>{{ config.faction.factionName }}</span></h1>
+<sg-squad-list-side-nav [factionId]="config.faction.factionId"></sg-squad-list-side-nav>
+<div class="main-panel">
+  <sg-squad-list-navbar></sg-squad-list-navbar>
+  <h1 *ngIf="config"><mat-icon [ngClass]="config.faction.factionIcon"></mat-icon> <span>{{ config.faction.factionName }}</span></h1>
+</div>
+
+
+
 

@@ -1,0 +1,628 @@
+{
+  "ships": [
+    {
+      "id": "tie-fo-fighter",
+      "faction": "firstorder",
+      "name": "TIE/FO Fighter",
+      "icon": "xwing-miniatures-ship xwing-miniatures-ship-tiefofighter",
+      "attack": 2,
+      "agility": 3,
+      "hull": 3,
+      "shields": 1,
+      "size": 1,
+      "isHyperspace": true,
+      "actions": [
+        {
+          "type": "Focus",
+          "difficulty": "white"
+        },
+        {
+          "type": "Evade",
+          "difficulty": "white"
+        },
+        {
+          "type": "Lock",
+          "difficulty": "white"
+        },
+        {
+          "type": "Barrel Roll",
+          "difficulty": "white"
+        }
+      ],
+      "maneuvers": []
+    },
+    {
+      "id": "tie-vn-silencer",
+      "faction": "firstorder",
+      "name": "TIE/VN Silencer",
+      "icon": "xwing-miniatures-ship xwing-miniatures-ship-tiesilencer",
+      "attack": 3,
+      "agility": 3,
+      "hull": 4,
+      "shields": 2,
+      "size": 1,
+      "isHyperspace": true,
+      "actions": [
+        {
+          "type": "Focus",
+          "difficulty": "white"
+        },
+        {
+          "type": "Boost",
+          "difficulty": "white"
+        },
+        {
+          "type": "Lock",
+          "difficulty": "white"
+        },
+        {
+          "type": "Barrel Roll",
+          "difficulty": "white"
+        }
+      ],
+      "maneuvers": []
+    },
+    {
+      "id": "tie-sf-fighter",
+      "faction": "firstorder",
+      "name": "TIE/SF Fighter",
+      "icon": "xwing-miniatures-ship xwing-miniatures-ship-tiesffighter",
+      "attack": 2,
+      "agility": 2,
+      "hull": 3,
+      "shields": 3,
+      "size": 1,
+      "isHyperspace": true,
+      "actions": [
+        {
+          "type": "Focus",
+          "difficulty": "white",
+          "linked": {
+            "type": "Rotate Arc",
+            "difficulty": "white"
+          }
+        },
+        {
+          "type": "Evade",
+          "difficulty": "white",
+          "linked": {
+            "type": "Rotate Arc",
+            "difficulty": "white"
+          }
+        },
+        {
+          "type": "Lock",
+          "difficulty": "white",
+          "linked": {
+            "type": "Rotate Arc",
+            "difficulty": "white"
+          }
+        },
+        {
+          "type": "Barrel Roll",
+          "difficulty": "white",
+          "linked": {
+            "type": "Rotate Arc",
+            "difficulty": "white"
+          }
+        }
+      ],
+      "maneuvers": []
+    },
+    {
+      "id": "upsilon-class-shuttle",
+      "faction": "firstorder",
+      "name": "Upsilon-Class Shuttle",
+      "icon": "xwing-miniatures-ship xwing-miniatures-ship-upsilonclassshuttle",
+      "attack": 4,
+      "agility": 1,
+      "hull": 6,
+      "shields": 6,
+      "size": 3,
+      "isHyperspace": true,
+      "actions": [
+        {
+          "type": "Focus",
+          "difficulty": "white"
+        },
+        {
+          "type": "Lock",
+          "difficulty": "white"
+        },
+        {
+          "type": "Reinforce",
+          "difficulty": "white"
+        },
+        {
+          "type": "Coordinate",
+          "difficulty": "white"
+        },
+        {
+          "type": "Jam",
+          "difficulty": "white"
+        }
+      ],
+      "maneuvers": []
+    }
+  ],
+
+  "pilots": [
+    {
+      "name": "\"Midnight\"",
+      "id": "fo-midnight",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "tie-fo-fighter",
+      "skill": 6,
+      "points": 44,
+      "charge": 1,
+      "slots": [
+        "Talent",
+        "Tech",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "\"Longshot\"",
+      "id": "fo-longshot",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "tie-fo-fighter",
+      "skill": 3,
+      "points": 33,
+      "slots": [
+        "Talent",
+        "Tech",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "\"Muse\"",
+      "id": "fo-muse",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "tie-fo-fighter",
+      "skill": 2,
+      "points": 32,
+      "slots": [
+        "Talent",
+        "Tech",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "TN-3465",
+      "id": "fo-tn-3465",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "tie-fo-fighter",
+      "skill": 2,
+      "points": 31,
+      "slots": [
+        "Tech",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "\"Scorch\"",
+      "id": "fo-scorch",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "tie-fo-fighter",
+      "skill": 4,
+      "points": 35,
+      "slots": [
+        "Talent",
+        "Tech",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "\"Static\"",
+      "id": "fo-static",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "tie-fo-fighter",
+      "skill": 4,
+      "points": 35,
+      "slots": [
+        "Talent",
+        "Tech",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "Lieutenant Rivas",
+      "id": "fo-lieutenant-rivas",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "tie-fo-fighter",
+      "skill": 1,
+      "points": 30,
+      "slots": [
+        "Tech",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "Commander Malarus",
+      "id": "fo-commander-malarus",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "tie-fo-fighter",
+      "skill": 5,
+      "points": 41,
+      "charge": 2,
+      "slots": [
+        "Talent",
+        "Tech",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "Omega Squadron Ace",
+      "id": "fo-omega-squadron-ace",
+      "unique": false,
+      "faction": "firstorder",
+      "ship": "tie-fo-fighter",
+      "skill": 3,
+      "points": 31,
+      "slots": [
+        "Talent",
+        "Tech",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "Zeta Squadron Pilot",
+      "id": "fo-omega-squadron-ace",
+      "unique": false,
+      "faction": "firstorder",
+      "ship": "tie-fo-fighter",
+      "skill": 2,
+      "points": 29,
+      "slots": [
+        "Tech",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "Epsilon Squadron Cadet",
+      "id": "fo-epsilon-squadron-cadet",
+      "unique": false,
+      "faction": "firstorder",
+      "ship": "tie-fo-fighter",
+      "skill": 1,
+      "points": 28,
+      "slots": [
+        "Tech",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "\"Null\"",
+      "id": "fo-null",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "tie-fo-fighter",
+      "skill": 0,
+      "points": 31,
+      "slots": [
+        "Talent",
+        "Tech",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "Kylo Ren",
+      "id": "fo-kylo-ren",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "tie-vn-silencer",
+      "skill": 5,
+      "force": 2,
+      "points": 82,
+      "slots": [
+        "Force",
+        "Tech",
+        "Torpedo",
+        "Missile",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "\"Blackout\"",
+      "id": "fo-Blackout",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "tie-vn-silencer",
+      "skill": 5,
+      "points": 70,
+      "slots": [
+        "Talent",
+        "Tech",
+        "Torpedo",
+        "Missile",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "\"Avenger\"",
+      "id": "fo-avenger",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "tie-vn-silencer",
+      "skill": 3,
+      "points": 62,
+      "slots": [
+        "Talent",
+        "Tech",
+        "Torpedo",
+        "Missile",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "\"Recoil\"",
+      "id": "fo-recoil",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "tie-vn-silencer",
+      "skill": 4,
+      "points": 63,
+      "slots": [
+        "Talent",
+        "Tech",
+        "Torpedo",
+        "Missile",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "Sienar-Jaemus Engineer",
+      "id": "fo-sienar-jaemus-engineer",
+      "unique": false,
+      "faction": "firstorder",
+      "ship": "tie-vn-silencer",
+      "skill": 1,
+      "points": 56,
+      "slots": [
+        "Tech",
+        "Torpedo",
+        "Missile",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "First Order Test Pilot",
+      "id": "fo-first-order-test-pilot",
+      "unique": false,
+      "faction": "firstorder",
+      "ship": "tie-vn-silencer",
+      "skill": 4,
+      "points": 62,
+      "slots": [
+        "Talent",
+        "Tech",
+        "Torpedo",
+        "Missile",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "Lieutenant Dormitz",
+      "id": "fo-lieutenant-dormitz",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "upsilon-class-shuttle",
+      "skill": 2,
+      "points": 60,
+      "slots": [
+        "Tech",
+        "Tech",
+        "Crew",
+        "Crew",
+        "Crew",
+        "Cannon",
+        "Sensor",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "Major Stridan",
+      "id": "fo-major-stridan",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "upsilon-class-shuttle",
+      "skill": 4,
+      "points": 63,
+      "slots": [
+        "Tech",
+        "Tech",
+        "Crew",
+        "Crew",
+        "Crew",
+        "Cannon",
+        "Sensor",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "Petty Officer Thanisson",
+      "id": "fo-petty-officer-thanisson",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "upsilon-class-shuttle",
+      "skill": 1,
+      "points": 60,
+      "charge": 1,
+      "slots": [
+        "Tech",
+        "Tech",
+        "Crew",
+        "Crew",
+        "Crew",
+        "Cannon",
+        "Sensor",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "Captain Cardinal",
+      "id": "fo-captain-cardinal",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "upsilon-class-shuttle",
+      "skill": 4,
+      "points": 64,
+      "charge": 2,
+      "slots": [
+        "Tech",
+        "Tech",
+        "Crew",
+        "Crew",
+        "Crew",
+        "Cannon",
+        "Sensor",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "Starkiller Base Pilot",
+      "id": "fo-starkiller-base-pilot",
+      "unique": false,
+      "faction": "firstorder",
+      "ship": "upsilon-class-shuttle",
+      "skill": 2,
+      "points": 56,
+      "slots": [
+        "Tech",
+        "Tech",
+        "Crew",
+        "Crew",
+        "Crew",
+        "Cannon",
+        "Sensor",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "Lieutenant Tavson",
+      "id": "fo-lieutenant-tavson",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "upsilon-class-shuttle",
+      "skill": 3,
+      "points": 62,
+      "charge": 2,
+      "recurring": true,
+      "slots": [
+        "Tech",
+        "Tech",
+        "Crew",
+        "Crew",
+        "Crew",
+        "Cannon",
+        "Sensor",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "\"Quickdraw\"",
+      "id": "fo-quickdraw",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "tie-sf-fighter",
+      "skill": 6,
+      "points": 45,
+      "charge": 1,
+      "recurring": true,
+      "slots": [
+        "Talent",
+        "Tech",
+        "Missile",
+        "Gunner",
+        "Sensor",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "\"Backdraft\"",
+      "id": "fo-backdraft",
+      "unique": true,
+      "faction": "firstorder",
+      "ship": "tie-sf-fighter",
+      "skill": 4,
+      "points": 41,
+      "slots": [
+        "Talent",
+        "Tech",
+        "Missile",
+        "Gunner",
+        "Sensor",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "Zeta Squadron Survivor",
+      "id": "fo-zeta-squadron-survivor",
+      "unique": false,
+      "faction": "firstorder",
+      "ship": "tie-sf-fighter",
+      "skill": 2,
+      "points": 34,
+      "slots": [
+        "Tech",
+        "Missile",
+        "Gunner",
+        "Sensor",
+        "Modification"
+      ],
+      "isHyperspace": true
+    },
+    {
+      "name": "Omega Squadron Expert",
+      "id": "fo-omega-squadron-expert",
+      "unique": false,
+      "faction": "firstorder",
+      "ship": "tie-sf-fighter",
+      "skill": 3,
+      "points": 36,
+      "slots": [
+        "Talent",
+        "Tech",
+        "Missile",
+        "Gunner",
+        "Sensor",
+        "Modification"
+      ],
+      "isHyperspace": true
+    }
+  ]
+}

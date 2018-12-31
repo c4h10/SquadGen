@@ -26,7 +26,7 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
 
   constructor(
     private storeManager: StoreManagerService,
-    private store: Store<State>
+    private store: Store<State>,
   ) {
   }
 

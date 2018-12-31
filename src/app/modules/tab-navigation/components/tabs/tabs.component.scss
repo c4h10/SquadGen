@@ -1,0 +1,15 @@
+@import '~@angular/material/theming';
+
+.tab-navigation-tabs{
+  height: 100%;
+  ::ng-deep {
+    .mat-tab-body-wrapper {
+      height: 100%;
+    }
+
+
+    .mat-tab-header {
+      @include mat-elevation(6);
+    }
+  }
+}

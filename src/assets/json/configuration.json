@@ -2,17 +2,17 @@
   "factions": [
     {
       "factionId": "empire",
-      "factionName": "Galactic Empire",
+      "factionName": "Empire",
       "factionIcon": "xwing-miniatures-font xwing-miniatures-font-empire"
     },
     {
       "factionId": "rebel",
-      "factionName": "Rebel Alliance",
+      "factionName": "Rebel",
       "factionIcon": "xwing-miniatures-font xwing-miniatures-font-rebel"
     },
     {
       "factionId": "scum",
-      "factionName": "Scum and Villainy",
+      "factionName": "Scum",
       "factionIcon": "xwing-miniatures-font xwing-miniatures-font-scum"
     },
     {

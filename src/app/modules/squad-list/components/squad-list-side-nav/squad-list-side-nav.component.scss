@@ -1,0 +1,26 @@
+.sidebar {
+  top: 105px;
+  user-select: none;
+  .nav {
+    margin-bottom: 20px;
+  }
+  li {
+    .mat-icon {
+      font-size: 20px;
+      float: left;
+      margin-right: 15px;
+      width: 30px;
+      text-align: center;
+      color: #a9afbb;
+    }
+
+    &.active {
+      a {
+        color: #fff;
+        .mat-icon {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

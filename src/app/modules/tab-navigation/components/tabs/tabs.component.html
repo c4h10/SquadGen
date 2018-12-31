@@ -1,9 +1,13 @@
-<mat-tab-group *ngIf="tabs$ | async" [(selectedIndex)]="selectedIndex">
-  <mat-tab *ngFor="let tab of tabs$ | async">
+<mat-tab-group *ngIf="tabs$ | async" [(selectedIndex)]="selectedIndex"
+               (selectedTabChange)="selectedTabChanged($event)"
+               (animationDone)="animationDone()"
+               color="accent"
+               class="tab-navigation-tabs">
+  <mat-tab *ngFor="let tab of tabs$ | async" class="mat-elevation-z6">
     <ng-template mat-tab-label>
       <sg-tab
-        [iconClass]="tab.data.factionIcon"
-        [label]="tab.data.factionName"
+        [iconClass]="tab.factionIcon"
+        [label]="tab.factionName"
       ></sg-tab>
     </ng-template>
     <ng-template matTabContent>

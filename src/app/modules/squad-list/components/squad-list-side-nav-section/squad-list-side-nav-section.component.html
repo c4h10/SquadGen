@@ -1,0 +1,15 @@
+<a class="nav-link expand-button" [ngClass]="{'collapsed': collapsed, 'expanded' : !collapsed}" data-toggle="collapse" (click)="toggleExpand($event)">
+  <mat-icon [ngClass]="ship.icon"></mat-icon> <p>{{ ship.name }}<b class="caret"></b></p>
+</a>
+<div class="ship-dial">
+<sg-maneuvers [ship]="ship"></sg-maneuvers>
+</div>
+<div class="collapse" [ngClass]="{'show': !collapsed}">
+  <ul class="nav pilot-list">
+    <li class="nav-item" *ngFor="let pilot of pilots">
+      <a class="nav-link" (click)="addToSquad(pilot)">
+        <mat-icon>add_box</mat-icon><p class="sidebar-normal">{{pilot.name}} ({{pilot.points}})</p>
+      </a>
+    </li>
+  </ul>
+</div>

@@ -14,4 +14,10 @@ export namespace EndpointProtocolTypes {
     status?: number;
     headers?: HttpHeaders;
   }
+
+  export interface FactionConfigurationResponse {
+    body?: any;
+    status?: number;
+    headers?: HttpHeaders;
+  }
 }
