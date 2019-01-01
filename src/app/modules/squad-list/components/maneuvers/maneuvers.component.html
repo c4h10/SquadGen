@@ -1,6 +1,6 @@
 <table class="maneuver-dial">
   <tr *ngFor="let row of dialMap; let i = index">
-    <td class="speed"><i>{{5 - i}}</i></td>
+    <td class="speed"><i>{{dialMap.length - i + shift}}</i></td>
     <td *ngFor="let cell of row"><i class="{{cell}}"></i></td>
   </tr>
 </table>

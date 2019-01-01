@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Ship } from '../../../global/reducers/types';
-import { forEach } from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'sg-maneuvers',
@@ -11,16 +10,8 @@ export class ManeuversComponent implements OnInit {
 
   @Input() ship: Ship;
 
+  shift: number;
   dialMap: string[][];
-  /**
-
-   [ 0, 0, 3, 0, 0, 0, 0, 0, 0, 0],
-   [ 3, 1, 2, 1, 3, 0, 0, 0, 0, 0],
-   [ 1, 2, 2, 2, 1, 0, 0, 0, 0, 0],
-   [ 3, 1, 1, 1, 3, 0, 0, 0, 0, 0],
-   [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-   [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-   */
 
   private shipToDialMap: number[] = [2, 3, 4, 5, 6, 9, 1, 7, 0, 8, 10, 11, 12];
 
@@ -28,8 +19,7 @@ export class ManeuversComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    this.transposeArray(this.ship.maneuvers);
+    this.shift = 0;
 
     this.dialMap = this.removeEmptyColumn(
       this.ship.maneuvers.map((row, rowIndex) => {
@@ -38,6 +28,10 @@ export class ManeuversComponent implements OnInit {
         row.forEach((column, colInd) => {
           tabRow[this.shipToDialMap[colInd]] = this.getManeuverIcon(colInd, rowIndex, column);
         });
+        // EXCEPTION FOR 0
+        if (rowIndex === 0) {
+          this.shift = this.isEmptyRow(tabRow) ? 0 : -1;
+        }
         return tabRow;
       }).filter((el) => !this.isEmptyRow(el)).reverse()
     );

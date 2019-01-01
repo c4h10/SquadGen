@@ -28,13 +28,6 @@
   }
 }
 
-.ship-dial {
-  font-size: 13px;
-  margin: 10px auto;
-  width: 215px;
-}
-
-
 .nav {
   &.pilot-list {
     margin-top: 0;
@@ -60,6 +53,34 @@
         }
       }
     }
-
   }
+}
+
+.tooltip-wrapper {
+  padding: 5px 10px 10px 10px;
+  border-radius: 3px;
+
+  background: rgba(97, 97, 97, .9);
+
+  .dial-title {
+    color: #fff;
+    font-size: 12px;
+    i {
+      font-size: 11px;
+    }
+  }
+  .ship-dial {
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .dial-desc {
+    width: 100%;
+    ::ng-deep {
+      .maneuver-dial {
+        margin: 0 auto;
+      }
+    }
+  }
+
 }

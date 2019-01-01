@@ -82,6 +82,7 @@
       "name": "TIE/SF Fighter",
       "icon": "xwing-miniatures-ship xwing-miniatures-ship-tiesffighter",
       "attack": 2,
+      "attackt": 2,
       "agility": 2,
       "hull": 3,
       "shields": 3,
@@ -184,6 +185,7 @@
       "skill": 6,
       "points": 44,
       "charge": 1,
+      "ability": "While you defend or perform an attack, if you have a lock on the enemy ship, that ship's dice cannot be modified.",
       "slots": [
         "Talent",
         "Tech",
@@ -199,6 +201,7 @@
       "ship": "tie-fo-fighter",
       "skill": 3,
       "points": 33,
+      "ability": "While you perform a primary attack at attack range 3, roll 1 additional attack die.",
       "slots": [
         "Talent",
         "Tech",
@@ -214,6 +217,7 @@
       "ship": "tie-fo-fighter",
       "skill": 2,
       "points": 32,
+      "ability": "At the start of the Engagement Phase, you may choose a friendly ship at range 0-1. If you do, that ship removes 1 stress token.",
       "slots": [
         "Talent",
         "Tech",
@@ -229,6 +233,7 @@
       "ship": "tie-fo-fighter",
       "skill": 2,
       "points": 31,
+      "ability": "While another friendly ship performs an attack, if you are at range 0-1 of the defender, you may suffer 1 %CRIT% damage to change 1 of the attacker's results to a %CRIT% result.",
       "slots": [
         "Tech",
         "Modification"
@@ -243,6 +248,7 @@
       "ship": "tie-fo-fighter",
       "skill": 4,
       "points": 35,
+      "ability": "While you perform a primary attack, if you are not stressed, you may gain 1 stress token to roll 1 additional attack die.",
       "slots": [
         "Talent",
         "Tech",
@@ -258,6 +264,7 @@
       "ship": "tie-fo-fighter",
       "skill": 4,
       "points": 35,
+      "ability": "While you perform a primary attack, you may spend your lock on the defender and a focus token to change all of your results to %CRIT% results.",
       "slots": [
         "Talent",
         "Tech",
@@ -273,6 +280,7 @@
       "ship": "tie-fo-fighter",
       "skill": 1,
       "points": 30,
+      "ability": "After a ship at range 1-2 gains a red or orange token, if you do not have that ship locked, you may acquire a lock on that ship.",
       "slots": [
         "Tech",
         "Modification"
@@ -288,6 +296,7 @@
       "skill": 5,
       "points": 41,
       "charge": 2,
+      "ability": "At the start of the Engagement Phase, you may spend 1 %CHARGE% and gain 1 stress token. If you do, until the end of the round, while you defend or perform an attack, you may change all of your %FOCUS% results to %EVADE% or %HIT% results.",
       "slots": [
         "Talent",
         "Tech",
@@ -346,6 +355,7 @@
       "ship": "tie-fo-fighter",
       "skill": 0,
       "points": 31,
+      "ability": "While you are not damaged, treat your initiative value as 7.",
       "slots": [
         "Talent",
         "Tech",
@@ -362,6 +372,7 @@
       "skill": 5,
       "force": 2,
       "points": 82,
+      "ability": "After you defend, you may spend 1 %FORCE% to assign the I'll Show You the Dark Side condition to the attacker. %LINEBREAK% AUTOTHRUSTERS: After you perform an action. you may perform a red %BARRELROLL% or a red %BOOST% action.",
       "slots": [
         "Force",
         "Tech",
@@ -379,6 +390,7 @@
       "ship": "tie-vn-silencer",
       "skill": 5,
       "points": 70,
+      "ability": "While you perform an attack, if the attack is obstructed by an obstacle, the defender rolls 2 fewer defense dice. %LINEBREAK% AUTOTHRUSTERS: After you perform an action. you may perform a red %BARRELROLL% or a red %BOOST% action.",
       "slots": [
         "Talent",
         "Tech",
@@ -396,6 +408,7 @@
       "ship": "tie-vn-silencer",
       "skill": 3,
       "points": 62,
+      "ability": "After another friendly ship is destroyed, you may perform an action, even while stressed. %LINEBREAK% AUTOTHRUSTERS: After you perform an action. you may perform a red %BARRELROLL% or a red %BOOST% action.",
       "slots": [
         "Talent",
         "Tech",
@@ -413,6 +426,7 @@
       "ship": "tie-vn-silencer",
       "skill": 4,
       "points": 63,
+      "ability": "While you are stressed, you may treat enemy ships in your %FRONTARC% at range 0-1 as being in your %BULLSEYEARC%. %LINEBREAK% AUTOTHRUSTERS: After you perform an action. you may perform a red %BARRELROLL% or a red %BOOST% action.",
       "slots": [
         "Talent",
         "Tech",
@@ -430,6 +444,7 @@
       "ship": "tie-vn-silencer",
       "skill": 1,
       "points": 56,
+      "ability": "AUTOTHRUSTERS: After you perform an action. you may perform a red %BARRELROLL% or a red %BOOST% action.",
       "slots": [
         "Tech",
         "Torpedo",
@@ -446,6 +461,7 @@
       "ship": "tie-vn-silencer",
       "skill": 4,
       "points": 62,
+      "ability": "AUTOTHRUSTERS: After you perform an action. you may perform a red %BARRELROLL% or a red %BOOST% action.",
       "slots": [
         "Talent",
         "Tech",
@@ -463,6 +479,7 @@
       "ship": "upsilon-class-shuttle",
       "skill": 2,
       "points": 60,
+      "ability": "SETUP: After you are placed, other friendly ships can be placed anywhere in the play area at range 0-2 of you.  %LINEBREAK% LINKED BATTERY: While you perform a %CANNON% attack, roll 1 addtional die.",
       "slots": [
         "Tech",
         "Tech",
@@ -483,6 +500,7 @@
       "ship": "upsilon-class-shuttle",
       "skill": 4,
       "points": 63,
+      "ability": "While you coordinate or resolve the effect of one of your upgrades, you may treat friendly ships at range 2-3 as being at range 0 or range 1. %LINEBREAK% LINKED BATTERY: While you perform a %CANNON% attack, roll 1 addtional die.",
       "slots": [
         "Tech",
         "Tech",
@@ -504,6 +522,7 @@
       "skill": 1,
       "points": 60,
       "charge": 1,
+      "ability": "During the Activation or Engagement Phase, after a ship in your %FRONTARC% at range 0-2 gains 1 stress token, you may spend 1 %CHARGE%. If you do, that ship gains 1 tractor token. %LINEBREAK% LINKED BATTERY: While you perform a %CANNON% attack, roll 1 addtional die.",
       "slots": [
         "Tech",
         "Tech",
@@ -525,6 +544,7 @@
       "skill": 4,
       "points": 64,
       "charge": 2,
+      "ability": "While a friendly ship at range 1-2 with lower initiative than you defends or performs an attack, if you have at least 1 %CHARGE%, that ship may reroll 1 %FOCUS% result. After an enemy ship at range 0-3 is destroyed, lose 1 %CHARGE%. %LINEBREAK% LINKED BATTERY: While you perform a %CANNON% attack, roll 1 addtional die.",
       "slots": [
         "Tech",
         "Tech",
@@ -545,6 +565,7 @@
       "ship": "upsilon-class-shuttle",
       "skill": 2,
       "points": 56,
+      "ability": "LINKED BATTERY: While you perform a %CANNON% attack, roll 1 addtional die.",
       "slots": [
         "Tech",
         "Tech",
@@ -566,6 +587,7 @@
       "skill": 3,
       "points": 62,
       "charge": 2,
+      "ability": "After you suffer damage, you may spend 1 %CHARGE% to perform an action. %LINEBREAK% LINKED BATTERY: While you perform a %CANNON% attack, roll 1 addtional die.",
       "recurring": true,
       "slots": [
         "Tech",
@@ -588,6 +610,7 @@
       "skill": 6,
       "points": 45,
       "charge": 1,
+      "ability": "After you lose a shield, you may spend 1 %CHARGE%. If you do, you may perform a bonus primary attack. %LINEBREAK% HEAVY WEAPON TURRET: You can rotate your %SINGLETURRETARC% indicator only to your %FRONTARC% or %REARARC%. You must treat the %FRONTARC% requirement of your equipped %MISSILE% upgrades as %SINGLETURRETARC%.",
       "recurring": true,
       "slots": [
         "Talent",
@@ -607,6 +630,7 @@
       "ship": "tie-sf-fighter",
       "skill": 4,
       "points": 41,
+      "ability": "While you perform a %SINGLETURRETARC% primary attack, if the defender is in your %REARARC% roll 1 additional dice. %LINEBREAK% HEAVY WEAPON TURRET: You can rotate your %SINGLETURRETARC% indicator only to your %FRONTARC% or %REARARC%. You must treat the %FRONTARC% requirement of your equipped %MISSILE% upgrades as %SINGLETURRETARC%.",
       "slots": [
         "Talent",
         "Tech",
@@ -625,6 +649,7 @@
       "ship": "tie-sf-fighter",
       "skill": 2,
       "points": 34,
+      "ability": "HEAVY WEAPON TURRET: You can rotate your %SINGLETURRETARC% indicator only to your %FRONTARC% or %REARARC%. You must treat the %FRONTARC% requirement of your equipped %MISSILE% upgrades as %SINGLETURRETARC%.",
       "slots": [
         "Tech",
         "Missile",
@@ -642,6 +667,7 @@
       "ship": "tie-sf-fighter",
       "skill": 3,
       "points": 36,
+      "ability": "HEAVY WEAPON TURRET: You can rotate your %SINGLETURRETARC% indicator only to your %FRONTARC% or %REARARC%. You must treat the %FRONTARC% requirement of your equipped %MISSILE% upgrades as %SINGLETURRETARC%.",
       "slots": [
         "Talent",
         "Tech",

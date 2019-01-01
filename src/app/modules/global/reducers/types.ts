@@ -22,6 +22,9 @@ export interface Ship {
   name: string;
   icon: string;
   attack: number;
+  attackb?: number;
+  attackt?: number;
+  attackdt?: number;
   agility: number;
   hull: number;
   shields: number;

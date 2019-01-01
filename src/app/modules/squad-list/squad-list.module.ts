@@ -17,7 +17,8 @@ import { WindowRefService } from '../../services/window-ref.service';
 import { SquadListNavbarComponent } from './components/squad-list-navbar/squad-list-navbar.component';
 import { SquadListNavbarToggleComponent } from './components/squad-list-navbar-toggle/squad-list-navbar-toggle.component';
 import { ManeuversComponent } from './components/maneuvers/maneuvers.component';
-
+import { SatPopoverModule } from '@ncstate/sat-popover';
+import { GlobalModule } from '../global/global.module';
 
 export function initEndpoints(apiClient: ApiClientService) {
   return () => apiClient.registerEndpoints(API_ENDPOINTS);
@@ -33,6 +34,8 @@ export function initEndpoints(apiClient: ApiClientService) {
     ManeuversComponent],
   imports: [
     CommonModule,
+    SatPopoverModule,
+    GlobalModule,
     CommonMaterialModule,
     StoreModule.forFeature(MODULE_NAME, reducer),
     EffectsModule.forFeature([SquadListEffects])
