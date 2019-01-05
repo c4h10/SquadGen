@@ -1,0 +1,7 @@
+<div class="actions-line">
+  <span class="action action-line" *ngFor="let shipAction of actions">
+    <i class="{{ shipAction.icon }} {{ shipAction.difficulty }}"></i>
+    <i class="xwing-miniatures-font xwing-miniatures-font-linked" *ngIf="shipAction.linked"></i>
+    <i class="{{ shipAction.linked.icon }} {{ shipAction.linked.difficulty }}" *ngIf="shipAction.linked"></i>
+  </span>
+</div>

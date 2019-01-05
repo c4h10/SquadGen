@@ -1,0 +1,18 @@
+.actions-line {
+  font-size: 18px;
+  text-align: right;
+  .action {
+    padding-left: 8px;
+    i {
+      color: #000;
+      font-size: 1em;
+      padding-right: 3px;
+      &.white {
+
+      }
+      &.red {
+        color: #ff0000;
+      }
+    }
+  }
+}

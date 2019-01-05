@@ -1,0 +1,13 @@
+<div class="stats-line">
+  <span class="stat stat-skill" *ngIf="pilot.skill">{{ pilot.skill }}</span>
+  <span class="stat stat-attack" *ngIf="pilot.ship.attack"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-frontarc"></i>{{ pilot.ship.attack }}</span>
+  <span class="stat stat-bullseyearc" *ngIf="pilot.ship.attackbull"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-bullseyearc"></i>{{ pilot.ship.attackbull }}</span>
+  <span class="stat stat-attackb" *ngIf="pilot.ship.attackb"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-reararc"></i>{{ pilot.ship.attackb }}</span>
+  <span class="stat stat-attackt" *ngIf="pilot.ship.attackt"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-singleturretarc"></i>{{ pilot.ship.attackt }}</span>
+  <span class="stat stat-attackdt" *ngIf="pilot.ship.attackdt"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-doubleturretarc"></i>{{ pilot.ship.attackdt }}</span>
+  <span class="stat stat-agility" *ngIf="pilot.ship.agility"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-agility"></i>{{ pilot.ship.agility }}</span>
+  <span class="stat stat-hull" *ngIf="pilot.ship.hull"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-hull"></i>{{ pilot.ship.hull }}</span>
+  <span class="stat stat-shields" *ngIf="pilot.ship.shields"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-shield"></i>{{ pilot.ship.shields }}</span>
+  <span class="stat stat-force" *ngIf="pilot.force"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-forcecharge"></i>{{ pilot.force }}<i class="xwing-miniatures-font xwing-miniatures-font-recurring"></i></span>
+  <span class="stat stat-charge" *ngIf="pilot.charge"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-charge"></i>{{ pilot.charge }}<i class="xwing-miniatures-font xwing-miniatures-font-recurring" *ngIf="pilot.recurring"></i></span>
+</div>
