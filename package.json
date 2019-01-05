@@ -28,6 +28,7 @@
     "@ngrx/router-store": "^6.1.2",
     "@ngrx/store": "^6.1.2",
     "@ngrx/store-devtools": "^6.1.2",
+    "angular-6-social-login": "^1.1.1",
     "bootstrap": "4.1.0",
     "bootstrap-material-design": "4.1.1",
     "bootstrap-notify": "3.1.3",

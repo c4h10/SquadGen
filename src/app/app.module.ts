@@ -17,6 +17,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { GlobalModule } from './modules/global/global.module';
 import { XwingTranslationService } from './services/xwing-translation.service';
 
+import { AuthService, AuthServiceConfig, FacebookLoginProvider, } from 'angular-6-social-login';
+import { SigninComponent } from './components/signin/signin.component';
+
+// Configs
+export function getAuthServiceConfigs() {
+  const config = new AuthServiceConfig(
+    [
+      {
+        id: FacebookLoginProvider.PROVIDER_ID,
+        provider: new FacebookLoginProvider('755195074846911')
+      }
+    ]);
+  return config;
+}
 
 const ngModules = [
   BrowserModule,
@@ -35,7 +49,8 @@ const sgModules = [
   declarations: [
     AppComponent,
     MainViewComponent,
-    NavBarComponent
+    NavBarComponent,
+    SigninComponent
   ],
   imports: [
     ...ngModules,
@@ -46,7 +61,14 @@ const sgModules = [
     environment.imports,
     LayoutModule
   ],
-  providers: [XwingTranslationService],
+  providers: [
+    XwingTranslationService,
+    {
+      provide: AuthServiceConfig,
+      useFactory: getAuthServiceConfigs
+    },
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
