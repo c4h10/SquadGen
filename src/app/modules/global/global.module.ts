@@ -12,6 +12,7 @@ import { NewSquadCardComponent } from './components/new-squad-card/new-squad-car
 import { CommonMaterialModule } from '../common-material/common-material.module';
 import { PopoverComponent } from './components/popover/popover.component';
 import { XwingFontIconComponent } from './components/xwing-font-icon/xwing-font-icon.component';
+import { XwingTranslatePipe } from './pipes/xwing-translate.pipe';
 
 
 export function initEndpoints(apiClient: ApiClientService) {
@@ -19,8 +20,8 @@ export function initEndpoints(apiClient: ApiClientService) {
 }
 
 @NgModule({
-  declarations: [NewSquadCardComponent, PopoverComponent, XwingFontIconComponent],
-  exports: [NewSquadCardComponent, PopoverComponent, XwingFontIconComponent],
+  declarations: [NewSquadCardComponent, PopoverComponent, XwingFontIconComponent, XwingTranslatePipe],
+  exports: [NewSquadCardComponent, PopoverComponent, XwingFontIconComponent, XwingTranslatePipe],
   imports: [
     CommonModule,
     CommonMaterialModule,

@@ -15,6 +15,7 @@ import { TabNavigationModule } from './modules/tab-navigation/tab-navigation.mod
 import { CommonMaterialModule } from './modules/common-material/common-material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { GlobalModule } from './modules/global/global.module';
+import { XwingTranslationService } from './services/xwing-translation.service';
 
 
 const ngModules = [
@@ -34,7 +35,7 @@ const sgModules = [
   declarations: [
     AppComponent,
     MainViewComponent,
-    NavBarComponent,
+    NavBarComponent
   ],
   imports: [
     ...ngModules,
@@ -45,7 +46,7 @@ const sgModules = [
     environment.imports,
     LayoutModule
   ],
-  providers: [],
+  providers: [XwingTranslationService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -9,12 +9,10 @@
   <mat-icon [ngClass]="ship.icon"></mat-icon> <p>{{ ship.name }}<b class="caret"></b></p>
 </a>
 <sat-popover #dial horizontalAlign="after">
-  <div class="tooltip-wrapper">
-    <div class="ship-dial">
+  <div class="tooltip-wrapper dial-wrapper">
+    <div class="dial-desc">
       <span  class="dial-title">{{ship.name}} <i>Dial</i></span>
-      <div class="dial-desc">
-        <sg-maneuvers [ship]="ship"></sg-maneuvers>
-      </div>
+      <sg-maneuvers [ship]="ship"></sg-maneuvers>
     </div>
   </div>
 </sat-popover>
@@ -26,9 +24,8 @@
          (click)="addToSquad(pilot)"
          [satPopoverAnchorFor]="desc"
          (mouseenter)="desc.open()"
-
+         (mouseleave)="desc.close()"
       >
-        <!--(mouseleave)="desc.close()"-->
         <mat-icon>add_box</mat-icon><p class="sidebar-normal">{{pilot.name}} ({{pilot.points}})</p>
       </a>
       <sat-popover #desc horizontalAlign="after">
@@ -54,12 +51,15 @@
                 <i class="{{ shipAction.linked.icon }} {{ shipAction.linked.difficulty }}" *ngIf="shipAction.linked"></i>
               </span>
             </div>
-            <div class="title-line"><span class="pilot">{{pilot.name}}</span> <span class="ship">{{ship.name}}</span><span *ngIf="pilot.unique" class="unique">, Unique</span></div>
+            <div class="title-line"><span class="pilot">{{pilot.name}}</span><span class="ship">{{ship.name}}</span><span *ngIf="pilot.unique" class="unique">, Unique</span></div>
             <div *ngIf="pilot.ability" class="ability-line">
-              <span>{{ pilot.ability }}</span>
+              <span [innerHTML]="pilot.ability | xwingTranslate">{{ pilot.ability }}</span>
             </div>
             <div class="upgrades-line">
-              <strong>Upgrades:</strong><sg-xwing-font-icon *ngFor="let upg of pilot.slots"  [type]="'upgrade'" [value]="upg"></sg-xwing-font-icon>
+              <strong>Upgrades:</strong>
+              <span *ngFor="let upg of pilot.slots" class="upgrade-line">
+              <i class="xwing-miniatures-font xwing-miniatures-font-{{upg.toLowerCase()}}"></i>
+              </span>
             </div>
           </div>
         </div>
