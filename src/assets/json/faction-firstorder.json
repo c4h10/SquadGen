@@ -184,7 +184,6 @@
       "ship": "tie-fo-fighter",
       "skill": 6,
       "points": 44,
-      "charge": 1,
       "ability": "While you defend or perform an attack, if you have a lock on the enemy ship, that ship's dice cannot be modified.",
       "slots": [
         "Talent",

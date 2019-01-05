@@ -25,6 +25,7 @@ export interface Ship {
   attackb?: number;
   attackt?: number;
   attackdt?: number;
+  attackbull?: number;
   agility: number;
   hull: number;
   shields: number;
@@ -55,7 +56,8 @@ export interface Pilot {
 export interface ShipAction {
   type: string;
   difficulty: string;
-  linked?: string;
+  icon?: string;
+  linked?: ShipAction;
 }
 
 export type Reducer<T> = (state: State, action: T) => State;

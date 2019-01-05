@@ -14,13 +14,12 @@ export class XwingFontIconComponent implements OnInit {
 
   constructor() {
   }
-
+// TODO: switch to buttons
   ngOnInit() {
     this.className = this.getIconClass(this.type, this.value);
   }
 
   getIconClass(type: string, value: string) {
-    console.log(value);
     switch (type) {
       default:
         return `xwing-miniatures-font xwing-miniatures-font-${value.toLowerCase()}`;

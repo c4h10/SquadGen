@@ -57,7 +57,7 @@
 }
 
 .tooltip-wrapper {
-  padding: 5px 10px 10px 10px;
+  padding: 10px;
   border-radius: 3px;
 
   background: rgba(97, 97, 97, .9);
@@ -83,4 +83,73 @@
     }
   }
 
+
+}
+
+.tooltip-wrapper{
+  &.ship-wrapper {
+    width: 540px;
+  }
+  .ship-desc {
+    background: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    .stats-line {
+      font-family: kimberley;
+      font-size: 18px;
+      float: left;
+      padding-right: 20px;
+      .stat {
+        padding-right: 8px;
+        i {
+          font-size: 1em;
+          padding-right: 3px;
+        }
+        &.stat-skill {
+          color:#cd6d2d;
+        }
+        &.stat-attack,
+        &.stat-bullseyearc,
+        &.stat-attackb,
+        &.stat-attackt,
+        &.stat-attackdt {
+          color: #ef232b;
+        }
+        &.stat-agility{
+          color: #6bbe44;
+        }
+        &.stat-hull{
+          color: #b6b335;
+        }
+        &.stat-shields{
+          color: #7ed3e5;
+        }
+        &.stat-force{
+          color: #b976d2;
+        }
+        &.stat-charge {
+          color: #b6b335;
+        }
+      }
+
+
+    }
+    .actions-line {
+      font-size: 18px;
+      .action {
+        padding-right: 8px;
+        i {
+          color: #000;
+          font-size: 1em;
+          padding-right: 3px;
+          &.white {
+
+          }
+          &.red {
+            color: #ff0000;
+          }
+        }
+      }
+    }
+  }
 }

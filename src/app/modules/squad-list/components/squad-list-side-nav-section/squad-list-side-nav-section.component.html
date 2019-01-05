@@ -21,21 +21,46 @@
 
 <div class="collapse" [ngClass]="{'show': !collapsed}">
   <ul class="nav pilot-list">
-    <li class="nav-item" *ngFor="let pilot of pilots; let i = index">
+    <li class="nav-item nav-pilot" *ngFor="let pilot of pilots; let i = index">
       <a class="nav-link"
          (click)="addToSquad(pilot)"
          [satPopoverAnchorFor]="desc"
          (mouseenter)="desc.open()"
-         (mouseleave)="desc.close()"
+
       >
+        <!--(mouseleave)="desc.close()"-->
         <mat-icon>add_box</mat-icon><p class="sidebar-normal">{{pilot.name}} ({{pilot.points}})</p>
       </a>
       <sat-popover #desc horizontalAlign="after">
-        <div class="tooltip-wrapper">
+        <div class="tooltip-wrapper ship-wrapper">
           <div class="ship-desc">
-            <div>{{ship.name}} <span *ngIf="pilot.unique">Unique</span></div>
-            <div *ngIf="pilot.ability">{{ pilot.ability }}</div>
-            <div><strong>Upgrades:</strong><sg-xwing-font-icon *ngFor="let upg of pilot.slots"  [type]="'upgrade'" [value]="upg"></sg-xwing-font-icon></div>
+            <div class="stats-line">
+              <span class="stat stat-skill" *ngIf="pilot.skill">{{ pilot.skill }}</span>
+              <span class="stat stat-attack" *ngIf="pilot.ship.attack"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-frontarc"></i>{{ pilot.ship.attack }}</span>
+              <span class="stat stat-bullseyearc" *ngIf="pilot.ship.attackbull"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-bullseyearc"></i>{{ pilot.ship.attackbull }}</span>
+              <span class="stat stat-attackb" *ngIf="pilot.ship.attackb"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-reararc"></i>{{ pilot.ship.attackb }}</span>
+              <span class="stat stat-attackt" *ngIf="pilot.ship.attackt"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-singleturretarc"></i>{{ pilot.ship.attackt }}</span>
+              <span class="stat stat-attackdt" *ngIf="pilot.ship.attackdt"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-doubleturretarc"></i>{{ pilot.ship.attackdt }}</span>
+              <span class="stat stat-agility" *ngIf="pilot.ship.agility"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-agility"></i>{{ pilot.ship.agility }}</span>
+              <span class="stat stat-hull" *ngIf="pilot.ship.hull"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-hull"></i>{{ pilot.ship.hull }}</span>
+              <span class="stat stat-shields" *ngIf="pilot.ship.shields"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-shield"></i>{{ pilot.ship.shields }}</span>
+              <span class="stat stat-force" *ngIf="pilot.force"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-forcecharge"></i>{{ pilot.force }}<i class="xwing-miniatures-font xwing-miniatures-font-recurring"></i></span>
+              <span class="stat stat-charge" *ngIf="pilot.charge"><i class="xwing-miniatures-font header-charge xwing-miniatures-font-charge"></i>{{ pilot.charge }}<i class="xwing-miniatures-font xwing-miniatures-font-recurring" *ngIf="pilot.recurring"></i></span>
+            </div>
+            <div class="actions-line">
+              <span class="action action-line" *ngFor="let shipAction of ship.actions">
+                <i class="{{ shipAction.icon }} {{ shipAction.difficulty }}"></i>
+                <i class="xwing-miniatures-font xwing-miniatures-font-linked" *ngIf="shipAction.linked"></i>
+                <i class="{{ shipAction.linked.icon }} {{ shipAction.linked.difficulty }}" *ngIf="shipAction.linked"></i>
+              </span>
+            </div>
+            <div class="title-line"><span class="pilot">{{pilot.name}}</span> <span class="ship">{{ship.name}}</span><span *ngIf="pilot.unique" class="unique">, Unique</span></div>
+            <div *ngIf="pilot.ability" class="ability-line">
+              <span>{{ pilot.ability }}</span>
+            </div>
+            <div class="upgrades-line">
+              <strong>Upgrades:</strong><sg-xwing-font-icon *ngFor="let upg of pilot.slots"  [type]="'upgrade'" [value]="upg"></sg-xwing-font-icon>
+            </div>
           </div>
         </div>
       </sat-popover>
