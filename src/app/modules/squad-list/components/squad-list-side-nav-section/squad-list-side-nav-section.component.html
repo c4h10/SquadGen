@@ -68,7 +68,7 @@
     <ul class="nav pilot-list">
       <li class="nav-item nav-pilot" *ngFor="let pilot of pilots">
         <a class="nav-link" (click)="addToSquad(pilot)">
-          <button mat-icon-button (click)="showPilotInfo($event)"><mat-icon>info_outline</mat-icon></button>
+          <button mat-icon-button (click)="showPilotInfo($event, pilot)"><mat-icon>info_outline</mat-icon></button>
           <mat-icon class="align-right">add_box</mat-icon><p class="sidebar-normal">{{pilot.name}} ({{pilot.points}})</p>
         </a>
       </li>

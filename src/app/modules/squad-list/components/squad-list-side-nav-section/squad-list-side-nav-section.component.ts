@@ -44,9 +44,14 @@ export class SquadListSideNavSectionComponent implements OnInit {
     });
   }
 
-  showPilotInfo(event) {
+  showPilotInfo(event, pilot: Pilot) {
     event.stopPropagation();
-    console.log(event);
+    this.action.emit({
+      type: SQUAD_LIST_NAV_ACTION.PILOT,
+      data: {
+        pilot: pilot
+      }
+    });
   }
 
   // TODO: Make service

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { ShipAction } from '../../../global/reducers/types';
+import { ShipAction } from '../../reducers/types';
 
 @Component({
   selector: 'sg-actions-line',

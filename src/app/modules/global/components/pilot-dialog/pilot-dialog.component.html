@@ -1,23 +1,31 @@
 <div class="card">
   <div class="card-header card-header-primary">
-    <h4 class="card-title"><span *ngIf="pilot.unique" class="unique">*</span>{{ pilot.name }}<span class="ship">{{pilot.ship.name}}</span></h4>
+    <h4 class="card-title"><span *ngIf="pilot.unique" class="unique">*</span>{{ pilot.name }}<span
+      class="ship">, {{pilot.ship.name}}</span></h4>
   </div>
   <div class="card-body">
     <div class="row">
+      <div class="col-md-6">
+        <sg-stats-line [pilot]="pilot"></sg-stats-line>
+      </div>
+      <div class="col-md-6">
+        <sg-actions-line [actions]="pilot.ship.actions"></sg-actions-line>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-md-12">
-        <div class="ship-desc">
-          <sg-stats-line [pilot]="pilot"></sg-stats-line>
-          <sg-actions-line [actions]="pilot.ship.actions"></sg-actions-line>
-          <div class="title-line"><</div>
-          <div *ngIf="pilot.ability" class="ability-line">
-            <span [innerHTML]="pilot.ability | xwingTranslate">{{ pilot.ability }}</span>
-          </div>
-          <div class="upgrades-line">
-            <strong>Upgrades:</strong>
-            <span *ngFor="let upg of pilot.slots" class="upgrade-line">
-                <i class="xwing-miniatures-font xwing-miniatures-font-{{upg.toLowerCase()}}"></i>
-                </span>
-          </div>
+        <div *ngIf="pilot.ability" class="ability-line">
+          <span [innerHTML]="pilot.ability | xwingTranslate">{{ pilot.ability }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="upgrades-line">
+          <strong>Upgrades:</strong>
+          <span *ngFor="let upg of pilot.slots" class="upgrade-line">
+            <i class="xwing-miniatures-font xwing-miniatures-font-{{upg.toLowerCase()}}"></i>
+          </span>
         </div>
       </div>
     </div>

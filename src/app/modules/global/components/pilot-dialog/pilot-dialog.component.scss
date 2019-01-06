@@ -1,0 +1,41 @@
+.ability-line {
+  font-size: 13px;
+  padding: 5px 0;
+  line-height: 1.25em;
+
+  ::ng-deep {
+    i {
+      font-size: 1em;
+      padding: 0 3px;
+    }
+  }
+}
+
+.upgrades-line {
+  font-size: 13px;
+  color: #000;
+  .upgrade-line {
+    padding-left: 3px;
+    font-size: 20px;
+
+    i {
+      font-size: 1em;
+    }
+  }
+}
+
+::ng-deep {
+  .stats-line {
+    float: none !important;
+    padding-right: 0 !important;
+    text-align: center !important;
+
+  }
+  .actions-line {
+    text-align: center !important;
+    .action {
+      padding-left: 0 !important;
+      padding-right: 8px !important;
+    }
+  }
+}

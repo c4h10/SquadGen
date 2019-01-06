@@ -16,6 +16,8 @@ import { XwingTranslatePipe } from './pipes/xwing-translate.pipe';
 import { DialDialogComponent } from './components/dial-dialog/dial-dialog.component';
 import { ManeuversComponent } from './components/maneuvers/maneuvers.component';
 import { PilotDialogComponent } from './components/pilot-dialog/pilot-dialog.component';
+import { ActionsLineComponent } from './components/actions-line/actions-line.component';
+import { StatsLineComponent } from './components/stats-line/stats-line.component';
 
 
 export function initEndpoints(apiClient: ApiClientService) {
@@ -24,9 +26,9 @@ export function initEndpoints(apiClient: ApiClientService) {
 
 @NgModule({
   declarations: [NewSquadCardComponent, PopoverComponent, XwingFontIconComponent,
-    XwingTranslatePipe, DialDialogComponent, ManeuversComponent, PilotDialogComponent],
+    XwingTranslatePipe, DialDialogComponent, ManeuversComponent, PilotDialogComponent, ActionsLineComponent, StatsLineComponent],
   exports: [NewSquadCardComponent, PopoverComponent, XwingFontIconComponent, XwingTranslatePipe, DialDialogComponent,
-    PilotDialogComponent, ManeuversComponent],
+    PilotDialogComponent, ManeuversComponent, ActionsLineComponent, StatsLineComponent],
   imports: [
     CommonModule,
     CommonMaterialModule,

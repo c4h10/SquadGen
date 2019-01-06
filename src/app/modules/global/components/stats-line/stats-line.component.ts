@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { Pilot } from '../../../global/reducers/types';
+import { Pilot } from '../../reducers/types';
 
 @Component({
   selector: 'sg-stats-line',

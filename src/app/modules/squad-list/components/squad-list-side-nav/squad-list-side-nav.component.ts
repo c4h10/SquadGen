@@ -6,6 +6,7 @@ import { getConfigurationFactions } from '../../../global/global.store';
 import { SQUAD_LIST_NAV_ACTION, SquadListNavAction } from '../../types';
 import { OpenDialogAction } from '../../../global/actions/global.actions';
 import { DialDialogComponent } from '../../../global/components/dial-dialog/dial-dialog.component';
+import { PilotDialogComponent } from '../../../global/components/pilot-dialog/pilot-dialog.component';
 
 @Component({
   selector: 'sg-squad-list-side-nav',
@@ -47,10 +48,19 @@ export class SquadListSideNavComponent implements OnInit, OnDestroy {
 
     switch (event.type) {
       case SQUAD_LIST_NAV_ACTION.DIAL:
-        console.log(event);
         this.globalStore.dispatch<OpenDialogAction>(
           new OpenDialogAction({
             componentOrTemplateRef: DialDialogComponent,
+            config: {
+              data: event.data
+            }
+          })
+        );
+        break;
+      case SQUAD_LIST_NAV_ACTION.PILOT:
+        this.globalStore.dispatch<OpenDialogAction>(
+          new OpenDialogAction({
+            componentOrTemplateRef: PilotDialogComponent,
             config: {
               data: event.data
             }
