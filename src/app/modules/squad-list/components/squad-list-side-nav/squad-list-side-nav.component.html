@@ -10,6 +10,7 @@
           <sg-squad-list-side-nav-section
             [ship]="ship"
             [pilots]="faction.pilots | pilotByShipFilter :ship"
+            (action)="actionHandler($event)"
           >
           </sg-squad-list-side-nav-section>
         </li>

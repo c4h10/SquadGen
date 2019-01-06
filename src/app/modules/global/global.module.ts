@@ -13,6 +13,9 @@ import { CommonMaterialModule } from '../common-material/common-material.module'
 import { PopoverComponent } from './components/popover/popover.component';
 import { XwingFontIconComponent } from './components/xwing-font-icon/xwing-font-icon.component';
 import { XwingTranslatePipe } from './pipes/xwing-translate.pipe';
+import { DialDialogComponent } from './components/dial-dialog/dial-dialog.component';
+import { ManeuversComponent } from './components/maneuvers/maneuvers.component';
+import { PilotDialogComponent } from './components/pilot-dialog/pilot-dialog.component';
 
 
 export function initEndpoints(apiClient: ApiClientService) {
@@ -20,8 +23,10 @@ export function initEndpoints(apiClient: ApiClientService) {
 }
 
 @NgModule({
-  declarations: [NewSquadCardComponent, PopoverComponent, XwingFontIconComponent, XwingTranslatePipe],
-  exports: [NewSquadCardComponent, PopoverComponent, XwingFontIconComponent, XwingTranslatePipe],
+  declarations: [NewSquadCardComponent, PopoverComponent, XwingFontIconComponent,
+    XwingTranslatePipe, DialDialogComponent, ManeuversComponent, PilotDialogComponent],
+  exports: [NewSquadCardComponent, PopoverComponent, XwingFontIconComponent, XwingTranslatePipe, DialDialogComponent,
+    PilotDialogComponent, ManeuversComponent],
   imports: [
     CommonModule,
     CommonMaterialModule,
@@ -33,7 +38,9 @@ export function initEndpoints(apiClient: ApiClientService) {
     ApiClientModule.provideEndpoints(initEndpoints)
   ],
   entryComponents: [
-    NewSquadCardComponent
+    NewSquadCardComponent,
+    DialDialogComponent,
+    PilotDialogComponent
   ]
 })
 export class GlobalModule {

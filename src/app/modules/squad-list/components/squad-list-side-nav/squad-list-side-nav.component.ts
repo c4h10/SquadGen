@@ -3,6 +3,9 @@ import { Observable, Subscription } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { Faction, State as GlobalState } from '../../../global/reducers/types';
 import { getConfigurationFactions } from '../../../global/global.store';
+import { SQUAD_LIST_NAV_ACTION, SquadListNavAction } from '../../types';
+import { OpenDialogAction } from '../../../global/actions/global.actions';
+import { DialDialogComponent } from '../../../global/components/dial-dialog/dial-dialog.component';
 
 @Component({
   selector: 'sg-squad-list-side-nav',
@@ -26,7 +29,7 @@ export class SquadListSideNavComponent implements OnInit, OnDestroy {
     this.factionsConfig$ = this.globalStore.select(getConfigurationFactions);
     [
       this.factionsConfig$.subscribe((configs) => {
-        const newConfig = configs.map( faction => {
+        const newConfig = configs.map(faction => {
           faction.pilots.sort((a, b) => b.points - a.points);
           return faction;
         });
@@ -38,5 +41,22 @@ export class SquadListSideNavComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
+  }
+
+  actionHandler(event: SquadListNavAction) {
+
+    switch (event.type) {
+      case SQUAD_LIST_NAV_ACTION.DIAL:
+        console.log(event);
+        this.globalStore.dispatch<OpenDialogAction>(
+          new OpenDialogAction({
+            componentOrTemplateRef: DialDialogComponent,
+            config: {
+              data: event.data
+            }
+          })
+        );
+        break;
+    }
   }
 }

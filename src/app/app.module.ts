@@ -16,6 +16,7 @@ import { CommonMaterialModule } from './modules/common-material/common-material.
 import { HttpClientModule } from '@angular/common/http';
 import { GlobalModule } from './modules/global/global.module';
 import { XwingTranslationService } from './services/xwing-translation.service';
+import { WindowRefService } from './services/window-ref.service';
 
 
 const ngModules = [
@@ -46,7 +47,7 @@ const sgModules = [
     environment.imports,
     LayoutModule
   ],
-  providers: [XwingTranslationService],
+  providers: [XwingTranslationService, WindowRefService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

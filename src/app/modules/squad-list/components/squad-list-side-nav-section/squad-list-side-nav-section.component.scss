@@ -8,9 +8,11 @@
 
 .nav-link {
   cursor: pointer;
+
   &:hover {
     background: rgba(200, 200, 200, 0.3);
   }
+
   p {
     font-size: 13px;
   }
@@ -18,8 +20,10 @@
 
 .nav-link.expand-button {
   padding: 5px 10px 5px 5px;
+
   &.expanded {
     background: rgba(200, 200, 200, 0.3);
+
     .caret {
       filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
       -webkit-transform: rotate(180deg);
@@ -31,15 +35,19 @@
 .nav {
   &.pilot-list {
     margin-top: 0;
-    .nav-item{
+    .nav-item {
 
-      .nav-link{
+      .nav-link {
         margin-top: 5px;
         padding: 0 5px 0 10px;
+
         .mat-icon {
-          margin-right: 0;
-          float: right;
-          margin-left: 5px;
+          &.align-right {
+            margin-right: 0;
+            float: right;
+            margin-left: 5px;
+          }
+
           font-size: 24px;
           line-height: 30px;
         }
@@ -84,21 +92,26 @@
     max-width: 570px;
     min-width: 400px;
   }
+
   .ship-desc {
     background: #fff;
     padding: 10px;
     border-radius: 3px;
+
     .title-line {
       font-size: 13px;
       padding-bottom: 3px;
       color: #000;
+
       .pilot {
         font-weight: bold;
         padding-right: 3px;
       }
+
       .ship {
         font-size: 12px;
       }
+
       .unique {
         font-size: 12px;
         font-style: italic;
@@ -109,6 +122,7 @@
       font-size: 13px;
       padding-bottom: 3px;
       line-height: 1.25em;
+
       ::ng-deep {
         i {
           font-size: 1em;
@@ -116,16 +130,62 @@
         }
       }
     }
+
     .upgrades-line {
       font-size: 13px;
       color: #000;
+
       .upgrade-line {
         padding-left: 3px;
         font-size: 20px;
+
         i {
           font-size: 1em;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .nav {
+    &.pilot-list {
+      .nav-item {
+        .nav-link {
+          .mat-icon-button {
+            float: left;
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            .mat-icon {
+              margin: 0;
+            }
+          }
+
+          padding-left: 5px;
+
+          .sidebar-normal {
+            margin-left: 35px;
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+  .nav-link {
+    &.expand-button {
+      .mat-icon-button {
+        float: left;
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+        .mat-icon {
+          margin: 0;
+        }
+      }
+    }
+    .nav-label {
+      margin-left: 35px;
     }
   }
 }

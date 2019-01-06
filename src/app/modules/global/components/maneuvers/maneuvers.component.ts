@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Ship } from '../../../global/reducers/types';
+import { Ship } from '../../reducers/types';
 
 @Component({
   selector: 'sg-maneuvers',
