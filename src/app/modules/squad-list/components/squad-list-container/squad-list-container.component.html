@@ -1,7 +1,48 @@
-<sg-squad-list-side-nav [factionId]="config.faction.factionId"></sg-squad-list-side-nav>
+<sg-squad-list-side-nav [factionId]="config.faction.factionId" [tabId]="tabId"></sg-squad-list-side-nav>
 <div class="main-panel">
-  <sg-squad-list-navbar></sg-squad-list-navbar>
+  <sg-squad-list-navbar [tabId]="tabId"></sg-squad-list-navbar>
+
   <h1 *ngIf="config"><mat-icon [ngClass]="config.faction.factionIcon"></mat-icon> <span>{{ config.faction.factionName }}</span></h1>
+
+  <div class="container-fluid">
+    <div class="row" *ngFor="let squadPilot of squadPilots">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title"><span *ngIf="squadPilot.pilot.unique" class="unique">*</span>{{ squadPilot.pilot.name }}<span
+              class="ship">, {{squadPilot.pilot.ship.name}}</span></h4>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <sg-stats-line [pilot]="squadPilot.pilot"></sg-stats-line>
+              </div>
+              <div class="col-md-6">
+                <sg-actions-line [actions]="squadPilot.pilot.ship.actions"></sg-actions-line>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div *ngIf="squadPilot.pilot.ability" class="ability-line">
+                  <span [innerHTML]="squadPilot.pilot.ability | xwingTranslate">{{ squadPilot.pilot.ability }}</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="upgrades-line">
+                  <strong>Upgrades:</strong>
+                  <span *ngFor="let upg of squadPilot.pilot.slots" class="upgrade-line">
+                    <i class="xwing-miniatures-font xwing-miniatures-font-{{upg.toLowerCase()}}"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 

@@ -30,8 +30,13 @@ export class SquadListSideNavSectionComponent implements OnInit {
     this.collapsed = !this.collapsed;
   }
 
-  addToSquad(pilot: Pilot) {
-    console.log(pilot);
+  addToSquad(event, pilot: Pilot) {
+    this.action.emit({
+      type: SQUAD_LIST_NAV_ACTION.ADD_TO_SQUAD,
+      data: {
+        pilot: pilot
+      }
+    });
   }
 
   showShipDial(event, ship: Ship) {

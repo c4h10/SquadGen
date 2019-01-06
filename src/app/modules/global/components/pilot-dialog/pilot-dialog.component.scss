@@ -1,5 +1,18 @@
+.card-header {
+  padding: 10px 15px !important;
+  .card-title {
+    font-size: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    i {
+      padding-right: 8px;
+    }
+  }
+}
+
 .ability-line {
-  font-size: 13px;
+  font-size: 12px;
   padding: 5px 0;
   line-height: 1.25em;
 
@@ -29,10 +42,12 @@
     float: none !important;
     padding-right: 0 !important;
     text-align: center !important;
+    font-size: 15px !important;
 
   }
   .actions-line {
     text-align: center !important;
+    font-size: 15px !important;
     .action {
       padding-left: 0 !important;
       padding-right: 8px !important;

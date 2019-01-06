@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { StoreManagerService } from '../../services/store-manager.service';
-import { SquadConfig, State } from '../../store/squad-list.store';
+import { SquadConfig, SquadPilot, State } from '../../store/squad-list.store';
 import { Store } from '@ngrx/store';
 import { TabContext } from '../../../tab-navigation/types';
-import { getSquadConfig, getTabId } from '../../selectors/squad-list.selectors';
+import { getSquadConfig, getSquadPilots, getTabId } from '../../selectors/squad-list.selectors';
 import { EMPTY, Observable, Subscription } from 'rxjs';
 
 
@@ -22,6 +22,9 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
   config: SquadConfig;
   config$: Observable<SquadConfig>;
 
+  squadPilots: SquadPilot[];
+  squadPilots$: Observable<SquadPilot[]>;
+
   subscriptions: Subscription = Subscription.EMPTY;
 
   constructor(
@@ -36,6 +39,7 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
 
     this.tabId$ = this.storeManager.select(getTabId);
     this.config$ = this.storeManager.select(getSquadConfig);
+    this.squadPilots$ = this.storeManager.select(getSquadPilots);
 
     [
       this.tabId$
@@ -45,7 +49,11 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
       this.config$
         .subscribe(config => {
           this.config = config;
-          })
+          }),
+      this.squadPilots$
+        .subscribe(squad => {
+          this.squadPilots = squad;
+        })
     ].forEach(s => this.subscriptions.add(s));
   }
 

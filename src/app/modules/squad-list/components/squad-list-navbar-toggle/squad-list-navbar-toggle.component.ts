@@ -25,9 +25,11 @@ export class SquadListNavbarToggleComponent implements OnInit, OnDestroy {
   sidebarToggle() {
     const toggleButton = this.toggleButton;
     let $layer;
-    if (this.sidebarVisible === false) {
+    if (!document.getElementsByClassName('close-layer')[0]) {
+      this.mobile_menu_visible = 0;
       this.sidebarOpen();
     } else {
+      this.mobile_menu_visible = 1;
       this.sidebarClose();
     }
     const body = document.getElementsByTagName('body')[0];

@@ -1,12 +1,12 @@
 import { Action } from '@ngrx/store';
-import { ACTION_NAMES, SquadListContainerCreatePayload, DummyPayload, GlobalDummyPayload, SquadListContainerCreatedPayload } from './types';
-
-export class DummyAction implements Action {
-  readonly type = ACTION_NAMES.DUMMY;
-
-  constructor(public payload: DummyPayload) {
-  }
-}
+import {
+  ACTION_NAMES,
+  SquadListContainerCreatePayload,
+  DummyPayload,
+  GlobalDummyPayload,
+  SquadListContainerCreatedPayload,
+  SquadListAddPilotPayload
+} from './types';
 
 export class SquadListContainerCreateAction implements Action {
   readonly type = ACTION_NAMES.SQUAD_LIST_CONTAINER_CREATE;
@@ -22,9 +22,24 @@ export class SquadListContainerCreatedAction implements Action {
   }
 }
 
+export class SquadListAddPilotAction implements Action {
+  readonly type = ACTION_NAMES.SQUAD_LIST_ADD_PILOT;
+
+  constructor(public payload: SquadListAddPilotPayload) {
+  }
+}
+
+
 export class GlobalDummyAction implements Action {
   readonly type = ACTION_NAMES.GLOBAL_DUMMY;
 
   constructor(public payload: GlobalDummyPayload) {
+  }
+}
+
+export class DummyAction implements Action {
+  readonly type = ACTION_NAMES.DUMMY;
+
+  constructor(public payload: DummyPayload) {
   }
 }

@@ -6,5 +6,6 @@ export const defaultState: Types.State = {
 };
 
 export const defaultContainerState: Types.ContainerState = {
-  tabId: '__EMPTY__'
+  tabId: '__EMPTY__',
+  squadPilots: []
 };

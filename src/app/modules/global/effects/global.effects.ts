@@ -69,7 +69,6 @@ export class GlobalEffects {
     .pipe(
       ofType(ACTION_NAMES.OPEN_DIALOG),
       map((action: OpenDialogAction) => {
-        console.log(action.payload);
         setTimeout(() => this.dialog.open(action.payload.componentOrTemplateRef, action.payload.config));
         return new ResultDialogAction({});
       })

@@ -36,6 +36,8 @@ export class TabNavigationEffects {
               config: {
                 // TODO: hyperspace type
                 isHyperspace: false,
+                points: 0,
+                totalPoints: 200,
                 faction: createAction.payload
               }
             })

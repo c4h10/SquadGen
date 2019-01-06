@@ -64,7 +64,6 @@ export class TabsComponent implements OnInit, OnDestroy {
   animationDone() {
     setTimeout(() => {
       const elemSidebar = <HTMLElement>document.querySelector('.sidebar .sidebar-wrapper');
-      console.log(elemSidebar);
       const ps = new PerfectScrollbar(elemSidebar);
     });
   }
