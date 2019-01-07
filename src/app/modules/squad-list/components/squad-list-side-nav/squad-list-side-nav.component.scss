@@ -1,26 +1,30 @@
 .sidebar {
+  .logo {
+    .nav-link {
+      background-color: #f44336;
+      box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(244, 67, 54, 0.4);
+      margin: 10px 15px 0;
+      border-radius: 3px;
+      color: #fff;
+      text-transform: capitalize;
+      font-size: 13px;
+      padding: 10px 15px;
+    }
+  }
+
   top: 105px;
   user-select: none;
-  .nav {
-    margin-bottom: 20px;
-  }
-  li {
-    .mat-icon {
-      font-size: 20px;
-      float: left;
-      margin-right: 15px;
-      width: 30px;
-      text-align: center;
-      color: #a9afbb;
-    }
 
-    &.active {
-      a {
-        color: #fff;
-        .mat-icon {
-          color: #fff;
-        }
-      }
+  .nav {
+    margin-bottom: 60px;
+  }
+  .sidebar-wrapper {
+    height: calc(100vh - 190px);
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      height: 4px;
+      width: 4px;
     }
   }
+
 }

@@ -73,15 +73,15 @@ export class SquadListSideNavComponent implements OnInit, OnDestroy {
         break;
       case SQUAD_LIST_NAV_ACTION.ADD_TO_SQUAD:
         this.storeManager.dispatch(withTabId(new SquadListAddPilotAction({pilot: event.data.pilot}), this.tabId));
-        this.closeSidePanel();
         break;
     }
   }
 
-  private closeSidePanel () {
+/*  TODO: removed
+    private closeSidePanel () {
     const body = document.getElementsByTagName('body')[0];
     const closeLayer = document.getElementsByClassName('close-layer')[0];
     closeLayer.parentNode.removeChild(closeLayer);
     body.classList.remove('nav-open');
-  }
+  }*/
 }
