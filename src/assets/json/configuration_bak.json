@@ -1,0 +1,29 @@
+{
+  "factions": [
+    {
+      "factionId": "empire",
+      "factionName": "Empire",
+      "factionIcon": "xwing-miniatures-font xwing-miniatures-font-empire"
+    },
+    {
+      "factionId": "rebel",
+      "factionName": "Rebel",
+      "factionIcon": "xwing-miniatures-font xwing-miniatures-font-rebel"
+    },
+    {
+      "factionId": "scum",
+      "factionName": "Scum",
+      "factionIcon": "xwing-miniatures-font xwing-miniatures-font-scum"
+    },
+    {
+      "factionId": "firstorder",
+      "factionName": "First Order",
+      "factionIcon": "xwing-miniatures-font xwing-miniatures-font-firstorder"
+    },
+    {
+      "factionId": "resistance",
+      "factionName": "Resistance",
+      "factionIcon": "xwing-miniatures-font xwing-miniatures-font-rebel-outline"
+    }
+  ]
+}
