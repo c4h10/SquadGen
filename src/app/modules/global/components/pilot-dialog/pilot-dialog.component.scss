@@ -10,9 +10,7 @@
     }
   }
 }
-.card {
-  min-width: 360px;
-}
+
 .ability-line {
   font-size: 12px;
   padding: 5px 0;
@@ -54,5 +52,11 @@
       padding-left: 0 !important;
       padding-right: 8px !important;
     }
+  }
+}
+
+@media (min-width: 991px) {
+  .card {
+    min-width: 360px;
   }
 }

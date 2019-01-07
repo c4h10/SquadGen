@@ -1,3 +1,18 @@
 .main-panel {
   height: 100%;
+  overflow: hidden;
+}
+
+.squad {
+  height: 100vh;
+  overflow-y: visible;
+  position: relative;
+}
+.squad-wrapper {
+  height: calc(100vh - 175px);
+}
+
+/* TEMPORARY */
+.card-header {
+  z-index: 0 !important;
 }
