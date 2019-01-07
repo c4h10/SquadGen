@@ -16,7 +16,7 @@ export class XwingTranslationService {
     {type: '%SINGLETURRETARC%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-singleturretarc"></i>`},
     {type: '%REARARC%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-reararc"></i>`},
     {type: '%MISSILE%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-missile"></i>`},
-    {type: '%FORCE%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-force"></i>`},
+    {type: '%FORCE%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-forcecharge"></i>`},
     {type: '%CRIT%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-crit"></i>`}
   ];
 

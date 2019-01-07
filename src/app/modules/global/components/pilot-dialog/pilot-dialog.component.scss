@@ -10,7 +10,9 @@
     }
   }
 }
-
+.card {
+  min-width: 360px;
+}
 .ability-line {
   font-size: 12px;
   padding: 5px 0;
@@ -18,8 +20,8 @@
 
   ::ng-deep {
     i {
-      font-size: 1em;
-      padding: 0 3px;
+      font-size: 1.2em;
+      padding: 0;
     }
   }
 }

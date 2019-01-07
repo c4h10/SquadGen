@@ -1,69 +1,74 @@
-.mat-icon {
-  font-size: 25px;
-  float: left;
-  margin-right: 15px;
-  width: 30px;
-  text-align: center;
-}
-
 .nav-link {
   cursor: pointer;
+
+  .mat-icon-button {
+    float: left;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    &.align-right {
+      float: right;
+    }
+    .mat-icon {
+      margin: 0;
+      font-size: 24px;
+      line-height: 30px;
+      float: left;
+      width: 30px;
+      text-align: center;
+    }
+  }
 
   &:hover {
     background: rgba(200, 200, 200, 0.3);
   }
-
-  p {
+  &.expand-button {
+    padding: 5px 10px 5px 5px;
+    .mat-icon-button {
+      .mat-icon {
+        line-height: 24px;
+      }
+    }
+    &.expanded {
+      background: rgba(200, 200, 200, 0.3);
+      .caret {
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .nav-label {
+    margin-left: 35px;
     font-size: 13px;
   }
 }
 
-.nav-link.expand-button {
-  padding: 5px 10px 5px 5px;
-
-  &.expanded {
-    background: rgba(200, 200, 200, 0.3);
-
-    .caret {
-      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-      -webkit-transform: rotate(180deg);
-      transform: rotate(180deg);
-    }
-  }
-}
 
 .nav {
   &.pilot-list {
     margin-top: 0;
     .nav-item {
-
       .nav-link {
         margin-top: 5px;
-        padding: 0 5px 0 10px;
-
-        .mat-icon {
-          &.align-right {
-            margin-right: 0;
-            float: right;
-            margin-left: 5px;
-          }
-
-          font-size: 24px;
-          line-height: 30px;
-        }
-
+        padding: 0 5px;
         .sidebar-normal {
-          font-size: 12px;
+          margin: 0 32px;
+          font-size: 11px;
+          .points {
+            float: right;
+          }
         }
-
         &:hover {
           background: rgba(200, 200, 200, 0.6);
         }
+
+
       }
     }
   }
 }
-
+/* POPUPS */
 .tooltip-wrapper {
   padding: 10px;
   border-radius: 3px;
@@ -125,8 +130,8 @@
 
       ::ng-deep {
         i {
-          font-size: 1em;
-          padding: 0 3px;
+          font-size: 1.2em;
+          padding: 0;
         }
       }
     }
@@ -147,45 +152,3 @@
   }
 }
 
-@media (max-width: 991px) {
-  .nav {
-    &.pilot-list {
-      .nav-item {
-        .nav-link {
-          .mat-icon-button {
-            float: left;
-            height: 30px;
-            width: 30px;
-            line-height: 30px;
-            .mat-icon {
-              margin: 0;
-            }
-          }
-
-          padding-left: 5px;
-
-          .sidebar-normal {
-            margin-left: 35px;
-            font-size: 11px;
-          }
-        }
-      }
-    }
-  }
-  .nav-link {
-    &.expand-button {
-      .mat-icon-button {
-        float: left;
-        height: 30px;
-        width: 30px;
-        line-height: 30px;
-        .mat-icon {
-          margin: 0;
-        }
-      }
-    }
-    .nav-label {
-      margin-left: 35px;
-    }
-  }
-}
