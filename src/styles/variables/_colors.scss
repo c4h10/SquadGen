@@ -3,14 +3,18 @@
 
 // Copy the palettes from your selected theme (usually theme.scss).
 $sg-app-primary: mat-palette($mat-grey);
-$sg-app-accent:  mat-palette($mat-amber, A200, A100, A400);
+$sg-app-accent:  mat-palette($mat-amber);
 $sg-app-warn:    mat-palette($mat-red);
 
 
 // Create your Sass color vars (will be available in all the project)
 $primary: mat-color($sg-app-primary);
+$light-primary: mat-color($sg-app-primary, 100);
 $dark-primary: mat-color($sg-app-primary, 700);
+$secondary: mat-color($sg-app-primary, 600);
+
 $accent: mat-color($sg-app-accent);
+$divider: mat-color($sg-app-primary, 400);
 $warn: mat-color($sg-app-warn);
 
 
