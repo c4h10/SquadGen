@@ -61,14 +61,6 @@ export class TabsComponent implements OnInit, OnDestroy {
   }
 
   animationDone() {
-/*    setTimeout(() => {
-      const elemSidebar = <HTMLElement>document.querySelector('.sidebar .sidebar-wrapper');
-      const ps = new PerfectScrollbar(elemSidebar);
-    });*/
-/*    setTimeout(() => {
-      const elemSquad = <HTMLElement>document.querySelector('.main-panel .squad-wrapper');
-      const ps = new PerfectScrollbar(elemSquad);
-    });*/
   }
 
   selectTab(tabIndex: number): void {

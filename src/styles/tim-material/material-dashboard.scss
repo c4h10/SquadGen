@@ -14,7 +14,8 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
  */
- @import "indigo-pink.css";
+ /*@import "indigo-pink.css";*/
+@import "theme/grey-amber";
 
 @import "core/variables";
 @import "core/mixins";
@@ -52,6 +53,5 @@
  //plugin scss
  @import "core/plugins/animate";
  @import "core/plugins/chartist";
- @import "core/plugins/perfect-scrollbar";
 
  @import "core/responsive";

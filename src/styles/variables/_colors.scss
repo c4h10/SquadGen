@@ -1,0 +1,18 @@
+// Import material theming functions
+@import '../../../node_modules/@angular/material/theming';
+
+// Copy the palettes from your selected theme (usually theme.scss).
+$sg-app-primary: mat-palette($mat-grey);
+$sg-app-accent:  mat-palette($mat-amber, A200, A100, A400);
+$sg-app-warn:    mat-palette($mat-red);
+
+
+// Create your Sass color vars (will be available in all the project)
+$primary: mat-color($sg-app-primary);
+$dark-primary: mat-color($sg-app-primary, 700);
+$accent: mat-color($sg-app-accent);
+$warn: mat-color($sg-app-warn);
+
+
+// Create the theme object (a Sass map containing all of the palettes).
+$sg-app-theme: mat-light-theme($sg-app-primary, $sg-app-accent, $sg-app-warn);

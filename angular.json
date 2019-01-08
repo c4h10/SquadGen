@@ -23,7 +23,6 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
               "src/styles/tim-material/material-dashboard.scss",
               "src/styles/main.scss"
             ],
