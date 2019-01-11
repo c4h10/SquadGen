@@ -167,7 +167,15 @@
     &.bg-primary,
     &.card-rotate.bg-primary .front,
     &.card-rotate.bg-primary .back{
-      background: linear-gradient(60deg, $purple-400, $purple-600);
+      background: linear-gradient(60deg, $grey-400, $grey-600);
+    }
+    .card-header-accent .card-icon,
+    .card-header-accent .card-text,
+    .card-header-accent:not(.card-header-icon):not(.card-header-text),
+    &.bg-accent,
+    &.card-rotate.bg-accent .front,
+    &.card-rotate.bg-accent .back{
+      background: linear-gradient(60deg, $amber-400, $amber-600);
     }
     .card-header-info .card-icon,
     .card-header-info .card-text,
@@ -215,9 +223,11 @@
     .card-header-primary:not(.card-header-icon):not(.card-header-text),
     .card-header-primary .card-text{
         @include shadow-big-color($brand-primary);
-
-        //@include shadow-8dp-color($brand-primary);
-        //@include shadow-16dp-color($brand-primary);
+    }
+    .card-header-accent .card-icon,
+    .card-header-accent:not(.card-header-icon):not(.card-header-text),
+    .card-header-accent .card-text{
+      @include shadow-big-color($brand-accent);
     }
     .card-header-danger .card-icon,
     .card-header-danger:not(.card-header-icon):not(.card-header-text),
@@ -493,7 +503,7 @@
       &:not(.card-header-icon):not(.card-header-text):not(.card-header-image){
         border-radius: $border-radius-base;
         margin-top: -20px;
-        padding: 15px;
+        padding: 10px 15px;
       }
 
       .card-icon,

@@ -104,22 +104,6 @@
             }
         }
     }
-
-    .logo-tim{
-        border-radius: 50%;
-        border: 1px solid #333;
-        display: block;
-        height: 61px;
-        width: 61px;
-        float: left;
-        overflow: hidden;
-
-        img{
-            width: 60px;
-            height: 60px;
-        }
-    }
-
     .nav{
         margin-top: 20px;
         display: block;
@@ -234,65 +218,10 @@
             content: "";
             display: block;
             background: #FFFFFF;
-            opacity: .93;
+            opacity: 0.9;
         }
     }
 
-    .logo{
-        padding: 15px 0px;
-        margin: 0;
-        display: block;
-        position: relative;
-        z-index: 4;
-
-        &:after{
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 15px;
-            height: 1px;
-            width: calc(100% - 30px);
-            background-color: rgba(180,180,180, .3);
-
-        }
-
-        p{
-            float: left;
-            font-size: 20px;
-            margin: 10px 10px;
-            color: $white-color;
-            line-height: 20px;
-        }
-
-        .simple-text{
-            text-transform: uppercase;
-            padding: $padding-small-vertical $padding-zero;
-            display: inline-block;
-            font-size: 18px;
-            color: $black-color;
-            white-space: nowrap;
-            font-weight: $font-weight-default;
-            line-height: 30px;
-            overflow: hidden;
-            text-align: center;
-            display: block;
-        }
-    }
-
-    .logo-tim{
-        border-radius: 50%;
-        border: 1px solid #333;
-        display: block;
-        height: 61px;
-        width: 61px;
-        float: left;
-        overflow: hidden;
-
-        img{
-            width: 60px;
-            height: 60px;
-        }
-    }
 
 
     &[data-background-color="black"]{
@@ -303,8 +232,11 @@
         }
     }
 
-    &[data-color="purple"]{
+    &[data-color="grey"]{
         @include set-background-color-button($brand-primary);
+    }
+    &[data-color="amber"]{
+      @include set-background-color-button($brand-accent);
     }
     &[data-color="azure"]{
         @include set-background-color-button($brand-info);

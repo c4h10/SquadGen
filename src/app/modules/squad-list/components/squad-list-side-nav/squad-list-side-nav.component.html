@@ -1,8 +1,6 @@
-<div class="sidebar" data-background-color="white" data-color="danger">
+<div class="sidebar" data-background-color="white" data-color="amber">
   <div class="logo" *ngIf="faction">
-      <a class="nav-link">
-        <mat-icon [ngClass]="faction.factionIcon"></mat-icon> {{ faction.factionName }}
-      </a>
+      <h4><mat-icon [ngClass]="faction.factionIcon"></mat-icon> {{ faction.factionName }}</h4>
   </div>
     <div class="sidebar-wrapper">
       <ul  class="nav" *ngIf="faction">
@@ -16,5 +14,5 @@
         </li>
       </ul>
     </div>
-  <div class="sidebar-background" style="background-image: url(assets/img/sidebar-4.jpg)"></div>
+  <div class="sidebar-background" *ngIf="faction" style="background-image: url(assets/img/sidebar-firstorder.jpg)"></div>
 </div>

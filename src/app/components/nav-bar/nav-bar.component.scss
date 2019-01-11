@@ -11,7 +11,9 @@
   .navbar-header {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
+    height: 48px;
     padding: 8px 16px;
     background: $dark-primary;
 
@@ -19,6 +21,23 @@
       height: 26px;
       margin: 0 4px 3px 0;
       vertical-align: middle;
+    }
+
+    .mat-mini-fab {
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      ::ng-deep {
+        .mat-button-wrapper {
+          padding: 4px 0;
+          .mat-icon {
+            height: 20px;
+            width: 20px;
+            font-size: 20px;
+          }
+        }
+      }
+
     }
   }
 }

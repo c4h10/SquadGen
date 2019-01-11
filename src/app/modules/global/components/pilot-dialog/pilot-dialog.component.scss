@@ -1,5 +1,4 @@
 .card-header {
-  padding: 10px 15px !important;
   .card-title {
     margin-bottom: 0;
     font-size: 13px;
@@ -37,7 +36,10 @@
     }
   }
 }
-
+.attributes {
+  justify-content: space-between;
+  padding: 0 15px;
+}
 ::ng-deep {
   .stats-line {
     float: none !important;

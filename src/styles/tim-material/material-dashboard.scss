@@ -34,7 +34,6 @@
  @import "core/type";
  @import "core/tabs";
  @import "core/tooltip";
- @import "core/popover";
  @import "core/dropdown";
  @import "core/togglebutton";
  @import "core/ripples";
@@ -46,9 +45,6 @@
  @import "core/dialog";
 
 @import "core/cards";
-@import "core/cards/card-stats";
-@import "core/cards/card-profile";
-@import "core/cards/card-plain";
 
  //plugin scss
  @import "core/plugins/animate";
