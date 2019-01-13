@@ -10,6 +10,7 @@ import {
   MatExpansionModule, MatDialogModule, MatTooltipModule
 } from '@angular/material';
 import { PilotByShipFilterPipe } from './pilot-by-ship-filter.pipe';
+import { FilterPipe } from './filter.pipe';
 
 
 const materialModules = [
@@ -29,13 +30,14 @@ const materialModules = [
 ];
 
 @NgModule({
-  declarations: [PilotByShipFilterPipe],
+  declarations: [PilotByShipFilterPipe, FilterPipe],
   imports: [
     ...materialModules
   ],
   exports: [
     ...materialModules,
-    PilotByShipFilterPipe
+    PilotByShipFilterPipe,
+    FilterPipe
   ]
 })
 export class CommonMaterialModule { }

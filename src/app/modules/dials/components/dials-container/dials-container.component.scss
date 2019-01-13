@@ -1,0 +1,24 @@
+.container {
+  margin-top: 24px;
+  .card {
+    margin: 15px 0;
+
+    .card-body {
+      padding: 4px 10px 10px;
+      height: 140px;
+
+      .title {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+      }
+
+      ::ng-deep {
+        .maneuver-dial {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

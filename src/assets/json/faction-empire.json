@@ -446,8 +446,8 @@
         [0, 0, 3, 0, 0, 0, 0, 0]
       ]
     }, {
-      "name": "tie-reaper",
-      "id": "TIE Reaper",
+      "id": "tie-reaper",
+      "name": "TIE Reaper",
       "faction": "empire",
       "icon": "xwing-miniatures-ship xwing-miniatures-ship-tiereaper",
       "attack": 3,
