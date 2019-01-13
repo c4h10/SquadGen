@@ -12,21 +12,25 @@ export class ManeuversComponent implements OnInit {
 
   shift: number;
   dialMap: string[][];
+  negativeDialMap: string[][];
 
   private shipToDialMap: number[] = [2, 3, 4, 5, 6, 9, 1, 7, 0, 8, 10, 11, 12];
+  private shipToNegativeDialMap: number[] = [2, 3, 4, 5, 6, 9, 1, 7, 0, 8, 3, 4, 5];
 
   constructor() {
   }
 
   ngOnInit() {
+    const shipManeuvers: number[][] = this.ship.maneuvers;
     this.shift = 0;
-
     this.dialMap = this.removeEmptyColumn(
-      this.ship.maneuvers.map((row, rowIndex) => {
-        const tabRow: string[] = [];
+      shipManeuvers.map((row, rowIndex) => {
+        const tabRow: string[] = new Array(13).fill('');
         tabRow.length = 13;
         row.forEach((column, colInd) => {
-          tabRow[this.shipToDialMap[colInd]] = this.getManeuverIcon(colInd, rowIndex, column);
+          if (colInd < 10) {
+            tabRow[this.shipToDialMap[colInd]] = this.getManeuverIcon(colInd, rowIndex, column);
+          }
         });
         // EXCEPTION FOR 0
         if (rowIndex === 0) {
@@ -35,6 +39,21 @@ export class ManeuversComponent implements OnInit {
         return tabRow;
       }).filter((el) => !this.isEmptyRow(el)).reverse()
     );
+
+    if (this.ship.maneuvers[0].length === 13) {
+      this.negativeDialMap = shipManeuvers.map((row, rowIndex) => {
+        let tabRow: string[] = new Array(13).fill('');
+        tabRow.length = 13;
+        row.forEach((column, colInd) => {
+          if (column > 0 && colInd > 9) {
+            tabRow[this.shipToNegativeDialMap[colInd]] = this.getManeuverIcon(colInd, rowIndex, column);
+          }
+        });
+        tabRow = tabRow.slice(1, this.dialMap[0].length + 1);
+        return tabRow;
+      }).filter((el) => !this.isEmptyRow(el));
+
+    }
   }
 
 

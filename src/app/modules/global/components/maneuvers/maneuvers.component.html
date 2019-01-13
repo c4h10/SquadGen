@@ -3,4 +3,8 @@
     <td class="speed"><i>{{dialMap.length - i + shift}}</i></td>
     <td *ngFor="let cell of row"><i class="{{cell}}"></i></td>
   </tr>
+  <tr *ngFor="let row of negativeDialMap; let i = index">
+    <td class="speed"><i>{{i + 1}}</i></td>
+    <td *ngFor="let cell of row"><i class="{{cell}}"></i></td>
+  </tr>
 </table>
