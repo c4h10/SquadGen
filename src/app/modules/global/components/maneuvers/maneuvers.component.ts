@@ -49,7 +49,12 @@ export class ManeuversComponent implements OnInit {
             tabRow[this.shipToNegativeDialMap[colInd]] = this.getManeuverIcon(colInd, rowIndex, column);
           }
         });
-        tabRow = tabRow.slice(1, this.dialMap[0].length + 1);
+        if (this.ship.id === 'sheathipede-class-shuttle') {
+          tabRow = tabRow.slice(2, this.dialMap[0].length);
+        } else if (this.ship.id === 'quadrijet-transfer-spacetug') {
+          tabRow = tabRow.slice(1, this.dialMap[0].length + 1);
+        }
+
         return tabRow;
       }).filter((el) => !this.isEmptyRow(el));
 

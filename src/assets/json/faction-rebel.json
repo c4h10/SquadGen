@@ -375,7 +375,7 @@
     },
     {
       "name": "Sheathipede-Class Shuttle",
-      "id": "sheathipede-Class-shuttle",
+      "id": "sheathipede-class-shuttle",
       "faction": "rebel",
       "icon": "xwing-miniatures-ship xwing-miniatures-ship-sheathipedeclassshuttle",
       "attack": 2,
