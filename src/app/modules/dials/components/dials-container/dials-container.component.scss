@@ -1,22 +1,43 @@
 .container {
   margin-top: 24px;
-  .card {
-    margin: 15px 0;
 
-    .card-body {
-      padding: 4px 10px 10px;
-      height: 140px;
 
-      .title {
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-
+  .row {
+    justify-content: center;
+    .filter-form {
+      display: flex;
+      justify-content: space-between;
+      .input-container {
+        width: calc(100vw - 80px)
       }
+      .button-container {
+        margin-right: 15px;
+      }
+    }
+    .dial-container {
+      margin: 0 10px;
 
-      ::ng-deep {
-        .maneuver-dial {
-          margin: 0 auto;
+      .card {
+        margin: 10px 0;
+        width: 174px;
+
+        .card-body {
+          padding: 4px 10px 10px;
+          height: 124px;
+
+          .title {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
+          }
+
+          ::ng-deep {
+            .maneuver-dial {
+              margin: 0 auto;
+              font-size: 11px;
+            }
+          }
         }
       }
     }
