@@ -5,7 +5,7 @@
       <a routerLink="/dials" mat-button>Dials</a>
     </div>
 
-    <button *ngIf="this.routeData && this.routeData.isSquadView" mat-mini-fab [disableRipple]="true" color="accent" (click)="newSquadDialog()">
+    <button *ngIf="routeData$ | async" mat-mini-fab [disableRipple]="true" color="accent" (click)="newSquadDialog()">
       <mat-icon>add</mat-icon>
     </button>
   </nav>
