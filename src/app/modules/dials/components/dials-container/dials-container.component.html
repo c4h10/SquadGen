@@ -5,7 +5,7 @@
         <button mat-raised-button type="button" color="accent">Filter</button>
       </div>
       <mat-form-field class="input-container">
-        <input matInput placeholder="Ship name or faction..." [(ngModel)]="queryString">
+        <input matInput placeholder="Ship name or faction..." [(ngModel)]="queryString" (click)="$event.target.select()">
       </mat-form-field>
     </div>
   </div>
