@@ -1,7 +1,11 @@
 <div class="main mat-elevation-z6">
   <nav class="navbar-header">
-    <a routerLink="/"><img alt="Legion" class="legion-logo" src="assets/img/legion_white.png" /></a>
-    <button mat-mini-fab [disableRipple]="true" color="accent" (click)="newSquadDialog()">
+    <div class="links">
+      <a routerLink="/" mat-button><img alt="Legion" class="legion-logo" src="assets/img/legion_white.png" /></a>
+      <a routerLink="/dials" mat-button>Dials</a>
+    </div>
+
+    <button *ngIf="this.routeData && this.routeData.isSquadView" mat-mini-fab [disableRipple]="true" color="accent" (click)="newSquadDialog()">
       <mat-icon>add</mat-icon>
     </button>
   </nav>

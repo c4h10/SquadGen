@@ -17,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { GlobalModule } from './modules/global/global.module';
 import { XwingTranslationService } from './services/xwing-translation.service';
 import { WindowRefService } from './services/window-ref.service';
+import { DialsViewComponent } from './components/dials-view/dials-view.component';
+import { DialsModule } from './modules/dials/dials.module';
 
 
 const ngModules = [
@@ -29,6 +31,7 @@ const ngModules = [
 const sgModules = [
   TabNavigationModule,
   CommonMaterialModule,
+  DialsModule,
   GlobalModule
 ];
 
@@ -36,7 +39,8 @@ const sgModules = [
   declarations: [
     AppComponent,
     MainViewComponent,
-    NavBarComponent
+    NavBarComponent,
+    DialsViewComponent
   ],
   imports: [
     ...ngModules,

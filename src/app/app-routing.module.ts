@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainViewComponent } from './components/main-view/main-view.component';
+import { DialsViewComponent } from './components/dials-view/dials-view.component';
 
 const routes: Routes = [
   {
@@ -8,18 +9,19 @@ const routes: Routes = [
     component: MainViewComponent,
     pathMatch: 'full',
     data: {
-      isTabView: true
+      path: '/',
+      isSquadView: true
     }
   },
-
   {
-    path: 'admin',
-    component: MainViewComponent,
+    path: 'dials',
+    component: DialsViewComponent,
     pathMatch: 'full',
     data: {
-      isTabView: false
+      path: '/dials',
+      isSquadView: false
     }
-  },
+  }
 ];
 
 @NgModule({

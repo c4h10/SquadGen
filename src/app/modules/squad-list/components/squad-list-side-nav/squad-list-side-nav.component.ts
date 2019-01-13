@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@a
 import { Observable, Subscription } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { Faction, State as GlobalState } from '../../../global/reducers/types';
-import { getConfigurationFactions } from '../../../global/global.store';
+import { getFactionConfig } from '../../../global/global.store';
 import { SQUAD_LIST_NAV_ACTION, SquadListNavAction } from '../../types';
 import { OpenDialogAction } from '../../../global/actions/global.actions';
 import { DialDialogComponent } from '../../../global/components/dial-dialog/dial-dialog.component';
@@ -22,8 +22,7 @@ export class SquadListSideNavComponent implements OnInit, OnDestroy {
 
   @Input() factionId: string;
   @Input() tabId: string | number;
-  factionsConfig$: Observable<Faction[]>;
-  factionsConfig: Faction[];
+  faction$: Observable<Faction>;
   faction: Faction;
 
   private subscriptions: Subscription = new Subscription();
@@ -32,15 +31,15 @@ export class SquadListSideNavComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.factionsConfig$ = this.globalStore.select(getConfigurationFactions);
+    this.faction$ = this.globalStore.select(getFactionConfig, this.factionId);
     [
-      this.factionsConfig$.subscribe((configs) => {
-        const newConfig = configs.map(faction => {
-          faction.pilots.sort((a, b) => b.points - a.points);
-          return faction;
-        });
-        this.factionsConfig = newConfig;
-        this.faction = this.factionsConfig.find((faction) => faction.factionId === this.factionId);
+      this.faction$.subscribe((config) => {
+        const newConfig = {
+          ...config,
+          pilots: config.pilots.sort((a, b) => b.points - a.points)
+        };
+
+        this.faction = newConfig;
       })
     ].forEach(s => this.subscriptions.add(s));
   }
@@ -76,12 +75,4 @@ export class SquadListSideNavComponent implements OnInit, OnDestroy {
         break;
     }
   }
-
-/*  TODO: removed
-    private closeSidePanel () {
-    const body = document.getElementsByTagName('body')[0];
-    const closeLayer = document.getElementsByClassName('close-layer')[0];
-    closeLayer.parentNode.removeChild(closeLayer);
-    body.classList.remove('nav-open');
-  }*/
 }
