@@ -12,8 +12,6 @@ $custom-typography: mat-typography-config($font-family: '"EurostileStandard", sa
 // hue. Available color palettes: https://material.io/design/color/
 $sg-app-primary: mat-palette($mat-grey);
 $sg-app-accent:  mat-palette($mat-amber);
-
-// The warn palette is optional (defaults to red).
 $sg-app-warn:    mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
@@ -23,3 +21,12 @@ $sg-app-theme: mat-light-theme($sg-app-primary, $sg-app-accent, $sg-app-warn);
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($sg-app-theme);
+
+/*
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-light-blue);
+  $alternate-accent:  mat-palette($mat-yellow, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  @include angular-material-theme($alternate-theme);
+}
+*/

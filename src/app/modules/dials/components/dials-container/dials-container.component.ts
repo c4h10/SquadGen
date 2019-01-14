@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Faction, Pilot, Ship, State as GlobalState } from '../../../global/reducers/types';
 import { Observable, Subscription } from 'rxjs';
@@ -7,7 +7,8 @@ import { getConfigurationFactions } from '../../../global/global.store';
 @Component({
   selector: 'sg-dials-container',
   templateUrl: './dials-container.component.html',
-  styleUrls: ['./dials-container.component.scss']
+  styleUrls: ['./dials-container.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DialsContainerComponent implements OnInit, OnDestroy {
 
@@ -29,10 +30,10 @@ export class DialsContainerComponent implements OnInit, OnDestroy {
         }
         this.factionsConfig = configs;
 
-        this.ships = configs.reduce((acc: Ship[], faction) => {
+        this.ships = this.uniqByName(configs.reduce((acc: Ship[], faction) => {
           acc.push(...faction.ships);
           return acc;
-        }, []);
+        }, []));
         this.ships.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
       })
     ].forEach(s => this.subscriptions.add(s));
@@ -42,7 +43,19 @@ export class DialsContainerComponent implements OnInit, OnDestroy {
     this.subscriptions.unsubscribe();
   }
 
-  filterShip (value: string) {
-    console.log(value);
+  clearInput () {
+    this.queryString = '';
+  }
+
+  onKeyup(event: KeyboardEvent) {
+    const target: HTMLInputElement = event.target as HTMLInputElement;
+    target.blur();
+  }
+
+  private uniqByName(ships: Ship[]) {
+    const seen = new Set();
+    return ships.filter(item => {
+      return seen.has(item.name) ? false : seen.add(item.name);
+    });
   }
 }
