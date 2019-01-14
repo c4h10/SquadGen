@@ -34,6 +34,7 @@ export interface Ship {
   actions: ShipAction[];
   maneuvers?: number[][];
   ability?: string;
+  keywords?: string;
 }
 
 export interface Pilot {

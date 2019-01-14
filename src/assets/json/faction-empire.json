@@ -63,7 +63,8 @@
         [1, 1, 2, 1, 1, 0, 0, 0, 3, 3],
         [0, 0, 1, 0, 0, 3, 0, 0, 0, 0],
         [0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-      ]
+      ],
+      "keywords": "vader"
     }, {
       "id": "tie-interceptor",
       "name": "TIE Interceptor",
@@ -96,7 +97,8 @@
         [1, 1, 2, 1, 1, 0, 3, 3],
         [0, 0, 2, 0, 0, 3, 0, 0],
         [0, 0, 1, 0, 0, 0, 0, 0]
-      ]
+      ],
+      "keywords": "soontir fel"
     }, {
       "id": "lambda-class-t-4a-shuttle",
       "name": "Lambda-Class Shuttle",
@@ -268,7 +270,8 @@
         [1, 2, 2, 2, 1, 0],
         [1, 1, 2, 1, 1, 3],
         [0, 0, 1, 0, 0, 3]
-      ]
+      ],
+      "keywords": "whisper"
     }, {
       "id": "tie-ca-punisher",
       "name": "TIE Punisher",
@@ -307,7 +310,8 @@
         [1, 1, 2, 1, 1, 0],
         [3, 1, 1, 1, 3, 0],
         [0, 0, 0, 0, 0, 3]
-      ]
+      ],
+      "keywords": "redline"
     }, {
       "id": "tie-advanced-v1",
       "name": "TIE Advanced Prototype",
@@ -444,7 +448,8 @@
         [1, 2, 2, 2, 1, 0, 0, 0],
         [1, 1, 1, 1, 1, 0, 0, 0],
         [0, 0, 3, 0, 0, 0, 0, 0]
-      ]
+      ],
+      "keywords": "gunboat"
     }, {
       "id": "tie-reaper",
       "name": "TIE Reaper",
@@ -477,9 +482,7 @@
         [0, 1, 2, 1, 0, 0, 0, 0]
       ]
     }
-  ]
-,
-
+  ],
   "pilots": [
   ]
 }

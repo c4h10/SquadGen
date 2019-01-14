@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="row dial-row">
-    <div class="dial-container" *ngFor="let ship of ships | filter : queryString">
+    <div class="dial-container" *ngFor="let ship of ships | dialFilter : queryString">
     <section class="card">
       <div class="card-body">
 
