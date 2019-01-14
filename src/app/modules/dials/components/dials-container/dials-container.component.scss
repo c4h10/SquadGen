@@ -1,12 +1,15 @@
 .container {
-  margin-top: 24px;
-
-
+  margin-top: 16px;
+  margin-bottom: 3em;
   .row {
+    &.dial-row {
+      margin-top: -10px;
+    }
     justify-content: center;
     .filter-form {
       display: flex;
       justify-content: space-between;
+      font-size: 13px;
       .input-container {
         width: calc(100vw - 80px)
       }
@@ -16,26 +19,57 @@
     }
     .dial-container {
       margin: 0 10px;
-
       .card {
         margin: 10px 0;
-        width: 174px;
-
+        width: 201px;
+        height: 132px;
         .card-body {
           padding: 4px 10px 10px;
-          height: 124px;
-
           .title {
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-
+            font-size: 11px;
           }
 
           ::ng-deep {
             .maneuver-dial {
               margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    .row {
+      .filter-form {
+        padding: 0 9px;
+      }
+
+      .dial-container {
+        margin: 0 5px;
+
+        .card {
+          margin: 5px 0;
+          width: 148px;
+          height: 105px;
+          .card-body {
+            padding: 4px;
+            .title {
               font-size: 11px;
+              i {
+                font-size: 2em;
+              }
+            }
+
+            ::ng-deep {
+              .maneuver-dial {
+                font-size: 9px;
+              }
             }
           }
         }

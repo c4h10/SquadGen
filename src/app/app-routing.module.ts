@@ -6,10 +6,19 @@ import { DialsViewComponent } from './components/dials-view/dials-view.component
 const routes: Routes = [
   {
     path: '',
-    component: MainViewComponent,
+    component: DialsViewComponent,
     pathMatch: 'full',
     data: {
       path: '/',
+      isSquadView: false
+    }
+  },
+  {
+    path: 'squad',
+    component: MainViewComponent,
+    pathMatch: 'full',
+    data: {
+      path: '/squad',
       isSquadView: true
     }
   },

@@ -9,13 +9,13 @@
       </mat-form-field>
     </div>
   </div>
-  <div class="row">
+  <div class="row dial-row">
     <div class="dial-container" *ngFor="let ship of ships | filter : queryString">
     <section class="card">
       <div class="card-body">
 
         <div class="title">
-          <mat-icon [ngClass]="ship.icon"></mat-icon>
+          <i [ngClass]="ship.icon"></i>
           {{ship.name}}</div>
         <sg-maneuvers [ship]="ship"></sg-maneuvers>
       </div>

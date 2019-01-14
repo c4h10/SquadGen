@@ -13,8 +13,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 48px;
-    padding: 8px 16px 8px 8px;
+    height: 42px;
+    padding: 8px;
     background: $dark-primary;
 
     .legion-logo {
@@ -40,4 +40,8 @@
 
     }
   }
+}
+.version {
+  color: $divider;
+  font-size: 0.8rem;
 }

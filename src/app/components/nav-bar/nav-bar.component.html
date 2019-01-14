@@ -1,12 +1,13 @@
-<div class="main mat-elevation-z6">
+<div class="main mat-elevation-z6" *ngIf="routeData$ | async">
   <nav class="navbar-header">
     <div class="links">
       <a routerLink="/" mat-button><img alt="Legion" class="legion-logo" src="assets/img/legion_white.png" /></a>
-      <a routerLink="/dials" mat-button>Dials</a>
     </div>
-
-    <button *ngIf="routeData$ | async" mat-mini-fab [disableRipple]="true" color="accent" (click)="newSquadDialog()">
-      <mat-icon>add</mat-icon>
-    </button>
+    <div class="buttons">
+      <button *ngIf="routeData.isSquadView" mat-mini-fab [disableRipple]="true" color="accent" (click)="newSquadDialog()">
+        <mat-icon>add</mat-icon>
+      </button>
+      <span class="version">v.0.1.1</span>
+    </div>
   </nav>
 </div>
