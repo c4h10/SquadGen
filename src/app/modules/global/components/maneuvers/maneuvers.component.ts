@@ -50,7 +50,7 @@ export class ManeuversComponent implements OnInit {
           }
         });
         if (this.ship.id === 'sheathipede-class-shuttle') {
-          tabRow = tabRow.slice(2, this.dialMap[0].length);
+          tabRow = tabRow.slice(2, this.dialMap[0].length + 2);
         } else if (this.ship.id === 'quadrijet-transfer-spacetug') {
           tabRow = tabRow.slice(1, this.dialMap[0].length + 1);
         }
