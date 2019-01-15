@@ -17,6 +17,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Build prod
 `ng build --prod --base-href=/xGen/`
+`ng build --prod --base-href=/SLAM/`
 
 ## Running unit tests
 

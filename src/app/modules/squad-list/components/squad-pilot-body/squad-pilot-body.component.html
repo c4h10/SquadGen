@@ -1,0 +1,17 @@
+
+
+
+<section class="row statistics">
+  <sg-stats-line [pilot]="squadPilot.pilot"></sg-stats-line>
+  <sg-actions-line [actions]="squadPilot.pilot.ship.actions"></sg-actions-line>
+</section>
+<section class="row ability-line" *ngIf="squadPilot.pilot.ability">
+  <span [innerHTML]="squadPilot.pilot.ability | xwingTranslate">{{ squadPilot.pilot.ability }}</span>
+</section>
+<section class="upgrades-line">
+  <strong>Upgrades:</strong>
+  <span *ngFor="let upg of squadPilot.pilot.slots" class="upgrade-line">
+      <i class="xwing-miniatures-font xwing-miniatures-font-{{upg.toLowerCase()}}"></i>
+    </span>
+</section>
+

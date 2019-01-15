@@ -18,6 +18,8 @@ import { SquadListNavbarComponent } from './components/squad-list-navbar/squad-l
 import { SquadListNavbarToggleComponent } from './components/squad-list-navbar-toggle/squad-list-navbar-toggle.component';
 import { SatPopoverModule } from '@ncstate/sat-popover';
 import { GlobalModule } from '../global/global.module';
+import { SquadPilotHeaderComponent } from './components/squad-pilot-header/squad-pilot-header.component';
+import { SquadPilotBodyComponent } from './components/squad-pilot-body/squad-pilot-body.component';
 
 export function initEndpoints(apiClient: ApiClientService) {
   return () => apiClient.registerEndpoints(API_ENDPOINTS);
@@ -29,7 +31,9 @@ export function initEndpoints(apiClient: ApiClientService) {
     SquadListSideNavComponent,
     SquadListSideNavSectionComponent,
     SquadListNavbarComponent,
-    SquadListNavbarToggleComponent],
+    SquadListNavbarToggleComponent,
+    SquadPilotHeaderComponent,
+    SquadPilotBodyComponent],
   imports: [
     CommonModule,
     SatPopoverModule,

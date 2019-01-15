@@ -1,22 +1,31 @@
 .main-panel {
   height: 100%;
   overflow: hidden;
-}
 
-.squad {
-  height: 100vh;
-  overflow-y: visible;
-  position: relative;
-}
-.squad-wrapper {
-  height: calc(100vh - 175px);
-  overflow-y: scroll;
-}
+  .squad {
+    height: 100vh;
+    overflow-y: visible;
+    position: relative;
 
-.squad-pilot-list {
-  margin-bottom: 60px;
-}
-/* TEMPORARY */
-.card-header {
-  z-index: 0 !important;
+    .squad-wrapper {
+      height: calc(100vh - 175px);
+      overflow-y: auto;
+
+      .squad-pilot-list {
+        margin-bottom: 60px;
+        .squad-pilot-header{
+          flex-direction: row-reverse;
+          ::ng-deep {
+            .mat-content {
+              justify-content: space-between;
+              .mat-expansion-panel-header-title,
+              .mat-expansion-panel-header-description {
+                flex-grow: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
