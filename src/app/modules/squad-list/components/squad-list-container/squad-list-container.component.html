@@ -5,9 +5,11 @@
     <div class="squad-wrapper container">
         <mat-accordion [multi]="true" class="squad-pilot-list" *ngIf="squadPilots.length > 0">
           <mat-expansion-panel *ngFor="let squadPilot of squadPilots">
-            <mat-expansion-panel-header class="squad-pilot-header" collapsedHeight="48px" expandedHeight="48px">
+            <mat-expansion-panel-header class="squad-pilot-header" collapsedHeight="40px" expandedHeight="40px">
               <mat-panel-title>
-                  <i [ngClass]="squadPilot.pilot.ship.icon"></i><span *ngIf="squadPilot.pilot.unique" class="unique">•</span>{{ squadPilot.pilot.name }}
+                  <p class="title">
+                    <i [ngClass]="squadPilot.pilot.ship.icon"></i>
+                    <span *ngIf="squadPilot.pilot.unique" class="unique">• </span> {{ squadPilot.pilot.name }} <span class="points">({{ squadPilot.points }})</span></p>
               </mat-panel-title>
               <mat-panel-description>
                 <sg-squad-pilot-header [squadPilot]="squadPilot"></sg-squad-pilot-header>

@@ -16,6 +16,7 @@ $secondary: mat-color($sg-app-primary, 600);
 $accent: mat-color($sg-app-accent);
 $divider: mat-color($sg-app-primary, 400);
 $warn: mat-color($sg-app-warn);
+$warn-hover: mat-color($sg-app-warn, 700);
 
 
 // Create the theme object (a Sass map containing all of the palettes).
