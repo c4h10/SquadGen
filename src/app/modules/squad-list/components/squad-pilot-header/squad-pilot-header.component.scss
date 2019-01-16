@@ -18,9 +18,10 @@
         }
       }
 
-      width: 32px;
-      height: 32px;
-      line-height: 32px;
+      padding-top: 3px;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
 
       .mat-icon {
         font-size: 18px;
@@ -42,6 +43,56 @@
 
           &:hover {
             color: mat-color($sg-app-warn, 900);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  ::ng-deep {
+    .actions {
+      .action {
+        /*padding-top: 3px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+
+        .mat-icon {
+          font-size: 18px;
+        }*/
+      }
+    }
+
+    .mat-menu-panel {
+      .mat-menu-content {
+        padding: 4px 0;
+        .mat-menu-item {
+          line-height: 32px;
+          height: 32px;
+          &.delete {
+            color: mat-color($sg-app-warn);
+            .mat-icon {
+              color: mat-color($sg-app-warn);
+            }
+            &:hover {
+              color: mat-color($sg-app-warn, 700);
+              .mat-icon {
+                color: mat-color($sg-app-warn, 700);
+              }
+            }
+          }
+          .mat-icon {
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 18px;
+            margin-right: 6px;
+          }
+
+          span {
+            font-size: 13px;
           }
         }
       }

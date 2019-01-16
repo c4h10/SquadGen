@@ -1,7 +1,17 @@
 <div class="actions">
-  <button mat-icon-button class="action duplicate"><mat-icon>file_copy</mat-icon></button>
-  <button mat-icon-button class="action move-up"><mat-icon>arrow_drop_up</mat-icon></button>
-  <button mat-icon-button class="action move-down"><mat-icon>arrow_drop_down</mat-icon></button>
-  <button mat-icon-button class="action delete"><mat-icon>delete</mat-icon></button>
+  <button mat-icon-button class="action duplicate" (click)="onActionClick($event, 'duplicate')" *ngIf="!isMobile"><mat-icon>file_copy</mat-icon></button>
+  <button mat-icon-button class="action move-up" (click)="onActionClick($event, 'move-up')" *ngIf="!isMobile"><mat-icon>arrow_drop_up</mat-icon></button>
+  <button mat-icon-button class="action move-down" (click)="onActionClick($event, 'move-down')" *ngIf="!isMobile"><mat-icon>arrow_drop_down</mat-icon></button>
+  <button mat-icon-button class="action delete" (click)="onActionClick($event, 'delete')" *ngIf="!isMobile"><mat-icon>delete</mat-icon></button>
+  <button mat-icon-button class="action more" [matMenuTriggerFor]="menu" *ngIf="isMobile" (click)="onMenuClick($event)">
+    <mat-icon>more_vert</mat-icon>
+  </button>
 </div>
 
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item class="action duplicate" (click)="onActionClick($event, 'duplicate', false)"><mat-icon>file_copy</mat-icon><span>Duplicate</span></button>
+  <button mat-menu-item class="action move-up" (click)="onActionClick($event, 'move-up', false)"><mat-icon>arrow_drop_up</mat-icon><span>Move up</span></button>
+  <button mat-menu-item class="action move-down" (click)="onActionClick($event, 'move-down', false)"><mat-icon>arrow_drop_down</mat-icon><span>Move down</span></button>
+  <button mat-menu-item class="action delete" (click)="onActionClick($event, 'delete', false)" ><mat-icon>delete</mat-icon><span>Remove</span></button>
+</mat-menu>

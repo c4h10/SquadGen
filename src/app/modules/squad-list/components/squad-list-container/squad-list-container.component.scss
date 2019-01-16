@@ -17,6 +17,7 @@
         display: block;
         margin-bottom: 60px;
         .squad-pilot-header{
+          transition: background-color 200ms ease-in;
           &:hover {
             background-color: mat-color($sg-app-primary, 100);
           }
@@ -38,12 +39,17 @@
                 margin: 0 0 0 12px;
                 flex-grow: 0;
               }
-
               .title {
                 margin: 0;
                 font-size: 13px;
                 line-height: 32px;
                 color: mat-color($sg-app-primary, 900);
+                .name {
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  overflow: hidden;
+                }
+
                 i {
                   margin-right: 4px;
                 }
@@ -57,4 +63,37 @@
       }
     }
   }
+}
+
+@media (max-width: 480px) {
+  .main-panel {
+    .squad {
+      .squad-wrapper {
+        .squad-pilot-list {
+          .squad-pilot-header{
+            padding: 0 12px;
+            ::ng-deep {
+              .mat-content {
+                justify-content: space-between;
+                .mat-expansion-panel-header-title {
+                  margin: 0 0 0 10px;
+                }
+                .mat-expansion-panel-header-description {
+                  margin: 0 0 0 6px;
+                }
+                .title {
+                  margin: 0;
+       /*           font-size: 11px;
+                  .points {
+                    font-size: 10px;
+                  }*/
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 }

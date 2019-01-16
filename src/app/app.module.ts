@@ -19,6 +19,7 @@ import { XwingTranslationService } from './services/xwing-translation.service';
 import { WindowRefService } from './services/window-ref.service';
 import { DialsViewComponent } from './components/dials-view/dials-view.component';
 import { DialsModule } from './modules/dials/dials.module';
+import { ResponsiveService } from './services/responsive.service';
 
 
 const ngModules = [
@@ -51,7 +52,7 @@ const sgModules = [
     environment.imports,
     LayoutModule
   ],
-  providers: [XwingTranslationService, WindowRefService],
+  providers: [XwingTranslationService, WindowRefService, ResponsiveService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

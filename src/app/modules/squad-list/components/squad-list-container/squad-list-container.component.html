@@ -9,7 +9,7 @@
               <mat-panel-title>
                   <p class="title">
                     <i [ngClass]="squadPilot.pilot.ship.icon"></i>
-                    <span *ngIf="squadPilot.pilot.unique" class="unique">• </span> {{ squadPilot.pilot.name }} <span class="points">({{ squadPilot.points }})</span></p>
+                    <span *ngIf="squadPilot.pilot.unique" class="unique">• </span> <span class="name">{{ squadPilot.pilot.name }} </span> <span class="points">({{ squadPilot.points }})</span></p>
               </mat-panel-title>
               <mat-panel-description>
                 <sg-squad-pilot-header [squadPilot]="squadPilot"></sg-squad-pilot-header>
