@@ -1,3 +1,15 @@
+<div class="stats">
+  <span class="stat stat-skill" *ngIf="squadPilot.pilot.skill">{{ squadPilot.pilot.skill }}</span>
+  <span class="stat stat-attack" *ngIf="squadPilot.pilot.ship.attack">{{ squadPilot.pilot.ship.attack }}</span>
+  <span class="stat stat-bullseyearc" *ngIf="squadPilot.pilot.ship.attackbull">{{ squadPilot.pilot.ship.attackbull }}</span>
+  <span class="stat stat-attackb" *ngIf="squadPilot.pilot.ship.attackb">{{ squadPilot.pilot.ship.attackb }}</span>
+  <span class="stat stat-attackt" *ngIf="squadPilot.pilot.ship.attackt">{{ squadPilot.pilot.ship.attackt }}</span>
+  <span class="stat stat-attackdt" *ngIf="squadPilot.pilot.ship.attackdt">{{ squadPilot.pilot.ship.attackdt }}</span>
+  <span class="stat stat-agility" *ngIf="squadPilot.pilot.ship.agility">{{ squadPilot.pilot.ship.agility }}</span>
+  <span class="stat stat-hull" *ngIf="squadPilot.pilot.ship.hull">{{ squadPilot.pilot.ship.hull }}</span>
+  <span class="stat stat-shields" *ngIf="squadPilot.pilot.ship.shields">{{ squadPilot.pilot.ship.shields }}</span>
+  <span class="stat stat-force" *ngIf="squadPilot.pilot.force">{{ squadPilot.pilot.force }}</span>
+</div>
 <div class="actions">
   <button mat-icon-button class="action duplicate" (click)="onActionClick($event, 'duplicate')" *ngIf="!isMobile"><mat-icon>file_copy</mat-icon></button>
   <button mat-icon-button class="action move-up" (click)="onActionClick($event, 'move-up')" *ngIf="!isMobile"><mat-icon>arrow_drop_up</mat-icon></button>

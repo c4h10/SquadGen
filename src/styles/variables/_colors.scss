@@ -3,8 +3,8 @@
 
 // Copy the palettes from your selected theme (usually theme.scss).
 $sg-app-primary: mat-palette($mat-grey);
-$sg-app-accent:  mat-palette($mat-amber);
-$sg-app-warn:    mat-palette($mat-red);
+$sg-app-accent: mat-palette($mat-amber);
+$sg-app-warn: mat-palette($mat-red);
 
 
 // Create your Sass color vars (will be available in all the project)
@@ -17,6 +17,15 @@ $accent: mat-color($sg-app-accent);
 $divider: mat-color($sg-app-primary, 400);
 $warn: mat-color($sg-app-warn);
 $warn-hover: mat-color($sg-app-warn, 700);
+
+
+$skill: #cd6d2d;
+$attack: #ef232b;
+$agility: #6bbe44;
+$hull: #b6b335;
+$shield: #7ed3e5;
+$force: #b976d2;
+$charge: #b6b335;
 
 
 // Create the theme object (a Sass map containing all of the palettes).
