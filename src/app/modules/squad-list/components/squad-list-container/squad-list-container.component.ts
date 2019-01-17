@@ -7,7 +7,12 @@ import { getSquadConfig, getSquadPilots, getTabId } from '../../selectors/squad-
 import { EMPTY, Observable, Subscription } from 'rxjs';
 import { SQUAD_LIST_NAV_ACTION, SquadListNavAction } from '../../types';
 import { withTabId } from '../../../../tab-store/types';
-import { SquadListAddPilotAction, SquadListRemovePilotAction } from '../../actions';
+import {
+  SquadListAddPilotAction,
+  SquadListDuplicatePilotAction, SquadListMoveDownPilotAction,
+  SquadListMoveUpPilotAction,
+  SquadListRemovePilotAction
+} from '../../actions';
 
 
 @Component({
@@ -70,10 +75,13 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
         this.storeManager.dispatch(withTabId(new SquadListRemovePilotAction({squadPilot: event.data.squadPilot}), this.tabId));
         break;
       case SQUAD_LIST_NAV_ACTION.MOVE_UP:
+        this.storeManager.dispatch(withTabId(new SquadListMoveUpPilotAction({squadPilot: event.data.squadPilot}), this.tabId));
         break;
       case SQUAD_LIST_NAV_ACTION.MOVE_DOWN:
+        this.storeManager.dispatch(withTabId(new SquadListMoveDownPilotAction({squadPilot: event.data.squadPilot}), this.tabId));
         break;
       case SQUAD_LIST_NAV_ACTION.DUPLICATE:
+        this.storeManager.dispatch(withTabId(new SquadListDuplicatePilotAction({squadPilot: event.data.squadPilot}), this.tabId));
         break;
     }
   }

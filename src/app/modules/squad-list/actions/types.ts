@@ -8,9 +8,9 @@ export const enum ACTION_NAMES {
   SQUAD_LIST_CONTAINER_CREATED = '[Squad list] SQUAD_LIST_CONTAINER_CREATED',
   SQUAD_LIST_ADD_PILOT = '[Squad list] SQUAD_LIST_ADD_PILOT',
   SQUAD_LIST_REMOVE_PILOT = '[Squad list] SQUAD_LIST_REMOVE_PILOT',
-  SQUAD_LIST_MOVE_UP = '[Squad list] SQUAD_LIST_MOVE_UP',
-  SQUAD_LIST_MOVE_DOWN = '[Squad list] SQUAD_LIST_MOVE_DOWN',
-  SQUAD_LIST_DUPLICATE = '[Squad list] SQUAD_LIST_DUPLICATE'
+  SQUAD_LIST_MOVE_UP_PILOT = '[Squad list] SQUAD_LIST_MOVE_UP_PILOT',
+  SQUAD_LIST_MOVE_DOWN_PILOT = '[Squad list] SQUAD_LIST_MOVE_DOWN_PILOT',
+  SQUAD_LIST_DUPLICATE_PILOT = '[Squad list] SQUAD_LIST_DUPLICATE_PILOT'
 }
 
 
@@ -36,6 +36,6 @@ export interface SquadListAddPilotPayload {
   pilot: Pilot;
 }
 
-export interface SquadListRemovePilotPayload {
+export interface SquadListPilotPayload {
   squadPilot: SquadPilot;
 }

@@ -7,6 +7,9 @@ import { reducer as globalDummyReducer } from './reducer.global-dummy';
 import { reducer as squadListContainerCreatedReducer } from './reducer.squad-list-container-created';
 import { reducer as squadListAddPilotReducer } from './reducer.squad-list-add-pilot';
 import { reducer as squadListRemovePilotReducer } from './reducer.squad-list-remove-pilot';
+import { reducer as squadListDuplicatePilotReducer } from './reducer.squad-list-duplicate-pilot';
+import { reducer as squadListMoveUpPilotReducer } from './reducer.squad-list-move-up-pilot';
+import { reducer as squadListMoveDownPilotReducer } from './reducer.squad-list-move-down-pilot';
 import * as Types from './types';
 import { MODULE_NAME } from '../types';
 import { tabReducer } from '../../../tab-store/tab-store.reducer';
@@ -17,7 +20,10 @@ export const CONTAINER_REDUCERS: Types.ReducerMap = {
   [ACTION_NAMES.DUMMY]: dummyReducer,
   [ACTION_NAMES.SQUAD_LIST_CONTAINER_CREATED]: squadListContainerCreatedReducer,
   [ACTION_NAMES.SQUAD_LIST_ADD_PILOT]: squadListAddPilotReducer,
-  [ACTION_NAMES.SQUAD_LIST_REMOVE_PILOT]: squadListRemovePilotReducer
+  [ACTION_NAMES.SQUAD_LIST_REMOVE_PILOT]: squadListRemovePilotReducer,
+  [ACTION_NAMES.SQUAD_LIST_MOVE_UP_PILOT]: squadListMoveUpPilotReducer,
+  [ACTION_NAMES.SQUAD_LIST_MOVE_DOWN_PILOT]: squadListMoveDownPilotReducer,
+  [ACTION_NAMES.SQUAD_LIST_DUPLICATE_PILOT]: squadListDuplicatePilotReducer
 };
 
 export const GLOBAL_REDUCERS: Types.GlobalReducerMap = {
