@@ -4,17 +4,21 @@ import { guid } from '../../../utils/utils.functions';
 
 export function reducer(state: ContainerState, action: SquadListAddPilotAction): ContainerState {
   const squadPilots = [...state.squadPilots];
+  const squadConfig = {
+    ...state.squadConfig,
+    points: state.squadConfig.points + action.payload.pilot.points
+  };
+
   squadPilots.push({
     UUID: guid(),
     pilot: action.payload.pilot,
     points: action.payload.pilot.points
   });
 
-  // TODO: CALCULATE TOTAL POINTS
-
   const newState = {
     ...state,
-    squadPilots : squadPilots
+    squadConfig,
+    squadPilots: squadPilots
   };
   return newState;
 }
