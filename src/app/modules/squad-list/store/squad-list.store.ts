@@ -11,7 +11,6 @@ export interface ContainerState {
   tabId: string | number;
   squadConfig?: SquadConfig;
   squadPilots: SquadPilot[];
-  // TODO: information about squad - points?
   meta?: any;
 }
 
@@ -24,6 +23,7 @@ export interface SquadConfig {
 }
 
 export interface SquadPilot {
+  UUID: string;
   pilot: Pilot;
   points: number;
   upgrades?: any;

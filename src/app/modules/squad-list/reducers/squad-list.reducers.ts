@@ -6,6 +6,7 @@ import { reducer as dummyReducer } from './reducer.dummy';
 import { reducer as globalDummyReducer } from './reducer.global-dummy';
 import { reducer as squadListContainerCreatedReducer } from './reducer.squad-list-container-created';
 import { reducer as squadListAddPilotReducer } from './reducer.squad-list-add-pilot';
+import { reducer as squadListRemovePilotReducer } from './reducer.squad-list-remove-pilot';
 import * as Types from './types';
 import { MODULE_NAME } from '../types';
 import { tabReducer } from '../../../tab-store/tab-store.reducer';
@@ -15,7 +16,8 @@ import { TabContainerAction, TabState } from '../../../tab-store/types';
 export const CONTAINER_REDUCERS: Types.ReducerMap = {
   [ACTION_NAMES.DUMMY]: dummyReducer,
   [ACTION_NAMES.SQUAD_LIST_CONTAINER_CREATED]: squadListContainerCreatedReducer,
-  [ACTION_NAMES.SQUAD_LIST_ADD_PILOT]: squadListAddPilotReducer
+  [ACTION_NAMES.SQUAD_LIST_ADD_PILOT]: squadListAddPilotReducer,
+  [ACTION_NAMES.SQUAD_LIST_REMOVE_PILOT]: squadListRemovePilotReducer
 };
 
 export const GLOBAL_REDUCERS: Types.GlobalReducerMap = {

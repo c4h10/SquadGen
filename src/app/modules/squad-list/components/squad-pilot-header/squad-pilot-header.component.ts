@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { SquadPilot } from '../../store/squad-list.store';
 import { ResponsiveService } from '../../../../services/responsive.service';
 import { Observable, Subscription } from 'rxjs';
+import { SQUAD_LIST_NAV_ACTION } from '../../types';
 
 @Component({
   selector: 'sg-squad-pilot-header',
@@ -11,6 +12,7 @@ import { Observable, Subscription } from 'rxjs';
 export class SquadPilotHeaderComponent implements OnInit, OnDestroy {
 
   @Input() squadPilot: SquadPilot;
+  @Output() action: EventEmitter<any> = new EventEmitter<any>();
 
   public isMobile$: Observable<boolean>;
   public isMobile: boolean;
@@ -43,7 +45,12 @@ export class SquadPilotHeaderComponent implements OnInit, OnDestroy {
     if (preventDefault) {
       event.stopPropagation();
     }
-    console.log(type);
+    this.action.emit({
+      type: type,
+      data: {
+        squadPilot: this.squadPilot
+      }
+    });
   }
 
 }

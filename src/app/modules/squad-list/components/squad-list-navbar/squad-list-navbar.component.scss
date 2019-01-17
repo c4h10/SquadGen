@@ -1,3 +1,8 @@
 .container-fluid {
   justify-content: unset;
+
+  .navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }

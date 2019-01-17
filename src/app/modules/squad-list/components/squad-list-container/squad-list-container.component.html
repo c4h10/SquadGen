@@ -1,6 +1,6 @@
 <sg-squad-list-side-nav [factionId]="config.faction.factionId" [tabId]="tabId"></sg-squad-list-side-nav>
 <div class="main-panel">
-  <sg-squad-list-navbar [tabId]="tabId"></sg-squad-list-navbar>
+  <sg-squad-list-navbar [tabId]="tabId" [config]="config"></sg-squad-list-navbar>
   <div class="squad">
     <div class="squad-wrapper container">
         <mat-accordion [multi]="true" class="squad-pilot-list" *ngIf="squadPilots.length > 0">
@@ -12,7 +12,7 @@
                     <span *ngIf="squadPilot.pilot.unique" class="unique">• </span> <span class="name">{{ squadPilot.pilot.name }} </span> <span class="points">({{ squadPilot.points }})</span></p>
               </mat-panel-title>
               <mat-panel-description>
-                <sg-squad-pilot-header [squadPilot]="squadPilot" class="header-line"></sg-squad-pilot-header>
+                <sg-squad-pilot-header [squadPilot]="squadPilot" class="header-line" (action)="actionHandler($event)"></sg-squad-pilot-header>
               </mat-panel-description>
             </mat-expansion-panel-header>
           <sg-squad-pilot-body  [squadPilot]="squadPilot" ></sg-squad-pilot-body>

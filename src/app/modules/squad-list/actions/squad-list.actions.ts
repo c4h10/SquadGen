@@ -5,7 +5,7 @@ import {
   DummyPayload,
   GlobalDummyPayload,
   SquadListContainerCreatedPayload,
-  SquadListAddPilotPayload
+  SquadListAddPilotPayload, SquadListRemovePilotPayload
 } from './types';
 
 export class SquadListContainerCreateAction implements Action {
@@ -29,6 +29,12 @@ export class SquadListAddPilotAction implements Action {
   }
 }
 
+export class SquadListRemovePilotAction implements Action {
+  readonly type = ACTION_NAMES.SQUAD_LIST_REMOVE_PILOT;
+
+  constructor(public payload: SquadListRemovePilotPayload) {
+  }
+}
 
 export class GlobalDummyAction implements Action {
   readonly type = ACTION_NAMES.GLOBAL_DUMMY;
