@@ -25,7 +25,7 @@
             background-color: mat-color($sg-app-primary, 100);
           }
           flex-direction: row-reverse;
-          padding: 0 12px;
+          padding: 0 8px 0 12px;
           &.mat-expanded {
             .header-line {
               ::ng-deep {

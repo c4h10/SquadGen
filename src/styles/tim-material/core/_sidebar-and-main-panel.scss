@@ -55,18 +55,6 @@
             display: none !important;
         }
 
-        .navbar-form{
-            border: none;
-            box-shadow: none;
-
-          .input-group {
-            font-size: 1.7em;
-            height: 36px;
-            width: 78%;
-            padding-left: 17px;
-          }
-        }
-
         > .nav,
         .user .user-info{
             [data-toggle="collapse"] ~ div > ul > li > a{

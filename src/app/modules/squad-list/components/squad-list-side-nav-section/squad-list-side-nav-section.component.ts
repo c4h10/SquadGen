@@ -61,7 +61,7 @@ export class SquadListSideNavSectionComponent implements OnInit {
 
   // TODO: Make service
   get isMobileMenu() {
-    if (this.windowRef.nativeWindow.innerWidth > 991) {
+    if (this.windowRef.nativeWindow.innerWidth > 768) {
       return false;
     }
     return true;
