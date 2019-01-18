@@ -34,7 +34,7 @@
           <div class="tooltip-wrapper ship-wrapper">
             <div class="ship-desc">
               <sg-stats-line [pilot]="pilot"></sg-stats-line>
-              <sg-actions-line [actions]="pilot.ship.actions"></sg-actions-line>
+              <sg-actions-line [actions]="pilot.actions ? pilot.actions : pilot.ship.actions"></sg-actions-line>
               <div class="title-line"><span class="ship">{{pilot.ship.name}}</span><span *ngIf="pilot.unique" class="unique">, Unique</span></div>
               <div *ngIf="pilot.ability" class="ability-line">
                 <span [innerHTML]="pilot.ability | xwingTranslate">{{ pilot.ability }}</span>

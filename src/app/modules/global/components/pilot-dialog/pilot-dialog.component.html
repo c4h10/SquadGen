@@ -4,29 +4,18 @@
       class="ship">, {{pilot.ship.name}}</span></h4>
   </div>
   <div class="card-body">
-    <div class="row attributes">
-      <div>
+    <div class="container">
+      <div class="row statistics">
         <sg-stats-line [pilot]="pilot"></sg-stats-line>
+        <sg-actions-line [actions]="pilot.actions ? pilot.actions : pilot.ship.actions"></sg-actions-line>
       </div>
-      <div>
-        <sg-actions-line [actions]="pilot.ship.actions"></sg-actions-line>
+      <div class="row ability-line" *ngIf="pilot.ability">
+        <span [innerHTML]="pilot.ability | xwingTranslate">{{ pilot.ability }}</span>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div *ngIf="pilot.ability" class="ability-line">
-          <span [innerHTML]="pilot.ability | xwingTranslate">{{ pilot.ability }}</span>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="upgrades-line">
-          <strong>Upgrades:</strong>
+      <div class="row upgrades-line">
           <span *ngFor="let upg of pilot.slots" class="upgrade-line">
             <i class="xwing-miniatures-font xwing-miniatures-font-{{upg.toLowerCase()}}"></i>
           </span>
-        </div>
       </div>
     </div>
   </div>

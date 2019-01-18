@@ -43,6 +43,7 @@ export interface Pilot {
   unique: boolean;
   faction:  string;
   ship: Ship;
+  actions: ShipAction[];
   skill: number;
   points: number;
   force?: number;

@@ -1,3 +1,5 @@
+@import "../../../../../styles/variables/colors";
+
 .card-header {
   .card-title {
     margin-bottom: 0;
@@ -13,7 +15,14 @@
 
 .ability-line {
   font-size: 12px;
-  padding: 5px 0;
+  padding-top: 4px;
+  border-top: 1px solid $divider;
+  margin-top: 4px;
+
+  padding-bottom: 4px;
+  border-bottom: 1px solid $divider;
+  margin-bottom: 4px;
+
   line-height: 1.25em;
 
   ::ng-deep {
@@ -36,30 +45,59 @@
     }
   }
 }
-.attributes {
+.statistics {
   justify-content: space-between;
   padding: 0 15px;
-}
-::ng-deep {
-  .stats-line {
-    float: none !important;
-    padding-right: 0 !important;
-    text-align: center !important;
-    font-size: 15px !important;
-
-  }
-  .actions-line {
-    text-align: center !important;
-    font-size: 15px !important;
-    .action {
-      padding-left: 0 !important;
-      padding-right: 8px !important;
+  ::ng-deep {
+    .stats-line {
+      float: none !important;
+      padding-right: 0 !important;
+      text-align: center !important;
+      font-size: 15px !important;
+    }
+    .actions-line {
+      text-align: center;
     }
   }
 }
 
-@media (min-width: 769px) {
+
+
+@media (max-width: 768px) {
   .card {
-    min-width: 360px;
+    min-width: 230px;
+  }
+  .statistics {
+    ::ng-deep {
+      .stats-line,
+      .actions-line {
+        font-size: 14px;
+      }
+    }
+  }
+  .ability-line {
+    font-size: 12px;
+    line-height: 1.25em;
+    .xwing-miniatures-font {
+      line-height: 1.25em;
+    }
+  }
+  .upgrades-line {
+
+  }
+}
+@media (max-width: 480px) {
+  .statistics {
+    justify-content: center;
+    ::ng-deep {
+      .stats-line,
+      .actions-line {
+        padding-right: 0;
+        text-align: center;
+      }
+    }
+  }
+  .ability-line {
+    font-size: 11px;
   }
 }
