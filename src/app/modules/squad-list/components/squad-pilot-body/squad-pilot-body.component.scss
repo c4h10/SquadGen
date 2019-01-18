@@ -1,3 +1,63 @@
+@import "../../../../../styles/variables/colors";
+
 .statistics {
   justify-content: space-between;
+}
+.ability-line {
+  padding-top: 4px;
+  border-top: 1px solid $divider;
+  margin-top: 4px;
+
+  padding-bottom: 4px;
+  border-bottom: 1px solid $divider;
+  margin-bottom: 4px;
+}
+
+.upgrades-line {
+  font-size: 17px;
+  line-height: 1.5em;
+  padding: 8px 0 0;
+  .upgrade-button {
+    padding-right: 6px;
+    padding-bottom: 6px;
+    &:last-child {
+    padding-right: 0;
+  }
+  }
+}
+
+@media (max-width: 768px) {
+  .statistics {
+    ::ng-deep {
+      .stats-line,
+      .actions-line {
+        font-size: 14px;
+      }
+    }
+  }
+  .ability-line {
+    font-size: 12px;
+    line-height: 1.25em;
+    .xwing-miniatures-font {
+      line-height: 1.25em;
+    }
+  }
+  .upgrades-line {
+
+  }
+}
+@media (max-width: 480px) {
+  .statistics {
+    justify-content: center;
+    ::ng-deep {
+      .stats-line,
+      .actions-line {
+        padding-right: 0;
+        text-align: center;
+      }
+    }
+  }
+  .ability-line {
+    font-size: 11px;
+  }
 }

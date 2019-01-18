@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "startStatic": "ng serve --live-reload false",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

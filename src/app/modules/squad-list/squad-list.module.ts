@@ -20,6 +20,7 @@ import { SatPopoverModule } from '@ncstate/sat-popover';
 import { GlobalModule } from '../global/global.module';
 import { SquadPilotHeaderComponent } from './components/squad-pilot-header/squad-pilot-header.component';
 import { SquadPilotBodyComponent } from './components/squad-pilot-body/squad-pilot-body.component';
+import { UpgradeButtonComponent } from './components/upgrade-button/upgrade-button.component';
 
 export function initEndpoints(apiClient: ApiClientService) {
   return () => apiClient.registerEndpoints(API_ENDPOINTS);
@@ -33,7 +34,8 @@ export function initEndpoints(apiClient: ApiClientService) {
     SquadListNavbarComponent,
     SquadListNavbarToggleComponent,
     SquadPilotHeaderComponent,
-    SquadPilotBodyComponent],
+    SquadPilotBodyComponent,
+    UpgradeButtonComponent],
   imports: [
     CommonModule,
     SatPopoverModule,

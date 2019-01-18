@@ -3,6 +3,9 @@
   text-align: right;
   .action {
     padding-left: 8px;
+    &:first-child{
+      padding-left: 0;
+    }
     i {
       color: #000;
       font-size: 1em;

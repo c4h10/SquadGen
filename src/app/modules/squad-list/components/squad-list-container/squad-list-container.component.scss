@@ -16,6 +16,7 @@
         display: block;
         margin-bottom: 60px;
         .squad-pilot-header{
+          user-select: none;
           .header-line {
             display: flex;
           }
@@ -41,33 +42,36 @@
               }
             }
           }
-          ::ng-deep {
-            .mat-content {
-              justify-content: space-between;
-              .mat-expansion-panel-header-title,
-              .mat-expansion-panel-header-description {
-                margin: 0 0 0 12px;
-                flex-grow: 0;
+        }
+        ::ng-deep {
+          .mat-content {
+            justify-content: space-between;
+            .mat-expansion-panel-header-title,
+            .mat-expansion-panel-header-description {
+              margin: 0 0 0 12px;
+              flex-grow: 0;
+            }
+            .title {
+              margin: 0;
+              font-size: 13px;
+              line-height: 32px;
+              color: mat-color($sg-app-primary, 900);
+              .name {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
               }
-              .title {
-                margin: 0;
-                font-size: 13px;
-                line-height: 32px;
-                color: mat-color($sg-app-primary, 900);
-                .name {
-                  text-overflow: ellipsis;
-                  white-space: nowrap;
-                  overflow: hidden;
-                }
 
-                i {
-                  margin-right: 4px;
-                }
-                .points {
-                  font-size: 11px;
-                }
+              i {
+                margin-right: 4px;
+              }
+              .points {
+                font-size: 11px;
               }
             }
+          }
+          .mat-expansion-panel-body {
+            padding: 8px 12px 16px;
           }
         }
       }
