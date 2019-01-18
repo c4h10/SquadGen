@@ -376,7 +376,7 @@
       "points": 82,
       "ability": "After you defend, you may spend 1 %FORCE% to assign the I'll Show You the Dark Side condition to the attacker. %LINEBREAK% AUTOTHRUSTERS: After you perform an action. you may perform a red %BARRELROLL% or a red %BOOST% action.",
       "slots": [
-        "Force",
+        "Forcecharge",
         "Tech",
         "Torpedo",
         "Missile",
