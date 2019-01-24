@@ -22,12 +22,12 @@ export class TabNavigationEffects {
       mergeMap(action => this.store.select(getLastCreatedTab)
         .pipe(
           map(activeTab => {
-            const createAction = action as ActionWithPayload<Faction>;
+            const createAction = action as ActionWithPayload<any>;
             return ({activeTab, createAction});
           })
         )
       ),
-      map( ({activeTab, createAction}) => {
+      map(({activeTab, createAction}) => {
           return [
             new SetActiveTabAction({activeId: activeTab}),
             new CreateTabAction({id: activeTab, feature: 'squadlist'}),
@@ -38,14 +38,16 @@ export class TabNavigationEffects {
                 isHyperspace: false,
                 points: 0,
                 totalPoints: 200,
-                faction: createAction.payload
+                faction: createAction.payload.faction,
+                upgrades: createAction.payload.upgrades
               }
             })
           ];
         }
       ),
       mergeAll()
-  );
+    );
 
-  constructor (private actions$: Actions, private store: Store<State>) {}
+  constructor(private actions$: Actions, private store: Store<State>) {
+  }
 }

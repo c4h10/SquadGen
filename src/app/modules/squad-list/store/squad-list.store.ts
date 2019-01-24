@@ -1,5 +1,5 @@
 import { TabState } from '../../../tab-store/types';
-import { Faction, Pilot } from '../../global/reducers/types';
+import { Faction, Pilot, Upgrades } from '../../global/reducers/types';
 
 
 export interface State extends TabState<ContainerState> {
@@ -16,6 +16,7 @@ export interface ContainerState {
 
 export interface SquadConfig {
   faction: Faction;
+  upgrades?: Upgrades;
   isHyperspace?: boolean;
   points: number;
   totalPoints: number;

@@ -1,4 +1,4 @@
-import { Faction, State, Upgrade } from '../reducers/types';
+import { Faction, State, Upgrade, Upgrades } from '../reducers/types';
 
 export const getConfigurationSelector = (state: State) => state.configuration;
 
@@ -12,6 +12,13 @@ export const getConfigurationFactionsSelector = (state: State): Faction[] => {
 export const getFactionConfigSelector = (state: State, factionId: string): Faction => {
 
   return state.configuration.factions.find((faction) => faction.factionId === factionId);
+};
+
+export const getUpgradesSelector = (state: State): Upgrades => {
+  if (getConfigurationSelector(state) && state.configuration.upgrades) {
+    return state.configuration.upgrades;
+  }
+  return null;
 };
 
 export const getUpgradesByTypeSelector = (state: State, upgradeType: string): Upgrade[] => {

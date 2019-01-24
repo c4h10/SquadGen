@@ -4,7 +4,7 @@ import {
   getConfigurationSelector,
   getConfigurationFactionsSelector,
   getFactionConfigSelector,
-  getUpgradesByTypeSelector
+  getUpgradesByTypeSelector, getUpgradesSelector
 } from './selectors/global.selectors';
 import { MODULE_NAME } from './types';
 
@@ -15,4 +15,5 @@ export const getConfiguration = createSelector(getGlobalFeatureStore, getConfigu
 export const getConfigurationFactions = createSelector(getGlobalFeatureStore, getConfigurationFactionsSelector);
 export const getFactionConfig = createSelector(getGlobalFeatureStore, getFactionConfigSelector);
 
+export const getUpgrades = createSelector(getGlobalFeatureStore, getUpgradesSelector);
 export const getUpgradesByType = createSelector(getGlobalFeatureStore, getUpgradesByTypeSelector);

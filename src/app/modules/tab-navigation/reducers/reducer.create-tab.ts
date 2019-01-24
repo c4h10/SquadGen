@@ -8,9 +8,9 @@ export function reducer(state: State, action: CreateMaterialTabAction): State {
   tabs.push({
     id: latestTabId,
     type: 'squadlist',
-    factionId: action.payload.factionId,
-    factionName: action.payload.factionName,
-    factionIcon: action.payload.factionIcon
+    factionId: action.payload.faction.factionId,
+    factionName: action.payload.faction.factionName,
+    factionIcon: action.payload.faction.factionIcon
   });
   return {
     ...state,
