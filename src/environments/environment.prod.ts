@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiBase: '/SLAM',
+  apiBase: '/xGen',
   imports: []
 };

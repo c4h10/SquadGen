@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { ACTION_NAMES, ConfigurationFetchedPayload, FactionFetchedPayload, OpenDialogPayload } from './types';
+import { ACTION_NAMES, ConfigurationFetchedPayload, FactionFetchedPayload, OpenDialogPayload, UpgradeFetchedPayload } from './types';
 
 
 export class ConfigurationFetchAction implements Action {
@@ -10,6 +10,17 @@ export class ConfigurationFetchedAction implements Action {
   readonly type = ACTION_NAMES.CONFIGURATION_FETCHED;
 
   constructor(public payload: ConfigurationFetchedPayload) {
+  }
+}
+
+export class UpgradeFetchAction implements Action {
+  readonly type = ACTION_NAMES.UPGRADE_FETCH;
+}
+
+export class UpgradeFetchedAction implements Action {
+  readonly type = ACTION_NAMES.UPGRADE_FETCHED;
+
+  constructor(public payload: UpgradeFetchedPayload) {
   }
 }
 
@@ -50,6 +61,8 @@ export class ResultDialogAction implements Action {
 export type GlobalActions =
   ConfigurationFetchAction
   | ConfigurationFetchedAction
+  | UpgradeFetchAction
+  | UpgradeFetchedAction
   | FactionFetchAction
   | FactionFetchedAction
   | OpenDialogAction

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ResponsiveService } from './services/responsive.service';
 
 @Component({
@@ -16,10 +16,11 @@ export class AppComponent implements OnInit {
     this.responsiveService.getMobileStatus().subscribe(isMobile => {
 
     });
-    this.onResize();
+    this.responsiveService.checkWidth();
   }
 
-  onResize() {
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
     this.responsiveService.checkWidth();
   }
 }

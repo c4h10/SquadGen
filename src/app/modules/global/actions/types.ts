@@ -5,6 +5,8 @@ import { MatDialogConfig } from '@angular/material';
 export const enum ACTION_NAMES {
   CONFIGURATION_FETCH = '[Global] CONFIGURATION_FETCH',
   CONFIGURATION_FETCHED = '[Global] CONFIGURATION_FETCHED',
+  UPGRADE_FETCH = '[Global] UPGRADE_FETCH',
+  UPGRADE_FETCHED = '[Global] UPGRADE_FETCHED',
   FACTION_FETCH = '[Global] FACTION_FETCH',
   FACTION_FETCHED = '[Global] FACTION_FETCHED',
   OPEN_DIALOG = '[Global] OPEN_DIALOG',
@@ -15,6 +17,10 @@ export const enum ACTION_NAMES {
 
 export interface ConfigurationFetchedPayload {
   data: Configuration;
+}
+
+export interface UpgradeFetchedPayload {
+  data: any;
 }
 
 export interface FactionFetchedPayload {

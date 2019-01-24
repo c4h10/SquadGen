@@ -1,0 +1,379 @@
+{
+  "Talent": [
+    {
+      "name": "Composure",
+      "id": "talent-composure",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 2,
+      "restrictions": [
+        {
+          "type": "actions",
+          "constriant": "has",
+          "args": "Focus"
+        }
+      ],
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Crack Shot",
+      "id": "talent-crack-shot",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 1,
+      "charge": 1,
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Daredevil",
+      "id": "talent-daredevil",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 3,
+      "restrictions": [
+        {
+          "type": "actions",
+          "constriant": "has",
+          "args": "Boost"
+        },
+        {
+          "type": "size",
+          "constriant": "lessThan",
+          "args": 2
+        }
+      ],
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Debris Gambit",
+      "id": "talent-debris-gambit",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 2,
+      "restrictions": [
+        {
+          "type": "actions",
+          "constriant": "equal",
+          "args": {
+            "type": "Boost",
+            "difficulty": "red"
+          }
+        },
+        {
+          "type": "size",
+          "constriant": "lessThan",
+          "args": 3
+        }
+      ],
+      "modifiers": [
+        {
+          "type": "actions",
+          "constriant": "add",
+          "args": {
+            "type": "Evade",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Elusive",
+      "id": "talent-elusive",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 3,
+      "charge": 1,
+      "restrictions": [
+        {
+          "type": "size",
+          "constriant": "lessThan",
+          "args": 3
+        }
+      ],
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Expert Handling",
+      "id": "talent-expert-handling",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 0,
+      "pointsMod": {
+        "formula": "2*__ship.size__"
+      },
+      "restrictions": [
+        {
+          "type": "actions",
+          "constriant": "equal",
+          "args": {
+            "type": "Barrel Roll",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "modifiers": [
+        {
+          "type": "actions",
+          "constriant": "update",
+          "args": {
+            "type": "Barrel Roll",
+            "difficulty": "white"
+          }
+        }
+      ],
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Fearless",
+      "id": "talent-fearless",
+      "slot": "Talent",
+      "factions": [
+        "scum"
+      ],
+      "points": 3,
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Intimidation",
+      "id": "talent-intimidation",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 3,
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Juke",
+      "id": "talent-juke",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 4,
+      "restrictions": [
+        {
+          "type": "size",
+          "constriant": "lessThan",
+          "args": 3
+        }
+      ],
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Lone Wolf",
+      "id": "talent-lone-wolf",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 4,
+      "recurring": true,
+      "charge": 1,
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Marksmanship",
+      "id": "talent-marksmanship",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 1,
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Outmaneuver",
+      "id": "talent-outmaneuver",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 6,
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Predator",
+      "id": "talent-predator",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 2,
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Ruthless",
+      "id": "talent-ruthless",
+      "slot": "Talent",
+      "factions": [
+        "empire"
+      ],
+      "points": 1,
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Saturation Salvo",
+      "id": "talent-saturation-salvo",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 6,
+      "restrictions": [
+        {
+          "type": "actions",
+          "constriant": "has",
+          "args": "Reload"
+        }
+      ],
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Selfless",
+      "id": "talent-selfless",
+      "slot": "Talent",
+      "factions": [
+        "rebel"
+      ],
+      "points": 3,
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Squad Leader",
+      "id": "talent-squad-leader",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 4,
+      "modifiers": [
+        {
+          "type": "actions",
+          "constriant": "add",
+          "args": {
+            "type": "Coordinate",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Swarm Tactics",
+      "id": "talent-swarm-tactics",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 3,
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Trick Shot",
+      "id": "talent-trick-shot",
+      "slot": "Talent",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 1,
+      "unique": false,
+      "isHyperspace": true
+    }
+  ]
+}

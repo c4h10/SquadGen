@@ -20,6 +20,15 @@ export class GlobalService {
       );
   }
 
+  getUpgrades(): Observable<ApiTypes.UpgradesResponse> {
+    return this.apiClient.getWithParameters(GLOBAL_ALIASES.UPGRADES, '')
+      .pipe(
+        map((response) => {
+          return response as ApiTypes.UpgradesResponse;
+        })
+      );
+  }
+
   getFactionConfiguration(factionId: string): Observable<ApiTypes.FactionConfigurationResponse> {
 
     const urlParams = {

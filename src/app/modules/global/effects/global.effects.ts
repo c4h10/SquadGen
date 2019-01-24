@@ -11,7 +11,7 @@ import {
   ErrorAction,
   FactionFetchAction,
   FactionFetchedAction,
-  OpenDialogAction, ResultDialogAction
+  OpenDialogAction, ResultDialogAction, UpgradeFetchedAction
 } from '../actions/global.actions';
 import { EndpointProtocolTypes as ApiTypes } from '../types';
 import { Configuration } from '../reducers/types';
@@ -36,13 +36,31 @@ export class GlobalEffects {
             })
           )
       )
-  );
+    );
   @Effect()
   fetchedConfiguration$: Observable<Action> = this.actions$
     .pipe(
       ofType<Action>(ACTION_NAMES.CONFIGURATION_FETCHED),
       mergeMap((action: ConfigurationFetchedAction) => action.payload!.data.factions
         .map(faction => new FactionFetchAction(faction.factionId))
+      )
+    );
+
+  @Effect()
+  fetchUpgrade$ = this.actions$
+    .pipe(
+      ofType(ACTION_NAMES.UPGRADE_FETCH),
+      switchMap(
+        (action: Action) => this.globalService.getUpgrades()
+          .pipe(
+            map((response: ApiTypes.UpgradesResponse) => {
+              return new UpgradeFetchedAction({data: response});
+            }),
+            catchError(err => {
+              console.log(err);
+              return observableOf(new ErrorAction());
+            })
+          )
       )
     );
 
@@ -84,5 +102,6 @@ export class GlobalEffects {
       })
     );
 
-  constructor (private actions$: Actions, private globalService: GlobalService,  private dialog: MatDialog) {}
+  constructor(private actions$: Actions, private globalService: GlobalService, private dialog: MatDialog) {
+  }
 }

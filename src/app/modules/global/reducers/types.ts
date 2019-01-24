@@ -6,6 +6,7 @@ export interface State {
 
 export interface Configuration {
   factions: Faction[];
+  upgrades?: Upgrades;
 }
 
 export interface Faction {
@@ -41,7 +42,7 @@ export interface Pilot {
   name: string;
   id: string;
   unique: boolean;
-  faction:  string;
+  faction: string;
   ship: Ship;
   actions: ShipAction[];
   skill: number;
@@ -52,6 +53,27 @@ export interface Pilot {
   slots: string[];
   isHyperspace: boolean;
   ability?: string;
+}
+
+export interface Upgrades {
+  [upgradeType: string]: Upgrade[];
+}
+
+export interface Upgrade {
+  id: string;
+  name: string;
+  points: number;
+  pointsMod?: any;
+  unique: boolean;
+  factions: string[];
+  restrictions?: any[];
+  validations?: any[];
+  modifiers?: any[];
+  force?: number;
+  charge?: number;
+  recurring?: boolean;
+  ability?: string;
+  isHyperspace: boolean;
 }
 
 

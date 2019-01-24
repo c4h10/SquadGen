@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { State as GlobalState } from '../../modules/global/reducers/types';
 import { Store } from '@ngrx/store';
-import { ConfigurationFetchAction, OpenDialogAction } from '../../modules/global/actions/global.actions';
+import { ConfigurationFetchAction, OpenDialogAction, UpgradeFetchAction } from '../../modules/global/actions/global.actions';
 import { ACTION_NAMES } from '../../modules/global/actions/types';
 import { Observable, Subscription } from 'rxjs';
 import { NewSquadCardComponent } from '../../modules/global/components/new-squad-card/new-squad-card.component';
@@ -59,6 +59,9 @@ export class NavBarComponent implements OnInit, OnDestroy {
 
     this.store.dispatch<ConfigurationFetchAction>({
       type: ACTION_NAMES.CONFIGURATION_FETCH
+    });
+    this.store.dispatch<UpgradeFetchAction>({
+      type: ACTION_NAMES.UPGRADE_FETCH
     });
   }
 
