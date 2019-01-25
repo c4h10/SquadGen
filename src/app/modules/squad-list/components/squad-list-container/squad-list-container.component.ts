@@ -8,12 +8,14 @@ import { EMPTY, Observable, Subscription } from 'rxjs';
 import { SQUAD_LIST_NAV_ACTION, SquadListNavAction } from '../../types';
 import { withTabId } from '../../../../tab-store/types';
 import {
-  SquadListAddPilotAction,
   SquadListDuplicatePilotAction, SquadListMoveDownPilotAction,
   SquadListMoveUpPilotAction,
   SquadListRemovePilotAction
 } from '../../actions';
+import {OpenDialogAction} from '../../../global/actions/global.actions';
 
+import { State as GlobalState } from '../../../global/reducers/types';
+import {UpgradeDialogComponent} from '../../../global/components/upgrade-dialog/upgrade-dialog.component';
 
 @Component({
   selector: 'sg-squad-list-container',
@@ -38,6 +40,7 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
   constructor(
     private storeManager: StoreManagerService,
     private store: Store<State>,
+    private globalStore: Store<GlobalState>
   ) {
   }
 
@@ -69,8 +72,24 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
     this.subscriptions.unsubscribe();
   }
 
+  // TODO: refactor switch cases
   actionHandler(event: SquadListNavAction) {
     switch (event.type) {
+      case SQUAD_LIST_NAV_ACTION.UPGRADE:
+        // TODO: IMPLEMENT VALIDATION and RESTRICTIONS
+        this.globalStore.dispatch<OpenDialogAction>(
+          new OpenDialogAction({
+            componentOrTemplateRef: UpgradeDialogComponent,
+            config: {
+              data: {
+                type: event.data.type,
+                upgrades: this.config.upgrades[event.data.type],
+                uuid: event.data.uuid
+              }
+            }
+          })
+        );
+        break;
       case SQUAD_LIST_NAV_ACTION.REMOVE_FROM_SQUAD:
         this.storeManager.dispatch(withTabId(new SquadListRemovePilotAction({squadPilot: event.data.squadPilot}), this.tabId));
         break;

@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from "@angular/core";
+
 
 @Component({
   selector: 'sg-upgrade-button',
@@ -9,6 +10,8 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 export class UpgradeButtonComponent implements OnInit {
 
   @Input() type: string;
+  @Output() action: EventEmitter<any> = new EventEmitter<any>();
+
   cssClass: string;
   constructor() { }
 
@@ -17,7 +20,8 @@ export class UpgradeButtonComponent implements OnInit {
   }
 
   onClick(event) {
-    console.log('UPGR BUTTON');
-    console.log(this.type);
+    this.action.emit({
+      type: this.type
+    });
   }
 }

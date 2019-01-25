@@ -7,7 +7,7 @@
     <span [innerHTML]="squadPilot.pilot.ability | xwingTranslate">{{ squadPilot.pilot.ability }}</span>
   </section>
   <section class="row upgrades-line"><!-- TODO: CREATE SEPARATE COMPONENT WITH LOGIC -->
-    <sg-upgrade-button class="upgrade-button" *ngFor="let upg of squadPilot.pilot.slots" [type]="upg"></sg-upgrade-button>
+    <sg-upgrade-button class="upgrade-button" (action)="actionUpgrade($event)" *ngFor="let upg of squadPilot.pilot.slots" [type]="upg"></sg-upgrade-button>
   </section>
 </div>
 

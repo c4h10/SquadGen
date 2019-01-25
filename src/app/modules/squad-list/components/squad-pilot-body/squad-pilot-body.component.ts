@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { SquadPilot } from '../../store/squad-list.store';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {SquadPilot} from '../../store/squad-list.store';
+import {SQUAD_LIST_NAV_ACTION} from '../../types';
 
 @Component({
   selector: 'sg-squad-pilot-body',
@@ -10,6 +11,7 @@ import { SquadPilot } from '../../store/squad-list.store';
 export class SquadPilotBodyComponent implements OnInit {
 
   @Input() squadPilot: SquadPilot;
+  @Output() action: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {
   }
@@ -17,4 +19,14 @@ export class SquadPilotBodyComponent implements OnInit {
   ngOnInit() {
   }
 
+  actionUpgrade(event) {
+    this.action.emit({
+      type: SQUAD_LIST_NAV_ACTION.UPGRADE,
+      data: {
+        type: event.type,
+        uuid: this.squadPilot.UUID
+      }
+    });
+
+  }
 }

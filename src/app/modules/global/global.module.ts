@@ -18,6 +18,8 @@ import { ManeuversComponent } from './components/maneuvers/maneuvers.component';
 import { PilotDialogComponent } from './components/pilot-dialog/pilot-dialog.component';
 import { ActionsLineComponent } from './components/actions-line/actions-line.component';
 import { StatsLineComponent } from './components/stats-line/stats-line.component';
+import { UpgradeDialogComponent } from './components/upgrade-dialog/upgrade-dialog.component';
+import {Upgrade} from './reducers/types';
 
 
 export function initEndpoints(apiClient: ApiClientService) {
@@ -26,7 +28,7 @@ export function initEndpoints(apiClient: ApiClientService) {
 
 @NgModule({
   declarations: [NewSquadCardComponent, PopoverComponent, XwingFontIconComponent,
-    XwingTranslatePipe, DialDialogComponent, ManeuversComponent, PilotDialogComponent, ActionsLineComponent, StatsLineComponent],
+    XwingTranslatePipe, DialDialogComponent, ManeuversComponent, PilotDialogComponent, ActionsLineComponent, StatsLineComponent, UpgradeDialogComponent],
   exports: [NewSquadCardComponent, PopoverComponent, XwingFontIconComponent, XwingTranslatePipe, DialDialogComponent,
     PilotDialogComponent, ManeuversComponent, ActionsLineComponent, StatsLineComponent],
   imports: [
@@ -42,6 +44,7 @@ export function initEndpoints(apiClient: ApiClientService) {
   entryComponents: [
     NewSquadCardComponent,
     DialDialogComponent,
+    UpgradeDialogComponent,
     PilotDialogComponent
   ]
 })
