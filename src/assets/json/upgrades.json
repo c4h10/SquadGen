@@ -19,7 +19,7 @@
           "args": "Focus"
         }
       ],
-      "ability": "<i>Requires <r>%FOCUS%</r> or %FOCUS%</i>%LINEBREAK%After you fail an action, if you have no green tokens, you may perform a %FOCUS% action.",
+      "ability": "<i>Requires <mark>%FOCUS%</mark> or %FOCUS%</i>%LINEBREAK%After you fail an action, if you have no green tokens, you may perform a %FOCUS% action.",
       "unique": false,
       "isHyperspace": true
     },
@@ -105,7 +105,7 @@
           }
         }
       ],
-      "ability": "<i>Adds <r>%EVADE%</r></i>%LINEBREAK%<i>small ship or medium ship only</i>%LINEBREAK%While you perform a red %EVADE% action, if there is an obstacle at range 0-1, treat the action as white instead.",
+      "ability": "<i>Adds <mark>%EVADE%</mark></i>%LINEBREAK%<i>small ship or medium ship only</i>%LINEBREAK%While you perform a red %EVADE% action, if there is an obstacle at range 0-1, treat the action as white instead.",
       "unique": false,
       "isHyperspace": false
     },
@@ -168,7 +168,7 @@
           }
         }
       ],
-      "ability": "This upgrade has a variable cost, worth 2, 4, or 6 points depending on if the ship base is small, medium or large respectively.%LINEBREAK%<i>Adds %BARRELROLL%</i>%LINEBREAK%<i>Requires <r>%BARRELROLL%</r></i>%LINEBREAK%<i class = flavor_text>While heavy fighters can often be coaxed into a barrel roll, seasoned pilots know how to do it without putting undue stress on their craft or leaving themselves open to attack.</i>",
+      "ability": "%LINEBREAK%<i>Requires <mark>%BARRELROLL%</mark></i>%LINEBREAK%<i>Adds %BARRELROLL%</i>",
       "unique": false,
       "isHyperspace": true
     },
@@ -320,7 +320,7 @@
           "args": "Reload"
         }
       ],
-      "ability": "<i>Requires %RELOAD% or <r>%RELOAD%</r></i>%LINEBREAK%While you perform a %TORPEDO% or %MISSILE% attack, you may spend 1&nbsp;%CHARGE% from that upgrade. If you do, choose two defense dice. The defender must reroll those dice.",
+      "ability": "<i>Requires %RELOAD% or <mark>%RELOAD%</mark></i>%LINEBREAK%While you perform a %TORPEDO% or %MISSILE% attack, you may spend 1&nbsp;%CHARGE% from that upgrade. If you do, choose two defense dice. The defender must reroll those dice.",
       "unique": false,
       "isHyperspace": false
     },
@@ -358,7 +358,7 @@
           }
         }
       ],
-      "ability": "<i>Adds <r>%COORDINATE%</r></i>%LINEBREAK%While you coordinate, the ship you choose can perform an action only if that action is also on your action bar.",
+      "ability": "<i>Adds <mark>%COORDINATE%</mark></i>%LINEBREAK%While you coordinate, the ship you choose can perform an action only if that action is also on your action bar.",
       "unique": true,
       "isHyperspace": true
     },

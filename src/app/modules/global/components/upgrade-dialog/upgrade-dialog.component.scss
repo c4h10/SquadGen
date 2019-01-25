@@ -1,0 +1,85 @@
+@import "../../../../../styles/variables/colors";
+
+.card-header {
+  .card-title {
+    margin-bottom: 0;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    i {
+      padding-right: 8px;
+    }
+  }
+}
+
+.card-body{
+  max-height: calc(100vh - 100px);
+  overflow: scroll;
+  &::-webkit-scrollbar {
+
+    width: 4px;
+  }
+  .upgrade {
+    display: flex;
+    flex-wrap: unset;
+    cursor: pointer;
+    margin-bottom: 8px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid $divider;
+    &:hover {
+      opacity: .45;
+    }
+    .icon {
+      display: flex;
+      flex-direction: column;
+    }
+    .desc {
+      line-height: 1.25em;
+      p {
+        width: 100%;
+        margin-bottom: 0;
+        ::ng-deep {
+          mark {
+            color: $warn;
+            padding: 0;
+            background-color: transparent;
+          }
+        }
+      }
+      .name {
+        font-weight: bold;
+      }
+      .keywords {
+        font-style: italic;
+      }
+      .ability {
+
+      }
+    }
+
+  }
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    min-width: 230px;
+
+    ::ng-deep {
+      .xwing-miniatures-font {
+        font-size: 1.25em;
+      }
+    }
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+
+  .desc {
+    font-size: 11px;
+  }
+}

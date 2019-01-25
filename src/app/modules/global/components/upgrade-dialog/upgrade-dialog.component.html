@@ -1,3 +1,19 @@
-<p>
-  upgrade-dialog works!
-</p>
+<div class="card">
+  <div class="card-header card-header-accent">
+    <h4 class="card-title"><i [ngClass]="cssClass"></i> {{ upgradeType }}</h4>
+  </div>
+  <div class="card-body">
+    <div class="container">
+      <section class="row upgrade" *ngFor="let upgrade of upgrades">
+        <div class="icon">
+          <mat-icon [ngClass]="cssClass"></mat-icon>
+        </div>
+        <div class="desc">
+          <p class="name">{{ upgrade.name }} ({{ upgrade.points }})</p>
+          <p class="keywords"><span *ngIf="upgrade.isHyperspace">Hyperspace.</span> <span *ngIf="upgrade.unique">Unique.</span></p>
+          <p class="ability" [innerHTML]="upgrade.ability | xwingTranslate">{{ upgrade.ability }}</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

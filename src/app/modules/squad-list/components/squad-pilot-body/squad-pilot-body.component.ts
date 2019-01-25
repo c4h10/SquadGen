@@ -24,7 +24,7 @@ export class SquadPilotBodyComponent implements OnInit {
       type: SQUAD_LIST_NAV_ACTION.UPGRADE,
       data: {
         type: event.type,
-        uuid: this.squadPilot.UUID
+        squadPilot: this.squadPilot
       }
     });
 

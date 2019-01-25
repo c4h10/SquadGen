@@ -84,7 +84,7 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
               data: {
                 type: event.data.type,
                 upgrades: this.config.upgrades[event.data.type],
-                uuid: event.data.uuid
+                squadPilot: event.data.squadPilot
               }
             }
           })
