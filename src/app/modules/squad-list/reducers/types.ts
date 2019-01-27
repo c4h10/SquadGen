@@ -6,7 +6,7 @@ import {
   SquadListDuplicatePilotAction,
   SquadListMoveDownPilotAction,
   SquadListMoveUpPilotAction,
-  SquadListAddUpgradeAction
+  SquadListAddUpgradeAction, SquadListRemoveUpgradeAction
 } from '../actions';
 
 export type Reducer<T> = (state: ContainerState, action: T) => ContainerState;
@@ -16,6 +16,7 @@ export type SquadListReducer =
   | Reducer<SquadListContainerCreatedAction>
   | Reducer<SquadListAddPilotAction>
   | Reducer<SquadListAddUpgradeAction>
+  | Reducer<SquadListRemoveUpgradeAction>
   | Reducer<SquadListDuplicatePilotAction>
   | Reducer<SquadListMoveUpPilotAction>
   | Reducer<SquadListMoveDownPilotAction>

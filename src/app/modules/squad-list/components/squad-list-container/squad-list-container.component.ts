@@ -10,7 +10,7 @@ import { withTabId } from '../../../../tab-store/types';
 import {
   SquadListDuplicatePilotAction, SquadListMoveDownPilotAction,
   SquadListMoveUpPilotAction,
-  SquadListRemovePilotAction
+  SquadListRemovePilotAction, SquadListRemoveUpgradeAction
 } from '../../actions';
 import { OpenDialogAction } from '../../../global/actions/global.actions';
 
@@ -96,7 +96,12 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
           })
         );
         break;
-      case SQUAD_LIST_NAV_ACTION.REMOVE_FROM_SQUAD:
+      case SQUAD_LIST_NAV_ACTION.REMOVE_UPGRADE:
+        this.storeManager.dispatch(withTabId(new SquadListRemoveUpgradeAction({
+          squadPilot: event.data.squadPilot,
+          upgrade: event.data.upgrade}), this.tabId));
+        break;
+        case SQUAD_LIST_NAV_ACTION.REMOVE_FROM_SQUAD:
         this.storeManager.dispatch(withTabId(new SquadListRemovePilotAction({squadPilot: event.data.squadPilot}), this.tabId));
         break;
       case SQUAD_LIST_NAV_ACTION.MOVE_UP:

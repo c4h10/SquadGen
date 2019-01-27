@@ -3,7 +3,7 @@ import {
   ACTION_NAMES,
   SquadListContainerCreatePayload,
   SquadListContainerCreatedPayload,
-  SquadListAddPilotPayload, SquadListPilotPayload, SquadListAddUpgradePayload
+  SquadListAddPilotPayload, SquadListPilotPayload, SquadListAddUpgradePayload, SquadListRemoveUpgradePayload
 } from './types';
 
 export class SquadListContainerCreateAction implements Action {
@@ -24,6 +24,13 @@ export class SquadListAddUpgradeAction implements Action {
   readonly type = ACTION_NAMES.SQUAD_LIST_ADD_UPGRADE;
 
   constructor(public payload: SquadListAddUpgradePayload) {
+  }
+}
+
+export class SquadListRemoveUpgradeAction implements Action {
+  readonly type = ACTION_NAMES.SQUAD_LIST_REMOVE_UPGRADE;
+
+  constructor(public payload: SquadListRemoveUpgradePayload) {
   }
 }
 

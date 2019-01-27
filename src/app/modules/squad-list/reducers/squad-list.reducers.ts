@@ -4,6 +4,7 @@ import { defaultState, defaultContainerState } from './defaults';
 import * as Store from '../store/squad-list.store';
 import { reducer as squadListContainerCreatedReducer } from './reducer.squad-list-container-created';
 import { reducer as squadListAddUpgradeReducer } from './reducer.squad-list-add-upgrade';
+import { reducer as squadListRemoveUpgradeReducer } from './reducer.squad-list-remove-upgrade';
 import { reducer as squadListAddPilotReducer } from './reducer.squad-list-add-pilot';
 import { reducer as squadListRemovePilotReducer } from './reducer.squad-list-remove-pilot';
 import { reducer as squadListDuplicatePilotReducer } from './reducer.squad-list-duplicate-pilot';
@@ -18,6 +19,7 @@ import { TabContainerAction, TabState } from '../../../tab-store/types';
 export const CONTAINER_REDUCERS: Types.ReducerMap = {
   [ACTION_NAMES.SQUAD_LIST_CONTAINER_CREATED]: squadListContainerCreatedReducer,
   [ACTION_NAMES.SQUAD_LIST_ADD_UPGRADE]: squadListAddUpgradeReducer,
+  [ACTION_NAMES.SQUAD_LIST_REMOVE_UPGRADE]: squadListRemoveUpgradeReducer,
   [ACTION_NAMES.SQUAD_LIST_ADD_PILOT]: squadListAddPilotReducer,
   [ACTION_NAMES.SQUAD_LIST_REMOVE_PILOT]: squadListRemovePilotReducer,
   [ACTION_NAMES.SQUAD_LIST_MOVE_UP_PILOT]: squadListMoveUpPilotReducer,

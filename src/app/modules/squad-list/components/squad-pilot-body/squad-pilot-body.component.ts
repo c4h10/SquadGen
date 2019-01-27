@@ -5,8 +5,7 @@ import {SQUAD_LIST_NAV_ACTION} from '../../types';
 @Component({
   selector: 'sg-squad-pilot-body',
   templateUrl: './squad-pilot-body.component.html',
-  styleUrls: ['./squad-pilot-body.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./squad-pilot-body.component.scss']
 })
 export class SquadPilotBodyComponent implements OnInit {
 
@@ -27,6 +26,15 @@ export class SquadPilotBodyComponent implements OnInit {
         squadPilot: this.squadPilot
       }
     });
+  }
 
+  actionRemove(event, upgrade) {
+    this.action.emit({
+      type: SQUAD_LIST_NAV_ACTION.REMOVE_UPGRADE,
+      data: {
+        upgrade: upgrade,
+        squadPilot: this.squadPilot
+      }
+    });
   }
 }
