@@ -28,8 +28,17 @@
     padding-bottom: 2px;
     border-bottom: 1px solid $divider;
     &:hover {
-      opacity: .45;
+      opacity: .55;
     }
+
+    &.disabled {
+      opacity: .35;
+      cursor: default;
+      &:hover {
+        opacity: .35;
+      }
+    }
+
     .icon {
       display: flex;
       flex-direction: column;

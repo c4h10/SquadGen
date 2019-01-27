@@ -12,10 +12,11 @@ import {
   SquadListMoveUpPilotAction,
   SquadListRemovePilotAction
 } from '../../actions';
-import {OpenDialogAction} from '../../../global/actions/global.actions';
+import { OpenDialogAction } from '../../../global/actions/global.actions';
 
-import { State as GlobalState } from '../../../global/reducers/types';
-import {UpgradeDialogComponent} from '../../../global/components/upgrade-dialog/upgrade-dialog.component';
+import { State as GlobalState, Upgrade, Upgrades } from '../../../global/reducers/types';
+import { UpgradeDialogComponent } from '../../../global/components/upgrade-dialog/upgrade-dialog.component';
+import { UpgradeRestrictionsService } from '../../services/upgrade-restrictions.service';
 
 @Component({
   selector: 'sg-squad-list-container',
@@ -40,7 +41,8 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
   constructor(
     private storeManager: StoreManagerService,
     private store: Store<State>,
-    private globalStore: Store<GlobalState>
+    private globalStore: Store<GlobalState>,
+    private restrictionService: UpgradeRestrictionsService
   ) {
   }
 
@@ -83,7 +85,7 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
             config: {
               data: {
                 type: event.data.type,
-                upgrades: this.config.upgrades[event.data.type],
+                upgrades: this.applyRestrictions(this.config.upgrades[event.data.type], event.data.squadPilot),
                 squadPilot: event.data.squadPilot
               }
             }
@@ -104,4 +106,18 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
         break;
     }
   }
+
+  private applyRestrictions(upgrades: Upgrade[], squadPilot: SquadPilot): Upgrade[] {
+    // FACTION
+    let result: Upgrade[] = upgrades.filter((item) => item.factions.includes(this.config.faction.factionId));
+
+    // RESTRICTIONS
+    result = this.restrictionService.applyRestrictions(result, squadPilot);
+
+
+    return result.sort((a, b) => {
+      return (b.points - a.points);
+    });
+  }
+
 }

@@ -44,7 +44,7 @@ export interface Pilot {
   unique: boolean;
   faction: string;
   ship: Ship;
-  actions: ShipAction[];
+  actions?: ShipAction[];
   skill: number;
   points: number;
   force?: number;
@@ -63,7 +63,7 @@ export interface Upgrade {
   id: string;
   name: string;
   points: number;
-  pointsMod?: any;
+  pointsMod?: PointsMod;
   unique: boolean;
   factions: string[];
   restrictions?: any[];
@@ -74,8 +74,13 @@ export interface Upgrade {
   recurring?: boolean;
   ability?: string;
   isHyperspace: boolean;
+  disabled?: boolean;
 }
 
+export interface PointsMod {
+  formula: string;
+  field: string;
+}
 
 export interface ShipAction {
   type: string;

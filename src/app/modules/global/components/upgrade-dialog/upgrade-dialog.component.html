@@ -4,13 +4,13 @@
   </div>
   <div class="card-body">
     <div class="container">
-      <section class="row upgrade" *ngFor="let upgrade of upgrades">
+      <section class="{{ upgrade.disabled ? 'row upgrade disabled' : 'row upgrade'}}" *ngFor="let upgrade of upgrades">
         <div class="icon">
           <mat-icon [ngClass]="cssClass"></mat-icon>
         </div>
         <div class="desc">
-          <p class="name">{{ upgrade.name }} ({{ upgrade.points }})</p>
-          <p class="keywords"><span *ngIf="upgrade.isHyperspace">Hyperspace.</span> <span *ngIf="upgrade.unique">Unique.</span></p>
+          <p class="name"><span *ngIf="upgrade.unique" class="unique">•</span> {{ upgrade.name }} ({{ upgrade.points }})</p>
+          <p class="keywords"><span *ngIf="upgrade.isHyperspace">Hyperspace.</span></p>
           <p class="ability" [innerHTML]="upgrade.ability | xwingTranslate">{{ upgrade.ability }}</p>
         </div>
       </section>

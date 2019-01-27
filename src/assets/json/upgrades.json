@@ -60,7 +60,7 @@
         },
         {
           "type": "size",
-          "operator": "lessThan",
+          "operator": "<",
           "args": 2
         }
       ],
@@ -82,16 +82,8 @@
       "points": 2,
       "restrictions": [
         {
-          "type": "actions",
-          "operator": "equal",
-          "args": {
-            "type": "Boost",
-            "difficulty": "red"
-          }
-        },
-        {
           "type": "size",
-          "operator": "lessThan",
+          "operator": "<",
           "args": 3
         }
       ],
@@ -125,7 +117,7 @@
       "restrictions": [
         {
           "type": "size",
-          "operator": "lessThan",
+          "operator": "<",
           "args": 3
         }
       ],
@@ -146,7 +138,8 @@
       ],
       "points": 0,
       "pointsMod": {
-        "formula": "2*__ship.size__"
+        "formula": "2*__FIELD__",
+        "field": "pilot.ship.size"
       },
       "restrictions": [
         {
@@ -168,7 +161,7 @@
           }
         }
       ],
-      "ability": "%LINEBREAK%<i>Requires <mark>%BARRELROLL%</mark></i>%LINEBREAK%<i>Adds %BARRELROLL%</i>",
+      "ability": "<i>Requires <mark>%BARRELROLL%</mark></i>%LINEBREAK%<i>Adds %BARRELROLL%</i>",
       "unique": false,
       "isHyperspace": true
     },
@@ -215,7 +208,7 @@
       "restrictions": [
         {
           "type": "size",
-          "operator": "lessThan",
+          "operator": "<",
           "args": 3
         }
       ],
@@ -391,6 +384,30 @@
       ],
       "points": 1,
       "ability": "While you perform an attack that is obstructed by an obstacle, roll 1 additional attack die.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Heroic",
+      "id": "talent-heroic",
+      "slot": "Talent",
+      "points": 1,
+      "factions": [
+        "resistance"
+      ],
+      "ability": "While you defend or perform an attack, if you have only blank results and have 2 or more results, you may reroll any number of your dice.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Fanatical",
+      "id": "talent-fanatical",
+      "slot": "Talent",
+      "points": 2,
+      "factions": [
+        "firstorder"
+      ],
+      "ability": "While you perform a primary attack, if you are not shielded, you may change 1 %FOCUS% result to a %HIT% result.",
       "unique": false,
       "isHyperspace": true
     }

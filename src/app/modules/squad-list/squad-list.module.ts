@@ -21,6 +21,7 @@ import { GlobalModule } from '../global/global.module';
 import { SquadPilotHeaderComponent } from './components/squad-pilot-header/squad-pilot-header.component';
 import { SquadPilotBodyComponent } from './components/squad-pilot-body/squad-pilot-body.component';
 import { UpgradeButtonComponent } from './components/upgrade-button/upgrade-button.component';
+import { UpgradeRestrictionsService } from './services/upgrade-restrictions.service';
 
 export function initEndpoints(apiClient: ApiClientService) {
   return () => apiClient.registerEndpoints(API_ENDPOINTS);
@@ -50,6 +51,7 @@ export function initEndpoints(apiClient: ApiClientService) {
     StoreManagerService,
     ApiClientService,
     SquadListService,
+    UpgradeRestrictionsService,
     WindowRefService,
     ApiClientModule.provideEndpoints(initEndpoints)
   ]
