@@ -1,7 +1,12 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA} from '@angular/material';
+import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import {Upgrade} from '../../reducers/types';
-import {SquadPilot} from "../../../squad-list/store/squad-list.store";
+import { SquadConfig, SquadPilot, State } from '../../../squad-list/store/squad-list.store';
+import { SQUAD_LIST_NAV_ACTION } from '../../../squad-list/types';
+import { StoreManagerService } from '../../../squad-list/services/store-manager.service';
+import { Store } from '@ngrx/store';
+import { withTabId } from '../../../../tab-store/types';
+import { SquadListAddUpgradeAction, SquadListRemovePilotAction } from '../../../squad-list/actions';
 
 @Component({
   selector: 'sg-upgrade-dialog',
@@ -10,12 +15,21 @@ import {SquadPilot} from "../../../squad-list/store/squad-list.store";
 })
 export class UpgradeDialogComponent implements OnInit {
 
+  tabId: string | number;
+  config: SquadConfig;
   upgrades: Upgrade[];
   squadPilot: SquadPilot;
   upgradeType: string;
   cssClass: string;
 
-  constructor(@Inject(MAT_DIALOG_DATA) data) {
+  constructor(
+    private storeManager: StoreManagerService,
+    private store: Store<State>,
+    public dialogRef: MatDialogRef<UpgradeDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) data
+  ) {
+    this.tabId = data.tabId;
+    this.config = data.config;
     this.squadPilot = data.squadPilot;
     this.upgrades = data.upgrades;
     this.upgradeType = data.type;
@@ -25,4 +39,13 @@ export class UpgradeDialogComponent implements OnInit {
   ngOnInit() {
   }
 
+  selectUpgrade(event, upgrade: Upgrade) {
+
+    this.storeManager.dispatch(withTabId(new SquadListAddUpgradeAction({
+      squadPilot: this.squadPilot,
+      upgrade: upgrade
+    }), this.tabId));
+
+    this.dialogRef.close();
+  }
 }

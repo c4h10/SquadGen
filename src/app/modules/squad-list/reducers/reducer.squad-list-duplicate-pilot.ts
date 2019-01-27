@@ -10,10 +10,9 @@ export function reducer(state: ContainerState, action: SquadListDuplicatePilotAc
     points: state.squadConfig.points + action.payload.squadPilot.points
   };
 
-  squadPilots.push({
-    ...action.payload.squadPilot,
-    UUID: guid()
-  });
+  const squadPilot = Object.assign({}, action.payload.squadPilot);
+  squadPilot.UUID = guid();
+  squadPilots.push(squadPilot);
 
   const newState = {
     ...state,

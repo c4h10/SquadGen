@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { StoreManagerService } from '../../services/store-manager.service';
 import { SquadConfig, SquadPilot, State } from '../../store/squad-list.store';
 import { Store } from '@ngrx/store';
@@ -42,7 +42,8 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
     private storeManager: StoreManagerService,
     private store: Store<State>,
     private globalStore: Store<GlobalState>,
-    private restrictionService: UpgradeRestrictionsService
+    private restrictionService: UpgradeRestrictionsService,
+    private changeDetector: ChangeDetectorRef
   ) {
   }
 
@@ -62,10 +63,12 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
       this.config$
         .subscribe(config => {
           this.config = config;
+          this.changeDetector.markForCheck();
         }),
       this.squadPilots$
         .subscribe(squad => {
           this.squadPilots = squad;
+          this.changeDetector.markForCheck();
         })
     ].forEach(s => this.subscriptions.add(s));
   }
@@ -78,12 +81,13 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
   actionHandler(event: SquadListNavAction) {
     switch (event.type) {
       case SQUAD_LIST_NAV_ACTION.UPGRADE:
-        // TODO: IMPLEMENT VALIDATION and RESTRICTIONS
         this.globalStore.dispatch<OpenDialogAction>(
           new OpenDialogAction({
             componentOrTemplateRef: UpgradeDialogComponent,
             config: {
               data: {
+                tabId: this.tabId,
+                config: this.config,
                 type: event.data.type,
                 upgrades: this.applyRestrictions(this.config.upgrades[event.data.type], event.data.squadPilot),
                 squadPilot: event.data.squadPilot
@@ -113,7 +117,6 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
 
     // RESTRICTIONS
     result = this.restrictionService.applyRestrictions(result, squadPilot);
-
 
     return result.sort((a, b) => {
       return (b.points - a.points);

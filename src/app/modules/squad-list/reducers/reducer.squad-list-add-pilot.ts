@@ -12,7 +12,8 @@ export function reducer(state: ContainerState, action: SquadListAddPilotAction):
   squadPilots.push({
     UUID: guid(),
     pilot: action.payload.pilot,
-    points: action.payload.pilot.points
+    points: action.payload.pilot.points,
+    upgrades: []
   });
 
   const newState = {

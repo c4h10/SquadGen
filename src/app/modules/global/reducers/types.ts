@@ -62,6 +62,7 @@ export interface Upgrades {
 export interface Upgrade {
   id: string;
   name: string;
+  slot: string;
   points: number;
   pointsMod?: PointsMod;
   unique: boolean;

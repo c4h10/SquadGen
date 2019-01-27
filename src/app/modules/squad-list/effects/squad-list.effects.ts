@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Effect, Actions, ofType } from '@ngrx/effects';
+import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Observable } from 'rxjs';
 import { Action, Store } from '@ngrx/store';
 import { MODULE_NAME } from '../types';
 import { State } from '../store/squad-list.store';
 import { StoreManagerService } from '../services/store-manager.service';
 import { SquadListService } from '../services/squad-list.service';
-import { ACTION_NAMES, GlobalDummyAction, SquadListContainerCreateAction, SquadListContainerCreatedAction } from '../actions';
-import { map, mapTo, mergeMap, switchMap } from 'rxjs/operators';
-import { TabContainerAction, withTabId } from '../../../tab-store/types';
+import { ACTION_NAMES, SquadListContainerCreateAction, SquadListContainerCreatedAction } from '../actions';
+import { map, switchMap } from 'rxjs/operators';
+import { withTabId } from '../../../tab-store/types';
 
 
 @Injectable()
@@ -20,19 +20,6 @@ export class SquadListEffects {
       return withTabId(new SquadListContainerCreatedAction(action.payload), action.payload.tabId);
     })
   );
-
-  @Effect() squadMock$: Observable<Action> = this.actions$.pipe(
-      ofType(ACTION_NAMES.DUMMY),
-      switchMap((action: Action) => this.squadListService
-        .squadMock()
-        .pipe(
-          map(data => ({ action, data }))
-        )
-      ),
-      map(({action, data }) => {
-        return new GlobalDummyAction({tabId: 'ss'});
-      })
-    );
 
   constructor(
     private actions$: Actions,

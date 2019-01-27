@@ -4,7 +4,7 @@
   </div>
   <div class="card-body">
     <div class="container">
-      <section class="{{ upgrade.disabled ? 'row upgrade disabled' : 'row upgrade'}}" *ngFor="let upgrade of upgrades">
+      <section class="{{ upgrade.disabled ? 'row upgrade disabled' : 'row upgrade'}}" (click)="selectUpgrade($event, upgrade)" *ngFor="let upgrade of upgrades">
         <div class="icon">
           <mat-icon [ngClass]="cssClass"></mat-icon>
         </div>
