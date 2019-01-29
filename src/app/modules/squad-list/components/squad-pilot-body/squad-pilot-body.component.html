@@ -7,8 +7,6 @@
     <span [innerHTML]="squadPilot.pilot.ability | xwingTranslate">{{ squadPilot.pilot.ability }}</span>
   </section>
   <section class="row upgrades-line"><!-- TODO: CREATE SEPARATE COMPONENT WITH LOGIC -->
-    <sg-upgrade-button class="upgrade-button" (action)="actionUpgrade($event)" *ngFor="let upg of squadPilot.pilot.slots" [type]="upg"></sg-upgrade-button>
-
-    <!--<span (click)="actionRemove($event, upg)" *ngFor="let upg of squadPilot.upgrades">{{ upg.name }}</span>-->
+    <sg-upgrade-buttons [slots]="squadPilot.pilot.slots" [upgrades]="squadPilot.upgrades" (action)="actionUpgrade($event)"></sg-upgrade-buttons>
   </section>
 </div>

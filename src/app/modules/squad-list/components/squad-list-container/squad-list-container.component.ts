@@ -117,6 +117,7 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
   }
 
   private applyRestrictions(upgrades: Upgrade[], squadPilot: SquadPilot): Upgrade[] {
+    console.log(upgrades);
     // FACTION
     let result: Upgrade[] = upgrades.filter((item) => item.factions.includes(this.config.faction.factionId));
 

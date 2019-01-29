@@ -22,6 +22,7 @@ import { SquadPilotHeaderComponent } from './components/squad-pilot-header/squad
 import { SquadPilotBodyComponent } from './components/squad-pilot-body/squad-pilot-body.component';
 import { UpgradeButtonComponent } from './components/upgrade-button/upgrade-button.component';
 import { UpgradeRestrictionsService } from './services/upgrade-restrictions.service';
+import { UpgradeButtonsComponent } from './components/upgrade-buttons/upgrade-buttons.component';
 
 export function initEndpoints(apiClient: ApiClientService) {
   return () => apiClient.registerEndpoints(API_ENDPOINTS);
@@ -36,7 +37,8 @@ export function initEndpoints(apiClient: ApiClientService) {
     SquadListNavbarToggleComponent,
     SquadPilotHeaderComponent,
     SquadPilotBodyComponent,
-    UpgradeButtonComponent],
+    UpgradeButtonComponent,
+    UpgradeButtonsComponent],
   imports: [
     CommonModule,
     SatPopoverModule,

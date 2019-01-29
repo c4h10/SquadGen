@@ -1,0 +1,11 @@
+<sg-upgrade-button class="upgrade-button" (action)="addUpgrade($event)" *ngFor="let upg of slots" [type]="upg"></sg-upgrade-button>
+<mat-chip-list *ngFor="let upg of upgrades">
+  <mat-chip [color]="'accent'"
+            [selectable]="true"
+            [removable]="true"
+            (removed)="removeUpgrade(upg)">
+    <i [ngClass]="getCssClass(upg.slot)"></i>
+    <span class="name">{{upg.name}}</span>
+    <mat-icon matChipRemove>cancel</mat-icon>
+  </mat-chip>
+</mat-chip-list>

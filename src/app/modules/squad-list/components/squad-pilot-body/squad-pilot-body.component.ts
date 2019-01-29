@@ -19,22 +19,25 @@ export class SquadPilotBodyComponent implements OnInit {
   }
 
   actionUpgrade(event) {
-    this.action.emit({
-      type: SQUAD_LIST_NAV_ACTION.UPGRADE,
-      data: {
-        type: event.type,
-        squadPilot: this.squadPilot
-      }
-    });
-  }
-
-  actionRemove(event, upgrade) {
-    this.action.emit({
-      type: SQUAD_LIST_NAV_ACTION.REMOVE_UPGRADE,
-      data: {
-        upgrade: upgrade,
-        squadPilot: this.squadPilot
-      }
-    });
+    switch (event.type) {
+      case SQUAD_LIST_NAV_ACTION.UPGRADE:
+        this.action.emit({
+          type: SQUAD_LIST_NAV_ACTION.UPGRADE,
+          data: {
+            type: event.data.upgradeType,
+            squadPilot: this.squadPilot
+          }
+        });
+      break;
+      case SQUAD_LIST_NAV_ACTION.REMOVE_UPGRADE:
+        this.action.emit({
+          type: SQUAD_LIST_NAV_ACTION.REMOVE_UPGRADE,
+          data: {
+            upgrade: event.data.upgrade,
+            squadPilot: this.squadPilot
+          }
+        });
+      break;
+    }
   }
 }

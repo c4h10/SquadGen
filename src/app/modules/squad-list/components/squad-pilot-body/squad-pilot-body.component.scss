@@ -17,12 +17,14 @@
   font-size: 17px;
   line-height: 1.5em;
   padding: 8px 0 0;
-  .upgrade-button {
-    padding-right: 6px;
-    padding-bottom: 6px;
-    &:last-child {
-    padding-right: 0;
-  }
+  ::ng-deep {
+    .upgrade-button {
+      padding-right: 6px;
+      padding-bottom: 6px;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
   }
 }
 
