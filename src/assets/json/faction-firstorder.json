@@ -359,7 +359,6 @@
       "points": 31,
       "ability": "While you are not damaged, treat your initiative value as 7.",
       "slots": [
-        "Talent",
         "Tech",
         "Modification"
       ],
@@ -373,14 +372,13 @@
       "ship": "tie-vn-silencer",
       "skill": 5,
       "force": 2,
-      "points": 82,
+      "points": 76,
       "ability": "After you defend, you may spend 1 %FORCE% to assign the I'll Show You the Dark Side condition to the attacker. %LINEBREAK% AUTOTHRUSTERS: After you perform an action. you may perform a red %BARRELROLL% or a red %BOOST% action.",
       "slots": [
         "Forcecharge",
         "Tech",
         "Torpedo",
-        "Missile",
-        "Modification"
+        "Missile"
       ],
       "isHyperspace": true
     },
@@ -391,14 +389,13 @@
       "faction": "firstorder",
       "ship": "tie-vn-silencer",
       "skill": 5,
-      "points": 70,
+      "points": 64,
       "ability": "While you perform an attack, if the attack is obstructed by an obstacle, the defender rolls 2 fewer defense dice. %LINEBREAK% AUTOTHRUSTERS: After you perform an action. you may perform a red %BARRELROLL% or a red %BOOST% action.",
       "slots": [
         "Talent",
         "Tech",
         "Torpedo",
-        "Missile",
-        "Modification"
+        "Missile"
       ],
       "isHyperspace": true
     },
@@ -409,14 +406,13 @@
       "faction": "firstorder",
       "ship": "tie-vn-silencer",
       "skill": 3,
-      "points": 62,
+      "points": 58,
       "ability": "After another friendly ship is destroyed, you may perform an action, even while stressed. %LINEBREAK% AUTOTHRUSTERS: After you perform an action. you may perform a red %BARRELROLL% or a red %BOOST% action.",
       "slots": [
         "Talent",
         "Tech",
         "Torpedo",
-        "Missile",
-        "Modification"
+        "Missile"
       ],
       "isHyperspace": true
     },
@@ -427,14 +423,13 @@
       "faction": "firstorder",
       "ship": "tie-vn-silencer",
       "skill": 4,
-      "points": 63,
+      "points": 59,
       "ability": "While you are stressed, you may treat enemy ships in your %FRONTARC% at range 0-1 as being in your %BULLSEYEARC%. %LINEBREAK% AUTOTHRUSTERS: After you perform an action. you may perform a red %BARRELROLL% or a red %BOOST% action.",
       "slots": [
         "Talent",
         "Tech",
         "Torpedo",
-        "Missile",
-        "Modification"
+        "Missile"
       ],
       "isHyperspace": true
     },
@@ -445,13 +440,12 @@
       "faction": "firstorder",
       "ship": "tie-vn-silencer",
       "skill": 1,
-      "points": 56,
+      "points": 52,
       "ability": "AUTOTHRUSTERS: After you perform an action. you may perform a red %BARRELROLL% or a red %BOOST% action.",
       "slots": [
         "Tech",
         "Torpedo",
-        "Missile",
-        "Modification"
+        "Missile"
       ],
       "isHyperspace": true
     },
@@ -462,14 +456,13 @@
       "faction": "firstorder",
       "ship": "tie-vn-silencer",
       "skill": 4,
-      "points": 62,
+      "points": 58,
       "ability": "AUTOTHRUSTERS: After you perform an action. you may perform a red %BARRELROLL% or a red %BOOST% action.",
       "slots": [
         "Talent",
         "Tech",
         "Torpedo",
-        "Missile",
-        "Modification"
+        "Missile"
       ],
       "isHyperspace": true
     },

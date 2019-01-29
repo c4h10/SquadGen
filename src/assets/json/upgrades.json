@@ -11,7 +11,7 @@
         "firstorder",
         "resistance"
       ],
-      "points": 2,
+      "points": 1,
       "restrictions": [
         {
           "type": "actions",
@@ -204,7 +204,7 @@
         "firstorder",
         "resistance"
       ],
-      "points": 4,
+      "points": 5,
       "restrictions": [
         {
           "type": "size",
@@ -227,7 +227,7 @@
         "firstorder",
         "resistance"
       ],
-      "points": 4,
+      "points": 5,
       "recurring": true,
       "charge": 1,
       "ability": "While you defend or perform an attack, if there are no other friendly ships at range 0-2, you may spend 1&nbsp;%CHARGE% to reroll 1 of your dice.",
@@ -382,7 +382,7 @@
         "firstorder",
         "resistance"
       ],
-      "points": 1,
+      "points": 2,
       "ability": "While you perform an attack that is obstructed by an obstacle, roll 1 additional attack die.",
       "unique": false,
       "isHyperspace": true
@@ -408,6 +408,554 @@
         "firstorder"
       ],
       "ability": "While you perform a primary attack, if you are not shielded, you may change 1 %FOCUS% result to a %HIT% result.",
+      "unique": false,
+      "isHyperspace": true
+    }
+  ],
+  "Tech": [
+    {
+      "name": "Advanced Optics",
+      "id": "tech-advanced-optics",
+      "slot": "Tech",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 4,
+      "ability": "While you perform an attack, you may spend 1 focus token to change 1 of your blank results to a %HIT% result.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Pattern Analyzer",
+      "id": "tech-pattern-analyzer",
+      "slot": "Tech",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 5,
+      "ability": "While you fully execute a red maneuver, before the Check Difficulty step, you may perform 1 action.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Targeting Synchronizer",
+      "id": "tech-targeting-synchronizer",
+      "slot": "Tech",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 6,
+      "restrictions": [
+        {
+          "type": "actions",
+          "operator": "has",
+          "args": "Lock"
+        }
+      ],
+      "ability": "<i>Requires %LOCK% or <mark>%LOCK%</mark></i>%LINEBREAK%While a friendly ship at range 1-2 performs an attack against a target you have locked, that ship ignores the&nbsp;%LOCK% attack requirement.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Primed Thrusters",
+      "id": "tech-primed-thrusters",
+      "slot": "Tech",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "restrictions": [
+        {
+          "type": "size",
+          "operator": "<",
+          "args": 2
+        }
+      ],
+      "points": 0,
+      "pointsMod": {
+        "formula": "4+__FIELD__",
+        "field": "pilot.skill"
+      },
+      "ability": "<i>small ship only</i>%LINEBREAK%While you have 2 or fewer stress tokens, you can perform %BARRELROLL% and %BOOST% actions even while stressed.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Ferrosphere Paint",
+      "id": "tech-ferrosphere-paint",
+      "slot": "Tech",
+      "factions": [
+        "resistance"
+      ],
+      "points": 6,
+      "ability": "<i>Resistance only</i>%LINEBREAK%After an enemy ship locks you, if you are not in that ship’s %BULLSEYEARC%, that ship gains 1 stress token.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Hyperspace Tracking Data",
+      "id": "tech-hyperspace-tracking-data",
+      "slot": "Tech",
+      "factions": [
+        "firstorder"
+      ],
+      "restrictions": [
+        {
+          "type": "size",
+          "operator": ">",
+          "args": 2
+        }
+      ],
+      "points": 2,
+      "ability": "<i>Large ship only. First Order only.</i>%LINEBREAK%<strong>Setup:</strong> Before placing forces, you may choose a number between 0 and 6. Treat your initiative as the chosen value during Setup.%LINEBREAK%After Setup, assign 1 focus or evade token to each friendly ship at range&nbsp;0-2.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Biohexacrypt Codes",
+      "id": "tech-biohexacrypt-codes",
+      "slot": "Tech",
+      "factions": [
+        "firstorder"
+      ],
+      "points": 1,
+      "ability": "While you coordinate or jam, if you have a lock on a ship, you may spend that lock to choose that ship, ignoring range restrictions.",
+      "unique": false,
+      "isHyperspace": false
+    }
+  ],
+  "Cannon": [
+    {
+      "name": "Heavy Laser Cannon",
+      "id": "cannon-heavy-laser-cannon",
+      "slot": "Cannon",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attackbull": 4,
+        "range": "2-3",
+        "rangebonus": true
+      },
+      "points": 4,
+      "ability": "<strong>Attack:</strong> After the Modify Attack Dice step, change all %CRIT% results to %HIT% results.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Ion Cannon",
+      "id": "cannon-ion-cannon",
+      "slot": "Cannon",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 3,
+        "range": "1-3",
+        "rangebonus": true
+      },
+      "points": 5,
+      "ability": "<strong>Attack:</strong> If this attack hits, spend 1&nbsp;%HIT% or %CRIT% result to cause the defender to suffer 1&nbsp;%HIT% damage. All remaining %HIT%/%CRIT% results inflict ion tokens instead of damage.",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Jamming Beam",
+      "id": "cannon-jamming-beam",
+      "slot": "Cannon",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 3,
+        "range": "1-2",
+        "rangebonus": true
+      },
+      "points": 0,
+      "ability": "<strong>Attack:</strong> If this attack hits, all %HIT%/%CRIT% results inflict jam tokens instead of damage.",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Tractor Beam",
+      "id": "cannon-tractor-beam",
+      "slot": "Cannon",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 3,
+        "range": "1-3",
+        "rangebonus": true
+      },
+      "points": 2,
+      "ability": "<strong>Attack:</strong> If this attack hits, all %HIT%/%CRIT% results inflict tractor tokens instead of damage.",
+      "unique": false,
+      "isHyperspace": false
+    }
+  ],
+  "Turret": [
+    {
+      "name": "Dorsal Turret",
+      "id": "turret-dorsal-turret",
+      "slot": "Turret",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "modifiers": [
+        {
+          "type": "actions",
+          "operator": "add",
+          "args": {
+            "type": "Rotate Arc",
+            "difficulty": "white"
+          }
+        }
+      ],
+      "ordnance": {
+        "attackt": 2,
+        "range": "1-2",
+        "rangebonus": true
+      },
+      "points": 2,
+      "ability": "<i>Adds %ROTATEARC%</i>%LINEBREAK%<strong>Attack</strong>",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Ion Cannon Turret",
+      "id": "turret-ion-cannon-turret",
+      "slot": "Turret",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "modifiers": [
+        {
+          "type": "actions",
+          "operator": "add",
+          "args": {
+            "type": "Rotate Arc",
+            "difficulty": "white"
+          }
+        }
+      ],
+      "ordnance": {
+        "attack": 3,
+        "range": "1-3",
+        "rangebonus": true
+      },
+      "points": 4,
+      "ability": "<i>Adds %ROTATEARC%</i>%LINEBREAK%<strong>Attack:</strong> If this attack hits, spend 1&nbsp;%HIT% or %CRIT% result to cause the defender to suffer 1&nbsp;%HIT% damage. All remaining %HIT%/%CRIT% results inflict ion tokens instead of damage.",
+      "unique": false,
+      "isHyperspace": true
+    }
+  ],
+  "Torpedo": [
+    {
+      "name": "Proton Torpedoes",
+      "id": "torpedo-proton-torpedoes",
+      "slot": "Torpedo",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 4,
+        "range": "2-3",
+        "rangebonus": false
+      },
+      "points": 12,
+      "charge": 2,
+      "ability": "<strong>Attack (%LOCK%):</strong> Spend 1&nbsp;%CHARGE%. Change 1&nbsp;%HIT% result to a %CRIT% result.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Ion Torpedoes",
+      "id": "torpedo-ion-torpedoes",
+      "slot": "Torpedo",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 4,
+        "range": "2-3",
+        "rangebonus": false
+      },
+      "points": 6,
+      "charge": 2,
+      "ability": "<strong>Attack (%LOCK%):</strong> Spend 1&nbsp;%CHARGE%. If this attack hits, spend 1&nbsp;%HIT% or %CRIT% result to cause the defender to suffer 1&nbsp;%HIT% damage. All remaining %HIT%/%CRIT% results inflict ion tokens instead of damage.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Adv. Proton Torpedoes",
+      "id": "torpedo-adv-proton-torpedoes",
+      "slot": "Torpedo",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 5,
+        "range": "1",
+        "rangebonus": false
+      },
+      "points": 6,
+      "charge": 1,
+      "ability": "<strong>Attack (%LOCK%):</strong> Spend 1&nbsp;%CHARGE%. Change 1&nbsp;%HIT% result to a %CRIT% result.",
+      "unique": false,
+      "isHyperspace": false
+    }
+
+  ],
+  "Missile": [
+    {
+      "name": "",
+      "id": "missile-",
+      "slot": "Missile",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 4,
+        "range": "2-3",
+        "rangebonus": false
+      },
+      "points": 12,
+      "charge": 2,
+      "ability": "",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "",
+      "id": "missile-",
+      "slot": "Missile",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 4,
+        "range": "2-3",
+        "rangebonus": false
+      },
+      "points": 12,
+      "charge": 2,
+      "ability": "",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "",
+      "id": "missile-",
+      "slot": "Missile",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 4,
+        "range": "2-3",
+        "rangebonus": false
+      },
+      "points": 12,
+      "charge": 2,
+      "ability": "",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "",
+      "id": "missile-",
+      "slot": "Missile",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 4,
+        "range": "2-3",
+        "rangebonus": false
+      },
+      "points": 12,
+      "charge": 2,
+      "ability": "",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "",
+      "id": "missile-",
+      "slot": "Missile",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 4,
+        "range": "2-3",
+        "rangebonus": false
+      },
+      "points": 12,
+      "charge": 2,
+      "ability": "",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Barrage Rockets",
+      "id": "missile-barrage-rockets",
+      "slot": "Missile",
+      "extraSlots": ["Missile"],
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 3,
+        "range": "2-3",
+        "rangebonus": false
+      },
+      "points": 7,
+      "charge": 5,
+      "ability": "<strong>Attack (%FOCUS%):</strong> Spend 1&nbsp;%CHARGE%. If the defender is in your %BULLSEYEARC%, you may spend 1 or more %CHARGE% to reroll that many attack dice.",
+      "unique": false,
+      "isHyperspace": false
+    }
+  ],
+  "Sensor": [
+    {
+      "name": "Advanced Sensors",
+      "id": "sensor-advanced-sensors",
+      "slot": "Sensor",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 10,
+      "ability": "After you reveal your dial, you may perform 1 action.%LINEBREAK%If you do, you cannot perform another action during your activation.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Collision Detector",
+      "id": "sensor-collision-detector",
+      "slot": "Sensor",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 6,
+      "charge": 2,
+      "ability": "While you boost or barrel roll, you can move through and overlap obstacles.%LINEBREAK%After you move through or overlap an obstacle, you may spend 1&nbsp;%CHARGE% to ignore its effects until the end of the round.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Fire-Control System",
+      "id": "sensor-fire-control-system",
+      "slot": "Sensor",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 2,
+      "ability": "While you perform an attack, if you have a lock on the defender, you may reroll 1 attack die. If you do, you cannot spend your lock during this attack.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Trajectory Simulator",
+      "id": "sensor-trajectory-simulator",
+      "slot": "Sensor",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 10,
+      "ability": "During the System Phase, if you would drop or launch a bomb, you may launch it using the [5&nbsp;%STRAIGHT%] template instead.",
       "unique": false,
       "isHyperspace": true
     }

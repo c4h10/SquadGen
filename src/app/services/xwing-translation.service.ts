@@ -17,6 +17,7 @@ export class XwingTranslationService {
     {type: '%CANNON%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-cannon"></i>`},
     {type: '%SINGLETURRETARC%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-singleturretarc"></i>`},
     {type: '%TURNLEFT%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-turnleft"></i>`},
+    {type: '%STRAIGHT%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-straight"></i>`},
     {type: '%TURNRIGHT%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-turnright"></i>`},
     {type: '%REARARC%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-reararc"></i>`},
     {type: '%MISSILE%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-missile"></i>`},

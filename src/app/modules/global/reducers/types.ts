@@ -63,10 +63,12 @@ export interface Upgrade {
   id: string;
   name: string;
   slot: string;
+  extraSlots: string[];
   points: number;
   pointsMod?: PointsMod;
   unique: boolean;
   factions: string[];
+  ordnance: any;
   restrictions?: any[];
   validations?: any[];
   modifiers?: any[];
