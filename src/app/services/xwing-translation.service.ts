@@ -23,6 +23,7 @@ export class XwingTranslationService {
     {type: '%MISSILE%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-missile"></i>`},
     {type: '%TORPEDO%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-torpedo"></i>`},
     {type: '%FORCE%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-forcecharge"></i>`},
+    {type: '%CHARGE%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-charge"></i>`},
     {type: '%CRIT%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-crit"></i>`}
   ];
 

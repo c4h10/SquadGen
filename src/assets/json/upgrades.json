@@ -1,4 +1,307 @@
 {
+  "Astromech": [],
+  "Cannon": [
+    {
+      "name": "Heavy Laser Cannon",
+      "id": "cannon-heavy-laser-cannon",
+      "slot": "Cannon",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attackbull": 4,
+        "range": "2-3",
+        "rangebonus": true
+      },
+      "points": 4,
+      "ability": "<strong>Attack:</strong> After the Modify Attack Dice step, change all %CRIT% results to %HIT% results.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Ion Cannon",
+      "id": "cannon-ion-cannon",
+      "slot": "Cannon",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 3,
+        "range": "1-3",
+        "rangebonus": true
+      },
+      "points": 5,
+      "ability": "<strong>Attack:</strong> If this attack hits, spend 1&nbsp;%HIT% or %CRIT% result to cause the defender to suffer 1&nbsp;%HIT% damage. All remaining %HIT%/%CRIT% results inflict ion tokens instead of damage.",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Jamming Beam",
+      "id": "cannon-jamming-beam",
+      "slot": "Cannon",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 3,
+        "range": "1-2",
+        "rangebonus": true
+      },
+      "points": 0,
+      "ability": "<strong>Attack:</strong> If this attack hits, all %HIT%/%CRIT% results inflict jam tokens instead of damage.",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Tractor Beam",
+      "id": "cannon-tractor-beam",
+      "slot": "Cannon",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 3,
+        "range": "1-3",
+        "rangebonus": true
+      },
+      "points": 2,
+      "ability": "<strong>Attack:</strong> If this attack hits, all %HIT%/%CRIT% results inflict tractor tokens instead of damage.",
+      "unique": false,
+      "isHyperspace": false
+    }
+  ],
+  "Configuration": [],
+  "Crew": [],
+  "Device": [],
+  "Force": [],
+  "Gunner": [],
+  "Illicit": [],
+  "Missile": [
+    {
+      "name": "Proton Rockets",
+      "id": "missile-proton-rockets",
+      "slot": "Missile",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attackbull": 5,
+        "range": "1-2",
+        "rangebonus": false
+      },
+      "points": 7,
+      "charge": 1,
+      "ability": "<strong>Attack (%FOCUS%):</strong> Spend 1&nbsp;%CHARGE%.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Cluster Missiles",
+      "id": "missile-cluster-missiles",
+      "slot": "Missile",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 3,
+        "range": "1-2",
+        "rangebonus": false
+      },
+      "points": 5,
+      "charge": 4,
+      "ability": "<strong>Attack (%LOCK%):</strong> Spend 1&nbsp;%CHARGE%. After this attack, you may perform this attack as a bonus attack against a different target at range 0-1 of the defender, ignoring the %LOCK% requirement.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Concussion Missiles",
+      "id": "missile-concussion-missiles",
+      "slot": "Missile",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 3,
+        "range": "2-3",
+        "rangebonus": false
+      },
+      "points": 6,
+      "charge": 3,
+      "ability": "<strong>Attack (%LOCK%):</strong> Spend 1&nbsp;%CHARGE%. After this attack hits, each ship at range 0-1 of the defender exposes 1 of its damage cards.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Homing Missiles",
+      "id": "missile-homing-missiles",
+      "slot": "Missile",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 4,
+        "range": "2-3",
+        "rangebonus": false
+      },
+      "points": 5,
+      "charge": 2,
+      "ability": "<strong>Attack (%LOCK%):</strong> Spend 1&nbsp;%CHARGE%. After you declare the defender, the defender may choose to suffer 1&nbsp;%HIT% damage. If it does, skip the Attack and Defense Dice steps and the attack is treated as hitting.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Ion Missiles",
+      "id": "missile-ion-missiles",
+      "slot": "Missile",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 4,
+        "range": "2-3",
+        "rangebonus": false
+      },
+      "points": 4,
+      "charge": 3,
+      "ability": "<strong>Attack (%LOCK%):</strong> Spend 1&nbsp;%CHARGE%. If this attack hits, spend 1&nbsp;%HIT% or %CRIT% result to cause the defender to suffer 1&nbsp;%HIT% damage. All remaining %HIT%/%CRIT% results inflict ion tokens instead of damage.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Barrage Rockets",
+      "id": "missile-barrage-rockets",
+      "slot": "Missile",
+      "extraSlots": ["Missile"],
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "ordnance": {
+        "attack": 3,
+        "range": "2-3",
+        "rangebonus": false
+      },
+      "restrictions": [
+        {
+          "type": "upgrades",
+          "operator": "empty",
+          "args": "Missile"
+        }
+      ],
+      "points": 7,
+      "charge": 5,
+      "ability": "<strong>Attack (%FOCUS%):</strong> Spend 1&nbsp;%CHARGE%. If the defender is in your %BULLSEYEARC%, you may spend 1 or more %CHARGE% to reroll that many attack dice.",
+      "unique": false,
+      "isHyperspace": false
+    }
+  ],
+  "Modification": [],
+  "Sensor": [
+    {
+      "name": "Advanced Sensors",
+      "id": "sensor-advanced-sensors",
+      "slot": "Sensor",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 10,
+      "ability": "After you reveal your dial, you may perform 1 action.%LINEBREAK%If you do, you cannot perform another action during your activation.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Collision Detector",
+      "id": "sensor-collision-detector",
+      "slot": "Sensor",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 6,
+      "charge": 2,
+      "ability": "While you boost or barrel roll, you can move through and overlap obstacles.%LINEBREAK%After you move through or overlap an obstacle, you may spend 1&nbsp;%CHARGE% to ignore its effects until the end of the round.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Fire-Control System",
+      "id": "sensor-fire-control-system",
+      "slot": "Sensor",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 2,
+      "ability": "While you perform an attack, if you have a lock on the defender, you may reroll 1 attack die. If you do, you cannot spend your lock during this attack.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Trajectory Simulator",
+      "id": "sensor-trajectory-simulator",
+      "slot": "Sensor",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 10,
+      "ability": "During the System Phase, if you would drop or launch a bomb, you may launch it using the [5&nbsp;%STRAIGHT%] template instead.",
+      "unique": false,
+      "isHyperspace": true
+    }
+  ],
   "Talent": [
     {
       "name": "Composure",
@@ -539,156 +842,7 @@
       "isHyperspace": false
     }
   ],
-  "Cannon": [
-    {
-      "name": "Heavy Laser Cannon",
-      "id": "cannon-heavy-laser-cannon",
-      "slot": "Cannon",
-      "factions": [
-        "empire",
-        "rebel",
-        "scum",
-        "firstorder",
-        "resistance"
-      ],
-      "ordnance": {
-        "attackbull": 4,
-        "range": "2-3",
-        "rangebonus": true
-      },
-      "points": 4,
-      "ability": "<strong>Attack:</strong> After the Modify Attack Dice step, change all %CRIT% results to %HIT% results.",
-      "unique": false,
-      "isHyperspace": true
-    },
-    {
-      "name": "Ion Cannon",
-      "id": "cannon-ion-cannon",
-      "slot": "Cannon",
-      "factions": [
-        "empire",
-        "rebel",
-        "scum",
-        "firstorder",
-        "resistance"
-      ],
-      "ordnance": {
-        "attack": 3,
-        "range": "1-3",
-        "rangebonus": true
-      },
-      "points": 5,
-      "ability": "<strong>Attack:</strong> If this attack hits, spend 1&nbsp;%HIT% or %CRIT% result to cause the defender to suffer 1&nbsp;%HIT% damage. All remaining %HIT%/%CRIT% results inflict ion tokens instead of damage.",
-      "unique": false,
-      "isHyperspace": false
-    },
-    {
-      "name": "Jamming Beam",
-      "id": "cannon-jamming-beam",
-      "slot": "Cannon",
-      "factions": [
-        "empire",
-        "rebel",
-        "scum",
-        "firstorder",
-        "resistance"
-      ],
-      "ordnance": {
-        "attack": 3,
-        "range": "1-2",
-        "rangebonus": true
-      },
-      "points": 0,
-      "ability": "<strong>Attack:</strong> If this attack hits, all %HIT%/%CRIT% results inflict jam tokens instead of damage.",
-      "unique": false,
-      "isHyperspace": false
-    },
-    {
-      "name": "Tractor Beam",
-      "id": "cannon-tractor-beam",
-      "slot": "Cannon",
-      "factions": [
-        "empire",
-        "rebel",
-        "scum",
-        "firstorder",
-        "resistance"
-      ],
-      "ordnance": {
-        "attack": 3,
-        "range": "1-3",
-        "rangebonus": true
-      },
-      "points": 2,
-      "ability": "<strong>Attack:</strong> If this attack hits, all %HIT%/%CRIT% results inflict tractor tokens instead of damage.",
-      "unique": false,
-      "isHyperspace": false
-    }
-  ],
-  "Turret": [
-    {
-      "name": "Dorsal Turret",
-      "id": "turret-dorsal-turret",
-      "slot": "Turret",
-      "factions": [
-        "empire",
-        "rebel",
-        "scum",
-        "firstorder",
-        "resistance"
-      ],
-      "modifiers": [
-        {
-          "type": "actions",
-          "operator": "add",
-          "args": {
-            "type": "Rotate Arc",
-            "difficulty": "white"
-          }
-        }
-      ],
-      "ordnance": {
-        "attackt": 2,
-        "range": "1-2",
-        "rangebonus": true
-      },
-      "points": 2,
-      "ability": "<i>Adds %ROTATEARC%</i>%LINEBREAK%<strong>Attack</strong>",
-      "unique": false,
-      "isHyperspace": false
-    },
-    {
-      "name": "Ion Cannon Turret",
-      "id": "turret-ion-cannon-turret",
-      "slot": "Turret",
-      "factions": [
-        "empire",
-        "rebel",
-        "scum",
-        "firstorder",
-        "resistance"
-      ],
-      "modifiers": [
-        {
-          "type": "actions",
-          "operator": "add",
-          "args": {
-            "type": "Rotate Arc",
-            "difficulty": "white"
-          }
-        }
-      ],
-      "ordnance": {
-        "attack": 3,
-        "range": "1-3",
-        "rangebonus": true
-      },
-      "points": 4,
-      "ability": "<i>Adds %ROTATEARC%</i>%LINEBREAK%<strong>Attack:</strong> If this attack hits, spend 1&nbsp;%HIT% or %CRIT% result to cause the defender to suffer 1&nbsp;%HIT% damage. All remaining %HIT%/%CRIT% results inflict ion tokens instead of damage.",
-      "unique": false,
-      "isHyperspace": true
-    }
-  ],
+  "Title": [],
   "Torpedo": [
     {
       "name": "Proton Torpedoes",
@@ -758,11 +912,11 @@
     }
 
   ],
-  "Missile": [
+  "Turret": [
     {
-      "name": "",
-      "id": "missile-",
-      "slot": "Missile",
+      "name": "Dorsal Turret",
+      "id": "turret-dorsal-turret",
+      "slot": "Turret",
       "factions": [
         "empire",
         "rebel",
@@ -770,21 +924,30 @@
         "firstorder",
         "resistance"
       ],
+      "modifiers": [
+        {
+          "type": "actions",
+          "operator": "add",
+          "args": {
+            "type": "Rotate Arc",
+            "difficulty": "white"
+          }
+        }
+      ],
       "ordnance": {
-        "attack": 4,
-        "range": "2-3",
-        "rangebonus": false
+        "attackt": 2,
+        "range": "1-2",
+        "rangebonus": true
       },
-      "points": 12,
-      "charge": 2,
-      "ability": "",
+      "points": 2,
+      "ability": "<i>Adds %ROTATEARC%</i>%LINEBREAK%<strong>Attack</strong>",
       "unique": false,
-      "isHyperspace": true
+      "isHyperspace": false
     },
     {
-      "name": "",
-      "id": "missile-",
-      "slot": "Missile",
+      "name": "Ion Cannon Turret",
+      "id": "turret-ion-cannon-turret",
+      "slot": "Turret",
       "factions": [
         "empire",
         "rebel",
@@ -792,170 +955,23 @@
         "firstorder",
         "resistance"
       ],
-      "ordnance": {
-        "attack": 4,
-        "range": "2-3",
-        "rangebonus": false
-      },
-      "points": 12,
-      "charge": 2,
-      "ability": "",
-      "unique": false,
-      "isHyperspace": true
-    },
-    {
-      "name": "",
-      "id": "missile-",
-      "slot": "Missile",
-      "factions": [
-        "empire",
-        "rebel",
-        "scum",
-        "firstorder",
-        "resistance"
-      ],
-      "ordnance": {
-        "attack": 4,
-        "range": "2-3",
-        "rangebonus": false
-      },
-      "points": 12,
-      "charge": 2,
-      "ability": "",
-      "unique": false,
-      "isHyperspace": true
-    },
-    {
-      "name": "",
-      "id": "missile-",
-      "slot": "Missile",
-      "factions": [
-        "empire",
-        "rebel",
-        "scum",
-        "firstorder",
-        "resistance"
-      ],
-      "ordnance": {
-        "attack": 4,
-        "range": "2-3",
-        "rangebonus": false
-      },
-      "points": 12,
-      "charge": 2,
-      "ability": "",
-      "unique": false,
-      "isHyperspace": true
-    },
-    {
-      "name": "",
-      "id": "missile-",
-      "slot": "Missile",
-      "factions": [
-        "empire",
-        "rebel",
-        "scum",
-        "firstorder",
-        "resistance"
-      ],
-      "ordnance": {
-        "attack": 4,
-        "range": "2-3",
-        "rangebonus": false
-      },
-      "points": 12,
-      "charge": 2,
-      "ability": "",
-      "unique": false,
-      "isHyperspace": true
-    },
-    {
-      "name": "Barrage Rockets",
-      "id": "missile-barrage-rockets",
-      "slot": "Missile",
-      "extraSlots": ["Missile"],
-      "factions": [
-        "empire",
-        "rebel",
-        "scum",
-        "firstorder",
-        "resistance"
+      "modifiers": [
+        {
+          "type": "actions",
+          "operator": "add",
+          "args": {
+            "type": "Rotate Arc",
+            "difficulty": "white"
+          }
+        }
       ],
       "ordnance": {
         "attack": 3,
-        "range": "2-3",
-        "rangebonus": false
+        "range": "1-3",
+        "rangebonus": true
       },
-      "points": 7,
-      "charge": 5,
-      "ability": "<strong>Attack (%FOCUS%):</strong> Spend 1&nbsp;%CHARGE%. If the defender is in your %BULLSEYEARC%, you may spend 1 or more %CHARGE% to reroll that many attack dice.",
-      "unique": false,
-      "isHyperspace": false
-    }
-  ],
-  "Sensor": [
-    {
-      "name": "Advanced Sensors",
-      "id": "sensor-advanced-sensors",
-      "slot": "Sensor",
-      "factions": [
-        "empire",
-        "rebel",
-        "scum",
-        "firstorder",
-        "resistance"
-      ],
-      "points": 10,
-      "ability": "After you reveal your dial, you may perform 1 action.%LINEBREAK%If you do, you cannot perform another action during your activation.",
-      "unique": false,
-      "isHyperspace": true
-    },
-    {
-      "name": "Collision Detector",
-      "id": "sensor-collision-detector",
-      "slot": "Sensor",
-      "factions": [
-        "empire",
-        "rebel",
-        "scum",
-        "firstorder",
-        "resistance"
-      ],
-      "points": 6,
-      "charge": 2,
-      "ability": "While you boost or barrel roll, you can move through and overlap obstacles.%LINEBREAK%After you move through or overlap an obstacle, you may spend 1&nbsp;%CHARGE% to ignore its effects until the end of the round.",
-      "unique": false,
-      "isHyperspace": true
-    },
-    {
-      "name": "Fire-Control System",
-      "id": "sensor-fire-control-system",
-      "slot": "Sensor",
-      "factions": [
-        "empire",
-        "rebel",
-        "scum",
-        "firstorder",
-        "resistance"
-      ],
-      "points": 2,
-      "ability": "While you perform an attack, if you have a lock on the defender, you may reroll 1 attack die. If you do, you cannot spend your lock during this attack.",
-      "unique": false,
-      "isHyperspace": true
-    },
-    {
-      "name": "Trajectory Simulator",
-      "id": "sensor-trajectory-simulator",
-      "slot": "Sensor",
-      "factions": [
-        "empire",
-        "rebel",
-        "scum",
-        "firstorder",
-        "resistance"
-      ],
-      "points": 10,
-      "ability": "During the System Phase, if you would drop or launch a bomb, you may launch it using the [5&nbsp;%STRAIGHT%] template instead.",
+      "points": 4,
+      "ability": "<i>Adds %ROTATEARC%</i>%LINEBREAK%<strong>Attack:</strong> If this attack hits, spend 1&nbsp;%HIT% or %CRIT% result to cause the defender to suffer 1&nbsp;%HIT% damage. All remaining %HIT%/%CRIT% results inflict ion tokens instead of damage.",
       "unique": false,
       "isHyperspace": true
     }
