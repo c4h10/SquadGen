@@ -331,7 +331,7 @@
     },
     {
       "name": "U-Wing",
-      "id": "ut-60d-u-Wing",
+      "id": "ut-60d-u-wing",
       "faction": "rebel",
       "icon": "xwing-miniatures-ship xwing-miniatures-ship-uwing",
       "attack": 3,

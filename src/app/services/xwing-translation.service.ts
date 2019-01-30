@@ -7,6 +7,7 @@ export class XwingTranslationService {
     {type: '%CHARGE%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-charge"></i>`},
     {type: '%EVADE%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-evade"></i>`},
     {type: '%FOCUS%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-focus"></i>`},
+    {type: '%CLOAK%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-cloak"></i>`},
     {type: '%HIT%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-hit"></i>`},
     {type: '%BARRELROLL%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-barrelroll"></i>`},
     {type: '%RELOAD%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-reload"></i>`},
@@ -24,6 +25,7 @@ export class XwingTranslationService {
     {type: '%TORPEDO%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-torpedo"></i>`},
     {type: '%FORCE%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-forcecharge"></i>`},
     {type: '%CHARGE%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-charge"></i>`},
+    {type: '%STOP%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-stop"></i>`},
     {type: '%CRIT%', value: `<i class="xwing-miniatures-font xwing-miniatures-font-crit"></i>`}
   ];
 

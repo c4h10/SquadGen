@@ -86,12 +86,206 @@
       "isHyperspace": false
     }
   ],
-  "Configuration": [],
+  "Configuration": [
+    {
+      "name": "Os-1 Arsenal Loadout",
+      "id": "configuration-os-1-arsenal-loadout",
+      "slot": "Configuration",
+      "ships": ["alpha-class-star-wing"],
+      "factions": [
+        "empire"
+      ],
+      "modifiers": [
+        {
+          "type": "slots",
+          "operator": "add",
+          "args": ["Torpedo", "Missile"]
+        }
+      ],
+      "points": 0,
+      "ability": "While you have exactly 1 disarm token, you can still perform %TORPEDO% and %MISSILE% attacks against targets you have locked. If you do, you cannot spend your lock during the attack.%LINEBREAK%Add %TORPEDO% and %MISSILE% slots.",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Xg-1 Assault Configuration",
+      "id": "configuration-xg-1-assault-configuration",
+      "slot": "Configuration",
+      "ships": ["alpha-class-star-wing"],
+      "factions": [
+        "empire"
+      ],
+      "modifiers": [
+        {
+          "type": "slots",
+          "operator": "add",
+          "args": ["Cannon"]
+        }
+      ],
+      "points": 0,
+      "ability": "While you have exactly 1 disarm token, you can still perform %CANNON% attacks. While you perform a %CANNON% attack while disarmed, roll a maximum of 3 attack dice.%LINEBREAK%Add %CANNON% slot.",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Pivot Wing",
+      "id": "configuration-pivot-wing",
+      "slot": "Configuration",
+      "ships": ["ut-60d-u-wing"],
+      "factions": [
+        "rebel"
+      ],
+      "points": 0,
+      "ability": "<strong>Closed: </strong>While you defend, roll 1 fewer defense die.%LINEBREAK%After you execute a [0&nbsp;%STOP%] maneuver, you may rotate your ship 90º or 180º.%LINEBREAK%Before you activate, you may flip this card.%LINEBREAK%<strong>Open:</Strong> Before you activate, you may flip this card.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Servomotor S-Foils",
+      "id": "configuration-servomotor-s-foils",
+      "slot": "Configuration",
+      "ships": ["t-65-x-wing"],
+      "factions": [
+        "rebel"
+      ],
+      "points": 0,
+      "ability": "<strong>Closed: </strong><i>Adds %BOOST% , %FOCUS%&nbsp;<i class='xwing-miniatures-font xwing-miniatures-font-linked'></i>&nbsp;<r>%BOOST%</r></i>%LINEBREAK% While you perform a primary attack, roll 1 fewer attack die.%LINEBREAK%Before you activate, you may flip this card.%LINEBREAK%<strong>Open:</strong> Before you activate, you may flip this card.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Integrated S-Foils",
+      "id": "configuration-integrated-s-foils",
+      "slot": "Configuration",
+      "ships": ["t-70-x-wing"],
+      "factions": [
+        "resistance"
+      ],
+      "points": 0,
+      "ability": "<strong>Closed: </strong><i>Adds %BARRELROLL%, %FOCUS% &nbsp;<i class='xwing-miniatures-font xwing-miniatures-font-linked'></i>&nbsp;<r>%BARRELROLL%</r></i>%LINEBREAK% While you perform a primary attack, if the defender is not in your %BULLSEYEARC%, roll 1 fewer attack die. %LINEBREAK% Before you activate, you may flip this card. %LINEBREAK% <b>Open:</b> Before you activate, you may flip this card.",
+      "unique": false,
+      "isHyperspace": true
+    }
+  ],
   "Crew": [],
   "Device": [],
   "Force": [],
   "Gunner": [],
-  "Illicit": [],
+  "Illicit": [
+    {
+      "name": "Cloaking Device",
+      "id": "illicit-cloaking-device",
+      "slot": "Illicit",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "restrictions": [
+        {
+          "type": "size",
+          "operator": "<",
+          "args": 3
+        }
+      ],
+      "points": 5,
+      "charge": 2,
+      "ability": "<i>small ship or medium ship only</i>%LINEBREAK%<strong>Action:</strong> Spend 1&nbsp;%CHARGE% to perform a %CLOAK% action.%LINEBREAK%At the start of the Planning Phase, roll 1 attack die. On a %FOCUS% result, decloak or discard your cloak token.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Contraband Cybernetics",
+      "id": "illicit-contraband-cybernetics",
+      "slot": "Illicit",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 5,
+      "charge": 1,
+      "ability": "Before you activate, you may spend 1&nbsp;%CHARGE%. If you do, until the end of the round, you can perform actions and execute red maneuvers, even while stressed.",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Feedback Array",
+      "id": "illicit-feedback-array",
+      "slot": "Illicit",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 4,
+      "ability": "Before you engage, you may gain 1 ion token and 1 disarm token. If you do, each ship at range 0 suffers 1&nbsp;%HIT% damage.",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Deadman's Switch",
+      "id": "illicit-deadmans-switch",
+      "slot": "Illicit",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 2,
+      "ability": "After you are destroyed, each other ship at range 0-1 suffers 1&nbsp;%HIT% damage.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Inertial Dampeners",
+      "id": "illicit-inertial-dampeners",
+      "slot": "Illicit",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 1,
+      "ability": "Before you would execute a maneuver, you may spend 1 shield. If you do, execute a white [0&nbsp;%STOP%] instead of the maneuver you revealed, then gain 1 stress token.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Rigged Cargo Chute",
+      "id": "illicit-rigged-cargo-chute",
+      "slot": "Illicit",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "restrictions": [
+        {
+          "type": "size",
+          "operator": ">",
+          "args": 1
+        }
+      ],
+      "points": 4,
+      "charge": 1,
+      "ability": "<i>large ship or medium ship only</i>%LINEBREAK%<strong>Action:</strong> Spend 1&nbsp;%CHARGE%. Drop 1 loose cargo using the [1&nbsp;%STRAIGHT%] template.",
+      "unique": false,
+      "isHyperspace": true
+    }
+  ],
   "Missile": [
     {
       "name": "Proton Rockets",
