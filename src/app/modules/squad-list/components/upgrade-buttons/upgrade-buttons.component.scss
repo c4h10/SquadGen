@@ -1,0 +1,49 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  .item {
+    padding: 3px;
+    max-width: 50%;
+
+    .upgrade-chip {
+      padding-left: 8px;
+      .xwing-miniatures-font {
+        margin-right:4px;
+      }
+      .name {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .mat-chip-remove {
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .main {
+    .item {
+      .upgrade-chip {
+        .name {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    .item {
+      .upgrade-chip {
+        .name {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+}

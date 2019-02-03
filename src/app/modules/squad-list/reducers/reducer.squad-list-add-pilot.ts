@@ -1,4 +1,4 @@
-import { ContainerState } from '../store/squad-list.store';
+import { ContainerState, SlotUpgrade } from '../store/squad-list.store';
 import { SquadListAddPilotAction } from '../actions';
 import { guid } from '../../../utils/utils.functions';
 
@@ -9,11 +9,18 @@ export function reducer(state: ContainerState, action: SquadListAddPilotAction):
     points: state.squadConfig.points + action.payload.pilot.points
   };
 
+  const upgrades: SlotUpgrade[] = action.payload.pilot.slots.map((item) => {
+      return {
+        type: item,
+        taken: false
+      };
+  });
+
   squadPilots.push({
     UUID: guid(),
     pilot: action.payload.pilot,
     points: action.payload.pilot.points,
-    upgrades: []
+    upgrades: upgrades
   });
 
   const newState = {

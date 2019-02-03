@@ -1,11 +1,24 @@
-<sg-upgrade-button class="upgrade-button" (action)="addUpgrade($event)" *ngFor="let upg of slots" [type]="upg"></sg-upgrade-button>
-<mat-chip-list *ngFor="let upg of upgrades">
-  <mat-chip [color]="'accent'"
-            [selectable]="true"
-            [removable]="true"
-            (removed)="removeUpgrade(upg)">
-    <i [ngClass]="getCssClass(upg.slot)"></i>
-    <span class="name">{{upg.name}}</span>
-    <mat-icon matChipRemove>cancel</mat-icon>
-  </mat-chip>
-</mat-chip-list>
+<section class="main">
+  <div class="item" *ngFor="let upg of upgrades">
+    <ng-container
+      [ngTemplateOutlet]="upg.taken === true ? chip : button"
+      [ngTemplateOutletContext]="{upg: upg}">
+    </ng-container>
+  </div>
+</section>
+<ng-template #button let-upg="upg">
+  <sg-upgrade-button class="upgrade-button" (action)="addUpgrade($event)" [type]="upg.type"></sg-upgrade-button>
+</ng-template>
+
+<ng-template #chip let-upg="upg">
+  <mat-chip-list>
+    <mat-chip class="upgrade-chip" [color]="'accent'"
+              [selectable]="true"
+              [removable]="true"
+              (removed)="removeUpgrade(upg)">
+      <i [ngClass]="getCssClass(upg.type)"></i>
+      <span class="name">{{upg.upgrade.name}}&nbsp;({{ upg.upgrade.points }})</span>
+      <mat-icon matChipRemove>cancel</mat-icon>
+    </mat-chip>
+  </mat-chip-list>
+</ng-template>

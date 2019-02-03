@@ -27,5 +27,11 @@ export interface SquadPilot {
   UUID: string;
   pilot: Pilot;
   points: number;
-  upgrades: Upgrade[];
+  upgrades: SlotUpgrade[];
+}
+
+export interface SlotUpgrade {
+  type: string;
+  taken?: boolean;
+  upgrade?: Upgrade;
 }

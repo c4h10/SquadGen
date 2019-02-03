@@ -17,6 +17,9 @@
   font-size: 17px;
   line-height: 1.5em;
   padding: 8px 0 0;
+  .upgrades-buttons {
+    width: 100%;
+  }
   ::ng-deep {
     .upgrade-button {
       padding-right: 6px;
@@ -54,7 +57,7 @@
     ::ng-deep {
       .stats-line,
       .actions-line {
-        padding-right: 0;
+        padding: 0 2px;
         text-align: center;
       }
     }

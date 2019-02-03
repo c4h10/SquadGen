@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Upgrade } from '../../../global/reducers/types';
 import { SQUAD_LIST_NAV_ACTION } from '../../types';
+import { SlotUpgrade } from '../../store/squad-list.store';
 
 @Component({
   selector: 'sg-upgrade-buttons',
@@ -10,8 +11,7 @@ import { SQUAD_LIST_NAV_ACTION } from '../../types';
 })
 export class UpgradeButtonsComponent implements OnInit {
 
-  @Input() slots: string[];
-  @Input() upgrades: Upgrade[];
+  @Input() upgrades: SlotUpgrade[];
   @Output() action: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {
@@ -37,7 +37,6 @@ export class UpgradeButtonsComponent implements OnInit {
       }
     });
   }
-
 
 
   getCssClass(type): string {

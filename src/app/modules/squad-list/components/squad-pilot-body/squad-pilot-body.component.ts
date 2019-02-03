@@ -33,7 +33,7 @@ export class SquadPilotBodyComponent implements OnInit {
         this.action.emit({
           type: SQUAD_LIST_NAV_ACTION.REMOVE_UPGRADE,
           data: {
-            upgrade: event.data.upgrade,
+            upgrade: event.data.upgrade.upgrade,
             squadPilot: this.squadPilot
           }
         });

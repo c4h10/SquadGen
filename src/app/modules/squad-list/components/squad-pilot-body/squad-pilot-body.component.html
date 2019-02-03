@@ -6,7 +6,7 @@
   <section class="row ability-line" *ngIf="squadPilot.pilot.ability">
     <span [innerHTML]="squadPilot.pilot.ability | xwingTranslate">{{ squadPilot.pilot.ability }}</span>
   </section>
-  <section class="row upgrades-line"><!-- TODO: CREATE SEPARATE COMPONENT WITH LOGIC -->
-    <sg-upgrade-buttons [slots]="squadPilot.pilot.slots" [upgrades]="squadPilot.upgrades" (action)="actionUpgrade($event)"></sg-upgrade-buttons>
+  <section class="row upgrades-line">
+    <sg-upgrade-buttons class="upgrades-buttons" [upgrades]="squadPilot.upgrades" (action)="actionUpgrade($event)"></sg-upgrade-buttons>
   </section>
 </div>

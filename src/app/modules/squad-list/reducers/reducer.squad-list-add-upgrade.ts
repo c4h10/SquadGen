@@ -12,8 +12,13 @@ export function reducer(state: ContainerState, action: SquadListAddUpgradeAction
   squadPilots = squadPilots.map((pilot) => {
     if (pilot.UUID === action.payload.squadPilot.UUID) {
       pilot.points = pilot.points + action.payload.upgrade.points;
-      const upgrades = [...pilot.upgrades];
-      upgrades.push(action.payload.upgrade);
+      const upgrades = [...pilot.upgrades].map((item) => {
+        if (action.payload.upgrade.slot === item.type) {
+            item.taken = true;
+            item.upgrade = action.payload.upgrade;
+        }
+        return item;
+      });
       pilot.upgrades = upgrades;
       return pilot;
     }
