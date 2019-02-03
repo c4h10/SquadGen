@@ -71,37 +71,21 @@ export class UpgradeRestrictionsService {
           // tslint:disable-next-line:no-eval
           return eval(squadPilot.pilot.ship.size + operator + arg);
         }
+      },
+
+      'upgrades': {
+        fn: function (squadPilot: SquadPilot, operator, arg) {
+          switch (operator) {
+            case 'empty':
+              return squadPilot.upgrades.filter((slotUpg) => {
+                return slotUpg.taken === false && slotUpg.type === arg;
+              }).length > 1;
+              break;
+          }
+        }
       }
     };
 
     return types[type].fn;
   }
 }
-
-/*
-
-        {
-          "type": "actions",
-          "operator": "equal",
-          "args": {
-            "type": "Boost",
-            "difficulty": "red"
-          }
-        },
-
-"restrictions": [
-        {
-          "type": "actions",
-          "operator": "equal",
-          "args": {
-            "type": "Boost",
-            "difficulty": "red"
-          }
-        },
-        {
-          "type": "size",
-          "operator": "lessThan",
-          "args": 3
-        }
-      ],
- */

@@ -6,7 +6,8 @@
     <div class="container">
       <section class="{{ upgrade.disabled ? 'row upgrade disabled' : 'row upgrade'}}" (click)="selectUpgrade($event, upgrade)" *ngFor="let upgrade of upgrades">
         <div class="icon">
-          <mat-icon [ngClass]="cssClass"></mat-icon>
+          <i [ngClass]="getCssClass(upgrade.slot)"></i>
+          <i *ngFor="let extra of upgrade.extraSlots" [ngClass]="getCssClass(extra)"></i>
         </div>
         <div class="desc">
           <p class="name"><span *ngIf="upgrade.unique" class="unique">•</span> {{ upgrade.name }} ({{ upgrade.points }})</p>

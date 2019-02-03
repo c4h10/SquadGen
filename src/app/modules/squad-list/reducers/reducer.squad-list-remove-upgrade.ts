@@ -11,11 +11,22 @@ export function reducer(state: ContainerState, action: SquadListRemoveUpgradeAct
 
   squadPilots = squadPilots.map((pilot) => {
     if (pilot.UUID === action.payload.squadPilot.UUID) {
+      let removed = false;
+      let extraSlots = [];
+      if (action.payload.upgrade.extraSlots) {
+        extraSlots = [...action.payload.upgrade.extraSlots];
+      }
+
       pilot.points = pilot.points - action.payload.upgrade.points;
-      const upgrades = [...pilot.upgrades].map(item => {
-        if (item.upgrade && item.upgrade.id === action.payload.upgrade.id) {
+      const upgrades = [...pilot.upgrades].map((item) => {
+        if (item.upgrade && item.upgrade.id === action.payload.upgrade.id && !removed) {
           item.taken = false;
           item.upgrade = null;
+          removed = true;
+        } else if (extraSlots.indexOf(item.type) > -1  && removed) {
+          item.taken = false;
+          item.upgrade = null;
+          extraSlots.splice( extraSlots.indexOf(item.type), 1 );
         }
         return item;
       });

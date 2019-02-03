@@ -11,12 +11,13 @@
 </ng-template>
 
 <ng-template #chip let-upg="upg">
-  <mat-chip-list>
+  <mat-chip-list *ngIf="upg.taken && upg.upgrade">
     <mat-chip class="upgrade-chip" [color]="'accent'"
               [selectable]="true"
               [removable]="true"
               (removed)="removeUpgrade(upg)">
       <i [ngClass]="getCssClass(upg.type)"></i>
+      <i *ngFor="let extra of upg.upgrade.extraSlots" [ngClass]="getCssClass(extra)"></i>
       <span class="name">{{upg.upgrade.name}}&nbsp;({{ upg.upgrade.points }})</span>
       <mat-icon matChipRemove>cancel</mat-icon>
     </mat-chip>

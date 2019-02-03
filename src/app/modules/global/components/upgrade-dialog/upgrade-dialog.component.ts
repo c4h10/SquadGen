@@ -40,12 +40,18 @@ export class UpgradeDialogComponent implements OnInit {
   }
 
   selectUpgrade(event, upgrade: Upgrade) {
-
+    if (upgrade.disabled) {
+      return;
+    }
     this.storeManager.dispatch(withTabId(new SquadListAddUpgradeAction({
       squadPilot: this.squadPilot,
       upgrade: upgrade
     }), this.tabId));
 
     this.dialogRef.close();
+  }
+
+  getCssClass(type): string {
+    return `xwing-miniatures-font xwing-miniatures-font-${type.toLowerCase()}`;
   }
 }
