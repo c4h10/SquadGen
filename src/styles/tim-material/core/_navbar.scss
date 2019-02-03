@@ -155,7 +155,7 @@
     &.navbar-transparent{
         background-color: transparent !important;
         box-shadow: none;
-        padding-top: 25px;
+        padding-top: 0;
 
     }
 
@@ -181,10 +181,6 @@
 .navbar{
   .navbar-minimize{
     padding: 3px 0 0 15px;
-  }
-
-  &.navbar-transparent{
-    padding-top: 10px;
   }
 
   .collapse{

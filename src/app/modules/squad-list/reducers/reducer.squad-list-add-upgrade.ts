@@ -2,7 +2,7 @@ import { ContainerState } from '../store/squad-list.store';
 import { SquadListAddUpgradeAction } from '../actions';
 
 export function reducer(state: ContainerState, action: SquadListAddUpgradeAction): ContainerState {
-
+  console.log(action.payload.upgrade);
   const squadConfig = {
     ...state.squadConfig,
     points: state.squadConfig.points + action.payload.upgrade.points

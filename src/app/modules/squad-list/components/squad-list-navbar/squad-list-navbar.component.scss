@@ -1,6 +1,6 @@
 .container-fluid {
   justify-content: unset;
-
+  padding: 10px 15px;
   .navbar-wrapper {
     display: flex;
     justify-content: space-between;
@@ -10,6 +10,7 @@
 
 @media (max-width: 768px) {
   .container-fluid {
+    padding: 5px 15px;
     .navbar-wrapper {
       width: calc(100% - 64px);
     }
