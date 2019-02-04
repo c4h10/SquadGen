@@ -321,6 +321,13 @@
           "args": ["Torpedo", "Missile"]
         }
       ],
+      "restrictions": [
+        {
+          "type": "ships",
+          "operator": "has",
+          "args": ["alpha-class-star-wing"]
+        }
+      ],
       "points": 0,
       "ability": "While you have exactly 1 disarm token, you can still perform %TORPEDO% and %MISSILE% attacks against targets you have locked. If you do, you cannot spend your lock during the attack.%LINEBREAK%Add %TORPEDO% and %MISSILE% slots.",
       "unique": false,
@@ -341,6 +348,13 @@
           "args": ["Cannon"]
         }
       ],
+      "restrictions": [
+        {
+          "type": "ships",
+          "operator": "has",
+          "args": ["alpha-class-star-wing"]
+        }
+      ],
       "points": 0,
       "ability": "While you have exactly 1 disarm token, you can still perform %CANNON% attacks. While you perform a %CANNON% attack while disarmed, roll a maximum of 3 attack dice.%LINEBREAK%Add %CANNON% slot.",
       "unique": false,
@@ -353,6 +367,13 @@
       "ships": ["ut-60d-u-wing"],
       "factions": [
         "rebel"
+      ],
+      "restrictions": [
+        {
+          "type": "ships",
+          "operator": "has",
+          "args": ["ut-60d-u-wing"]
+        }
       ],
       "points": 0,
       "ability": "<strong>Closed: </strong>While you defend, roll 1 fewer defense die.%LINEBREAK%After you execute a [0&nbsp;%STOP%] maneuver, you may rotate your ship 90º or 180º.%LINEBREAK%Before you activate, you may flip this card.%LINEBREAK%<strong>Open:</Strong> Before you activate, you may flip this card.",
@@ -367,8 +388,15 @@
       "factions": [
         "rebel"
       ],
+      "restrictions": [
+        {
+          "type": "ships",
+          "operator": "has",
+          "args": ["t-65-x-wing"]
+        }
+      ],
       "points": 0,
-      "ability": "<strong>Closed: </strong><i>Adds %BOOST% , %FOCUS%&nbsp;<i class='xwing-miniatures-font xwing-miniatures-font-linked'></i>&nbsp;<r>%BOOST%</r></i>%LINEBREAK% While you perform a primary attack, roll 1 fewer attack die.%LINEBREAK%Before you activate, you may flip this card.%LINEBREAK%<strong>Open:</strong> Before you activate, you may flip this card.",
+      "ability": "<strong>Closed: </strong><i>Adds %BOOST% , %FOCUS%&nbsp;<i class='xwing-miniatures-font xwing-miniatures-font-linked'></i>&nbsp;<mark>%BOOST%</mark></i>%LINEBREAK% While you perform a primary attack, roll 1 fewer attack die.%LINEBREAK%Before you activate, you may flip this card.%LINEBREAK%<strong>Open:</strong> Before you activate, you may flip this card.",
       "unique": false,
       "isHyperspace": true
     },
@@ -380,8 +408,15 @@
       "factions": [
         "resistance"
       ],
+      "restrictions": [
+        {
+          "type": "ships",
+          "operator": "has",
+          "args": ["t-70-x-wing"]
+        }
+      ],
       "points": 0,
-      "ability": "<strong>Closed: </strong><i>Adds %BARRELROLL%, %FOCUS% &nbsp;<i class='xwing-miniatures-font xwing-miniatures-font-linked'></i>&nbsp;<r>%BARRELROLL%</r></i>%LINEBREAK% While you perform a primary attack, if the defender is not in your %BULLSEYEARC%, roll 1 fewer attack die. %LINEBREAK% Before you activate, you may flip this card. %LINEBREAK% <b>Open:</b> Before you activate, you may flip this card.",
+      "ability": "<strong>Closed: </strong><i>Adds %BARRELROLL%, %FOCUS% &nbsp;<i class='xwing-miniatures-font xwing-miniatures-font-linked'></i>&nbsp;<mark>%BARRELROLL%</mark></i>%LINEBREAK% While you perform a primary attack, if the defender is not in your %BULLSEYEARC%, roll 1 fewer attack die. %LINEBREAK% Before you activate, you may flip this card. %LINEBREAK% <b>Open:</b> Before you activate, you may flip this card.",
       "unique": false,
       "isHyperspace": true
     }
@@ -475,11 +510,11 @@
       "isHyperspace": true
     }
   ],
-  "Force": [
+  "Forcecharge": [
     {
       "name": "Heightened Perception",
       "id": "force-heightened-perception",
-      "slot": "Force",
+      "slot": "Forcecharge",
       "factions": [
         "empire",
         "rebel",
@@ -495,7 +530,7 @@
     {
       "name": "Instinctive Aim",
       "id": "force-instinctive-aim",
-      "slot": "Force",
+      "slot": "Forcecharge",
       "factions": [
         "empire",
         "rebel",
@@ -511,7 +546,7 @@
     {
       "name": "Sense",
       "id": "force-sense",
-      "slot": "Force",
+      "slot": "Forcecharge",
       "factions": [
         "empire",
         "rebel",
@@ -527,7 +562,7 @@
     {
       "name": "Supernatural Reflexes",
       "id": "force-supernatural-reflexes",
-      "slot": "Force",
+      "slot": "Forcecharge",
       "factions": [
         "empire",
         "rebel",
@@ -554,7 +589,7 @@
     {
       "name": "Predictive Shot",
       "id": "force-predictive-shot",
-      "slot": "Force",
+      "slot": "Forcecharge",
       "factions": [
         "empire",
         "rebel",
@@ -570,7 +605,7 @@
     {
       "name": "Hate",
       "id": "force-hate",
-      "slot": "Force",
+      "slot": "Forcecharge",
       "factions": [
         "empire",
         "rebel",
@@ -584,7 +619,327 @@
       "isHyperspace": true
     }
   ],
-  "Gunner": [],
+  "Gunner": [
+    {
+      "name": "Agile Gunner",
+      "id": "gunner-agile-gunner",
+      "slot": "Gunner",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 8,
+      "ability": "During the End Phase, you may rotate your %SINGLETURRETARC% indicator.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Hotshot Gunner",
+      "id": "gunner-hotshot-gunner",
+      "slot": "Gunner",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 7,
+      "ability": "While you perform a %SINGLETURRETARC% attack, after the Modify Defense Dice step, the defender removes 1 focus or calculate token.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Skilled Bombardier",
+      "id": "gunner-skilled-bombardier",
+      "slot": "Gunner",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 2,
+      "ability": "If you would drop or launch a device, you may use a template of the same bearing with a speed 1 higher or lower.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Veteran Tail Gunner",
+      "id": "gunner-veteran-tail-gunner",
+      "slot": "Gunner",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 4,
+      "restrictions": [
+        {
+          "type": "stats",
+          "operator": "has",
+          "args": "pilot.ship.attackb"
+        }
+      ],
+      "ability": "After you perform a primary %FRONTARC% attack, you may perform a bonus primary %REARARC% attack.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Veteran Turret Gunner",
+      "id": "gunner-veteran-turret-gunner",
+      "slot": "Gunner",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 6,
+      "restrictions": [
+        {
+          "type": "actions",
+          "operator": "has",
+          "args": "Rotate Arc"
+        }
+      ],
+      "ability": "<i>Requires <mark>%ROTATEARC%</mark> or %ROTATEARC%</i>%LINEBREAK%After you perform a primary attack, you may perform a bonus %SINGLETURRETARC% attack using a %SINGLETURRETARC% you did not already attack from this round.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Special Forces Gunner",
+      "id": "gunner-special-forces-gunner",
+      "slot": "Gunner",
+      "ships": ["tie-sf-fighter"],
+      "restrictions": [
+        {
+          "type": "ships",
+          "operator": "has",
+          "args": ["tie-sf-fighter"]
+        }
+      ],
+      "factions": [
+        "firstorder"
+      ],
+      "points": 10,
+      "ability": "<i>First Order only</i>%LINEBREAK%While you perform a primary %FRONTARC% attack, if your %SINGLETURRETARC% is in your %FRONTARC%, you may roll 1&nbsp;additional attack die.%LINEBREAK%After you perform a primary %FRONTARC% attack, if your %SINGLETURRETARC% is in your %REARARC%, you may perform a bonus primary %SINGLETURRETARC% attack.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Finn",
+      "id": "gunner-finn",
+      "slot": "Gunner",
+      "factions": [
+        "resistance"
+      ],
+      "points": 10,
+      "ability": "<i>Resistance only</i>%LINEBREAK%While you defend or perform a primary attack, if the enemy ship is in your %FRONTARC%, you may add 1 blank result to your roll (this die can be rerolled or otherwise modified).",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Paige Tico",
+      "id": "gunner-",
+      "slot": "Gunner",
+      "factions": [
+        "resistance"
+      ],
+      "points": 7,
+      "ability": "<i>Resistance only</i>%LINEBREAK%After you perform a primary attack, you may drop 1 bomb or rotate your %SINGLETURRETARC%.%LINEBREAK%After you are destroyed, you may drop 1 bomb.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Rey",
+      "id": "gunner-rey",
+      "slot": "Gunner",
+      "factions": [
+        "resistance"
+      ],
+      "modifiers": [
+        {
+          "type": "stats",
+          "operator": "update",
+          "args": {
+            "type": "force",
+            "args": "+1"
+          }
+        }
+      ],
+      "points": 14,
+      "force": 1,
+      "ability": "<i>Resistance only</i>%LINEBREAK%While you defend or perform an attack, if the enemy ship is in your %SINGLETURRETARC%, you may spend 1&nbsp;%FORCE% to change 1 of your blank results to a %EVADE% or %HIT% result.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Han Solo",
+      "id": "gunner-han-solo",
+      "slot": "Gunner",
+      "factions": [
+        "scum"
+      ],
+      "points": 12,
+      "ability": "<i>Scum only</i>%LINEBREAK%Before you engage, you may perform a red %FOCUS% action.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Greedo",
+      "id": "gunner-greedo",
+      "slot": "Gunner",
+      "factions": [
+        "scum"
+      ],
+      "points": 1,
+      "charge": 1,
+      "recurring": true,
+      "ability": "<i>Scum only</i>%LINEBREAK%While you perform an attack, you may spend 1&nbsp;%CHARGE% to change 1&nbsp;%HIT% result to a %CRIT% result.%LINEBREAK%While you defend, if your %CHARGE% is active, the attacker may change 1&nbsp;%HIT% result to a %CRIT% result.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Dengar",
+      "id": "gunner-dengar",
+      "slot": "Gunner",
+      "factions": [
+        "scum"
+      ],
+      "points": 6,
+      "charge": 1,
+      "recurring": true,
+      "ability": "<i>Scum only</i>%LINEBREAK%After you defend, if the attacker is in your firing arc, you may spend 1&nbsp;%CHARGE%. If you do, roll 1 attack die unless the attacker chooses to remove 1 green token. On a %HIT% or %CRIT% result, the attacker suffers 1&nbsp;%HIT% damage.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "BT-1",
+      "id": "gunner-bt-1",
+      "slot": "Gunner",
+      "factions": [
+        "empire",
+        "scum"
+      ],
+      "points": 2,
+      "ability": "<i>Scum or Squad including Darth Vader only</i>%LINEBREAK%While you perform an attack, you may change 1&nbsp;%HIT% result to a %CRIT% result for each stress token the defender has.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Bossk",
+      "id": "gunner-bossk",
+      "slot": "Gunner",
+      "factions": [
+        "scum"
+      ],
+      "points": 10,
+      "ability": "",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Fifth Brother",
+      "id": "gunner-fifth-brother",
+      "slot": "Gunner",
+      "factions": [
+        "empire"
+      ],
+      "modifiers": [
+        {
+          "type": "stats",
+          "operator": "update",
+          "args": {
+            "type": "force",
+            "args": "+1"
+          }
+        }
+      ],
+      "points": 9,
+      "force": 1,
+      "ability": "<i>Empire only</i>%LINEBREAK%While you perform an attack, you may spend 1&nbsp;%FORCE% to change 1 of your %FOCUS% results to a %CRIT% result.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Luke Skywalker",
+      "id": "gunner-",
+      "slot": "Gunner",
+      "factions": [
+        "rebel"
+      ],
+      "modifiers": [
+        {
+          "type": "stats",
+          "operator": "update",
+          "args": {
+            "type": "force",
+            "args": "+1"
+          }
+        }
+      ],
+      "points": 26,
+      "force": 1,
+      "ability": "<i>Rebel only</i>%LINEBREAK%At the start of the Engagement Phase, you may spend 1&nbsp;%FORCE% to rotate your %SINGLETURRETARC% indicator.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Han Solo",
+      "id": "gunner-han-solo",
+      "slot": "Gunner",
+      "factions": [
+        "rebel"
+      ],
+      "points": 14,
+      "ability": "<i>Rebel only</i>%LINEBREAK%During the Engagement Phase, at initiative 7, you may perform a %SINGLETURRETARC% attack. You cannot attack from that %SINGLETURRETARC% again this round.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Ezra Bridger",
+      "id": "gunner-ezra-bridger",
+      "slot": "Gunner",
+      "factions": [
+        "rebel"
+      ],
+      "modifiers": [
+        {
+          "type": "stats",
+          "operator": "update",
+          "args": {
+            "type": "force",
+            "args": "+1"
+          }
+        }
+      ],
+      "points": 18,
+      "force": 1,
+      "ability": "<i>Rebel only</i>%LINEBREAK%After you perform a primary attack, you may spend 1&nbsp;%FORCE% to perform a bonus %SINGLETURRETARC% attack from a %SINGLETURRETARC% you have not attacked from this round. If you do and you are stressed, you may reroll 1 attack die.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Bistan",
+      "id": "gunner-bistan",
+      "slot": "Gunner",
+      "factions": [
+        "rebel"
+      ],
+      "points": 14,
+      "ability": "<i>Rebel only</i>%LINEBREAK%After you perform a primary attack, if you are focused, you may perform a bonus %SINGLETURRETARC% attack against a ship you have not already attacked this round.",
+      "unique": true,
+      "isHyperspace": false
+    }
+  ],
   "Illicit": [
     {
       "name": "Cloaking Device",
@@ -942,7 +1297,7 @@
       ],
       "points": 0,
       "pointsMod": {
-        "formula": "2*__FIELD__ + Math.min(1,__FILED__ - 2)",
+        "formula": "2*__FIELD__ + Math.min(1,__FIELD__ - 2)",
         "field": "pilot.ship.size"
       },
       "restrictions": [
@@ -965,7 +1320,7 @@
           }
         }
       ],
-      "ability": "<i>Adds %BOOST%</i>%LINEBREAK%<i>Requires <r>%BOOST%</r></i>%LINEBREAK%<i class = flavor_text>Large military forces such as the Galactic Empire have standardized engines, but individual pilots and small organizations often replace the power couplings, add thrusters, or use high-performance fuel to get extra push out of their engines.</i>",
+      "ability": "<i>Adds %BOOST%</i>%LINEBREAK%<i>Requires <mark>%BOOST%</mark></i>",
       "unique": false,
       "isHyperspace": true
     },

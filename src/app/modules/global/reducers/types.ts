@@ -68,6 +68,7 @@ export interface Upgrade {
   pointsMod?: PointsMod;
   unique: boolean;
   factions: string[];
+  ships?: string[];
   ordnance: any;
   restrictions?: any[];
   validations?: any[];

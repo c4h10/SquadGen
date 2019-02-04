@@ -16,7 +16,7 @@ export class UpgradeRestrictionsService {
       if (item.pointsMod) {
         const fieldValue = item.pointsMod.field.split('.').reduce((o, i) => o[i], squadPilot);
         // tslint:disable-next-line:no-eval
-        item.points = eval(item.pointsMod.formula.replace('__FIELD__', fieldValue));
+        item.points = eval(item.pointsMod.formula.replace(/__FIELD__/g, fieldValue));
       }
       // RESTRICTION MOD
       if (item.restrictions) {
@@ -70,6 +70,29 @@ export class UpgradeRestrictionsService {
         fn: function (squadPilot: SquadPilot, operator, arg) {
           // tslint:disable-next-line:no-eval
           return eval(squadPilot.pilot.ship.size + operator + arg);
+        }
+      },
+
+      'stats': {
+        fn: function (squadPilot: SquadPilot, operator, arg) {
+          let result = true;
+          switch (operator) {
+            case 'has':
+              result = !!arg.split('.').reduce((o, i) => o[i], squadPilot);
+              break;
+          }
+          return result;
+        }
+      },
+
+      'ships': {
+        fn: function (squadPilot: SquadPilot, operator, arg) {
+          let result = false;
+          // Ships restrictions
+          if (arg.includes(squadPilot.pilot.ship.id)) {
+            result = true;
+          }
+          return result;
         }
       },
 
