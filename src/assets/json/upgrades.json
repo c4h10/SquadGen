@@ -1,5 +1,224 @@
 {
-  "Astromech": [],
+  "Astromech": [
+    {
+      "name": "BB-8",
+      "id": "astromech-bb-8",
+      "slot": "Astromech",
+      "factions": [
+        "resistance"
+      ],
+      "points": 0,
+      "charge": 2,
+      "pointsMod": {
+        "formula": "2+__FIELD__",
+        "field": "pilot.skill"
+      },
+      "ability": "<i>Resistance only</i>%LINEBREAK%Before you execute a blue maneuver, you may spend 1&nbsp;%CHARGE% to perform a&nbsp;%BARRELROLL% or&nbsp;%BOOST% action.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "BB Astromech",
+      "id": "astromech-bb-astromech",
+      "slot": "Astromech",
+      "factions": [
+        "resistance"
+      ],
+      "points": 0,
+      "charge": 2,
+      "pointsMod": {
+        "formula": "__FIELD__",
+        "field": "pilot.skill"
+      },
+      "ability": "<i>Resistance only</i>%LINEBREAK%Before you execute a blue maneuver, you may spend 1&nbsp;%CHARGE% to perform a %BARRELROLL% action.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "M9-G8",
+      "id": "astromech-m9-g8",
+      "slot": "Astromech",
+      "factions": [
+        "resistance"
+      ],
+      "points": 7,
+      "ability": "<i>Resistance only</i>%LINEBREAK%While a ship you are locking performs an attack, you may choose 1 attack die. If you do, the attacker rerolls that die.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "R5-X3",
+      "id": "astromech-r5-x3",
+      "slot": "Astromech",
+      "factions": [
+        "resistance"
+      ],
+      "points": 5,
+      "charge": 2,
+      "ability": "<i>Resistance only</i>%LINEBREAK%Before you activate or engage, you may spend 1&nbsp;%CHARGE% to ignore obstacles until the end of this phase.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "R2-HA",
+      "id": "astromech-r2-ha",
+      "slot": "Astromech",
+      "factions": [
+        "resistance"
+      ],
+      "points": 4,
+      "ability": "<i>Resistance only</i>%LINEBREAK%While you defend, you may spend your lock on the attacker to reroll any number of your defense dice.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "R2 Astromech",
+      "id": "astromech-r2-astromech",
+      "slot": "Astromech",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 4,
+      "charge": 2,
+      "ability": "After you reveal your dial, you may spend 1&nbsp;%CHARGE% and gain 1 disarm token to recover 1 shield.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "R3 Astromech",
+      "id": "astromech-r3-astromech",
+      "slot": "Astromech",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 3,
+      "ability": "You can maintain up to 2 locks. Each lock must be on a different object.%LINEBREAK%After you perform a %LOCK% action, you may acquire a lock.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "R4 Astromech",
+      "id": "astromech-r4-astromech",
+      "slot": "Astromech",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "restrictions": [
+        {
+          "type": "size",
+          "operator": "<",
+          "args": 2
+        }
+      ],
+      "points": 2,
+      "ability": "<i>small ship only</i>%LINEBREAK%Decrease the difficulty of your speed 1-2 basic maneuvers (%TURNLEFT%, %BANKLEFT%, %STRAIGHT%, %BANKRIGHT%, %TURNRIGHT%).",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "R5 Astromech",
+      "id": "astromech-r5-astromech",
+      "slot": "Astromech",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 4,
+      "charge": 2,
+      "ability": "<strong>Action:</strong> Spend 1&nbsp;%CHARGE% to repair 1 facedown damage card.%LINEBREAK%<strong>Action:</strong> Repair 1 faceup <strong>Ship</strong> damage card.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "\"Genius\"",
+      "id": "astromech-genius",
+      "slot": "Astromech",
+      "factions": [
+        "scum"
+      ],
+      "points": 2,
+      "ability": "<i>Scum only</i>%LINEBREAK%After you fully execute a maneuver, if you have not dropped or launched a device this round, you may drop 1 bomb.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "R5-TK",
+      "id": "astromech-r5-tk",
+      "slot": "Astromech",
+      "factions": [
+        "scum"
+      ],
+      "points": 1,
+      "ability": "<i>Scum only</i>%LINEBREAK%You can perform attacks against friendly ships.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "R5-P8",
+      "id": "astromech-r5-p8",
+      "slot": "Astromech",
+      "factions": [
+        "scum"
+      ],
+      "points": 4,
+      "ability": "<i>Scum only</i>%LINEBREAK%While you perform an attack against a defender in your %FRONTARC%, you may spend 1&nbsp;%CHARGE% to reroll 1 attack die. If the rerolled result is a %CRIT% result, suffer 1&nbsp;%CRIT% damage.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "\"Chopper\"",
+      "id": "astromech-chopper",
+      "slot": "Astromech",
+      "factions": [
+        "rebel"
+      ],
+      "points": 1,
+      "ability": "<i>Rebel only</i>%LINEBREAK%<strong>Action:</strong> Spend 1 non-recurring &nbsp;%CHARGE% from another equipped upgrade to recover 1 shield. %LINEBREAK%<strong>Action:</strong> Spend 2 shields to recover 1 non-recurring %CHARGE% on an equipped upgrade.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "R2-D2",
+      "id": "astromech-r2-d2",
+      "slot": "Astromech",
+      "factions": [
+        "rebel"
+      ],
+      "points": 6,
+      "charge": 2,
+      "ability": "<i>Rebel only</i>%LINEBREAK%After you reveal your dial, you may spend 1&nbsp;%CHARGE% and gain 1 disarm token to recover 1 shield.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "R5-D8",
+      "id": "astromech-r5-d8",
+      "slot": "Astromech",
+      "factions": [
+        "rebel"
+      ],
+      "points": 6,
+      "charge": 3,
+      "ability": "<i>Rebel only</i>%LINEBREAK%<strong>Action:</strong> Spend 1&nbsp;%CHARGE% to repair 1 facedown damage card.%LINEBREAK%<strong>Action:</strong> Repair 1 faceup <strong>Ship</strong> damage card.",
+      "unique": true,
+      "isHyperspace": true
+    }
+  ],
   "Cannon": [
     {
       "name": "Heavy Laser Cannon",
@@ -623,7 +842,279 @@
       "isHyperspace": false
     }
   ],
-  "Modification": [],
+  "Modification": [
+    {
+      "name": "Ablative Plating",
+      "id": "modification-ablative-plating",
+      "slot": "Modification",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 6,
+      "charge": 2,
+      "restrictions": [
+        {
+          "type": "size",
+          "operator": ">",
+          "args": 1
+        }
+      ],
+      "ability": "<i>large ship or medium ship only</i>%LINEBREAK%Before you would suffer damage from an obstacle or from a friendly bomb detonating, you may spend 1&nbsp;%CHARGE%. If you do, prevent 1 damage.",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Advanced SLAM",
+      "id": "modification-advanced-slam",
+      "slot": "Modification",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 3,
+      "restrictions": [
+        {
+          "type": "actions",
+          "operator": "has",
+          "args": "Slam"
+        }
+      ],
+      "ability": "<i>Requires %SLAM%</i>%LINEBREAK%After you perform a %SLAM% action, if you fully executed the maneuver, you may perform a white action on your action bar, treating that action as red.",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Afterburners",
+      "id": "modification-afterburners",
+      "slot": "Modification",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 6,
+      "restrictions": [
+        {
+          "type": "size",
+          "operator": "<",
+          "args": 2
+        }
+      ],
+      "ability": "<i>small ship only</i>%LINEBREAK%After you fully execute a speed 3-5 maneuver, you may spend 1&nbsp;%CHARGE% to perform a %BOOST% action, even while stressed.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Electronic Baffle",
+      "id": "modification-electronic-baffle",
+      "slot": "Modification",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 2,
+      "ability": "During the End Phase, you may suffer 1&nbsp;%HIT% damage to remove 1 red token.",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Engine Upgrade",
+      "id": "modification-engine-upgrade",
+      "slot": "Modification",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 0,
+      "pointsMod": {
+        "formula": "2*__FIELD__ + Math.min(1,__FILED__ - 2)",
+        "field": "pilot.ship.size"
+      },
+      "restrictions": [
+        {
+          "type": "actions",
+          "operator": "equal",
+          "args": {
+            "type": "Boost",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "modifiers": [
+        {
+          "type": "actions",
+          "operator": "update",
+          "args": {
+            "type": "Boost",
+            "difficulty": "white"
+          }
+        }
+      ],
+      "ability": "<i>Adds %BOOST%</i>%LINEBREAK%<i>Requires <r>%BOOST%</r></i>%LINEBREAK%<i class = flavor_text>Large military forces such as the Galactic Empire have standardized engines, but individual pilots and small organizations often replace the power couplings, add thrusters, or use high-performance fuel to get extra push out of their engines.</i>",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Munitions Failsafe",
+      "id": "modification-munitions-failsafe",
+      "slot": "Modification",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 1,
+      "ability": "While you perform a %TORPEDO% or %MISSILE% attack, after rolling attack dice, you may cancel all dice results to recover 1&nbsp;%CHARGE% you spent as a cost for the attack.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Static Discharge Vanes",
+      "id": "modification-static-discharge-vanes",
+      "slot": "Modification",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 8,
+      "ability": "Before you would gain 1 ion or jam token, if you are not stressed, you may choose another ship at range 0-1 and gain 1 stress token. If you do, the chosen ship gains that ion or jam token instead.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Tactical Scrambler",
+      "id": "modification-tactical-scrambler",
+      "slot": "Modification",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 2,
+      "restrictions": [
+        {
+          "type": "size",
+          "operator": ">",
+          "args": 1
+        }
+      ],
+      "ability": "<i>large ship or medium ship only</i>%LINEBREAK%While you obstruct an enemy ship’s attack, the defender rolls 1 additional defense die.",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Hull Upgrade",
+      "id": "modification-hull-upgrade",
+      "slot": "Modification",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 0,
+      "pointsMod": {
+        "formula": "1+2*__FIELD__ - Math.max(0, 1 - __FIELD__)",
+        "field": "pilot.ship.agility"
+      },
+      "modifiers": [
+        {
+          "type": "stats",
+          "operator": "update",
+          "args": {
+            "type": "hull",
+            "args": "+1"
+          }
+        }
+      ],
+      "ability": "+1 %HULL%",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Shield Upgrade",
+      "id": "modification-shield-upgrade",
+      "slot": "Modification",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 0,
+      "pointsMod": {
+        "formula": "2+2*__FIELD__ - Math.max(0, 1 - __FIELD__)",
+        "field": "pilot.ship.agility"
+      },
+      "modifiers": [
+        {
+          "type": "stats",
+          "operator": "update",
+          "args": {
+            "type": "shields",
+            "args": "+1"
+          }
+        }
+      ],
+      "ability": "+1 %SHIELD%",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Stealth Device",
+      "id": "modification-stealth-device",
+      "slot": "Modification",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 0,
+      "pointsMod": {
+        "formula": "2+2*__FIELD__ - Math.max(0, 1 - __FIELD__)",
+        "field": "pilot.ship.agility"
+      },
+      "modifiers": [
+        {
+          "type": "stats",
+          "operator": "update",
+          "args": {
+            "type": "agility",
+            "args": "+1"
+          }
+        }
+      ],
+      "ability": "While you defend, if your %CHARGE% is active, roll 1 additional defense die.%LINEBREAK%After you suffer damage, lose 1&nbsp;%CHARGE%.",
+      "unique": false,
+      "isHyperspace": false
+    }
+  ],
   "Sensor": [
     {
       "name": "Advanced Sensors",
