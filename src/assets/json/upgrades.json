@@ -423,6 +423,129 @@
   ],
   "Crew": [
     {
+      "name": "Freelance Slicer",
+      "id": "crew-freelance-slicer",
+      "slot": "Crew",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 3,
+      "ability": "hile you defend, before attack dice are rolled, you may spend a lock you have on the attacker to roll 1 attack die. If you do, the attacker gains 1 jam token. Then, on a %HIT% or %CRIT% result, gain 1 jam token.",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "GNK \"Gonk\" Droid",
+      "id": "crew-gnk-gonk-droid",
+      "slot": "Crew",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 10,
+      "charge": 1,
+      "ability": "<strong>Setup:</strong> Lose 1&nbsp;%CHARGE%.%LINEBREAK%<strong>Action:</strong> Recover 1&nbsp;%CHARGE%.%LINEBREAK%<strong>Action:</strong> Spend 1&nbsp;%CHARGE% to recover 1 shield.",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Novice Technician",
+      "id": "crew-novice-technician",
+      "slot": "Crew",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 4,
+      "ability": "At the end of the round, you may roll 1 attack die to repair 1 faceup damage card. Then on a %HIT% result, expose 1 damage card.",
+      "unique": false,
+      "isHyperspace": false
+    },
+    {
+      "name": "Informant",
+      "id": "crew-informant",
+      "slot": "Crew",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 5,
+      "ability": "During the System Phase, if an enemy ship with the <strong>Informant</strong> upgrade is at range 0-2, flip your dial faceup.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Perceptive Copilot",
+      "id": "crew-perceptive-copilot",
+      "slot": "Crew",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 8,
+      "ability": "After you perform a %FOCUS% action, gain 1 focus token.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Seasoned Navigator",
+      "id": "crew-seasoned-navigator",
+      "slot": "Crew",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "points": 5,
+      "ability": "After you reveal your dial, you may set your dial to another non-red maneuver of the same speed. While you execute that maneuver, increase its difficulty.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Tactical Officer",
+      "id": "crew-tactical-officer",
+      "slot": "Crew",
+      "factions": [
+        "empire",
+        "rebel",
+        "scum",
+        "firstorder",
+        "resistance"
+      ],
+      "restrictions": [
+        {
+          "type": "actions",
+          "operator": "equal",
+          "args": {
+            "type": "Coordinate",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "points": 2,
+      "ability": "<i>Adds %COORDINATE%</i>%LINEBREAK%<i>Requires <mark>%COORDINATE%</mark></i>",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
       "name": "Captain Phasma",
       "id": "crew-captain-phasma",
       "slot": "Crew",
@@ -2053,7 +2176,11 @@
         "firstorder",
         "resistance"
       ],
-      "points": 4,
+      "points": 0,
+      "pointsMod": {
+        "formula": "2+2*__FIELD__",
+        "field": "pilot.skill"
+      },
       "modifiers": [
         {
           "type": "actions",
@@ -2303,6 +2430,46 @@
       "ability": "<i>Adds %SLAM%</i>%LINEBREAK%<i>Resistance only</i>%LINEBREAK%After you perform a %SLAM% action, lose 1&nbsp;%CHARGE%. Then you may gain 1 ion token to remove 1 disarm token.%LINEBREAK%If your %CHARGE% is inactive, you cannot perform the %SLAM% action.",
       "unique": true,
       "isHyperspace": true
+    },
+    {
+      "name": "ST-321",
+      "id": "title-st-321",
+      "slot": "Title",
+      "ships": ["lambda-class-t-4a-shuttle"],
+      "restrictions": [
+        {
+          "type": "ships",
+          "operator": "has",
+          "args": ["lambda-class-t-4a-shuttle"]
+        }
+      ],
+      "factions": [
+        "empire"
+      ],
+      "points": 4,
+      "ability": "<i>Empire only</i>%LINEBREAK%After you perform a %COORDINATE% action, you may choose an enemy ship at range 0-3 of the ship you coordinated. If you do, acquire a lock on that enemy ship, ignoring range restrictions.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Dauntless",
+      "id": "title-dauntless",
+      "slot": "Title",
+      "ships": ["vt-49-decimator"],
+      "restrictions": [
+        {
+          "type": "ships",
+          "operator": "has",
+          "args": ["vt-49-decimator"]
+        }
+      ],
+      "factions": [
+        "empire"
+      ],
+      "points": 4,
+      "ability": "<i>Empire only</i>%LINEBREAK%After you partially execute a maneuver, you may perform 1 white action, treating that action as red.",
+      "unique": true,
+      "isHyperspace": false
     }
   ],
   "Torpedo": [
