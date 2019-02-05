@@ -423,6 +423,270 @@
   ],
   "Crew": [
     {
+      "name": "ISB Slicer",
+      "id": "crew-isb-slicer",
+      "slot": "Crew",
+      "factions": [
+        "empire"
+      ],
+      "points": 3,
+      "ability": "<i>Empire only</i>%LINEBREAK%During the End Phase, enemy ships at range 1-2 cannot remove jam tokens.",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Director Krennic",
+      "id": "crew-Director Krennic",
+      "slot": "Crew",
+      "factions": [
+        "empire"
+      ],
+      "modifiers": [
+        {
+          "type": "actions",
+          "operator": "add",
+          "args": {
+            "type": "Lock",
+            "difficulty": "white"
+          }
+        }
+      ],
+      "points": 5,
+      "ability": "<i>Adds %LOCK%</i>%LINEBREAK%<i>Empire only</i>%LINEBREAK%<strong>Setup:</strong> Before placing forces, assign the <strong>Optimized Prototype</strong> condition to another friendly ship.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Death Troopers",
+      "id": "crew-death-troopers",
+      "slot": "Crew",
+      "factions": [
+        "empire"
+      ],
+      "extraSlots": ["Crew"],
+      "restrictions": [
+        {
+          "type": "upgrades",
+          "operator": "empty",
+          "args": "Crew"
+        }
+      ],
+      "points": 6,
+      "ability": "<i>Empire only</i>%LINEBREAK%During the Activation Phase, enemy ships at range 0-1 cannot remove stress tokens.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Grand Inquisitor",
+      "id": "crew-grand-inquisitor",
+      "slot": "Crew",
+      "factions": [
+        "empire"
+      ],
+      "modifiers": [
+        {
+          "type": "stats",
+          "operator": "update",
+          "args": {
+            "type": "force",
+            "args": "+1"
+          }
+        }
+      ],
+      "points": 14,
+      "force": 1,
+      "ability": "<i>Empire only</i>%LINEBREAK%After an enemy ship at range 0-2 reveals its dial, you may spend 1&nbsp;%FORCE% to perform 1 white action on your action bar, treating that action as red.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Darth Vader",
+      "id": "crew-darth-vader",
+      "slot": "Crew",
+      "factions": [
+        "empire"
+      ],
+      "modifiers": [
+        {
+          "type": "stats",
+          "operator": "update",
+          "args": {
+            "type": "force",
+            "args": "+1"
+          }
+        }
+      ],
+      "points": 14,
+      "force": 1,
+      "ability": "<i>Empire only</i>%LINEBREAK%At the start of the Engagement Phase, you may choose 1 ship in your firing arc at range 0-2 and spend 1&nbsp;%FORCE%. If you do, that ship suffers 1&nbsp;%HIT% damage unless it chooses to remove 1 green token.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Seventh Sister",
+      "id": "crew-seventh-sister",
+      "slot": "Crew",
+      "factions": [
+        "empire"
+      ],
+      "modifiers": [
+        {
+          "type": "stats",
+          "operator": "update",
+          "args": {
+            "type": "force",
+            "args": "+1"
+          }
+        }
+      ],
+      "points": 9,
+      "force": 1,
+      "ability": "<i>Empire only</i>%LINEBREAK%If an enemy ship at range 0-1 would gain a stress token, you may spend 1&nbsp;%FORCE% to have it gain 1 jam or tractor token instead.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Emperor Palpatine",
+      "id": "crew-emperor-palpatine",
+      "slot": "Crew",
+      "factions": [
+        "empire"
+      ],
+      "extraSlots": ["Crew"],
+      "restrictions": [
+        {
+          "type": "upgrades",
+          "operator": "empty",
+          "args": "Crew"
+        }
+      ],
+      "modifiers": [
+        {
+          "type": "stats",
+          "operator": "update",
+          "args": {
+            "type": "force",
+            "args": "+1"
+          }
+        }
+      ],
+      "points": 11,
+      "force": 1,
+      "ability": "<i>Empire only</i>%LINEBREAK%While another friendly ship defends or performs an attack, you may spend 1&nbsp;%FORCE% to modify 1 of its dice as though that ship had spent 1&nbsp;%FORCE%.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "0-0-0",
+      "id": "crew-0-0-0",
+      "slot": "Crew",
+      "factions": [
+        "empire",
+        "scum"
+      ],
+      "points": 5,
+      "ability": "<i>Scum or Squad including Darth Vader only</i>%LINEBREAK%At the start of the Engagement Phase, you may choose 1 enemy ship at range 0-1. If you do, you gain 1 calculate token unless that ship chooses to gain 1 stress token.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Admiral Sloane",
+      "id": "crew-admiral-sloane",
+      "slot": "Crew",
+      "factions": [
+        "empire"
+      ],
+      "points": 10,
+      "ability": "<i>Empire only</i>%LINEBREAK%After another friendly ship at range 0-3 defends, if it is destroyed, the attacker gains 2 stress tokens.%LINEBREAK%While a friendly ship at range 0-3 performs an attack against a stressed ship, it may reroll 1 attack die.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Agent Kallus",
+      "id": "crew-agent-kallus",
+      "slot": "Crew",
+      "factions": [
+        "empire"
+      ],
+      "points": 6,
+      "ability": "<i>Empire only</i>%LINEBREAK%<strong>Setup:</strong> Assign the <strong>Hunted</strong> condition to 1 enemy ship.%LINEBREAK%While you perform an attack against the ship with the <strong>Hunted</strong> condition, you may change 1 of your %FOCUS% results to a %HIT% result.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Ciena Ree",
+      "id": "crew-ciena-ree",
+      "slot": "Crew",
+      "factions": [
+        "empire"
+      ],
+      "restrictions": [
+        {
+          "type": "actions",
+          "operator": "has",
+          "args": "Coordinate"
+        }
+      ],
+      "points": 10,
+      "ability": "<i>Requires %COORDINATE% or <mark>%COORDINATE%</mark></i>%LINEBREAK%<i>Empire only</i>%LINEBREAK%After you perform a %COORDINATE% action, if the ship you coordinated performed a %BARRELROLL% or %BOOST% action, it may gain 1 stress token to rotate 90°.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Grand Moff Tarkin",
+      "id": "crew-grand-moff-tarkin",
+      "slot": "Crew",
+      "factions": [
+        "empire"
+      ],
+      "restrictions": [
+        {
+          "type": "actions",
+          "operator": "has",
+          "args": "Lock"
+        }
+      ],
+      "points": 6,
+      "charge": 2,
+      "recurring": true,
+      "ability": "<i>Requires %LOCK% or <mark>%LOCK%</mark></i>%LINEBREAK%<i>Empire only</i>%LINEBREAK%During the System Phase, you may spend 2 %CHARGE%. If you do, each friendly ship may acquire a lock on a ship that you have locked.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Minister Tua",
+      "id": "crew-minister-tua",
+      "slot": "Crew",
+      "factions": [
+        "empire"
+      ],
+      "points": 7,
+      "ability": "<i>Empire only</i>%LINEBREAK%At the start of the Engagement Phase, if you are damaged, you may perform a red %REINFORCE% action.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Moff Jerjerrod",
+      "id": "crew-moff-jerjerrod",
+      "slot": "Crew",
+      "factions": [
+        "empire"
+      ],
+      "restrictions": [
+        {
+          "type": "actions",
+          "operator": "has",
+          "args": "Coordinate"
+        }
+      ],
+      "points": 10,
+      "charge": 2,
+      "recurring": true,
+      "ability": "<i>Requires %COORDINATE% or <mark>%COORDINATE%</mark></i> <i>Empire only</i>%LINEBREAK%During the System Phase, you may spend 2 %CHARGE%. If you do, choose the [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%], or [1&nbsp;%BANKRIGHT%] template. Each friendly ship may perform a red %BOOST% action using that template.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
       "name": "Freelance Slicer",
       "id": "crew-freelance-slicer",
       "slot": "Crew",
@@ -434,7 +698,7 @@
         "resistance"
       ],
       "points": 3,
-      "ability": "hile you defend, before attack dice are rolled, you may spend a lock you have on the attacker to roll 1 attack die. If you do, the attacker gains 1 jam token. Then, on a %HIT% or %CRIT% result, gain 1 jam token.",
+      "ability": "While you defend, before attack dice are rolled, you may spend a lock you have on the attacker to roll 1 attack die. If you do, the attacker gains 1 jam token. Then, on a %HIT% or %CRIT% result, gain 1 jam token.",
       "unique": false,
       "isHyperspace": false
     },
