@@ -421,7 +421,182 @@
       "isHyperspace": true
     }
   ],
-  "Crew": [],
+  "Crew": [
+    {
+      "name": "Captain Phasma",
+      "id": "crew-captain-phasma",
+      "slot": "Crew",
+      "factions": [
+        "firstorder"
+      ],
+      "points": 5,
+      "ability": "<i>First Order only</i>%LINEBREAK%At the end of the Engagement Phase, each enemy ship at range 0-1 that is not stressed gains 1 stress token.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Supreme Leader Snoke",
+      "id": "crew-supreme-leader-snoke",
+      "slot": "Crew",
+      "extraSlots": ["Missile"],
+      "restrictions": [
+        {
+          "type": "upgrades",
+          "operator": "empty",
+          "args": "Missile"
+        }
+      ],
+      "factions": [
+        "firstorder"
+      ],
+      "modifiers": [
+        {
+          "type": "stats",
+          "operator": "update",
+          "args": {
+            "type": "force",
+            "args": "+1"
+          }
+        }
+      ],
+      "points": 13,
+      "force": 1,
+      "ability": "<i>First Order only</i>%LINEBREAK%During the System Phase, you may choose any number of enemy ships beyond range 1. If you do, spend that many %FORCE% to flip each chosen ship’s dial faceup.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "General Hux",
+      "id": "crew-general-hux",
+      "slot": "Crew",
+      "restrictions": [
+        {
+          "type": "actions",
+          "operator": "has",
+          "args": "Coordinate"
+        }
+      ],
+      "factions": [
+        "firstorder"
+      ],
+      "points": 10,
+      "ability": "<i>Requires %COORDINATE% or <mark>%COORDINATE%.</mark></i> <i>First Order only</i>%LINEBREAK%While you perform a white %COORDINATE% action, you may treat it as red. If you do, you may coordinate up to 2 additional ships of the same ship type, and each ship you coordinate must perform the same action, treating that action as red.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Kylo Ren",
+      "id": "crew-kylo-ren",
+      "slot": "Crew",
+      "modifiers": [
+        {
+          "type": "stats",
+          "operator": "update",
+          "args": {
+            "type": "force",
+            "args": "+1"
+          }
+        }
+      ],
+      "factions": [
+        "firstorder"
+      ],
+      "points": 11,
+      "force": 1,
+      "ability": "<i>First Order only</i>%LINEBREAK%<strong>Action:</strong> Choose 1 enemy ship at range 1-3. If you do, spend 1&nbsp;%FORCE% to assign the <strong>I’ll Show You the Dark Side</strong> condition to that ship.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Petty Officer Thanisson",
+      "id": "crew-petty-officer-thanisson",
+      "slot": "Crew",
+      "factions": [
+        "firstorder"
+      ],
+      "points": 4,
+      "ability": "<i>First Order only</i>%LINEBREAK%During the Activation or Engagement Phase, after an enemy ship in your %FRONTARC% at range 0-1 gains a red or orange token, if you are not stressed, you may gain 1 stress token. If you do, that ship gains 1 additional token of the type that it gained.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "C-3PO",
+      "id": "crew-c-3po",
+      "slot": "Crew",
+      "factions": [
+        "resistance"
+      ],
+      "modifiers": [
+        {
+          "type": "actions",
+          "operator": "add",
+          "args": {
+            "type": "Calculate",
+            "difficulty": "white"
+          }
+        },
+        {
+          "type": "actions",
+          "operator": "add",
+          "args": {
+            "type": "Coordinate",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "points": 6,
+      "ability": "<i>Adds %CALCULATE% ,  <mark>%COORDINATE%</mark></i>%LINEBREAK%<i>Resistance only</i>%LINEBREAK%While you coordinate, you can choose friendly ships beyond range 2 if they have&nbsp;%CALCULATE% on their action bar.%LINEBREAK%After you perform the&nbsp;%CALCULATE% or&nbsp;%COORDINATE% action, gain 1&nbsp;calculate token.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Chewbacca",
+      "id": "crew-chewbacca",
+      "slot": "Crew",
+      "factions": [
+        "resistance"
+      ],
+      "points": 5,
+      "charge": 2,
+      "ability": "<i>Resistance only</i>%LINEBREAK%<strong>Setup:</strong> Lose 1&nbsp;%CHARGE%.%LINEBREAK%After a friendly ship at range&nbsp;0-3 is dealt 1&nbsp;damage card, recover 1&nbsp;%CHARGE%.%LINEBREAK%While you perform an attack, you may spend 2&nbsp;%CHARGE% to change 1&nbsp;%FOCUS% result to a&nbsp;%CRIT% result.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Han Solo",
+      "id": "crew-han-solo",
+      "slot": "Crew",
+      "factions": [
+        "resistance"
+      ],
+      "modifiers": [
+        {
+          "type": "actions",
+          "operator": "add",
+          "args": {
+            "type": "Evade",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "points": 6,
+      "ability": "<i>Adds <mark>%EVADE%</mark></i>%LINEBREAK%<i>Resistance only</i>%LINEBREAK%After you perform an %EVADE% action, gain additional evade tokens equal to the number of enemy ships at range 0-1.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Rose Tico",
+      "id": "crew-rose-tico",
+      "slot": "Crew",
+      "factions": [
+        "resistance"
+      ],
+      "points": 9,
+      "ability": "<i>Resistance only</i>%LINEBREAK%While you defend or perform an attack, you may spend 1 of your results to acquire a lock on the enemy ship.",
+      "unique": true,
+      "isHyperspace": true
+    }
+  ],
   "Device": [
     {
       "name": "Bomblet Generator",
@@ -2077,7 +2252,59 @@
       "isHyperspace": false
     }
   ],
-  "Title": [],
+  "Title": [
+    {
+      "name": "Rey’s Millennium Falcon",
+      "id": "title-reys-millennium-falcon",
+      "slot": "Title",
+      "ships": ["scavenged-yt-1300-light-freighter"],
+      "restrictions": [
+        {
+          "type": "ships",
+          "operator": "has",
+          "args": ["scavenged-yt-1300-light-freighter"]
+        }
+      ],
+      "factions": [
+        "resistance"
+      ],
+      "points": 5,
+      "ability": "<i>Resistance only</i>%LINEBREAK%If you have 2 or fewer stress tokens, you can execute red Segnor’s Loop [%SLOOPLEFT% or %SLOOPRIGHT%] maneuvers and perform %BOOST% and&nbsp;<rotate> actions even while stressed.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Black One",
+      "id": "title-black-one",
+      "slot": "Title",
+      "ships": ["t-70-x-wing"],
+      "restrictions": [
+        {
+          "type": "ships",
+          "operator": "has",
+          "args": ["t-70-x-wing"]
+        }
+      ],
+      "modifiers": [
+        {
+          "type": "actions",
+          "operator": "add",
+          "args": {
+            "type": "Slam",
+            "difficulty": "white"
+          }
+        }
+      ],
+      "factions": [
+        "resistance"
+      ],
+      "points": 2,
+      "charge": 1,
+      "ability": "<i>Adds %SLAM%</i>%LINEBREAK%<i>Resistance only</i>%LINEBREAK%After you perform a %SLAM% action, lose 1&nbsp;%CHARGE%. Then you may gain 1 ion token to remove 1 disarm token.%LINEBREAK%If your %CHARGE% is inactive, you cannot perform the %SLAM% action.",
+      "unique": true,
+      "isHyperspace": true
+    }
+  ],
   "Torpedo": [
     {
       "name": "Proton Torpedoes",
