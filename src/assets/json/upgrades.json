@@ -423,6 +423,229 @@
   ],
   "Crew": [
     {
+      "name": "4-LOM",
+      "id": "crew-4-lom",
+      "slot": "Crew",
+      "factions": [
+        "scum"
+      ],
+      "points": 2,
+      "ability": "<i>Scum only</i>%LINEBREAK%While you perform an attack, after rolling attack dice, you may name a type of green token. If you do, gain 2 ion tokens and, during this attack, the defender cannot spend tokens of the named type.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Boba Fett",
+      "id": "crew-boba-fett",
+      "slot": "Crew",
+      "factions": [
+        "scum"
+      ],
+      "points": 4,
+      "ability": "<i>Scum only</i>%LINEBREAK%<strong>Setup:</strong> Start in reserve.%LINEBREAK%At the end of Setup, place yourself at range 0 of an obstacle and beyond range 3 of any enemy ship.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Cad Bane",
+      "id": "crew-cad-bane",
+      "slot": "Crew",
+      "factions": [
+        "scum"
+      ],
+      "points": 4,
+      "ability": "<i>Scum only</i>%LINEBREAK%After you drop or launch a device, you may perform a red %BOOST% action.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Chewbacca",
+      "id": "crew-chewbacca",
+      "slot": "Crew",
+      "factions": [
+        "scum"
+      ],
+      "points": 4,
+      "ability": "<i>Scum only</i>%LINEBREAK%At the start of the End Phase, you may spend 1 focus token to repair 1 of your faceup damage cards.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Cikatro Vizago",
+      "id": "crew-cikatro-vizago",
+      "slot": "Crew",
+      "factions": [
+        "scum"
+      ],
+      "points": 1,
+      "ability": "<i>Scum only</i>%LINEBREAK%During the End Phase, you may choose 2 %ILLICIT% upgrades equipped to friendly ships at range 0-1. If you do, you may exchange these upgrades.%LINEBREAK%<strong>End of Game:</strong> Return all %ILLICIT% upgrades to their original ships.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "IG-88D",
+      "id": "crew-ig-88D",
+      "slot": "Crew",
+      "factions": [
+        "scum"
+      ],
+      "modifiers": [
+        {
+          "type": "actions",
+          "operator": "add",
+          "args": {
+            "type": "Calculate",
+            "difficulty": "white"
+          }
+        }
+      ],
+      "points": 4,
+      "ability": "<i>Adds %CALCULATE%</i>%LINEBREAK%<i>Scum only</i>%LINEBREAK%You have the pilot ability of each other friendly ship with the <strong>IG-2000</strong> upgrade.%LINEBREAK%After you perform a %CALCULATE% action, gain 1 calculate token.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Ketsu Onyo",
+      "id": "crew-ketsu-onyo",
+      "slot": "Crew",
+      "factions": [
+        "scum"
+      ],
+      "points": 5,
+      "ability": "<i>Scum only</i>%LINEBREAK%At the start of the End Phase, you may choose 1 enemy ship at range 0-2 in your firing arc. If you do, that ship does not remove its tractor tokens.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "L3-37",
+      "id": "crew-l3-37",
+      "slot": "Crew",
+      "factions": [
+        "scum"
+      ],
+      "points": 4,
+      "ability": "<i>Scum only</i>%LINEBREAK%<strong>Setup:</strong> Equip this side faceup.%LINEBREAK%While you defend, you may flip this card. If you do, the attacker must reroll all attack dice.%LINEBREAK%<strong>L3-37’s Programming</strong>If you are not shielded, decrease the difficulty of your bank (%BANKLEFT% and %BANKRIGHT%) maneuvers.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Lando Calrissian",
+      "id": "crew-lando-calrissian",
+      "slot": "Crew",
+      "factions": [
+        "scum"
+      ],
+      "points": 8,
+      "ability": "<i>Scum only</i>%LINEBREAK%After you roll dice, you may spend 1 green token to reroll up to 2 of your results.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Latts Razzi",
+      "id": "crew-latts-razzi",
+      "slot": "Crew",
+      "factions": [
+        "scum"
+      ],
+      "points": 7,
+      "ability": "<i>Scum only</i>%LINEBREAK%While you defend, if the attacker is stressed, you may remove 1 stress from the attacker to change 1 of your blank/%FOCUS% results to an %EVADE% result.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Maul",
+      "id": "crew-maul",
+      "slot": "Crew",
+      "factions": [
+        "scum",
+        "rebel"
+      ],
+      "modifiers": [
+        {
+          "type": "stats",
+          "operator": "update",
+          "args": {
+            "type": "force",
+            "args": "+1"
+          }
+        }
+      ],
+      "points": 11,
+      "force": 1,
+      "ability": "<i>Scum or Squad including Ezra Bridger or Squad including Ezra Bridger (Sheathipede) or Squad including Ezra Bridger (TIE Fighter) only</i>%LINEBREAK%After you suffer damage, you may gain 1 stress token to recover 1&nbsp;%FORCE%.%LINEBREAK%You can equip \"Dark Side\" upgrades.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Qi’ra",
+      "id": "crew-qi-ra",
+      "slot": "Crew",
+      "factions": [
+        "scum"
+      ],
+      "points": 2,
+      "ability": "<i>Scum only</i>%LINEBREAK%While you move and perform attacks, you ignore obstacles that you are locking.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Tobias Beckett",
+      "id": "crew-tobias-beckett",
+      "slot": "Crew",
+      "factions": [
+        "scum"
+      ],
+      "points": 2,
+      "ability": "<i>Scum only</i>%LINEBREAK%<strong>Setup:</strong> After placing forces, you may choose 1 obstacle in the play area. If you do, place it anywhere in the play area beyond range 2 of any board edge or ship and beyond range 1 of other obstacles.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Unkar Plutt",
+      "id": "crew-Unkar Plutt",
+      "slot": "Crew",
+      "factions": [
+        "scum"
+      ],
+      "points": 2,
+      "ability": "<i>Scum only</i>%LINEBREAK%After you partially execute a maneuver, you may suffer 1&nbsp;%HIT% damage to perform 1 white action.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Zuckuss",
+      "id": "crew-zuckuss",
+      "slot": "Crew",
+      "factions": [
+        "scum"
+      ],
+      "points": 2,
+      "ability": "<i>Scum only</i>%LINEBREAK%While you perform an attack, if you are not stressed, you may choose 1 defense die and gain 1 stress token. If you do, the defender must reroll that die.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Jabba the Hutt",
+      "id": "crew-jabba-the-hutt",
+      "slot": "Crew",
+      "factions": [
+        "scum"
+      ],
+      "extraSlots": ["Crew"],
+      "restrictions": [
+        {
+          "type": "upgrades",
+          "operator": "empty",
+          "args": "Crew"
+        }
+      ],
+      "points": 6,
+      "charge": 4,
+      "ability": "<i>Scum only</i>%LINEBREAK%During the End Phase, you may choose 1 friendly ship at range 0-2 and spend 1&nbsp;%CHARGE%. If you do, that ship recovers 1&nbsp;%CHARGE% on 1 of its equipped %ILLICIT% upgrades.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
       "name": "ISB Slicer",
       "id": "crew-isb-slicer",
       "slot": "Crew",
