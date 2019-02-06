@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {SquadPilot} from '../../store/squad-list.store';
 import {SQUAD_LIST_NAV_ACTION} from '../../types';
 
@@ -12,7 +12,7 @@ export class SquadPilotBodyComponent implements OnInit {
   @Input() squadPilot: SquadPilot;
   @Output() action: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor() {
+  constructor(private changeDetector: ChangeDetectorRef) {
   }
 
   ngOnInit() {
@@ -39,5 +39,6 @@ export class SquadPilotBodyComponent implements OnInit {
         });
       break;
     }
+    this.changeDetector.markForCheck();
   }
 }

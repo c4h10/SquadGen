@@ -2,12 +2,12 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnDestroy, OnI
 import { SquadPilot } from '../../store/squad-list.store';
 import { ResponsiveService } from '../../../../services/responsive.service';
 import { Observable, Subscription } from 'rxjs';
-import { SQUAD_LIST_NAV_ACTION } from '../../types';
 
 @Component({
   selector: 'sg-squad-pilot-header',
   templateUrl: './squad-pilot-header.component.html',
-  styleUrls: ['./squad-pilot-header.component.scss']
+  styleUrls: ['./squad-pilot-header.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SquadPilotHeaderComponent implements OnInit, OnDestroy {
 

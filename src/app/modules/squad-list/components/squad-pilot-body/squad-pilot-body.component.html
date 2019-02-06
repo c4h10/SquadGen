@@ -1,7 +1,7 @@
 <div class="container">
   <section class="row statistics">
     <sg-stats-line [pilot]="squadPilot.pilot"></sg-stats-line>
-    <sg-actions-line [actions]="squadPilot.pilot.actions ? squadPilot.pilot.actions : squadPilot.pilot.ship.actions"></sg-actions-line>
+    <sg-actions-line [actions]="squadPilot.actions"></sg-actions-line>
   </section>
   <section class="row ability-line" *ngIf="squadPilot.pilot.ability">
     <span [innerHTML]="squadPilot.pilot.ability | xwingTranslate">{{ squadPilot.pilot.ability }}</span>

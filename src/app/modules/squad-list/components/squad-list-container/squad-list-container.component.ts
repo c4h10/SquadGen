@@ -21,8 +21,7 @@ import { UpgradeRestrictionsService } from '../../services/upgrade-restrictions.
 @Component({
   selector: 'sg-squad-list-container',
   templateUrl: './squad-list-container.component.html',
-  styleUrls: ['./squad-list-container.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./squad-list-container.component.scss']
 })
 export class SquadListContainerComponent implements OnInit, OnDestroy {
 
