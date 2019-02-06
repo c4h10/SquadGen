@@ -646,6 +646,222 @@
       "isHyperspace": false
     },
     {
+      "name": "\"Zeb\" Orrelios",
+      "id": "crew-zeb-orrelios",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "points": 1,
+      "ability": "<i>Rebel only</i>%LINEBREAK%You can perform primary attacks at range 0. Enemy ships at range 0 can perform primary attacks against you.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "\"Chopper\"",
+      "id": "crew-chopper",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "points": 1,
+      "ability": "<i>Rebel only</i>%LINEBREAK%During the Perform Action step, you may perform 1 action, even while stressed. After you perform an action while stressed, suffer 1&nbsp;%HIT% damage unless you expose 1 of your damage cards.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Baze Malbus",
+      "id": "crew-baze-malbus",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "points": 3,
+      "ability": "<i>Rebel only</i>%LINEBREAK%While you perform a %FOCUS% action, you may treat it as red. If you do, gain 1 additional focus token for each enemy ship at range 0-1, to a maximum of 2.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Cassian Andor",
+      "id": "crew-cassian-andor",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "points": 6,
+      "ability": "<i>Rebel only</i>%LINEBREAK%During the System Phase, you may choose 1 enemy ship at range 1-2 and guess aloud a bearing and speed, then look at that ship’s dial. If the chosen ship’s bearing and speed match your guess, you may set your dial to another maneuver.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Hera Syndulla",
+      "id": "crew-hera-syndulla",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "points": 4,
+      "ability": "<i>Rebel only</i>%LINEBREAK%You can execute red maneuvers even while stressed. After you fully execute a red maneuver, if you have 3 or more stress tokens, remove 1 stress token and suffer 1&nbsp;%HIT% damage.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Jyn Erso",
+      "id": "crew-jyn-erso",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "points": 2,
+      "ability": "<i>Rebel only</i>%LINEBREAK%If a friendly ship at range 0-3 would gain a focus token, it may gain 1 evade token instead.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Kanan Jarrus",
+      "id": "crew-kanan-jarrus",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "modifiers": [
+        {
+          "type": "stats",
+          "operator": "update",
+          "args": {
+            "type": "force",
+            "args": "+1"
+          }
+        }
+      ],
+      "points": 12,
+      "ability": "<i>Rebel only</i>%LINEBREAK%After a friendly ship at range 0-2 fully executes a white maneuver, you may spend 1&nbsp;%FORCE% to remove 1 stress token from that ship.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "Sabine Wren",
+      "id": "crew-sabine-wren",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "points": 3,
+      "ability": "<i>Rebel only</i>%LINEBREAK%<strong>Setup:</strong> Place 1 ion, 1 jam, 1 stress, and 1 tractor token on this card. %LINEBREAK%After a ship suffers the effect of a friendly bomb, you may remove 1 ion, jam, stress, or tractor token from this card. If you do, that ship gains a matching token.",
+      "unique": true,
+      "isHyperspace": false
+    },
+    {
+      "name": "C-3PO",
+      "id": "crew-c-3po",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "modifiers": [
+        {
+          "type": "actions",
+          "operator": "add",
+          "args": {
+            "type": "Calculate",
+            "difficulty": "white"
+          }
+        }
+      ],
+      "points": 8,
+      "ability": "<i>Adds %CALCULATE%</i>%LINEBREAK%<i>Rebel only</i>%LINEBREAK%Before rolling defense dice, you may spend 1 calculate token to guess aloud a number 1 or higher. If you do and you roll exactly that many %EVADE% results, add 1&nbsp;%EVADE% result.%LINEBREAK%After you perform the %CALCULATE% action, gain 1 calculate token.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Chewbacca",
+      "id": "crew-chewbacca",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "points": 4,
+      "charge": 2,
+      "recurring": true,
+      "ability": "<i>Rebel only</i>%LINEBREAK%At the start of the Engagement Phase, you may spend 2 %CHARGE% to repair 1 faceup damage card.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Lando Calrissian",
+      "id": "crew-lando-calrissian",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "points": 2,
+      "ability": "<i>Rebel only</i>%LINEBREAK%<strong>Action:</strong> Roll 2 defense dice. For each %FOCUS% result, gain 1 focus token. For each %EVADE% result, gain 1 evade token. If both results are blank, the opposing player chooses focus or evade. You gain 1 token of that type.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Leia Organa",
+      "id": "crew-leia-organa",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "points": 2,
+      "charge": 3,
+      "recurring": true,
+      "ability": "<i>Rebel only</i>%LINEBREAK%At the start of the Activation Phase, you may spend 3 %CHARGE%. During this phase, each friendly ship reduces the difficulty of its red maneuvers.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Magva Yarro",
+      "id": "crew-magva-yarro",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "points": 8,
+      "ability": "<i>Rebel only</i>%LINEBREAK%After you defend, if the attack hit, you may acquire a lock on the attacker.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Nien Nunb",
+      "id": "crew-nien-nunb",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "points": 5,
+      "ability": "<i>Rebel only</i>%LINEBREAK%Decrease the difficulty of your bank maneuvers (%BANKLEFT% and %BANKRIGHT%).",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "R2-D2",
+      "id": "crew-r2-d2",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "points": 8,
+      "ability": "<i>Rebel only</i>%LINEBREAK%During the End Phase, if you are damaged and not shielded, you may roll 1 attack die to recover 1 shield. On a %HIT% result, expose 1 of your damage cards.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
+      "name": "Saw Gerrera",
+      "id": "crew-saw-gerrera",
+      "slot": "Crew",
+      "factions": [
+        "rebel"
+      ],
+      "points": 8,
+      "ability": "<i>Rebel only</i>%LINEBREAK%While you perform an attack, you may suffer 1&nbsp;%HIT% damage to change all of your %FOCUS% results to %CRIT% results.",
+      "unique": true,
+      "isHyperspace": true
+    },
+    {
       "name": "ISB Slicer",
       "id": "crew-isb-slicer",
       "slot": "Crew",
