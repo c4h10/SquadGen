@@ -428,5 +428,22 @@
       ]
     }
   ],
-  "pilots": []
+  "pilots": [
+    {
+      "name": "Blue Squadron Escort",
+      "id": "t-65-x-wing",
+      "unique": false,
+      "faction": "rebel",
+      "ship": "t-70-x-wing",
+      "skill": 1,
+      "points": 41,
+      "slots": [
+        "Torpedo",
+        "Astromech",
+        "Modification",
+        "Configuration"
+      ],
+      "isHyperspace": true
+    }
+  ]
 }

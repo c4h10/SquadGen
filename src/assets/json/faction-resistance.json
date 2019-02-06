@@ -139,5 +139,23 @@
     }
   ],
   "pilots": [
+    {
+      "name": "Blue Squadron Rookie",
+      "id": "res-blue-squadron-rookie",
+      "unique": false,
+      "faction": "resistance",
+      "ship": "t-70-x-wing",
+      "skill": 1,
+      "points": 46,
+      "slots": [
+        "Astromech",
+        "Modification",
+        "Configuration",
+        "Tech",
+        "Title",
+        "Hardpoint"
+      ],
+      "isHyperspace": true
+    }
   ]
 }

@@ -480,5 +480,19 @@
       ]
     }
   ],
-  "pilots": []
+  "pilots": [
+    {
+      "name": "Zealous Recruit",
+      "id": "fang-fighter",
+      "unique": false,
+      "faction": "scum",
+      "ship": "t-70-x-wing",
+      "skill": 1,
+      "points": 44,
+      "slots": [
+        "Torpedo"
+      ],
+      "isHyperspace": true
+    }
+  ]
 }

@@ -484,5 +484,18 @@
     }
   ],
   "pilots": [
+    {
+      "name": "Academy Pilot",
+      "id": "emp-academy-pilot",
+      "unique": false,
+      "faction": "empire",
+      "ship": "tie-ln-fighter",
+      "skill": 1,
+      "points": 23,
+      "slots": [
+        "Modification"
+      ],
+      "isHyperspace": true
+    }
   ]
 }
