@@ -3732,5 +3732,88 @@
       "unique": false,
       "isHyperspace": true
     }
+  ],
+  "Hardpoint": [
+    {
+      "name": "Hardpoint: Cannon",
+      "id": "hardpoint-cannon",
+      "slot": "Hardpoint",
+      "ships": ["t-70-x-wing"],
+      "factions": [
+        "resistance"
+      ],
+      "modifiers": [
+        {
+          "type": "slots",
+          "operator": "add",
+          "args": ["Cannon"]
+        }
+      ],
+      "restrictions": [
+        {
+          "type": "ships",
+          "operator": "has",
+          "args": ["t-70-x-wing"]
+        }
+      ],
+      "points": 0,
+      "ability": "<i>Add %CANNON% slot.</i>",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Hardpoint: Missile",
+      "id": "hardpoint-missile",
+      "slot": "Hardpoint",
+      "ships": ["t-70-x-wing"],
+      "factions": [
+        "resistance"
+      ],
+      "modifiers": [
+        {
+          "type": "slots",
+          "operator": "add",
+          "args": ["Missile"]
+        }
+      ],
+      "restrictions": [
+        {
+          "type": "ships",
+          "operator": "has",
+          "args": ["t-70-x-wing"]
+        }
+      ],
+      "points": 0,
+      "ability": "<i>Add %MISSILE% slot.</i>",
+      "unique": false,
+      "isHyperspace": true
+    },
+    {
+      "name": "Hardpoint: Torpedo",
+      "id": "hardpoint-torpedo",
+      "slot": "Hardpoint",
+      "ships": ["t-70-x-wing"],
+      "factions": [
+        "resistance"
+      ],
+      "modifiers": [
+        {
+          "type": "slots",
+          "operator": "add",
+          "args": ["Torpedo"]
+        }
+      ],
+      "restrictions": [
+        {
+          "type": "ships",
+          "operator": "has",
+          "args": ["t-70-x-wing"]
+        }
+      ],
+      "points": 0,
+      "ability": "<i>Add %TORPEDO% slot.</i>",
+      "unique": false,
+      "isHyperspace": true
+    }
   ]
 }
