@@ -2401,7 +2401,7 @@
           "type": "stats",
           "operator": "update",
           "args": {
-            "type": "hull",
+            "type": "ship.hull",
             "args": 1
           }
         }
@@ -2431,7 +2431,7 @@
           "type": "stats",
           "operator": "update",
           "args": {
-            "type": "shields",
+            "type": "ship.shields",
             "args": 1
           }
         }
@@ -2461,7 +2461,7 @@
           "type": "stats",
           "operator": "update",
           "args": {
-            "type": "agility",
+            "type": "ship.agility",
             "args": 1
           }
         }
@@ -3241,7 +3241,7 @@
           "type": "stats",
           "operator": "update",
           "args": {
-            "type": "attack",
+            "type": "ship.attack",
             "args": "3"
           }
         }
@@ -3565,7 +3565,7 @@
           "type": "stats",
           "operator": "update",
           "args": {
-            "type": "shields",
+            "type": "ship.shields",
             "args": 1
           }
         }

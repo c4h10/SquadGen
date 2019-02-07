@@ -34,8 +34,10 @@ export function reducer(state: ContainerState, action: SquadListRemoveUpgradeAct
       pilot.upgrades = upgrades;
 
       if (action.payload.upgrade.modifiers) {
-        // TODO: calculate TOTAL POINTS
+        const preModPoint = pilot.points;
         pilot = UpgradeUtils.applyModifiers(action.payload.upgrade.modifiers, pilot, 1);
+        const postModPoint = pilot.points;
+        squadConfig.points = squadConfig.points + postModPoint - preModPoint;
       }
       return pilot;
     }

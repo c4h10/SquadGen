@@ -26,6 +26,9 @@ export class UpgradeUtils {
           break;
         case 'stats':
           if (revert === 0) {
+// TODO: hull upog
+            const fieldValue = item.args.type.split('.').reduce((o, i) => o[i], squadPilot.pilot);
+            console.log(fieldValue);
             squadPilot.pilot[item.args.type] =
               squadPilot.pilot[item.args.type] ? squadPilot.pilot[item.args.type] + item.args.args : item.args.args;
           } else {
