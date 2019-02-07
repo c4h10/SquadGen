@@ -3,8 +3,8 @@
   <sg-squad-list-navbar [tabId]="tabId" [config]="config"></sg-squad-list-navbar>
   <div class="squad">
     <div class="squad-wrapper container">
-        <mat-accordion [multi]="true" class="squad-pilot-list" *ngIf="squadPilots.length > 0">
-          <mat-expansion-panel *ngFor="let squadPilot of squadPilots">
+        <mat-accordion [multi]="true" class="squad-pilot-list" *ngIf="(squadPilots$ | async).length > 0">
+          <mat-expansion-panel *ngFor="let squadPilot of (squadPilots$ | async)">
             <mat-expansion-panel-header class="squad-pilot-header" collapsedHeight="40px" expandedHeight="40px">
               <mat-panel-title>
                   <p class="title">

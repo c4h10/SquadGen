@@ -5,29 +5,36 @@ import {shipActionToClassName} from '../../../utils/utils.translation';
 
 export class UpgradeUtils {
 
-  static applyModifiers(modifiers: any[], squadPilot: SquadPilot): SquadPilot {
+  static applyModifiers(modifiers: any[], squadPilot: SquadPilot, revert: number = 0): SquadPilot {
     modifiers.forEach((item) => {
       switch (item.type) {
         case 'actions':
-          squadPilot.actions = this.actionModifier(item.operator, item.args, squadPilot.actions);
+          squadPilot.actions = this.getActionFunction(item.operator)[revert](squadPilot.actions, item.args);
           break;
       }
     });
     return squadPilot;
   }
 
+  static getActionFunction(type: string) {
 
-  static actionModifier(operator, args, actions: ShipAction[]): ShipAction[] {
-
-    if (operator === 'add') {
-      actions.push({
-        type: args.type,
-        difficulty: args.difficulty,
-        icon  : shipActionToClassName(args.type)
-      });
-    } else if (operator === 'remove') {
-      // TODO: reverting
-    }
-    return actions;
+    const types = {
+      'add': [
+        function (actions: ShipAction[], args) {
+          actions.push({
+            type: args.type,
+            difficulty: args.difficulty,
+            icon  : shipActionToClassName(args.type)
+          });
+          return actions;
+        },
+        function (actions: ShipAction[], args) {
+          const ind = actions.findIndex((el) => el.type === args.type && el.difficulty === args.difficulty);
+          actions.splice( ind, 1);
+          return actions;
+        }
+      ]
+    };
+    return types[type];
   }
 }

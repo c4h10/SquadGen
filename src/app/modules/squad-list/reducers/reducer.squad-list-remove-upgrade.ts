@@ -1,5 +1,6 @@
 import { ContainerState } from '../store/squad-list.store';
 import { SquadListRemoveUpgradeAction } from '../actions';
+import {UpgradeUtils} from '../lib/upgrade-utils';
 
 export function reducer(state: ContainerState, action: SquadListRemoveUpgradeAction): ContainerState {
 
@@ -31,6 +32,10 @@ export function reducer(state: ContainerState, action: SquadListRemoveUpgradeAct
         return item;
       });
       pilot.upgrades = upgrades;
+
+      if (action.payload.upgrade.modifiers) {
+        pilot = UpgradeUtils.applyModifiers(action.payload.upgrade.modifiers, pilot, 1);
+      }
       return pilot;
     }
     return pilot;

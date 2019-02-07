@@ -1,5 +1,5 @@
 import { TabState } from '../../../tab-store/types';
-import {Faction, Pilot, ShipAction, Upgrade, Upgrades} from "../../global/reducers/types";
+import {Faction, Pilot, ShipAction, Upgrade, Upgrades} from '../../global/reducers/types';
 
 
 export interface State extends TabState<ContainerState> {

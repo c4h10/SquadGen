@@ -30,7 +30,6 @@ export function reducer(state: ContainerState, action: SquadListAddUpgradeAction
       });
       pilot.upgrades = upgrades;
 
-      // TODO: apply squad modifications
       if (action.payload.upgrade.modifiers) {
         pilot = UpgradeUtils.applyModifiers(action.payload.upgrade.modifiers, pilot);
       }

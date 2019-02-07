@@ -1264,12 +1264,12 @@
       "name": "Supreme Leader Snoke",
       "id": "crew-supreme-leader-snoke",
       "slot": "Crew",
-      "extraSlots": ["Missile"],
+      "extraSlots": ["Crew"],
       "restrictions": [
         {
           "type": "upgrades",
           "operator": "empty",
-          "args": "Missile"
+          "args": "Crew"
         }
       ],
       "factions": [
