@@ -1,5 +1,7 @@
 
 # SquadGen
+DialBrowser: https://c4h10.github.io/SLAM/
+SquadGenerator - WiP
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
 
