@@ -12,16 +12,21 @@ export class UpgradeButtonComponent implements OnInit {
   @Input() type: string;
   @Output() action: EventEmitter<any> = new EventEmitter<any>();
 
-  cssClass: string;
   constructor() { }
 
   ngOnInit() {
-    this.cssClass = `xwing-miniatures-font xwing-miniatures-font-${this.type.toLowerCase()}`;
   }
 
   onClick(event) {
     this.action.emit({
       type: this.type
     });
+  }
+
+  getCssClass(type): string {
+    if (type.toLowerCase() === 'configuration') {
+      return `xwing-miniatures-font xwing-miniatures-font-config`;
+    }
+    return `xwing-miniatures-font xwing-miniatures-font-${type.toLowerCase()}`;
   }
 }

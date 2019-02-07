@@ -566,7 +566,7 @@
           "operator": "update",
           "args": {
             "type": "force",
-            "args": "+1"
+            "args": 1
           }
         }
       ],
@@ -730,7 +730,7 @@
           "operator": "update",
           "args": {
             "type": "force",
-            "args": "+1"
+            "args": 1
           }
         }
       ],
@@ -928,7 +928,7 @@
           "operator": "update",
           "args": {
             "type": "force",
-            "args": "+1"
+            "args": 1
           }
         }
       ],
@@ -951,7 +951,7 @@
           "operator": "update",
           "args": {
             "type": "force",
-            "args": "+1"
+            "args": 1
           }
         }
       ],
@@ -974,7 +974,7 @@
           "operator": "update",
           "args": {
             "type": "force",
-            "args": "+1"
+            "args": 1
           }
         }
       ],
@@ -1005,7 +1005,7 @@
           "operator": "update",
           "args": {
             "type": "force",
-            "args": "+1"
+            "args": 1
           }
         }
       ],
@@ -1281,7 +1281,7 @@
           "operator": "update",
           "args": {
             "type": "force",
-            "args": "+1"
+            "args": 1
           }
         }
       ],
@@ -1320,7 +1320,7 @@
           "operator": "update",
           "args": {
             "type": "force",
-            "args": "+1"
+            "args": 1
           }
         }
       ],
@@ -1772,7 +1772,7 @@
           "operator": "update",
           "args": {
             "type": "force",
-            "args": "+1"
+            "args": 1
           }
         }
       ],
@@ -1860,7 +1860,7 @@
           "operator": "update",
           "args": {
             "type": "force",
-            "args": "+1"
+            "args": 1
           }
         }
       ],
@@ -1883,7 +1883,7 @@
           "operator": "update",
           "args": {
             "type": "force",
-            "args": "+1"
+            "args": 1
           }
         }
       ],
@@ -1918,7 +1918,7 @@
           "operator": "update",
           "args": {
             "type": "force",
-            "args": "+1"
+            "args": 1
           }
         }
       ],
@@ -2314,7 +2314,7 @@
       "modifiers": [
         {
           "type": "actions",
-          "operator": "update",
+          "operator": "add",
           "args": {
             "type": "Boost",
             "difficulty": "white"
@@ -2402,7 +2402,7 @@
           "operator": "update",
           "args": {
             "type": "hull",
-            "args": "+1"
+            "args": 1
           }
         }
       ],
@@ -2432,7 +2432,7 @@
           "operator": "update",
           "args": {
             "type": "shields",
-            "args": "+1"
+            "args": 1
           }
         }
       ],
@@ -2462,7 +2462,7 @@
           "operator": "update",
           "args": {
             "type": "agility",
-            "args": "+1"
+            "args": 1
           }
         }
       ],
@@ -2693,7 +2693,7 @@
       "modifiers": [
         {
           "type": "actions",
-          "operator": "update",
+          "operator": "add",
           "args": {
             "type": "Barrel Roll",
             "difficulty": "white"
@@ -3239,7 +3239,7 @@
       "modifiers": [
         {
           "type": "stats",
-          "operator": "add",
+          "operator": "update",
           "args": {
             "type": "attack",
             "args": "3"
@@ -3566,7 +3566,7 @@
           "operator": "update",
           "args": {
             "type": "shields",
-            "args": "+1"
+            "args": 1
           }
         }
       ],

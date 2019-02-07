@@ -40,6 +40,9 @@ export class UpgradeButtonsComponent implements OnInit {
 
 
   getCssClass(type): string {
+    if (type.toLowerCase() === 'configuration') {
+      return `xwing-miniatures-font xwing-miniatures-font-config`;
+    }
     return `xwing-miniatures-font xwing-miniatures-font-${type.toLowerCase()}`;
   }
 }
