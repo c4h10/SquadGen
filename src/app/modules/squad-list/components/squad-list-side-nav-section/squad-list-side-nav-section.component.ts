@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { Pilot, Ship } from '../../../global/reducers/types';
-import { WindowRefService } from '../../../../services/window-ref.service';
 import { MatDialog } from '@angular/material';
 import { SQUAD_LIST_NAV_ACTION } from '../../types';
+import { Observable, Subscription } from 'rxjs';
+import { ResponsiveService } from '../../../../services/responsive.service';
 
 @Component({
   selector: 'sg-squad-list-side-nav-section',
@@ -10,20 +11,35 @@ import { SQUAD_LIST_NAV_ACTION } from '../../types';
   styleUrls: ['./squad-list-side-nav-section.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SquadListSideNavSectionComponent implements OnInit {
+export class SquadListSideNavSectionComponent implements OnInit, OnDestroy {
 
   @Input() ship: Ship;
   @Input() pilots: Pilot[];
-
   @Output() action: EventEmitter<any> = new EventEmitter<any>();
+
+  public isMobile$: Observable<boolean>;
+  public isMobile: boolean;
+  private subscriptions: Subscription = new Subscription();
 
   collapsed: boolean;
 
-  constructor(private windowRef: WindowRefService, public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, private responsiveService: ResponsiveService) {
   }
 
   ngOnInit() {
     this.collapsed = true;
+
+    this.isMobile$ = this.responsiveService.getMobileStatus();
+    [
+      this.isMobile$.subscribe(isMobile => {
+        this.isMobile = isMobile;
+      })
+    ].forEach(s => this.subscriptions.add(s));
+    this.responsiveService.checkWidth();
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
   }
 
   toggleExpand(event) {
@@ -57,18 +73,5 @@ export class SquadListSideNavSectionComponent implements OnInit {
         pilot: pilot
       }
     });
-  }
-
-  // TODO: Make service
-  get isMobileMenu() {
-    if (this.windowRef.nativeWindow.innerWidth > 768) {
-      return false;
-    }
-    return true;
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    // TODO: ON RESIZE EVENT
   }
 }

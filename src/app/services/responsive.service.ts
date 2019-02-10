@@ -29,7 +29,7 @@ export class ResponsiveService {
       this.onMobileChange(true);
     } else if (width <= 768) {
       this.screenWidth = 'sm';
-      this.onMobileChange(false);
+      this.onMobileChange(true);
     } else if (width > 768 && width <= 992) {
       this.screenWidth = 'md';
       this.onMobileChange(false);

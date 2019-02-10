@@ -76,7 +76,6 @@ export class SquadListContainerComponent implements OnInit, OnDestroy {
     this.subscriptions.unsubscribe();
   }
 
-  // TODO: refactor switch cases
   actionHandler(event: SquadListNavAction) {
     switch (event.type) {
       case SQUAD_LIST_NAV_ACTION.UPGRADE:

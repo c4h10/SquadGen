@@ -1,4 +1,4 @@
-<ng-template [ngIf]="!isMobileMenu" [ngIfElse]="mobileShip">
+<ng-template [ngIf]="!isMobile" [ngIfElse]="mobileShip">
   <a class="nav-link expand-button"
      [ngClass]="{'collapsed': collapsed, 'expanded' : !collapsed}"
      data-toggle="collapse"
@@ -19,7 +19,7 @@
     </div>
   </sat-popover>
 </ng-template>
-<ng-template [ngIf]="!isMobileMenu" [ngIfElse]="mobilePilot">
+<ng-template [ngIf]="!isMobile" [ngIfElse]="mobilePilot">
   <div class="collapse" [ngClass]="{'show': !collapsed}">
     <ul class="nav pilot-list">
       <li class="nav-item nav-pilot" *ngFor="let pilot of pilots">

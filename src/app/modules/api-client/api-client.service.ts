@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { EndpointCollection, EndpointConfiguration, EndpointData } from './types';
 import { HttpClient } from '@angular/common/http';
 
-// TODO: block ui?
 @Injectable()
 export class ApiClientService {
   private endpoints: EndpointCollection = {};
