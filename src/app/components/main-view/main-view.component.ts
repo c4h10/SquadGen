@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'sg-main-view',
@@ -7,12 +7,4 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainViewComponent  {
-  tabConfig: any = {
-    types: [
-        {
-          id: 'squad-list',
-          unique: false
-        }
-      ]
-  };
 }

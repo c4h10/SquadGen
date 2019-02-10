@@ -3,7 +3,6 @@ import {Faction, Pilot, ShipAction, Upgrade, Upgrades} from '../../global/reduce
 
 
 export interface State extends TabState<ContainerState> {
-  configuration: any;
 }
 
 

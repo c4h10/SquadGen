@@ -1,10 +1,6 @@
 import { Action } from '@ngrx/store';
-import { ACTION_NAMES, CreateTabPayload, SetActiveTabPayload, TabsConfigurationPayload } from './types';
+import { ACTION_NAMES, CreateTabPayload, SetActiveTabPayload } from './types';
 
-export class TabsConfigurationAction implements Action {
-  readonly type = ACTION_NAMES.TABS_CONFIGURATION;
-  constructor(public payload: TabsConfigurationPayload) {}
-}
 
 export class CreateMaterialTabAction implements Action {
   readonly type = ACTION_NAMES.CREATE_MATERIAL_TAB;
@@ -17,6 +13,5 @@ export class SetActiveTabAction implements Action {
 }
 
 export type TabNavigationActions =
-  TabsConfigurationAction
   | SetActiveTabAction
   | CreateMaterialTabAction;

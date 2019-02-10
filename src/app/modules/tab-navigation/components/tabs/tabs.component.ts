@@ -1,7 +1,6 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { State, Tab } from '../../reducers/types';
 import { Store } from '@ngrx/store';
-import { TabsConfigurationAction } from '../../actions/tab-navigation.actions';
 import { Observable, Subscription } from 'rxjs';
 import { getActiveTab, getTabs } from '../../tab-navigation.store';
 
@@ -12,8 +11,6 @@ import { getActiveTab, getTabs } from '../../tab-navigation.store';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TabsComponent implements OnInit, OnDestroy {
-
-  @Input() config?: any;
 
   activeFactionId: string;
   selectedIndex$: Observable<number | string>;
@@ -31,7 +28,6 @@ export class TabsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.store.dispatch(new TabsConfigurationAction(this.config));
     this.tabs$ = this.store.select(getTabs);
     this.selectedIndex$ = this.store.select(getActiveTab);
 

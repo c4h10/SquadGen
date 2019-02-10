@@ -8,7 +8,6 @@ import { State } from '../reducers/types';
 import { getLastCreatedTab } from '../tab-navigation.store';
 import { SquadListContainerCreateAction } from '../../squad-list/actions';
 import { ActionWithPayload } from '../types';
-import { Faction } from '../../global/reducers/types';
 import { CreateTabAction } from '../../../tab-store/global-store-tab-actions';
 
 @Injectable()
