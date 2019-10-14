@@ -24,6 +24,16 @@
       "factionId": "resistance",
       "factionName": "Resistance",
       "factionIcon": "xwing-miniatures-font xwing-miniatures-font-rebel-outline"
+    },
+    {
+      "factionId": "separatist",
+      "factionName": "Separatist Alliance",
+      "factionIcon": "xwing-miniatures-font xwing-miniatures-font-separatist-outline"
+    },
+    {
+      "factionId": "republic",
+      "factionName": "Galactic Republic",
+      "factionIcon": "xwing-miniatures-font xwing-miniatures-font-republic-outline"
     }
   ]
 }

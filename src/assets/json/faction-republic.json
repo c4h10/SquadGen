@@ -1,0 +1,187 @@
+{
+  "ships": [
+    {
+      "id": "torrent-starfighter",
+      "faction": "republic",
+      "name": "V-19 Torrent Starfighter",
+      "icon": "xwing-miniatures-ship",
+      "attack": 2,
+      "agility": 2,
+      "hull": 3,
+      "shields": 0,
+      "size": 1,
+      "isHyperspace": true,
+      "actions": [
+        {
+          "type": "Calculate",
+          "difficulty": "white"
+        },
+        {
+          "type": "Lock",
+          "difficulty": "white"
+        },
+        {
+          "type": "Barrel Roll",
+          "difficulty": "white",
+          "linked": {
+            "type": "Calculate",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "maneuvers": [
+        [ 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 3, 2, 2, 2, 3, 0, 0, 0],
+        [ 1, 1, 2, 1, 1, 0, 0, 0, 3, 3],
+        [ 0, 3, 2, 3, 0, 0, 0, 0],
+        [ 0, 0, 1, 0, 0, 0, 0, 0],
+        [ 0, 0, 0, 0, 0, 0, 0, 0]
+      ],
+      "keywords": "kickball, swoop"
+    },
+    {
+      "id": "Naboo-starfighter",
+      "faction": "republic",
+      "name": "Naboo Royal N-1 Starfighter",
+      "icon": "xwing-miniatures-ship",
+      "attack": 2,
+      "agility": 2,
+      "hull": 3,
+      "shields": 0,
+      "size": 1,
+      "isHyperspace": true,
+      "actions": [
+        {
+          "type": "Calculate",
+          "difficulty": "white"
+        },
+        {
+          "type": "Lock",
+          "difficulty": "white"
+        },
+        {
+          "type": "Barrel Roll",
+          "difficulty": "white",
+          "linked": {
+            "type": "Calculate",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "maneuvers": [
+        [ 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 0, 1, 1, 1, 0, 0, 0, 0],
+        [ 1, 2, 2, 2, 1, 0, 0, 0],
+        [ 1, 2, 2, 2, 1, 0, 0, 0, 3, 3],
+        [ 0, 0, 1, 0, 0, 0, 0, 0],
+        [ 0, 0, 1, 0, 0, 0, 0, 0]
+      ],
+      "keywords": "padme, amidala, ric olie,anakin, skywalker,"
+    },
+    {
+      "id": "delta-7-aethersprite",
+      "faction": "republic",
+      "name": "Delta-7 Aethersprite",
+      "icon": "xwing-miniatures-ship",
+      "attack": 2,
+      "agility": 2,
+      "hull": 3,
+      "shields": 0,
+      "size": 1,
+      "isHyperspace": true,
+      "actions": [
+        {
+          "type": "Calculate",
+          "difficulty": "white"
+        },
+        {
+          "type": "Lock",
+          "difficulty": "white"
+        },
+        {
+          "type": "Barrel Roll",
+          "difficulty": "white",
+          "linked": {
+            "type": "Calculate",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "maneuvers": [
+        [ 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 1, 2, 0, 2, 1, 0, 0, 0],
+        [ 1, 2, 2, 2, 1, 0, 3, 3],
+        [ 0, 1, 2, 1, 0, 0, 0, 0],
+        [ 0, 0, 1, 0, 0, 3, 0, 0],
+        [ 0, 0, 1, 0, 0, 3, 0, 0]
+      ],
+      "keywords": "anakin, skywalker, obi-wan kenobi, mace windu, luminara, saesee"
+    },
+    {
+      "name": "ARC-170",
+      "id": "arc-170-starfighter-republic",
+      "faction": "republic",
+      "icon": "xwing-miniatures-ship xwing-miniatures-ship-arc170",
+      "attack": 3,
+      "attackb": 2,
+      "agility": 1,
+      "hull": 6,
+      "shields": 3,
+      "size": 2,
+      "isHyperspace": false,
+      "actions": [
+        {"type": "Focus", "difficulty": "white"},
+        {"type": "Lock", "difficulty": "white"},
+        {"type": "Barrel Roll", "difficulty": "red"}
+      ],
+      "maneuvers": [
+        [0, 0, 0, 0, 0, 0],
+        [0, 2, 2, 2, 0, 0],
+        [1, 2, 2, 2, 1, 0],
+        [3, 1, 1, 1, 3, 0],
+        [0, 0, 3, 0, 0, 3]
+      ]
+    },
+    {
+      "id": "btl-b-y-wing",
+      "faction": "separatist",
+      "name": "BTL-B Y-Wing",
+      "icon": "xwing-miniatures-ship",
+      "attack": 2,
+      "agility": 2,
+      "hull": 3,
+      "shields": 0,
+      "size": 1,
+      "isHyperspace": true,
+      "actions": [
+        {
+          "type": "Calculate",
+          "difficulty": "white"
+        },
+        {
+          "type": "Lock",
+          "difficulty": "white"
+        },
+        {
+          "type": "Barrel Roll",
+          "difficulty": "white",
+          "linked": {
+            "type": "Calculate",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "maneuvers": [
+        [ 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 0, 1, 2, 1, 0, 0, 0, 0],
+        [ 1, 2, 2, 2, 1, 0, 0, 0],
+        [ 3, 1, 1, 1, 3, 0, 0, 0],
+        [ 0, 0, 3, 0, 0, 3, 0, 0],
+        [ 0, 0, 0, 0, 0, 0, 0, 0]
+      ],
+      "keywords": "anakin, skywalker, matchstick"
+    }
+  ],
+
+  "pilots": []
+}

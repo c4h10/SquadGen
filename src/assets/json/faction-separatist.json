@@ -1,0 +1,201 @@
+{
+  "ships": [
+    {
+      "id": "vulture-droid-fighter",
+      "faction": "separatist",
+      "name": "Vulture-class Droid Fighter",
+      "icon": "xwing-miniatures-ship",
+      "attack": 2,
+      "agility": 2,
+      "hull": 3,
+      "shields": 0,
+      "size": 1,
+      "isHyperspace": true,
+      "actions": [
+        {
+          "type": "Calculate",
+          "difficulty": "white"
+        },
+        {
+          "type": "Lock",
+          "difficulty": "white"
+        },
+        {
+          "type": "Barrel Roll",
+          "difficulty": "white",
+          "linked": {
+            "type": "Calculate",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "maneuvers": [
+        [ 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 1, 0, 0, 0, 1, 3, 0, 0],
+        [ 2, 1, 2, 1, 2, 0, 0, 0, 3, 3],
+        [ 1, 3, 2, 3, 1, 0, 0, 0],
+        [ 0, 0, 2, 0, 0, 0, 0, 0],
+        [ 0, 0, 1, 0, 0, 0, 0, 0]
+      ],
+      "keywords": "drone, vulture"
+    },
+    {
+      "id": "belbullab-22-starfighter",
+      "faction": "separatist",
+      "name": "Belbullab-22 Starfighter",
+      "icon": "xwing-miniatures-ship",
+      "attack": 2,
+      "agility": 2,
+      "hull": 3,
+      "shields": 0,
+      "size": 1,
+      "isHyperspace": true,
+      "actions": [
+        {
+          "type": "Calculate",
+          "difficulty": "white"
+        },
+        {
+          "type": "Lock",
+          "difficulty": "white"
+        },
+        {
+          "type": "Barrel Roll",
+          "difficulty": "white",
+          "linked": {
+            "type": "Calculate",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "maneuvers": [
+        [ 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 1, 1, 0, 1, 1, 0, 0, 0],
+        [ 1, 2, 2, 2, 1, 0, 0, 0],
+        [ 3, 1, 2, 1, 3, 0, 3, 3],
+        [ 0, 0, 1, 0, 0, 0, 0, 0],
+        [ 0, 0, 1, 0, 0, 0, 0, 0]
+      ],
+      "keywords": "general, grievous, sear, tambor"
+    },
+    {
+      "id": "hyena-class-droid-bomber",
+      "faction": "separatist",
+      "name": "Hyena-Class Droid Bomber",
+      "icon": "xwing-miniatures-ship",
+      "attack": 2,
+      "agility": 2,
+      "hull": 3,
+      "shields": 0,
+      "size": 1,
+      "isHyperspace": true,
+      "actions": [
+        {
+          "type": "Calculate",
+          "difficulty": "white"
+        },
+        {
+          "type": "Lock",
+          "difficulty": "white"
+        },
+        {
+          "type": "Barrel Roll",
+          "difficulty": "white",
+          "linked": {
+            "type": "Calculate",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "maneuvers": [
+        [ 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 1, 3, 1, 3, 1, 0, 0, 0],
+        [ 2, 1, 2, 1, 2, 3, 0, 0, 3, 3],
+        [ 3, 0, 2, 0, 3, 0, 0, 0],
+        [ 0, 0, 1, 0, 0, 0, 0, 0],
+        [ 0, 0, 3, 0, 0, 0, 0, 0]
+      ],
+      "keywords": "bomber, hyena, 404"
+    },
+    {
+      "id": "sith-infiltrator",
+      "faction": "separatist",
+      "name": "Sith Infiltrator",
+      "icon": "xwing-miniatures-ship",
+      "attack": 2,
+      "agility": 2,
+      "hull": 3,
+      "shields": 0,
+      "size": 1,
+      "isHyperspace": true,
+      "actions": [
+        {
+          "type": "Calculate",
+          "difficulty": "white"
+        },
+        {
+          "type": "Lock",
+          "difficulty": "white"
+        },
+        {
+          "type": "Barrel Roll",
+          "difficulty": "white",
+          "linked": {
+            "type": "Calculate",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "maneuvers": [
+        [ 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 3, 2, 2, 2, 3, 0, 0, 0],
+        [ 1, 2, 2, 2, 1, 0, 3, 3],
+        [ 1, 1, 2, 1, 1, 0, 0, 0],
+        [ 0, 0, 1, 0, 0, 0, 0, 0],
+        [ 0, 0, 0, 0, 0, 3, 0, 0]
+      ],
+      "keywords": "maul, dooku, count"
+    },
+    {
+      "id": "nantex-class-starfighter",
+      "faction": "separatist",
+      "name": "Nantex-Class Starfighter",
+      "icon": "xwing-miniatures-ship",
+      "attack": 2,
+      "agility": 2,
+      "hull": 3,
+      "shields": 0,
+      "size": 1,
+      "isHyperspace": true,
+      "actions": [
+        {
+          "type": "Calculate",
+          "difficulty": "white"
+        },
+        {
+          "type": "Lock",
+          "difficulty": "white"
+        },
+        {
+          "type": "Barrel Roll",
+          "difficulty": "white",
+          "linked": {
+            "type": "Calculate",
+            "difficulty": "red"
+          }
+        }
+      ],
+      "maneuvers": [
+        [ 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 1, 2, 0, 2, 1, 0, 0, 0],
+        [ 1, 2, 2, 2, 1, 0, 0, 0],
+        [ 1, 2, 2, 2, 1, 0, 3, 3],
+        [ 0, 0, 1, 0, 0, 0, 0, 0],
+        [ 0, 0, 1, 0, 0, 3, 0, 0]
+      ],
+      "keywords": "sun fac, chertek, kret"
+    }
+  ],
+
+  "pilots": []
+}
